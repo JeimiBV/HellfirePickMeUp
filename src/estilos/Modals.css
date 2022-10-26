@@ -1,0 +1,18 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.over{
+    width: 80%;
+    height: 89.5vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

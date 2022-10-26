@@ -1,0 +1,33 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.contenedor-cabecera {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    border-bottom: 3px solid rgb(47, 62, 70);
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(47, 62, 70);
+}
+
+.logo {
+
+    height: 10vh;
+
+
+}
+
+.nombre {
+    text-transform: initial !important;
+    font-style: italic;
+    font-family: cursive;
+    font-size: 5vh !important;
+}
+
+.user {
+    font-size: 3vh;
+}
