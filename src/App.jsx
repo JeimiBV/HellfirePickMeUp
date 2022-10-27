@@ -1,10 +1,12 @@
 import './App.css'
 import Cabecera from './componentes/Cabecera'
-import Sidebar from './componentes/Sidebar'
+//import Sidebar from './componentes/Sidebar'
 import React, { useState } from 'react'
-import { BrowserRouter as Router} from 'react-router-dom';
-import Navpage from "./componentes/Navpage"
-
+import { BrowserRouter as Router } from 'react-router-dom';
+import FormIn from './componentes/FormInicioS'
+//import Navpage from "./componentes/Navpage"
+/*<Sidebar/>
+  <Navpage/>*/
 
 
 function App() {
@@ -13,15 +15,14 @@ function App() {
 
 
   return (
-      <Router>
-        <div className='App'>
-            <Cabecera />
-          <div className='contenedor-form'>
-              <Sidebar/>
-              <Navpage/>
-          </div>
+    <Router>
+      <div className='App'>
+        <Cabecera />
+        <div className='contenedor-form'>
+          <FormIn/>
         </div>
-      </Router>
+      </div>
+    </Router>
   )
 }
 
