@@ -3,26 +3,46 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';*/
 import React from 'react';
-import { } from 'bootstrap'
 
 function FormInicioSesion() {
     return (
-        <form>
-            <div class="mb-3">
-                <label> for="exampleInputEmail1" class="form-label">Email address</label>
-                <input> type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"</input>
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <div class="w-100 h-100">
+            <div class="row ">
+                <div class="col d-flex justify-content-center align-middle">
+                    <label class="fs-1 p-5">
+                        Detener la <br />  pérdida y el <br /> desperdicio de <br /> alimentos<br /> por las personas<br /> por el planeta
+                    </label>
+                </div>
+                <div class="col p-5 align-middle">
+                    <form>
+                        <div class="text-center fs-4 w-75 font-bold">
+                            <label> Inicio de Sesión</label>
+                            <div class="border border-dark"> </div>
+                        </div>
+
+                        <div class="mb-3 w-75 mt-3">
+                            <label class="form-label ">Correo electrónico</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                        </div>
+
+                        <div class="mb-3 w-75">
+                            <label class="form-label">Contraseña</label>
+                            <div class="input-group">
+                                <input class="form-control" id="exampleInputPassword1" />
+                                <i class="position-absolute d-block top-50 end-0 me-2 fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+
+                        <div class="text-center w-75">
+                            <button type="submit" class="btn btn-secondary ">Acceder</button>
+                        </div>
+
+                    </form>
+                </div>
+
             </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" />
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </div>
+
     );
 }
 export default FormInicioSesion;
