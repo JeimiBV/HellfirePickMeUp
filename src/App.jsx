@@ -4,6 +4,7 @@ import Cabecera from './componentes/Cabecera'
 import React, { useState } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom';
 import FormIn from './componentes/FormInicioS'
+import { AuthProvider } from './context/authContext'
 //import Navpage from "./componentes/Navpage"
 /*<Sidebar/>
   <Navpage/>*/
@@ -17,10 +18,12 @@ function App() {
   return (
     <Router>
       <div className='App'>
-        <Cabecera />
-        <div className='contenedor-form'>
-          <FormIn/>
-        </div>
+        <AuthProvider>
+          <Cabecera />
+          <div className='contenedor-form'>
+            <FormIn />
+          </div>
+        </AuthProvider>
       </div>
     </Router>
   )
