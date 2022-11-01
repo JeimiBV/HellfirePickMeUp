@@ -5,88 +5,98 @@ import Row from 'react-bootstrap/Row';*/
 import React from 'react';
 import Modals from "./Modals";
 import { useState } from "react";
+import { useAuth } from '../context/authContext'
+import { useNavigate } from 'react-router-dom'
+
 
 function FormInicioSesion() {
-    const [ modalCorreo, setModalCorreo]=useState(false)
-    const [ correo, setCorreo]= useState("")
-    const [ modalContraseña, setModalContraseña] =useState(false)
-    const [ contraseña, setContraseña]=useState("")
-    const [ modalAmbos,setModalAmbos]=useState(false)
-    const [ojo,setOjo]=useState(false)
-    
-    const verificarEspacio =(valor)=>{
-        if(valor==""|| valor==null || valor.includes(" ")){
+    const [modalCorreo, setModalCorreo] = useState(false)
+    const [modalContraseña, setModalContraseña] = useState(false)
+    const [modalAmbos, setModalAmbos] = useState(false)
+    const [ojo, setOjo] = useState(false);
+    const [error, setError] = useState();
+    const [modalInvalido, setmodalInvalido]=useState(false);
+    const [user, setUser] = useState({
+        correo: '',
+        contraseña: ''
+    });
+
+    const { login } = useAuth();
+    const navigate = useNavigate();
+
+    const handlechange = ({ target: { name, value } }) => {
+        setUser({ ...user, [name]: value })
+
+    };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        validar()
+        setError('');
+        try {
+            await login(user.correo, user.contraseña);
+            navigate("/formulario")
+        } catch (error) {
+            console.log(error.code);
+            if (error.code === "auth/user-not-found" || error.code === "auth/wrong-password") {
+                console.log("no hay usuario")
+                mostrar(setmodalInvalido)
+            }
+        }
+    }
+    const verificarEspacio = (valor) => {
+        if (valor == "" || valor == null || valor.includes(" ")) {
             return false
         }
         return true
-     }
-     const verContraseña=()=>{
+    }
+    const verContraseña = () => {
         setOjo(!ojo)
-     }
+    }
 
-    const mostrar=(cambiarEstado)=>{
-        setTimeout(()=>{
+    const mostrar = (cambiarEstado) => {
+        setTimeout(() => {
             cambiarEstado(false)
-        },2000);
+        }, 2000);
         cambiarEstado(true)
     }
-     const validar=()=>{
-        if(verificarEspacio(correo) && verificarEspacio(contraseña)){
+    const validar = () => {
+        if (verificarEspacio(user.correo) && verificarEspacio(user.contraseña)) {
             console.log("espacios con contenido")
         }
-        else{
-            if(!verificarEspacio(correo)&& !verificarEspacio(contraseña) ){
+        else {
+            if (!verificarEspacio(user.correo) && !verificarEspacio(user.contraseña)) {
                 console.log("contraseña y correo estan vacíos")
                 mostrar(setModalAmbos)
             }
-            else{
-                if(!verificarEspacio(correo)){
+            else {
+                if (!verificarEspacio(user.correo)) {
                     console.log("correo vacío")
                     mostrar(setModalCorreo)
-                    return true                    
+                    return true
                 }
                 console.log("contraseña vacía")
                 mostrar(setModalContraseña)
             }
 
         }
-     }
-    
+    }
+
     return (
         <div class="w-100 h-100 container ">
             <div class="row ">
                 <div class="col d-flex justify-content-center align-middle mt-5">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-    <label class="fs-1 pt-5">
-            Detener la <br />  pérdida y el <br /> desperdicio de <br /> alimentos<br /> por las personas<br /> por el planeta
-        </label>
-    </div>
-    <div class="carousel-item">
-    <label class="fs-1 pt-5">
-         Detener la <br />  pérdida y el <br /> desperdicio de <br /> alimentos<br /> por las personas<br /> por el planeta
-        </label>
-    </div>
-    <div class="carousel-item">
-    <label class="fs-1 pt-5">
-            Detener la <br />  pérdida y el <br /> desperdicio de <br /> alimentos<br /> por las personas<br /> por el planeta
-     </label>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+                <label class="fs-1 pt-5 ">
+                                    Detener la <br />  
+                                    pérdida y el <br />
+                                    desperdicio de <br /> 
+                                    alimentos<br /> 
+                                    por las personas<br /> 
+                                    por el planeta
+                </label>
 
                 </div>
                 <div class="col p-5 align-middle">
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div class="text-center fs-4 w-75 font-bold pt-5 mt-5">
                             <label> Inicio de Sesión</label>
                             <div class="border border-dark"> </div>
@@ -94,48 +104,54 @@ function FormInicioSesion() {
 
                         <div class="mb-3 w-75 mt-3">
                             <label class="form-label ">Correo electrónico</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
-                            onChange={ev => setCorreo(ev.target.value)} />
+                            <input type="email" name='correo' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                onChange={handlechange} />
                         </div>
 
                         <div class="mb-3 w-75">
                             <label class="form-label">Contraseña</label>
                             <div class="input-group">
-                                <input class="form-control " type={ojo?"text":"password"} id="exampleInputPassword1"
-                                onChange={ev => setContraseña(ev.target.value)} />
-                                <i class={ojo?"position-relative border end-0 p-3  fa-solid fa-eye "
-                                        :"fa-solid fa-eye-slash position-relative border end-0 p-3"}
-                                 onClick={verContraseña}></i>
+                                <input class="form-control " name='contraseña' type={ojo ? "text" : "password"} id="exampleInputPassword1"
+                                    onChange={handlechange} />
+                                <i class={ojo ? "position-relative border end-0 p-3  fa-solid fa-eye "
+                                    : "fa-solid fa-eye-slash position-relative border end-0 p-3"}
+                                    onClick={verContraseña}></i>
                             </div>
                         </div>
 
 
                     </form>
                     <div class="text-center w-75">
-                            <button type="submit" class="btn btn-secondary "onClick={validar}>Acceder</button>
-                        </div>
+                        <button type="submit" class="btn btn-secondary" onClick={handleSubmit}>Acceder</button>
+                    </div>
 
                     <Modals
-                      estado={modalAmbos}
-                      cambiarEstado={setModalAmbos}
-                      estadoPantalla={false}
-                      texto={"No se aceptan espacios vacíos"}/>
+                        estado={modalAmbos}
+                        cambiarEstado={setModalAmbos}
+                        estadoPantalla={false}
+                        texto={"No se aceptan espacios vacíos"} />
                     <Modals
-                      estado={modalContraseña}
-                      cambiarEstado={setModalContraseña}
-                      estadoPantalla={false}
-                      texto={"Ingrese su contraseña "}/>
+                        estado={modalContraseña}
+                        cambiarEstado={setModalContraseña}
+                        estadoPantalla={false}
+                        texto={"Ingrese su contraseña "} />
                     <Modals
-                      estado={modalCorreo}
-                      cambiarEstado={setModalCorreo}
-                      estadoPantalla={false}
-                      texto={"Ingrese su correo"}/>
-              
+                        estado={modalCorreo}
+                        cambiarEstado={setModalCorreo}
+                        estadoPantalla={false}
+                        texto={"Ingrese su correo"} />
+                    <Modals
+                        estado={modalInvalido}
+                        cambiarEstado={setmodalInvalido}
+                        estadoPantalla={false}
+                        texto={"Verifique que su correo y contraseña sean correctas"} />
                 </div>
-
             </div>
         </div>
 
     );
 }
+//ev => setCorreo(ev.target.value)106
+//ev => setContraseña(ev.target.value)113
+//onClick={validar} del acceder
 export default FormInicioSesion;
