@@ -255,49 +255,47 @@ function Form() {
             </button>
         </form>
 
+                        <Modals
+                    estado={modalConf}
+                    cambiarEstado={setModalConf}
+                    estadoPantalla={true}
+                    texto={"Seguro de guardar el producto?"} 
+                    titulo={" Registro de producto"}
+                    mostrarSi={mostrarSi}
+                    mostrarNo={mostrarNo}
+                    buttons={true}
+                    />
+                    <Modals                        
+                    estado={modalSi}
+                    cambiarEstado={setModalSi}
+                    estadoPantalla={true}
+                    texto={"Guardando registro ..."} 
+                    buttons={false}
+                    />
+                     <Modals                        
+                    estado={modalNo}
+                    cambiarEstado={setModalNo}
+                    estadoPantalla={true}
+                    texto={"Cancelado"} 
+                    buttons={false}
+                    />
+                    <Modals                        
+                    estado={modalNo}
+                    cambiarEstado={setModalNo}
+                    estadoPantalla={true}
+                    texto={"Cancelado"} 
+                    buttons={false}
+                   />
 
-        <Modals
-            estado={modalConf}
-            cambiarEstado={setModalConf}
-        >
-            <div className="modals">
-                <h2>
-                    Registro de producto
-                </h2>
-                <h3 className="texto-confirmacion">¿Está seguro de registrar el producto?</h3>
-                <div className="botones">
-                    <button type="submit" className="left" onClick={mostrarSi}>Si</button>
-                    <button className="right" onClick={mostrarNo}>No</button>
-                </div>
-            </div>
-        </Modals>
+                    <Modals                        
+                    estado={modalError}
+                    cambiarEstado={setModalError}
+                    estadoPantalla={true}
+                    texto={"Se debe insertar una imagen"} 
+                    buttons={false}
+                   />
 
-        <Modals
-            estado={modalSi}
-            cambiarEstado={setModalSi}
-        >
-            <div className="modalSiNo">
-                <h3 className="texto-confirmacion">Guardando registro ...</h3>
-            </div>
-        </Modals>
-
-        <Modals
-            estado={modalNo}
-            cambiarEstado={setModalNo}
-        >
-            <div className="modalSiNo">
-                <h3 className="texto-confirmacion">Cancelado</h3>
-            </div>
-        </Modals>
         
-        <Modals
-            estado={modalError}
-            cambiarEstado={setModalError}
-        >
-            <div className="modalSiNo">
-                <h3 className="texto-confirmacion">Se debe insertar una imagen </h3>
-            </div>
-        </Modals>
 
     </div>
 

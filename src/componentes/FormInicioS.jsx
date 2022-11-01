@@ -82,7 +82,7 @@ function FormInicioSesion() {
     }
 
     return (
-        <div class="w-100 h-100 container ">
+        <div class="w-100 h-100  ">
             <div class="row ">
                 <div class="col d-flex justify-content-center align-middle mt-5">
                 <label class="fs-1 pt-5 ">
@@ -129,22 +129,31 @@ function FormInicioSesion() {
                         estado={modalAmbos}
                         cambiarEstado={setModalAmbos}
                         estadoPantalla={false}
-                        texto={"No se aceptan espacios vacíos"} />
+                        texto={"No se aceptan espacios vacíos"} 
+                        buttons={false}
+                        />
                     <Modals
                         estado={modalContraseña}
                         cambiarEstado={setModalContraseña}
                         estadoPantalla={false}
-                        texto={"Ingrese su contraseña "} />
+                        texto={"Ingrese su contraseña "} 
+                        buttons={false}
+                        />
                     <Modals
                         estado={modalCorreo}
                         cambiarEstado={setModalCorreo}
                         estadoPantalla={false}
-                        texto={"Ingrese su correo"} />
+                        texto={"Ingrese su correo"} 
+                        buttons={false}
+                        />
                     <Modals
                         estado={modalInvalido}
                         cambiarEstado={setmodalInvalido}
                         estadoPantalla={false}
-                        texto={"Verifique que su correo y contraseña sean correctas"} />
+                        texto={"Verifique que su correo y contraseña sean correctas"}
+                        buttons={false}
+                        />
+                       
                 </div>
             </div>
         </div>
