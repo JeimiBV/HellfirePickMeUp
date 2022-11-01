@@ -36,11 +36,10 @@ function Informacion(){
                               </div>
                                        
                                 
-                              
-                               <Link to="/listaProductos"><button className="b12">CERRAR</button>
+                               <Link to="/ofertar"><button className="b13">Ofertar</button></Link>
+                               <Link to="/listaProductos"><button className="b12">Cerrar</button>
                                </Link>
                                
-
                    </div>    
                        
 

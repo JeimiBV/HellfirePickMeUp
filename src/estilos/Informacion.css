@@ -70,3 +70,20 @@
     height: 85%;
 
 }
+.b13{
+
+    height: 35px;
+    margin-left: 1.5%;
+    min-width: 10%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    background-color: gray;
+    transition: .5s;
+    cursor: pointer; 
+}
+.b13:hover{
+
+    background-color: darkslategray;
+    color: azure;
+    transition: .5s; 
+}
