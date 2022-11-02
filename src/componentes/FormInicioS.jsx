@@ -35,6 +35,7 @@ function FormInicioSesion() {
         try {
             await login(user.correo, user.contraseña);
             navigate("/formulario")
+            console.log(user)
         } catch (error) {
             console.log(error.code);
             if (error.code === "auth/user-not-found" || error.code === "auth/wrong-password") {
