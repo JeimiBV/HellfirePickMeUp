@@ -22,6 +22,7 @@ function Form() {
     const [archivoUrl, setArchivoUrl] = React.useState("");
     const [isLoading, setIsLoading] = useState(true);
     const [urlImagen, setUrlImagen] = useState("");
+    
 
     const cargarFoto = async (event) => {
         event.preventDefault();
@@ -179,6 +180,7 @@ function Form() {
     //http://localhost:5000/fir-crud-c44e7/us-central1/app/api/products
 
     return <div className="contenedor">
+        
         <label className="titulo">
             Registrar Producto
         </label>

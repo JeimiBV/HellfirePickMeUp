@@ -12,15 +12,30 @@ import Formulario from "./componentes/Formulario"
 import Informacion from "./componentes/Informacion";
 import Productoslista from "./componentes/ListaProductos";
 import Login from "./componentes/FormInicioS"
+import {useAuth}from './context/authContext'
+import { ProtectedRoute } from './componentes/ProtectedRoute';
+import LandingPage from './componentes/LandingPage';
 
 const App = () =>{
+
+
     return(
           <BrowserRouter>
               <Routes>
-              <Route path="/listaProductos" element={<Productoslista/>}/>
-              <Route path="/formulario" element={<Formulario />}/>
-              <Route path="/Informacion/:id" element={<Informacion/>}/>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/listaProductos" element={  
+              <AuthProvider> <ProtectedRoute >
+                <Productoslista/>
+                </ProtectedRoute></AuthProvider> }/>
+
+              <Route path="/formulario" element={  
+              <AuthProvider>  <ProtectedRoute >
+                <Formulario />
+                </ProtectedRoute></AuthProvider> }/>
+              
+              <Route path="/Informacion/:id" element={  <AuthProvider> <Informacion/>   </AuthProvider> }/>
               <Route path="/Login" element={  <AuthProvider> <Login/> </AuthProvider> }/>
+              
               </Routes>
           </BrowserRouter>
 

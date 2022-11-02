@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 import {todosProductos} from './funciones'
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
-function Productoslista() {
 
+function Productoslista() {
+   
     const [productos, setProductos]=useState(null)
 
     useEffect(() => {
