@@ -20,14 +20,16 @@ function Header() {
         <h1 className="nombre">
             Pick me up
         </h1>
-        <ProtectedRoute>
+       
         <h1 className="user">
          {user?`bienvenido ${user.email}`:`bienvenido `}
         </h1>
-        <button onClick={handleLogout}>
+    {
+        user?(    <button onClick={handleLogout}>
             logout
-        </button>
-        </ProtectedRoute>
+        </button>):(<div></div>)
+    }
+   
 
        
     </div>
