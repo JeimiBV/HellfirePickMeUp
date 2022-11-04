@@ -127,7 +127,7 @@ function Ofertar() {
 
                 </form>
                 <div className="buiz"><button className="bu" type="submit" onClick={mostrarModal}>Confirmar</button></div>
-                <div className="bode"><button className="bo">Cancelar</button></div>
+                <div className="bode"><button className="bo" onClick={() => { window.location.pathname = 'listaProductos'; }}>Cancelar</button></div>
                 <div className="mod">
                     <Modals
                         titulo={"Registro de oferta"}
