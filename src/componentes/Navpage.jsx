@@ -5,16 +5,14 @@ import Informacion from "./Informacion";
 import Productoslista from "./ListaProductos";
 
 
-
 const NavPage = () =>{
     return(
 
              <Routes>
-                <Route path="/listaProductos" element={<Productoslista/>}/>
-                <Route path="/formulario" element={<Formulario />}/>
-                <Route path="/Informacion/:id" element={<Informacion/>}/>
-               
-            </Routes>
+                    <Route path="/listaProductos" element={<Productoslista/>}/>
+                    <Route path="/formulario" element={<Formulario />}/>
+                    <Route path="/Informacion/:id" element={<Informacion/>}/>
+                </Routes>
     )
 }
 
