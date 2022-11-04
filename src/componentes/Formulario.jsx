@@ -4,10 +4,19 @@ import Modals from "./Modals";
 import "../estilos/formulario.css"
 import { useState } from 'react'
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { Navigate } from "react-router-dom";
+import { useAuth } from '../context/authContext'
 
 
 
-function Form() {
+function Form({usuario}) {
+    const { user, logout } = useAuth();
+    
+            if(usuario!=user.uid){
+                return <Navigate to ="/"/>
+            }
+        //
+    
     const [nombre, setNombre] = useState({ valor: '', estado: false, check: false })
     const [descripcion, setDescripcion] = useState({ valor: '', estado: false, check: false })
     const [archivo, setArchivo] = useState(false)

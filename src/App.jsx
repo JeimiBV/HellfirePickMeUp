@@ -10,8 +10,11 @@ import { ProtectedRoute } from "./componentes/ProtectedRoute";
 import Sidebar from "./componentes/Sidebar";
 import Formulario from './componentes/Formulario'
 import { Plantilla } from "./componentes/Plantilla";
+import { useState } from "react";
 
 function App() {
+const [user,setUser]= useState ("QwXZyaODI9bQPoepSI1XyTYTeej1");
+
   return (
     <BrowserRouter>
     <AuthProvider>
@@ -19,27 +22,27 @@ function App() {
     </AuthProvider>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<AuthProvider> <Login /> </AuthProvider>} />
+        <Route path="/login" element={<AuthProvider> <Login usuario={user} /> </AuthProvider>} />
         <Route path="/formulario" element={
           <AuthProvider>
             <ProtectedRoute>
-            <Plantilla >
-            <Formulario/>
-            </Plantilla>
+               <Plantilla >
+                  <Formulario usuario={user}/>
+                </Plantilla>
             </ProtectedRoute>
           </AuthProvider>} />
         <Route path="/listaProductos" element={
           <AuthProvider>
             <ProtectedRoute>
             <Plantilla>
-            <Productoslista />
+            <Productoslista usuario={user} />
             </Plantilla>
             </ProtectedRoute>
           </AuthProvider>} />
         <Route path="/informacion/:id" element={
           <AuthProvider>
             <ProtectedRoute>
-              <Informacion />
+              <Informacion usuario={user} />
             </ProtectedRoute>
           </AuthProvider>} />
       </Routes>

@@ -6,17 +6,25 @@ import React from 'react';
 import Modals from "./Modals";
 import { useState } from "react";
 import { useAuth } from '../context/authContext'
-import { useNavigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 
-function FormInicioSesion() {
+function FormInicioSesion({usuario}) {
+    const { user,loading } = useAuth();
+    if(user){
+        if (usuario != user.uid) {
+            return <Navigate to="/" />
+        } else {
+            return <Navigate to="/formulario" />
+        }
+    }
     const [modalCorreo, setModalCorreo] = useState(false)
     const [modalContraseña, setModalContraseña] = useState(false)
     const [modalAmbos, setModalAmbos] = useState(false)
     const [ojo, setOjo] = useState(false);
     const [error, setError] = useState();
     const [modalInvalido, setmodalInvalido]=useState(false);
-    const [user, setUser] = useState({
+    const [userf, setUser] = useState({
         correo: '',
         contraseña: ''
     });
@@ -25,7 +33,7 @@ function FormInicioSesion() {
     const navigate = useNavigate();
 
     const handlechange = ({ target: { name, value } }) => {
-        setUser({ ...user, [name]: value })
+        setUser({ ...userf, [name]: value })
 
     };
     const handleSubmit = async (e) => {
@@ -33,12 +41,12 @@ function FormInicioSesion() {
         validar()
         setError('');
         try {
-            await login(user.correo, user.contraseña);
+            await login(userf.correo, userf.contraseña);
             navigate("/formulario")
-            console.log(user)
+            console.log(userf)
         } catch (error) {
             console.log(error.code);
-            if (error.code === "auth/user-not-found" || error.code === "auth/wrong-password") {
+            if (error.code === "auth/userf-not-found" || error.code === "auth/wrong-password") {
                 console.log("no hay usuario")
                 mostrar(setmodalInvalido)
             }
@@ -61,16 +69,16 @@ function FormInicioSesion() {
         cambiarEstado(true)
     }
     const validar = () => {
-        if (verificarEspacio(user.correo) && verificarEspacio(user.contraseña)) {
+        if (verificarEspacio(userf.correo) && verificarEspacio(userf.contraseña)) {
             console.log("espacios con contenido")
         }
         else {
-            if (!verificarEspacio(user.correo) && !verificarEspacio(user.contraseña)) {
+            if (!verificarEspacio(userf.correo) && !verificarEspacio(userf.contraseña)) {
                 console.log("contraseña y correo estan vacíos")
                 mostrar(setModalAmbos)
             }
             else {
-                if (!verificarEspacio(user.correo)) {
+                if (!verificarEspacio(userf.correo)) {
                     console.log("correo vacío")
                     mostrar(setModalCorreo)
                     return true

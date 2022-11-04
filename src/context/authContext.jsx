@@ -29,11 +29,27 @@ export function AuthProvider({ children }) {
         setUser(currentUser);
         setLoading(false);
         console.log(currentUser)
+        console.log(currentUser.uid)
         });
         return () => unsuscribe ();
     }, [])
+ /* const login =()=>{
 
-        
+    setUser({
+        id:1,
+        name:"usuario1",
+        correo:"usuario1@gmail.com",
+        password:"987654321",
+        permission: "negocio"
+      })
+
+      
+  
+    }
+    const logout = ()=>{
+        setUser( null)
+      }
+     */   
 
     return (
         <authContext.Provider value={{ login,user, logout, loading }}>
