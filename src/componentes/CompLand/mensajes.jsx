@@ -19,19 +19,43 @@ export const MensajesP = () => {
                   es la que nos regala la alegría de vivir.</p>
                     <p> - Tecumseh.</p>
 
-                    </div> 
-                    <div class="col-sm-4 p-5">
+                </div> 
+
+                 <div class="col-sm-4 p-5">
 
                     <img className="imagen2"  src="../../../src/imagenes/happy.jpg" alt="..." width="400" height="300" />
                  </div>
-                  </div>
+                </div>
+
+            <div class="row body color-titulo">
+                 <div class="col-sm p-5">
+                   <img className=""  src="../../../src/imagenes/planet.jpg" width="90" height="90"/>
+                   <h3>
+                     Usando la aplicacion ayudas a reducir 
+                     el desperdicio de comida
+                   </h3>
+                 </div>
+
+                 <div class="col-sm p-5">
+                     <img className=""  src="../../../src/imagenes/icono.jpg" width="90" height="90"/>
+                    <h3>
+                    ¡Ya son 1000 usuarios que tienen la App!
+                    </h3>   
+                    </div>
+                    <div class="col-sm p-5">
+                     <img className=""  src="../../../src/imagenes/ofertaa.webp" width="90" height="90"/>
+                     <h3>
+                    ¡Tenemos variedad de ofertas para ti!
+                    </h3>   
 
                  </div> 
 
-                 </div>
-    
-    
+            </div>
 
+        </div> 
+
+    </div>
+    
 
   )
 }
