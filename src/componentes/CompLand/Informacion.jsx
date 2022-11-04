@@ -17,11 +17,21 @@ const Informacion = () => {
                         o alimentos que no han vendido al servicio de los consumidores
                         para no malgastar la comida. 
         
+                        </p>             
+                    </div>
+                    <div className="col-sm p-5 m-5">
+                        <h1 className='color-titulo' >
+                            Nuestro objetivo
+                        </h1>
+                        <hr class="border border-dark border-" />
+                        
+                        <p>
+                        Es ser un movimiento que lucha contra la pérdida y el desperdicio de alimentos
+                        reduciendo considerablemente las cifras de desperdicio
+                    
                         </p>
 
-                                        
                     </div>
-
                     
                 </div>
             </div>
