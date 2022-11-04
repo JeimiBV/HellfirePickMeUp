@@ -2,10 +2,12 @@ import './App.css'
 import Cabecera from './componentes/Cabecera'
 import Sidebar from './componentes/Sidebar'
 import React, { useState } from 'react'
-import { BrowserRouter as Route, Routes, Router} from 'react-router-dom';
-import Navpage from "./componentes/Navpage"
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
-
+import NabvarIni from './componentes/CompLand/Navbar';
+import Landing from './componentes/Landing'
+import LoginConsumidor from './paginas/LoginConsumidor';
+import LoginNegocio from './paginas/LoginNegocio';
 
 function App() {
 
@@ -13,15 +15,16 @@ function App() {
 
 
   return (
-      <Router>
-        
+    <div className='App'>
+     <Router>
         <NabvarIni/> 
           <Routes>
             <Route path='/' element={<Landing/>}/>
             <Route path='/loginConsumidor' element={<LoginConsumidor/>}/>
             <Route path='/loginNegocio' element={<LoginNegocio/>}/>
-          </Routes>
+          </Routes>  
       </Router>
+    </div>
   )
 }
 
