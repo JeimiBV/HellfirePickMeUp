@@ -58,3 +58,14 @@
 .estadisticasM{
     margin-top: 50%;
 }
+
+/*Footer*/
+
+.contenedor-footer{
+    width: 99%;
+    
+}
+
+.bg-sucess-2{
+    background: #84a98c;
+}
