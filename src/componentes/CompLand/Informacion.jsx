@@ -1,5 +1,6 @@
 import React from 'react'
-import '../../estilos/Landing.css'
+
+
 
 const Informacion = () => { 
   return (
