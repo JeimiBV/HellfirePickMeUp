@@ -15,11 +15,6 @@ function Ofertar() {
     const [Hora, setHora] = useState({ estado: false, valor: '--:--' }); // tarea 11
     const [modalConf, setModalConf] = useState(false)
 
-
-
-
-    // const mostrarSi = () => { console.log("se presiono mostrar si") }
-    //const mostrarNo = () => { console.log("se presiono mostrar no") }
     const Validar = () => {
         if ((Precio.valor > 0) && (Fecha.valor !== 'AAAA-MM-DD') && (Hora.valor !== '--:--')) {
             setPrecio(prevState => ({ ...prevState, estado: false }))
@@ -56,7 +51,7 @@ function Ofertar() {
             setModalSi(false)
         }, 3000);
 
-        document.getElementById('form').reset();// tarea 8
+        document.getElementById('form').reset();
         setModalConf(false);
         setModalSi(true);
         setPrecio(prevState => ({ ...prevState, estado: false }));
@@ -69,11 +64,10 @@ function Ofertar() {
             setModalNo(false)
             setModalSi(false)
         }, 3000);
+        document.getElementById('form').reset();
         setModalConf(false);
         setModalNo(true);
     }
-
-
 
     function formatoFecha(formato) {
 
@@ -124,6 +118,7 @@ function Ofertar() {
                 </form>
                 <div className="buiz"><button className="bu" type="submit" onClick={Validar}>Confirmar</button></div>
                 <div className="bode"><button className="bo" onClick={() => { window.location.pathname = 'listaProductos'; }}>Cancelar</button></div>
+               
                 <div className="mod">
                     <Modals
                         titulo={"Registro de oferta"}
