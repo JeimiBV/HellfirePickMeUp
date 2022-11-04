@@ -46,6 +46,14 @@
     font-weight: bold;
  }
 
+   /*2do slider*/
+   .containerB{
+    background-color: #84a98c;
+    padding: 50px;
+    width: 70%;
+    position: relative;
+}
+
  /*Mensajes*/
 .estadisticasM{
     margin-top: 50%;
