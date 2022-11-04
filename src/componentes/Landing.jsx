@@ -11,10 +11,10 @@ const Landing = () => {
   return (
     <div className='todo'> 
         
-        
+        <Carrusel/>
         <Informacion/>
         <Slider/>
-      
+        <MensajesP/>
         <Footer/>
     </div> 
 
