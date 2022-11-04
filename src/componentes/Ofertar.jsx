@@ -7,25 +7,48 @@ import Modals from "./Modals";
 import { setDate } from "date-fns";
 
 function Ofertar() {
-    const [fecha, setFecha] = useState("");
-    const [show, setShow] = useState(false);
+    const [modalSi, setModalSi] = useState(false);
+    const [modalNo, setModalNo] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     const [Precio, setPrecio] = useState({ estado: false, valor: '' }); // tarea 9
-    const [modalSi, setModalSi] = useState(false); // tarea 2
-    const [modalNo, setModalNo] = useState(false); // tarea 3
-    // const [modalConf, setModalConf] = useState(false) //tarea 1
-    const [isLoading, setIsLoading] = useState(true);// todas las tareas
-    // tarea 12
+    const [Fecha, setFecha] = useState({ estado: false, valor: 'AAAA-MM-DD' }); // tarea 10
+    const [Hora, setHora] = useState({ estado: false, valor: '--:--' }); // tarea 11
+    const [modalConf, setModalConf] = useState(false)
 
 
-    const mostrar = (cambiarEstado) => {
-        setTimeout(() => {
-            cambiarEstado(false)
-        }, 2000);
-        cambiarEstado(true)
-    }
+
 
     // const mostrarSi = () => { console.log("se presiono mostrar si") }
     //const mostrarNo = () => { console.log("se presiono mostrar no") }
+    const Validar = () => {
+        if ((Precio.valor > 0) && (Fecha.valor !== 'AAAA-MM-DD') && (Hora.valor !== '--:--')) {
+            setPrecio(prevState => ({ ...prevState, estado: false }))
+            setFecha(prevState => ({ ...prevState, estado: false }));
+            setHora(prevState => ({ ...prevState, estado: false }));
+            setIsLoading(false)
+            setModalConf(true);
+
+        } else {
+            setIsLoading(true);
+
+            if (Precio.valor > 0) {
+                setPrecio(prevState => ({ ...prevState, estado: false }));
+            } else {
+                setPrecio(prevState => ({ ...prevState, estado: true }));
+            }
+            if (Fecha.valor !== 'AAAA-MM-DD') {
+                setFecha(prevState => ({ ...prevState, estado: false }));
+            } else {
+                setFecha(prevState => ({ ...prevState, estado: true }));
+            }
+            if (Hora.valor !== '--:--') {
+                setHora(prevState => ({ ...prevState, estado: false }));
+            } else {
+                setHora(prevState => ({ ...prevState, estado: true }));
+            }
+        }
+
+    }
 
     const mostrarSi = () => {
         setTimeout(() => {
@@ -34,7 +57,7 @@ function Ofertar() {
         }, 3000);
 
         document.getElementById('form').reset();// tarea 8
-        setShow(false);
+        setModalConf(false);
         setModalSi(true);
         setPrecio(prevState => ({ ...prevState, estado: false }));
         setFecha(prevState => ({ ...prevState, estado: false }));
@@ -46,13 +69,10 @@ function Ofertar() {
             setModalNo(false)
             setModalSi(false)
         }, 3000);
-        setShow(false);
+        setModalConf(false);
         setModalNo(true);
     }
 
-    const mostrarModal = () => {
-        mostrar(setShow);
-    }
 
 
     function formatoFecha(formato) {
@@ -72,38 +92,6 @@ function Ofertar() {
         return (formato.replace(/dd|mm|yyyy/gi, matched => map[matched]))
     }
 
-    /*var date = new Date();
-    console.log(date.toLocaleDateString());*/
-    //const asignarFecha =()=>{
-
-
-    //return ((new Date).toLocaleDateString())
-    //setFecha("4/11/2022")
-    //console.log((new Date).getFullYear() + '-' + ( (new Date).getMonth() + 1 ) + '-' + (new Date).getDate())
-    // return 
-    // }
-
-
-
-    /*const [date, setDate] = useState(new Date());
-    const [fechaFormato, setFechaFormato] = useState('');
-     
-     
-    const formatoFecha = fecha => {
-       setDate(fecha);
-       const dia = fecha.getDate();
-       const mes = fecha.getMonth() + 1;
-       const anio = fecha.getFullYear();
-       const dato = date.getDate() + '-' + ( date.getMonth() + 1 ) + '-' + date.getFullYear();
-       if(ev.target.value < fecha){
-        document.getElementById("fecha").value=dato;
-       }
-     }*/
-
-
-
-
-    //fecha.min= new Date().toISOString.split("T")[0];
     return (
         <>
             <div className="contenido">
@@ -112,21 +100,29 @@ function Ofertar() {
                     <label className="ti">Registrar oferta</label>
                     <label className="la" >
                         Precio:
-                        <input className="in" id="numero" type="number" required placeholder="$" min="1" />
+                        <input className="in" id="numero" type="number" required placeholder="$" min="1" onChange={e => (setPrecio(prevState => ({ ...prevState, valor: e.target.value })))} />
+                        <h3 className={Precio.estado ? "validacion-1" : "invisible"}>
+                            Ingrese un numero positivo
+                        </h3>
                     </label>
                     <label className="la">
                         Fecha:
-                        <input className="in" type="date" name="fecha" id="fecha" min={formatoFecha('yyyy-mm-dd')} required />
-
+                        <input className="in" type="date" name="fecha" id="fecha" min={formatoFecha('yyyy-mm-dd')} required onChange={e => (setFecha(prevState => ({ ...prevState, valor: e.target.value })))} />
+                        <h3 className={Fecha.estado ? "validacion-1" : "invisible"}>
+                            Ingrese una fecha
+                        </h3>
                     </label>
                     <label className="la">
                         Hora:
-                        <input className="in" type="time" required />
+                        <input className="in" type="time" required defaultValue={null} onChange={e => (setHora(prevState => ({ ...prevState, valor: e.target.value })))} />
+                        <h3 className={Hora.estado ? "validacion-1" : "invisible"}>
+                            Ingrese una hora
+                        </h3>
                     </label>
 
 
                 </form>
-                <div className="buiz"><button className="bu" type="submit" onClick={mostrarModal}>Confirmar</button></div>
+                <div className="buiz"><button className="bu" type="submit" onClick={Validar}>Confirmar</button></div>
                 <div className="bode"><button className="bo" onClick={() => { window.location.pathname = 'listaProductos'; }}>Cancelar</button></div>
                 <div className="mod">
                     <Modals
@@ -134,12 +130,12 @@ function Ofertar() {
                         mostrarSi={mostrarSi}
                         mostrarNo={mostrarNo}
                         buttons={true}
-                        estado={show}
-                        cambiarEstado={setShow}
-                        estadoPantalla={false}
-                        texto={"Esta seguro de realizar su oferta?"} 
+                        estado={modalConf}
+                        cambiarEstado={setModalConf}
+                        estadoPantalla={true}
+                        texto={"Esta seguro de realizar su oferta?"}
                         icon={false}
-                        />
+                    />
 
                     <Modals
                         titulo={""}
@@ -147,21 +143,21 @@ function Ofertar() {
                         buttons={false}
                         estado={modalSi}
                         cambiarEstado={setModalSi}
-                        estadoPantalla={false}
-                        texto={"Guardando registro ..."} 
+                        estadoPantalla={true}
+                        texto={"Guardando registro ..."}
                         icon={false}
-                        />
-                        <Modals
+                    />
+                    <Modals
                         titulo={""}
                         mostrarNo={mostrarNo}
                         buttons={false}
                         estado={modalNo}
                         cambiarEstado={setModalNo}
-                        estadoPantalla={false}
-                        texto={"Cancelado"} 
+                        estadoPantalla={true}
+                        texto={"Cancelado"}
                         icon={false}
-                        />
-                        
+                    />
+
                 </div>
             </div>
         </>
