@@ -5,6 +5,13 @@ import React from 'react'
 const Informacion = () => { 
   return (
     <div>
+        <div>
+        <div className="contenedor">
+
+            <img src="../../../src/imagenes/comida19.png" class="img-fluid opacity-50" width='100%'/>
+            
+        </div>
+                </div>
         <div className='contenedor-2 text-center body'>
                 <div className="row " >
                     <div class="col-sm p-5 m-5"> 
