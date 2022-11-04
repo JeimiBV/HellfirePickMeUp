@@ -1,3 +1,21 @@
+
+/* Navbar*/
+
+.bg-sucess{
+    background-color: rgb(244, 247, 247);
+    --bs-border-opacity: 3;
+    border-color: #000000 !important;
+}
+
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link{
+    background: #84A98C !important
+}
+
+.nav-link:hover{
+    color: rgb(252, 251, 255) !important;
+}
+
 /* Informacion*/
 .contenedor{
     object-fit: cover;
