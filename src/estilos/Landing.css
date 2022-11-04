@@ -22,6 +22,19 @@
     position: relative;
     
  }
+ 
+ .body{
+    font-size: x-large;
+     
+   }
+   .contenedor-2{
+       width: 99%;
+   }
+   
+   .color-titulo{
+       color: #52796f;
+}
+ 
 /*slider inicio*/
 .sliderA{
     align-items: center;
