@@ -16,6 +16,7 @@ const Landing = () => {
         <Slider/>
         <MensajesP/>
         <Footer/>
+        
     </div> 
 
   )
