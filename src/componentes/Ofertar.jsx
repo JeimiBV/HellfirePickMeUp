@@ -138,18 +138,27 @@ function Ofertar() {
                         cambiarEstado={setShow}
                         estadoPantalla={false}
                         texto={"Esta seguro de realizar su oferta?"} 
-                        icon={true}
+                        icon={false}
                         />
 
                     <Modals
                         titulo={""}
                         mostrarSi={mostrarSi}
-                        mostrarNo={mostrarNo}
                         buttons={false}
                         estado={modalSi}
                         cambiarEstado={setModalSi}
                         estadoPantalla={false}
                         texto={"Guardando registro ..."} 
+                        icon={false}
+                        />
+                        <Modals
+                        titulo={""}
+                        mostrarNo={mostrarNo}
+                        buttons={false}
+                        estado={modalNo}
+                        cambiarEstado={setModalNo}
+                        estadoPantalla={false}
+                        texto={"Cancelado"} 
                         icon={false}
                         />
                         
