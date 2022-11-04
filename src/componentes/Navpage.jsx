@@ -12,7 +12,7 @@ const NavPage = () =>{
                     <Route path="/listaProductos" element={<Productoslista/>}/>
                     <Route path="/formulario" element={<Formulario />}/>
                     <Route path="/Informacion/:id" element={<Informacion/>}/>
-                    <Route path="/Ofertar" element={<Ofertar/>}/>
+                    <Route path="/Ofertar/:id" element={<Ofertar/>}/>
                 </Routes>
     )
 }

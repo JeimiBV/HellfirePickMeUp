@@ -1,55 +1,57 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "../estilos/Informacion.css";
 import imagen from "../imagenes/pique.png";
-import { Link , useParams} from "react-router-dom";
-import {unicoProducto} from './funciones'
+import { Link, useParams } from "react-router-dom";
+import { unicoProducto } from './funciones'
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
-function Informacion(){
-    const [producto, setProductos]=useState(null)
+function Informacion() {
+    const [producto, setProductos] = useState(null)
     const params = useParams()
     useEffect(() => {
-        
-        unicoProducto(params.id,setProductos)
-    },[] )
-    
-    if(producto != null){
+
+        unicoProducto(params.id, setProductos)
+    }, [])
+
+    if (producto != null) {
         return (
-    <>
+            <>
                 <div className="todo">
-        
-        <h1 className="t"> {producto.Nombre}</h1>  
+
+                    <h1 className="t"> {producto.Nombre}</h1>
 
 
-               <div className="Informacion">
-                   
-                       <div  className="desytip">
-                          
+                    <div className="Informacion">
 
-                               <h2 className="encabezado">Descripcion:</h2>
+                        <div className="desytip">
 
-                               <p className="Parrafo">{producto.Descripcion}</p>
-                              <h2 className="encabezado">Tipo de producto:</h2> <p className="Parrafo">{producto.Tipo}</p>  
-                               
-                              <div className="a12">
-                              <img width="100px" heigth="100px" className= "imagen_1" src={producto.Imagen} alt="" />
 
-                              </div>
-                                       
-                                
-                               <Link to="/ofertar"><button className="b13">Ofertar</button></Link>
-                               <Link to="/listaProductos"><button className="b12">Cerrar</button>
-                               </Link>
-                               
-                   </div>    
-                       
+                            <h2 className="encabezado">Descripcion:</h2>
 
-                       
-               </div>
-           
-   </div>
-    
-    </>
-    )}
+                            <p className="Parrafo">{producto.Descripcion}</p>
+                            <h2 className="encabezado">Tipo de producto:</h2> <p className="Parrafo">{producto.Tipo}</p>
+
+                            <div className="a12">
+                                <img width="100px" heigth="100px" className="imagen_1" src={producto.Imagen} alt="" />
+
+                            </div>
+
+                            <a href={`/Ofertar/${params.id}`}>
+                                <button className="b13">Ofertar</button>
+                            </a>
+                            <Link to="/listaProductos"><button className="b12">Cerrar</button>
+                            </Link>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </>
+        )
+    }
 
 }
 

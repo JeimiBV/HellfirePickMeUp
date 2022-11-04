@@ -5,6 +5,8 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import "../estilos/ofertar.css"
 import Modals from "./Modals";
 import { setDate } from "date-fns";
+import { Link, useParams } from "react-router-dom";
+import { unicoProducto } from './funciones'
 
 function Ofertar() {
     const [modalSi, setModalSi] = useState(false);
@@ -14,6 +16,14 @@ function Ofertar() {
     const [Fecha, setFecha] = useState({ estado: false, valor: 'AAAA-MM-DD' }); // tarea 10
     const [Hora, setHora] = useState({ estado: false, valor: '--:--' }); // tarea 11
     const [modalConf, setModalConf] = useState(false)
+    const [producto, setProductos] = useState(null)
+    const params = useParams()
+
+
+    useEffect(() => {
+
+        unicoProducto(params.id, setProductos)
+    }, [])
 
     const Validar = () => {
         if ((Precio.valor > 0) && (Fecha.valor !== 'AAAA-MM-DD') && (Hora.valor !== '--:--')) {
@@ -85,11 +95,11 @@ function Ofertar() {
 
         return (formato.replace(/dd|mm|yyyy/gi, matched => map[matched]))
     }
-
+    if (producto != null) {
     return (
         <>
             <div className="contenido">
-
+            <label className="titulo-1"> {producto.Nombre} </label>
                 <form className="fo" id="form">
                     <label className="ti">Registrar oferta</label>
                     <label className="la" >
@@ -157,5 +167,6 @@ function Ofertar() {
             </div>
         </>
     );
+}
 }
 export default Ofertar;
