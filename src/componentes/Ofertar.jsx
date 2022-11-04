@@ -96,39 +96,48 @@ function Ofertar() {
         return (formato.replace(/dd|mm|yyyy/gi, matched => map[matched]))
     }
     if (producto != null) {
-    return (
-        <>
-            <div className="contenido">
-            <label className="titulo-1"> {producto.Nombre} </label>
-                <form className="fo" id="form">
-                    <label className="ti">Registrar oferta</label>
-                    <label className="la" >
-                        Precio:
-                        <input className="in" id="numero" type="number" required placeholder="$" min="1" onChange={e => (setPrecio(prevState => ({ ...prevState, valor: e.target.value })))} />
-                        <h3 className={Precio.estado ? "validacion-1" : "invisible"}>
-                            Ingrese un numero positivo
-                        </h3>
-                    </label>
-                    <label className="la">
-                        Fecha:
-                        <input className="in" type="date" name="fecha" id="fecha" min={formatoFecha('yyyy-mm-dd')} required onChange={e => (setFecha(prevState => ({ ...prevState, valor: e.target.value })))} />
-                        <h3 className={Fecha.estado ? "validacion-1" : "invisible"}>
-                            Ingrese una fecha
-                        </h3>
-                    </label>
-                    <label className="la">
-                        Hora:
-                        <input className="in" type="time" required defaultValue={null} onChange={e => (setHora(prevState => ({ ...prevState, valor: e.target.value })))} />
-                        <h3 className={Hora.estado ? "validacion-1" : "invisible"}>
-                            Ingrese una hora
-                        </h3>
-                    </label>
+        return (
+            <div className="contenedor-1">
+                <label className="titulo-1"> {producto.Nombre} </label>
+                <div className="elementos-form-1">
+                    <div className="label-2">Registrar Oferta</div>
+                    <form id="form">
+                        <label className="label-1">
+                            <div className="contenedor-input-1">
+                                Precio:
+                                <input className="entrada-1" id="numero" type="number" required placeholder="$" min="1" onChange={e => (setPrecio(prevState => ({ ...prevState, valor: e.target.value })))} />
+                                <h3 className={Precio.estado ? "validacion-1" : "invisible"}>
+                                    Ingrese un numero positivo
+                                </h3>
+                            </div>
+                        </label>
+                        <label className="label-1">
+                            <div className="contenedor-input-1">
+                                Fecha :
+                                <input className="entrada-3" type="date" min={formatoFecha('yyyy-mm-dd')} required onChange={e => (setFecha(prevState => ({ ...prevState, valor: e.target.value })))} />
+                                <h3 className={Fecha.estado ? "validacion-1" : "invisible"}>
+                                    Ingrese una fecha
+                                </h3>
+                            </div>
+                        </label>
+                        <label className="label-1">
+                            <div className="contenedor-input-1">
+                                Hora:
+                                <input className="entrada-2" type="time" required defaultValue={null} onChange={e => (setHora(prevState => ({ ...prevState, valor: e.target.value })))} />
+                                <h3 className={Hora.estado ? "validacion-1" : "invisible"}>
+                                    Ingrese una hora
+                                </h3>
+                            </div>
+                        </label>
+                    </form>
+                    <div className="contenedor-botones">
+                        <button className="botonL-1" onClick={Validar}>Confirmar</button>
+                        <button className="botonR-1" onClick={() => { window.location.pathname = 'listaProductos'; }}>
+                            Cancelar</button>
+                    </div>
+                </div>
 
-
-                </form>
-                <div className="buiz"><button className="bu" type="submit" onClick={Validar}>Confirmar</button></div>
-                <div className="bode"><button className="bo" onClick={() => { window.location.pathname = 'listaProductos'; }}>Cancelar</button></div>
-               
+                
                 <div className="mod">
                     <Modals
                         titulo={"Registro de oferta"}
@@ -162,11 +171,9 @@ function Ofertar() {
                         texto={"Cancelado"}
                         icon={false}
                     />
-
                 </div>
             </div>
-        </>
-    );
-}
+        );
+    }
 }
 export default Ofertar;
