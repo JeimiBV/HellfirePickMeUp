@@ -1,0 +1,10 @@
+/*slider inicio*/
+.sliderA{
+    align-items: center;
+    background-color: #84a99a00;
+    width: 70%;
+    position: absolute;
+    color: rgb(9, 8, 8);
+    margin-top: 24%;
+    font-weight: bold;
+ }
