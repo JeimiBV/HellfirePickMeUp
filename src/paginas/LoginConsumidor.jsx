@@ -6,4 +6,4 @@ const LoginConsumidor = () => {
   )
 }
 
-export default LoginConsumidor
+export default LoginConsumidor;
