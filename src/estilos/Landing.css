@@ -1,3 +1,9 @@
+/* Informacion*/
+.contenedor{
+    object-fit: cover;
+    position: relative;
+    
+ }
 /*slider inicio*/
 .sliderA{
     align-items: center;
