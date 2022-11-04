@@ -2,7 +2,7 @@ import './App.css'
 import Cabecera from './componentes/Cabecera'
 import Sidebar from './componentes/Sidebar'
 import React, { useState } from 'react'
-import { BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Route, Routes, Router} from 'react-router-dom';
 import Navpage from "./componentes/Navpage"
 
 
@@ -14,13 +14,13 @@ function App() {
 
   return (
       <Router>
-        <div className='App'>
-            <Cabecera />
-          <div className='contenedor-form'>
-              <Sidebar/>
-              <Navpage/>
-          </div>
-        </div>
+        
+        <NabvarIni/> 
+          <Routes>
+            <Route path='/' element={<Landing/>}/>
+            <Route path='/loginConsumidor' element={<LoginConsumidor/>}/>
+            <Route path='/loginNegocio' element={<LoginNegocio/>}/>
+          </Routes>
       </Router>
   )
 }
