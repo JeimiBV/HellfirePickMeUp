@@ -9,7 +9,7 @@ const NabvarIni = () => {
             <div className="container-lg">
                 <div className="mr-auto">
                     <Link class="navbar-brand" as to='/'>
-                    <img src="../../src/imagenes/logo2.png" alt=" " width="40" height="34"/>
+                    <img src="../../src/imagenes/logo.png" alt=" " width="40" height="34"/>
                     </Link>
                 </div> 
 
