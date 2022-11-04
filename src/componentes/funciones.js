@@ -52,6 +52,28 @@ const unicoProducto = async (id, setProducto) => {
     console.log(peticion)
 }
 
+/*const unicaOferta = async (id, setOferta) => {
+    console.log(id)
+    //console.log(req.params.id)
+
+    const peticion =  Axios({
+        method: "GET",
+        withCredentials: true,
+        url: `http://localhost:5000/pruebafirebase-30018/us-central1/app/api/products/${id}`,
+    }).then(response => {
+        if (!response.data.error) {
+            console.log(response.data)
+            setOferta(response.data)
+        } else {
+            console.log(response.data.error[0]);
+        }
+    })
+        .catch(err => {
+            console.log(err)
+        });
+   // state(peticion.data.results)
+    console.log(peticion)
+}*/
 export {
 
     todosProductos,

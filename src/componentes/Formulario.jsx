@@ -179,9 +179,7 @@ function Form() {
     //http://localhost:5000/fir-crud-c44e7/us-central1/app/api/products
 
     return <div className="contenedor">
-        <label className="titulo">
-            Registrar Producto
-        </label>
+            <label className="titulo">Registrar Producto</label>
 
         <form action="http://localhost:5000/pruebafirebase-30018/us-central1/app/api/products" method="POST" id="Formul" className="elementos-form" >
 
