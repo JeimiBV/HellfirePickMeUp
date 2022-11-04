@@ -19,11 +19,18 @@ export const MensajesP = () => {
                   es la que nos regala la alegría de vivir.</p>
                     <p> - Tecumseh.</p>
 
+                    </div> 
+                    <div class="col-sm-4 p-5">
+
+                    <img className="imagen2"  src="../../../src/imagenes/happy.jpg" alt="..." width="400" height="300" />
+                 </div>
+                  </div>
+
                  </div> 
 
                  </div>
-    </div>
-    </div>
+    
+    
 
 
   )
