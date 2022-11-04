@@ -23,8 +23,18 @@ const NabvarIni = () => {
                 <button className=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-
-                
+                <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul className="navbar-nav gap-5 ms-auto ">      
+                        <li className="nav nav-pills flex-column flex-sm-row">
+                            <Link className="flex-sm-fill text-sm-center nav-link active "  as to='/LoginNegocio'>
+                            <i className="bi bi-shop "> </i> Negocio</Link>
+                        </li>
+                        <li className="nav nav-pills flex-column flex-sm-row ">
+                            <Link className="flex-sm-fill text-sm-center nav-link active "  as to='/LoginConsumidor'> 
+                            <i className="bi bi-person"></i> Consumidor</Link>
+                        </li>
+                    </ul>        
+                </div> 
                 
             </div>
             
