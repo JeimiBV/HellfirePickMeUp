@@ -25,5 +25,12 @@
 }
 
 .card-title{
+    
     font-weight: bold;
+}
+
+.card-img-top{
+
+    border-radius: 8px;
+  
 }
