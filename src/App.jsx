@@ -1,9 +1,9 @@
 import './App.css'
 import Cabecera from './componentes/Cabecera'
-import Sidebar from './componentes/Sidebar'
 import React, { useState } from 'react'
-import { BrowserRouter as Router} from 'react-router-dom';
-import Navpage from "./componentes/Navpage"
+import { BrowserRouter as Router, Route,Routes} from 'react-router-dom';
+import Mostrarmenu from './componentes/Menu';
+import Mostraroferta from './componentes/Oferta';
 
 
 
@@ -16,11 +16,18 @@ function App() {
       <Router>
         <div className='App'>
             <Cabecera />
-          <div className='contenedor-form'>
-              <Sidebar/>
-              <Navpage/>
-          </div>
+           
         </div>
+        <div className='Menu'>
+             <Routes>
+
+                <Route path= "/menu" element= {<Mostrarmenu/>}/>
+                <Route path= "/oferta/:id" element= {<Mostraroferta/>}/>
+                
+             </Routes>
+        </div>
+      
+       
       </Router>
   )
 }

@@ -7,8 +7,7 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 function Informacion(){
     const [producto, setProductos]=useState(null)
     const params = useParams()
-    useEffect(() => {
-        
+    useEffect(() => {  
         unicoProducto(params.id,setProductos)
     },[] )
     
