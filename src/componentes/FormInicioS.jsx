@@ -15,7 +15,7 @@ function FormInicioSesion() {
     const [modalAmbos, setModalAmbos] = useState(false)
     const [ojo, setOjo] = useState(false);
     const [error, setError] = useState();
-    const [modalInvalido, setmodalInvalido]=useState(false);
+    const [modalInvalido, setmodalInvalido] = useState(false);
     const [userf, setUser] = useState({
         correo: '',
         contraseña: ''
@@ -33,17 +33,20 @@ function FormInicioSesion() {
         validar()
         setError('');
         try {
-            await login(userf.correo, userf.contraseña);
-            if(userf.correo != "user@gmail.com"){
+            if (userf.correo == "user@gmail.com") {
+                await login(userf.correo, userf.contraseña);
+                navigate("/listaProductos");
+            }
+            /*if (userf.correo != "user@gmail.com") {
                 console.log("entra al if")
                 navigate("/");
             }
-            else{
+            else {
                 console.log("entra al else")
                 navigate("/formulario");
-                
-            }
-            
+
+            }*/
+
         } catch (error) {
             console.log(error.code);
             if (error.code === "auth/userf-not-found" || error.code === "auth/wrong-password") {
@@ -69,39 +72,44 @@ function FormInicioSesion() {
         cambiarEstado(true)
     }
     const validar = () => {
-        if (verificarEspacio(userf.correo) && verificarEspacio(userf.contraseña)) {
-            console.log("espacios con contenido")
-        }
-        else {
-            if (!verificarEspacio(userf.correo) && !verificarEspacio(userf.contraseña)) {
-                console.log("contraseña y correo estan vacíos")
-                mostrar(setModalAmbos)
+        if (userf.correo == "user@gmail.com") {
+            if (verificarEspacio(userf.correo) && verificarEspacio(userf.contraseña)) {
+                console.log("espacios con contenido")
             }
             else {
-                if (!verificarEspacio(userf.correo)) {
-                    console.log("correo vacío")
-                    mostrar(setModalCorreo)
-                    return true
+                if (!verificarEspacio(userf.correo) && !verificarEspacio(userf.contraseña)) {
+                    console.log("contraseña y correo estan vacíos")
+                    mostrar(setModalAmbos)
                 }
-                console.log("contraseña vacía")
-                mostrar(setModalContraseña)
-            }
+                else {
+                    if (!verificarEspacio(userf.correo)) {
+                        console.log("correo vacío")
+                        mostrar(setModalCorreo)
+                        return true
+                    }
+                    console.log("contraseña vacía")
+                    mostrar(setModalContraseña)
+                }
 
+            }
+        } else {
+            mostrar(setmodalInvalido);
         }
+
     }
 
     return (
         <div class="w-100 h-100 ">
             <div class="row ">
                 <div class="col d-flex justify-content-center align-middle mt-5">
-                <label class="fs-1 pt-5 ">
-                                    Detener la <br />  
-                                    pérdida y el <br />
-                                    desperdicio de <br /> 
-                                    alimentos<br /> 
-                                    por las personas<br /> 
-                                    por el planeta
-                </label>
+                    <label class="fs-1 pt-5 ">
+                        Detener la <br />
+                        pérdida y el <br />
+                        desperdicio de <br />
+                        alimentos<br />
+                        por las personas<br />
+                        por el planeta
+                    </label>
 
                 </div>
                 <div class="col p-5 align-middle">
@@ -138,31 +146,31 @@ function FormInicioSesion() {
                         estado={modalAmbos}
                         cambiarEstado={setModalAmbos}
                         estadoPantalla={false}
-                        texto={"No se aceptan espacios vacíos"} 
+                        texto={"No se aceptan espacios vacíos"}
                         buttons={false}
-                        />
+                    />
                     <Modals
                         estado={modalContraseña}
                         cambiarEstado={setModalContraseña}
                         estadoPantalla={false}
-                        texto={"Ingrese su contraseña "} 
+                        texto={"Ingrese su contraseña "}
                         buttons={false}
-                        />
+                    />
                     <Modals
                         estado={modalCorreo}
                         cambiarEstado={setModalCorreo}
                         estadoPantalla={false}
-                        texto={"Ingrese su correo"} 
+                        texto={"Ingrese su correo"}
                         buttons={false}
-                        />
+                    />
                     <Modals
                         estado={modalInvalido}
                         cambiarEstado={setmodalInvalido}
                         estadoPantalla={false}
                         texto={"Verifique que su correo y contraseña sean correctas"}
                         buttons={false}
-                        />
-                       
+                    />
+
                 </div>
             </div>
         </div>
