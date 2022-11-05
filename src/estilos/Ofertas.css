@@ -23,3 +23,7 @@
     cursor: pointer;
     transform: translateY(-3%);
 }
+
+.card-title{
+    font-weight: bold;
+}
