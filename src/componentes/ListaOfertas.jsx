@@ -12,11 +12,23 @@ const ListaOfertas = () => {
 
     const ofertados = pr.filter( ofert => 
         ofert.Fecha!== ''
+        
     )
 
+    const lista = ofertados.map(oferta =>   
+      <div key={oferta.id}>)
+
+
+
+
+      
   return (
-    <div>ListaOfertas</div>
+      <div className="container">     
+          <div className="ofertas"> {lista}</div>
+      </div>
   )
+    
+
 }
 
 export default ListaOfertas
