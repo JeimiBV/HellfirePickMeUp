@@ -36,11 +36,11 @@ const ListaOfertas = () => {
             
    return (
     
-        <div className="container">                                                                                                                                             <h1 className=" text-center " > Lista de Ofertas </h1>      
-            <div className="ofertas"> {lista}</div>
-        </div>
-    
-    )
+    <div className="container">     
+      <h1 className=" text-center " > Lista de Ofertas </h1> 
+      <div className="ofertas"> {lista}</div>
+     </div>
+  )
 }
 
 export default ListaOfertas
