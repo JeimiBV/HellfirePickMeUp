@@ -1,9 +1,10 @@
+
 *{ 
     margin: 0%;
     padding: 0%;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
-.contenido{
+.contenedor-1{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -11,20 +12,9 @@
     width: 80%;
     background-color: gray;
     position: relative;
-    padding-top: 4%;
 }
-
-.ti{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight:bold;
-    font-size: 1rem;
-    padding-bottom: 3%;
-}
-.fo{
-    min-width: 70%;
+.elementos-form-1{
+    min-width: 60%;
     min-height: 70%;
     padding: 30px ;
     border: 2px solid black;
@@ -32,68 +22,120 @@
     flex-direction: column;
     background-color: azure;
     border-radius: 20px; 
+    justify-content: space-between;   
 
 }
-.la{
+.label-1{ 
     padding-top: .5%;
     padding-bottom: 0.3%;
     padding-left: 1.5%;
     display: flex;
+    flex-direction: column;
     font-weight: bold;
+
 }
-.in{
+
+.label-2{ 
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    font-weight: bold;
+
+}
+
+.entrada-1{
     background-color: white;
     height: 30px ;
     margin-left: 1.5%; 
-    margin-right: 3.5%;
-    margin-bottom: 6%;
+
     padding-left: 2%;
     width: 20vw;
-    position: relative;
-    left: 0px;
-}
-.buiz{
-    position: relative;
-    top: -20%;
-    left: -15%;
-}
-.bu{
 
-    height: 35px;
-    width: 100px;
-    min-width: 10%;
+    
+}
+
+.entrada-2{
+    background-color: white;
+    height: 30px ;
+    margin-left: 3.5%; 
+
+    padding-left: 2%;
+    width: 10vw;
+
+    
+}
+.entrada-3{
+    background-color: white;
+    height: 30px ;
+    margin-left: 1.5%; 
+
+    padding-left: 2%;
+    width: 21vw;
+
+    
+}
+
+.contenedor-input-1{
+    height: 7vh;
+    justify-content: flex-end;
+
+}
+
+.titulo-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:bold;
+    font-size: 2.5rem;
+}
+
+.validacion-1{
+    margin-left: 9.3%;
+    font-size: small;
+    color: red;
+    height: 3hv;
+}
+.transparent-1{
+    display: none;
+}
+.botonL-1{
+    height: 40px;
+    margin-left: 1.5%;
+    min-width: 20%;
+    margin: 2%;
     background-color: gray;
     transition: .5s;
-    cursor: pointer; 
+    cursor: pointer;
 }
-.bu:hover{
+.botonL-1:hover{
     background-color: darkslategray;
     color: azure;
     transition: .5s;
 }
-.bode{
-    position: relative;
-    top: -31.7%;
-    left: 10%;
-}
-
-.bo{
-
-    height: 35px;
-    width: 100px;
-    min-width: 10%;
+.botonR-1{
+    height: 40px;
+    margin-left: 1.5%;
+    min-width: 20%;
+    margin: 2%;
     background-color: gray;
     transition: .5s;
-    cursor: pointer; 
+    cursor: pointer;
 }
-.bo:hover{
+.botonR-1:hover{
     background-color: darkslategray;
     color: azure;
     transition: .5s;
 }
+
+.contenedor-botones{
+    display:inline-flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
 .mod{
     position: absolute;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content:center ; 
 }

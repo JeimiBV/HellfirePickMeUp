@@ -181,7 +181,7 @@ function Form() {
     return <div className="contenedor">
             <label className="titulo">Registrar Producto</label>
 
-        <form action="http://localhost:5000/pruebafirebase-30018/us-central1/app/api/products" method="POST" id="Formul" className="elementos-form" >
+        <form action="http://localhost:5000/base-de-datos-h/us-central1/app/api/products" method="POST" id="Formul" className="elementos-form" >
 
             <label className="label">
                 Nombre del producto
@@ -253,41 +253,40 @@ function Form() {
             </button>
         </form>
 
+            <div className="mod">
+                    <Modals
+                        titulo={"Registro de oferta"}
+                        mostrarSi={mostrarSi}
+                        mostrarNo={mostrarNo}
+                        buttons={true}
+                        estado={modalConf}
+                        cambiarEstado={setModalConf}
+                        estadoPantalla={true}
+                        texto={"Esta seguro de realizar su oferta?"}
+                        icon={false}
+                    />
 
-        <Modals
-            estado={modalConf}
-            cambiarEstado={setModalConf}
-        >
-            <div className="modals">
-                <h2>
-                    Registro de producto
-                </h2>
-                <h3 className="texto-confirmacion">¿Está seguro de registrar el producto?</h3>
-                <div className="botones">
-                    <button type="submit" className="left" onClick={mostrarSi}>Si</button>
-                    <button className="right" onClick={mostrarNo}>No</button>
+                    <Modals
+                        titulo={""}
+                        mostrarSi={mostrarSi}
+                        buttons={false}
+                        estado={modalSi}
+                        cambiarEstado={setModalSi}
+                        estadoPantalla={true}
+                        texto={"Guardando registro ..."}
+                        icon={false}
+                    />
+                    <Modals
+                        titulo={""}
+                        mostrarNo={mostrarNo}
+                        buttons={false}
+                        estado={modalNo}
+                        cambiarEstado={setModalNo}
+                        estadoPantalla={true}
+                        texto={"Cancelado"}
+                        icon={false}
+                    />
                 </div>
-            </div>
-        </Modals>
-
-        <Modals
-            estado={modalSi}
-            cambiarEstado={setModalSi}
-        >
-            <div className="modalSiNo">
-                <h3 className="texto-confirmacion">Guardando registro ...</h3>
-            </div>
-        </Modals>
-
-        <Modals
-            estado={modalNo}
-            cambiarEstado={setModalNo}
-        >
-            <div className="modalSiNo">
-                <h3 className="texto-confirmacion">Cancelado</h3>
-            </div>
-        </Modals>
-        
         <Modals
             estado={modalError}
             cambiarEstado={setModalError}

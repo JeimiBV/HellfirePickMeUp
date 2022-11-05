@@ -1,56 +1,255 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "../estilos/Informacion.css";
 import imagen from "../imagenes/pique.png";
-import { Link , useParams} from "react-router-dom";
-import {unicoProducto} from './funciones'
+import { Link, useParams } from "react-router-dom";
+import { unicoProducto } from './funciones'
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
-function Informacion(){
-    const [producto, setProductos]=useState(null)
+import Ofertar from './Ofertar'
+import Modals from "./Modals";
+
+function Informacion() {
+    const [modalOf, setModalOf]= useState(false)
+    const [modalSi, setModalSi] = useState(false);
+    const [modalNo, setModalNo] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+    const [Precio, setPrecio] = useState({ estado: false, valor: '' }); // tarea 9
+    const [Fecha, setFecha] = useState({ estado: false, valor: 'AAAA-MM-DD' }); // tarea 10
+    const [Hora, setHora] = useState({ estado: false, valor: '--:--' }); // tarea 11
+    const [modalConf, setModalConf] = useState(false)
+    const [producto, setProductos] = useState(null)
     const params = useParams()
+
+
     useEffect(() => {
-        
-        unicoProducto(params.id,setProductos)
-    },[] )
+
+        unicoProducto(params.id, setProductos)
+    }, [])
+
+    const Validar = () => {
+        if ((Precio.valor > 0) && (Fecha.valor !== 'AAAA-MM-DD') && (Hora.valor !== '--:--')) {
+            setPrecio(prevState => ({ ...prevState, estado: false }))
+            setFecha(prevState => ({ ...prevState, estado: false }));
+            setHora(prevState => ({ ...prevState, estado: false }));
+            setIsLoading(false)
+            setModalConf(true);
+
+        } else {
+            setIsLoading(true);
+
+            if (Precio.valor > 0) {
+                setPrecio(prevState => ({ ...prevState, estado: false }));
+            } else {
+                setPrecio(prevState => ({ ...prevState, estado: true }));
+            }
+            if (Fecha.valor !== 'AAAA-MM-DD') {
+                setFecha(prevState => ({ ...prevState, estado: false }));
+            } else {
+                setFecha(prevState => ({ ...prevState, estado: true }));
+            }
+            if (Hora.valor !== '--:--') {
+                setHora(prevState => ({ ...prevState, estado: false }));
+            } else {
+                setHora(prevState => ({ ...prevState, estado: true }));
+            }
+        }
+
+    }
+
+    const mostrarSi = () => {
+        setTimeout(() => {
+            setModalNo(false)
+            setModalSi(false)
+        }, 3000);
+
+        document.getElementById('form').reset();
+        setModalConf(false);
+        setModalSi(true);
+        setPrecio(prevState => ({ ...prevState, estado: false }));
+        setFecha(prevState => ({ ...prevState, estado: false }));
+        setHora(prevState => ({ ...prevState, estado: false }));
+
+    }
+    const mostrarNo = () => {
+        setTimeout(() => {
+            setModalNo(false)
+            setModalSi(false)
+        }, 3000);
+        document.getElementById('form').reset();
+        setModalConf(false);
+        setModalNo(true);
+    }
+
+    function formatoFecha(formato) {
+
+
+        const date = new Date();
+        const map = {
+            dd: date.getDate(),
+            mm: date.getMonth() + 1,
+            yyyy: date.getFullYear()
+        }
+
+        if (date.getDate() < 10) {
+            map.dd = '0' + date.getDate()
+        }
+
+        return (formato.replace(/dd|mm|yyyy/gi, matched => map[matched]))
+    }
     
-    if(producto != null){
+
+
+    const [show, setShow] = useState(false);
+    const mostrar = (cambiarEstado) => {
+        setTimeout(() => {
+            cambiarEstado(false)
+        }, 2000);
+        cambiarEstado(true)
+    }
+
+
+    const mostrarModal = () => {
+        mostrar(setShow);
+    }
+
+    const mostrarModalOf = () => {
+        setModalOf(true);
+    }
+    const ocultarModalOf = () => {
+        setModalOf(false);
+    }
+    function formatoFecha(formato) {
+
+
+        const date = new Date();
+        const map = {
+            dd: date.getDate(),
+            mm: date.getMonth() + 1,
+            yyyy: date.getFullYear()
+        }
+
+        if (date.getDate() < 10) {
+            map.dd = '0' + date.getDate()
+        }
+
+        return (formato.replace(/dd|mm|yyyy/gi, matched => map[matched]))
+    }
+
+    if (producto != null) {
         return (
-    <>
+            <>
                 <div className="todo">
-        
-        <h1 className="t"> {producto.Nombre}</h1>  
+
+                    <h1 className="t"> {producto.Nombre}</h1>
 
 
-               <div className="Informacion">
+                    <div className="Informacion">
+
+                        <div className="desytip">
+
+
+                            <h2 className="encabezado">Descripcion:</h2>
+
+                            <p className="Parrafo">{producto.Descripcion}</p>
+                            <h2 className="encabezado">Tipo de producto:</h2> <p className="Parrafo">{producto.Tipo}</p>
+
+                            <div className="a12">
+                                <img width="100px" heigth="100px" className="imagen_1" src={producto.Imagen} alt="" />
+
+                            </div>
+
+
+                            <button className="b13" onClick={mostrarModalOf}> Ofertar</button>
+                            <Link to="/listaProductos"><button className="b12">Cerrar</button>
+                            </Link>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <Ofertar
+                    estado={modalOf}>
                    
-                       <div  className="desytip">
-                          
 
-                               <h2 className="encabezado">Descripcion:</h2>
+                <div className="elementos-form-1">
+                    <div className="label-2">Registrar Oferta</div>
+                    <form className="fo" id="form" action="http://localhost:5000/base-de-datos-h/us-central1/app/api/products/${id}" method="PUT">
+                        <label className="label-1">
+                            <div className="contenedor-input-1">
+                                Precio:
+                                <input className="entrada-1" id="numero" type="number" required placeholder="$" min="1" onChange={e => (setPrecio(prevState => ({ ...prevState, valor: e.target.value })))} />
+                                <h3 className={Precio.estado ? "validacion-1" : "invisible"}>
+                                    Ingrese un numero positivo
+                                </h3>
+                            </div>
+                        </label>
+                        <label className="label-1">
+                            <div className="contenedor-input-1">
+                                Fecha :
+                                <input className="entrada-3" type="date" min={formatoFecha('yyyy-mm-dd')} required onChange={e => (setFecha(prevState => ({ ...prevState, valor: e.target.value })))} />
+                                <h3 className={Fecha.estado ? "validacion-1" : "invisible"}>
+                                    Ingrese una fecha
+                                </h3>
+                            </div>
+                        </label>
+                        <label className="label-1">
+                            <div className="contenedor-input-1">
+                                Hora:
+                                <input className="entrada-2" type="time" required defaultValue={null} onChange={e => (setHora(prevState => ({ ...prevState, valor: e.target.value })))} />
+                                <h3 className={Hora.estado ? "validacion-1" : "invisible"}>
+                                    Ingrese una hora
+                                </h3>
+                            </div>
+                        </label>
+                    </form>
+                    <div className="contenedor-botones">
+                        <button className="botonL-1" onClick={Validar}>Confirmar</button>
+                        <button className="botonR-1" onClick={ocultarModalOf}>
+                            Cancelar</button>
+                    </div>
+                </div>
 
-                               <p className="Parrafo">{producto.Descripcion}</p>
-                              <h2 className="encabezado">Tipo de producto:</h2> <p className="Parrafo">{producto.Tipo}</p>  
-                               
-                              <div className="a12">
-                              <img width="100px" heigth="100px" className= "imagen_1" src={producto.Imagen} alt="" />
+                
+                <div className="mod">
+                    <Modals
+                        titulo={"Registro de oferta"}
+                        mostrarSi={mostrarSi}
+                        mostrarNo={mostrarNo}
+                        buttons={true}
+                        estado={modalConf}
+                        cambiarEstado={setModalConf}
+                        estadoPantalla={true}
+                        texto={"Esta seguro de realizar su oferta?"}
+                        icon={false}
+                    />
 
-                              </div>
-                                       
-                                
-                               <Link to="/ofertar"><button className="b13">Ofertar</button></Link>
-                               <Link to="/listaProductos"><button className="b12">Cerrar</button>
-                               </Link>
-                               
-                   </div>    
-                       
-
-                       
-               </div>
-           
-   </div>
-    
-    </>
-    )}
-
+                    <Modals
+                        titulo={""}
+                        mostrarSi={mostrarSi}
+                        buttons={false}
+                        estado={modalSi}
+                        cambiarEstado={setModalSi}
+                        estadoPantalla={true}
+                        texto={"Guardando registro ..."}
+                        icon={false}
+                    />
+                    <Modals
+                        titulo={""}
+                        mostrarNo={mostrarNo}
+                        buttons={false}
+                        estado={modalNo}
+                        cambiarEstado={setModalNo}
+                        estadoPantalla={true}
+                        texto={"Cancelado"}
+                        icon={false}
+                    />
+                </div>
+            
+                  
+                </Ofertar>
+            </>
+        )
+    }
 }
-
 export default Informacion
