@@ -8,6 +8,12 @@ const ListaOfertas = () => {
         todosProductos(setProducto)
     },[] )
 
+    const pr = producto || []
+
+    const ofertados = pr.filter( ofert => 
+        ofert.Fecha!== ''
+    )
+
   return (
     <div>ListaOfertas</div>
   )
