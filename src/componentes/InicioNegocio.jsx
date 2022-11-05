@@ -6,7 +6,7 @@ import React from 'react';
 import Modals from "./Modals";
 import { useState } from "react";
 import { useAuth } from '../context/authContext'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 function FormInicioSesion() {
@@ -34,7 +34,7 @@ function FormInicioSesion() {
         setError('');
         try {
             await login(userf.correo, userf.contraseña);
-            if(userf.correo != "user@gmail.com"){
+            if(userf.correo != "usuario1@gmail.com"){
                 console.log("entra al if")
                 navigate("/");
             }
@@ -43,6 +43,13 @@ function FormInicioSesion() {
                 navigate("/formulario");
                 
             }
+            /*if(userf.correo == "usuario1@gmail.com"){
+                navigate("/formulario")
+            } else if(userf.correo == "user@gmail.com"){
+                navigate("/listaProductos")
+            } else{
+                navigate("/")
+            }*/
             
         } catch (error) {
             console.log(error.code);

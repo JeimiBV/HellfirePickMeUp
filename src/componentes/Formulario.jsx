@@ -12,6 +12,7 @@ function Form({usuario}) {
     const { user } = useAuth();
     
             if(usuario!=user.uid){
+                console.log("el id desde formulario es: " + user.uid)
                 return <Navigate to ="/"/>
             }
     

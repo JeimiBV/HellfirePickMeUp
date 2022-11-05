@@ -38,7 +38,7 @@ function Header() {
           <Link onClick={controlBoton}
             className="flex-sm-fill text-sm-center nav-link active "
             as
-            to="/login"
+            to="/loginN"
           >
             <i className="bi bi-shop "> </i> Negocio
           </Link>
@@ -47,7 +47,7 @@ function Header() {
           <Link onClick={controlBoton}
             className="flex-sm-fill text-sm-center nav-link active "
             as
-            to="/login"
+            to="/loginC"
           >
             <i className="bi bi-person"></i> Consumidor
           </Link>

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import LandingPage from './componentes/Landingpage'
-import Login from './componentes/FormInicioS'
+import LoginC from './componentes/FormInicioS'
+import LoginN from './componentes/InicioNegocio'
 //import NavbarIni from './componentes/CompLand/Navbar'
 import Productoslista from './componentes/ListaProductos'
 import Informacion from './componentes/Informacion'
@@ -36,7 +37,8 @@ const [userC,setUserC]= useState ("3JY7KuYaN9W5WOy5Jbz7U16KKuw2");
     </AuthProvider>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/login" element={<AuthProvider> <Login/> </AuthProvider>} />
+        <Route path="/loginC" element={<AuthProvider> <LoginC/> </AuthProvider>} />
+        <Route path="/loginN" element={<AuthProvider> <LoginN/> </AuthProvider>} />
         <Route path="/formulario" element={
           <AuthProvider>
             <ProtectedRoute>
