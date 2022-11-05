@@ -22,14 +22,13 @@ export function AuthProvider({ children }) {
     //const signup = (correo,contraseña) => createUserWithEmailAndPassword(auth, correo, contraseña)
     const login = (correo, contraseña) => signInWithEmailAndPassword(auth, correo, contraseña)
     
-     const logout=()=>signOut(auth )
+     const logout=()=>signOut(auth)
     
      useEffect(() => {
         const unsuscribe = onAuthStateChanged(auth, (currentUser) => {
         setUser(currentUser);
         setLoading(false);
         console.log(currentUser)
-        console.log(currentUser.uid)
         });
         return () => unsuscribe ();
     }, [])

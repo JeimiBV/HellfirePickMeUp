@@ -9,12 +9,11 @@ import { useAuth } from '../context/authContext'
 
 
 function Form({usuario}) {
-    const { user, logout } = useAuth();
+    const { user } = useAuth();
     
             if(usuario!=user.uid){
                 return <Navigate to ="/"/>
             }
-        //
     
     const [nombre, setNombre] = useState({ valor: '', estado: false, check: false })
     const [descripcion, setDescripcion] = useState({ valor: '', estado: false, check: false })

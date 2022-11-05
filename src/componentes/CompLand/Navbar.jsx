@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import "../../estilos/Landing.css";
+import { useAuth } from "../../context/authContext";
 
 const NabvarIni = () => {
   /*const cambiarPagina=()=>{
         <Navigate to="/login"/>
     }*/
+  const { user, logout } = useAuth();
+  const [ boton, setBoton] = useState();
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
+  const controlBoton=()=>{
+    setBoton(false)
+  }
   return (
     <div className="contenedor-navbar">
       <nav className="navbar fixed-top navbar-expand-lg bg-sucess border-bottom border-dark border-2 ">
         <div className="container-lg">
           <div className="mr-auto">
-            <Link class="navbar-brand" as to="/">
+            <Link class="navbar-brand" as to="/" >
               <img
                 src="../../src/imagenes/logo.png"
                 alt=" "
@@ -39,9 +54,9 @@ const NabvarIni = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul className="navbar-nav gap-5 ms-auto ">
+            <ul className={boton ? " navbar-nav gap-5 ms-auto " : " invisible"}>
               <li className="nav nav-pills flex-column flex-sm-row">
-                <Link
+                <Link onClick={controlBoton}
                   className="flex-sm-fill text-sm-center nav-link active "
                   as
                   to="/login"
@@ -50,7 +65,7 @@ const NabvarIni = () => {
                 </Link>
               </li>
               <li className="nav nav-pills flex-column flex-sm-row ">
-                <Link
+                <Link onClick={controlBoton}
                   className="flex-sm-fill text-sm-center nav-link active "
                   as
                   to="/login"
@@ -60,6 +75,7 @@ const NabvarIni = () => {
               </li>
             </ul>
           </div>
+          {user ? <button onClick={handleLogout}>logout</button> : <div></div>}
         </div>
       </nav>
     </div>

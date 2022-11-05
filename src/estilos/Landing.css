@@ -19,8 +19,8 @@
 /* Informacion*/
 .contenedor{
 
-    height: 100vh;
-    width: 98.9vw;
+    height: 100vh !important;
+    width: 98.9vw !important;
     
     
  }

@@ -9,7 +9,7 @@ import { useAuth } from '../context/authContext'
 
 
 function Productoslista({usuario}) {
-    const { user, logout } = useAuth();
+    const { user } = useAuth();
     
     if(usuario!=user.uid){
         return <Navigate to ="/"/>
@@ -18,7 +18,6 @@ function Productoslista({usuario}) {
     const [productos, setProductos]=useState(null)
 
     useEffect(() => {
-
         todosProductos(setProductos)
     },[] )
 

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import LandingPage from './componentes/Landingpage'
 import Login from './componentes/FormInicioS'
-import Navpage from './componentes/Navpage'
+//import NavbarIni from './componentes/CompLand/Navbar'
 import Productoslista from './componentes/ListaProductos'
 import Informacion from './componentes/Informacion'
 import Cabecera from './componentes/Cabecera'
@@ -12,14 +12,11 @@ import Formulario from './componentes/Formulario'
 import { Plantilla } from "./componentes/Plantilla";
 import { useState } from "react";
 //import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-
-import NabvarIni from './componentes/CompLand/Navbar';
 import Landing from './componentes/Landing'
-import LoginConsumidor from './paginas/LoginConsumidor';
-import LoginNegocio from './paginas/LoginNegocio';
 
 function App() {
-const [user,setUser]= useState ("QwXZyaODI9bQPoepSI1XyTYTeej1");
+const [userN,setUserN]= useState ("QwXZyaODI9bQPoepSI1XyTYTeej1");
+const [userC,setUserC]= useState ("3JY7KuYaN9W5WOy5Jbz7U16KKuw2");
 
 /**<div className='App'>
      <Router>
@@ -35,17 +32,16 @@ const [user,setUser]= useState ("QwXZyaODI9bQPoepSI1XyTYTeej1");
   return (
     <BrowserRouter>
     <AuthProvider>
-   
     <Cabecera/> 
     </AuthProvider>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/login" element={<AuthProvider> <Login usuario={user} /> </AuthProvider>} />
+        <Route path="/login" element={<AuthProvider> <Login/> </AuthProvider>} />
         <Route path="/formulario" element={
           <AuthProvider>
             <ProtectedRoute>
                <Plantilla >
-                  <Formulario usuario={user}/>
+                  <Formulario usuario={userN}/>
                 </Plantilla>
             </ProtectedRoute>
           </AuthProvider>} />
@@ -53,14 +49,14 @@ const [user,setUser]= useState ("QwXZyaODI9bQPoepSI1XyTYTeej1");
           <AuthProvider>
             <ProtectedRoute>
             <Plantilla>
-            <Productoslista usuario={user} />
+            <Productoslista usuario={userC} />
             </Plantilla>
             </ProtectedRoute>
           </AuthProvider>} />
         <Route path="/informacion/:id" element={
           <AuthProvider>
             <ProtectedRoute>
-              <Informacion usuario={user} />
+              <Informacion usuario={userN} />
             </ProtectedRoute>
           </AuthProvider>} />
       </Routes>

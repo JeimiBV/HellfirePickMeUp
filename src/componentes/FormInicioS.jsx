@@ -9,15 +9,7 @@ import { useAuth } from '../context/authContext'
 import { Navigate, useNavigate } from 'react-router-dom'
 
 
-function FormInicioSesion({usuario}) {
-    const { user,loading } = useAuth();
-    if(user){
-        if (usuario != user.uid) {
-            return <Navigate to="/" />
-        } else {
-            return <Navigate to="/formulario" />
-        }
-    }
+function FormInicioSesion() {
     const [modalCorreo, setModalCorreo] = useState(false)
     const [modalContraseña, setModalContraseña] = useState(false)
     const [modalAmbos, setModalAmbos] = useState(false)
@@ -42,8 +34,14 @@ function FormInicioSesion({usuario}) {
         setError('');
         try {
             await login(userf.correo, userf.contraseña);
-            navigate("/formulario")
-            console.log(userf)
+            if(userf.correo == "usuario1@gmail.com"){
+                navigate("/formulario")
+            } else if(userf.correo == "user@gmail.com"){
+                navigate("/listaProductos")
+            } else{
+                navigate("/")
+            }
+            
         } catch (error) {
             console.log(error.code);
             if (error.code === "auth/userf-not-found" || error.code === "auth/wrong-password") {
