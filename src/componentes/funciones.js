@@ -72,10 +72,12 @@ const unicoProducto = async (id, setProducto) => {
    // state(peticion.data.results)
     console.log(peticion)
 }*/
+const idProducto = async()=>{}
 export {
 
     todosProductos,
-    unicoProducto
+    unicoProducto,
+    idProducto
 }
 
 /*const peticion = await axios.get(`http://localhost:5000/pruebafirebase-30018/us-central1/app/api/products/${id}`)

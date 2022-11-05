@@ -7,8 +7,9 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Ofertar from './Ofertar'
 import Modals from "./Modals";
 
+
 function Informacion() {
-    const [modalOf, setModalOf]= useState(false)
+    const [modalOf, setModalOf] = useState(false)
     const [modalSi, setModalSi] = useState(false);
     const [modalNo, setModalNo] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
@@ -95,7 +96,7 @@ function Informacion() {
 
         return (formato.replace(/dd|mm|yyyy/gi, matched => map[matched]))
     }
-    
+
 
 
     const [show, setShow] = useState(false);
@@ -167,89 +168,86 @@ function Informacion() {
                     </div>
 
                 </div>
-
                 <Ofertar
                     estado={modalOf}>
-                   
-
-                <div className="elementos-form-1">
-                    <div className="label-2">Registrar Oferta</div>
-                    <form className="fo" id="form" action="http://localhost:5000/base-de-datos-h/us-central1/app/api/products/${id}" method="PUT">
-                        <label className="label-1">
-                            <div className="contenedor-input-1">
-                                Precio:
-                                <input className="entrada-1" id="numero" type="number" required placeholder="$" min="1" onChange={e => (setPrecio(prevState => ({ ...prevState, valor: e.target.value })))} />
-                                <h3 className={Precio.estado ? "validacion-1" : "invisible"}>
-                                    Ingrese un numero positivo
-                                </h3>
-                            </div>
-                        </label>
-                        <label className="label-1">
-                            <div className="contenedor-input-1">
-                                Fecha :
-                                <input className="entrada-3" type="date" min={formatoFecha('yyyy-mm-dd')} required onChange={e => (setFecha(prevState => ({ ...prevState, valor: e.target.value })))} />
-                                <h3 className={Fecha.estado ? "validacion-1" : "invisible"}>
-                                    Ingrese una fecha
-                                </h3>
-                            </div>
-                        </label>
-                        <label className="label-1">
-                            <div className="contenedor-input-1">
-                                Hora:
-                                <input className="entrada-2" type="time" required defaultValue={null} onChange={e => (setHora(prevState => ({ ...prevState, valor: e.target.value })))} />
-                                <h3 className={Hora.estado ? "validacion-1" : "invisible"}>
-                                    Ingrese una hora
-                                </h3>
-                            </div>
-                        </label>
-                    </form>
-                    <div className="contenedor-botones">
-                        <button className="botonL-1" onClick={Validar}>Confirmar</button>
-                        <button className="botonR-1" onClick={ocultarModalOf}>
-                            Cancelar</button>
+                    <div className="elementos-form-1">
+                        <div className="label-2">Registrar Oferta</div>
+                        <form className="fo" id="form" action="http://localhost:5000/base-de-datos-h/us-central1/app/api/products/${id}" method="PUT">
+                            <label className="label-1">
+                                <div className="contenedor-input-1">
+                                    Precio:
+                                    <input className="entrada-1" id="numero" type="number" required placeholder="$" min="1" onChange={e => (setPrecio(prevState => ({ ...prevState, valor: e.target.value })))} />
+                                    <h3 className={Precio.estado ? "validacion-1" : "invisible"}>
+                                        Ingrese un numero positivo
+                                    </h3>
+                                </div>
+                            </label>
+                            <label className="label-1">
+                                <div className="contenedor-input-1">
+                                    Fecha :
+                                    <input className="entrada-3" type="date" min={formatoFecha('yyyy-mm-dd')} required onChange={e => (setFecha(prevState => ({ ...prevState, valor: e.target.value })))} />
+                                    <h3 className={Fecha.estado ? "validacion-1" : "invisible"}>
+                                        Ingrese una fecha
+                                    </h3>
+                                </div>
+                            </label>
+                            <label className="label-1">
+                                <div className="contenedor-input-1">
+                                    Hora:
+                                    <input className="entrada-2" type="time" required defaultValue={null} onChange={e => (setHora(prevState => ({ ...prevState, valor: e.target.value })))} />
+                                    <h3 className={Hora.estado ? "validacion-1" : "invisible"}>
+                                        Ingrese una hora
+                                    </h3>
+                                </div>
+                            </label>
+                        </form>
+                        <div className="contenedor-botones">
+                            <button className="botonL-1" onClick={Validar}>Confirmar</button>
+                            <button className="botonR-1" onClick={ocultarModalOf}>
+                                Cancelar</button>
+                        </div>
                     </div>
-                </div>
 
-                
-                <div className="mod">
-                    <Modals
-                        titulo={"Registro de oferta"}
-                        mostrarSi={mostrarSi}
-                        mostrarNo={mostrarNo}
-                        buttons={true}
-                        estado={modalConf}
-                        cambiarEstado={setModalConf}
-                        estadoPantalla={true}
-                        texto={"Esta seguro de realizar su oferta?"}
-                        icon={false}
-                    />
 
-                    <Modals
-                        titulo={""}
-                        mostrarSi={mostrarSi}
-                        buttons={false}
-                        estado={modalSi}
-                        cambiarEstado={setModalSi}
-                        estadoPantalla={true}
-                        texto={"Guardando registro ..."}
-                        icon={false}
-                    />
-                    <Modals
-                        titulo={""}
-                        mostrarNo={mostrarNo}
-                        buttons={false}
-                        estado={modalNo}
-                        cambiarEstado={setModalNo}
-                        estadoPantalla={true}
-                        texto={"Cancelado"}
-                        icon={false}
-                    />
-                </div>
-            
-                  
+                    <div className="mod">
+                        <Modals
+                            titulo={"Registro de oferta"}
+                            mostrarSi={mostrarSi}
+                            mostrarNo={mostrarNo}
+                            buttons={true}
+                            estado={modalConf}
+                            cambiarEstado={setModalConf}
+                            estadoPantalla={true}
+                            texto={"Esta seguro de realizar su oferta?"}
+                            icon={false}
+                        />
+
+                        <Modals
+                            titulo={""}
+                            mostrarSi={mostrarSi}
+                            buttons={false}
+                            estado={modalSi}
+                            cambiarEstado={setModalSi}
+                            estadoPantalla={true}
+                            texto={"Guardando registro ..."}
+                            icon={false}
+                        />
+                        <Modals
+                            titulo={""}
+                            mostrarNo={mostrarNo}
+                            buttons={false}
+                            estado={modalNo}
+                            cambiarEstado={setModalNo}
+                            estadoPantalla={true}
+                            texto={"Cancelado"}
+                            icon={false}
+                        />
+                    </div>
                 </Ofertar>
             </>
         )
     }
+
 }
+
 export default Informacion
