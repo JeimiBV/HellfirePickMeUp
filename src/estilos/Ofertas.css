@@ -1,0 +1,14 @@
+.ofertas{
+    position: relative; 
+    padding: 1rem 2rem ;
+    flex-direction: column;
+    left: 2rem;
+    top: 1rem;
+    width: 98%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 0fr));
+    gap: 3rem ;
+    box-sizing: border-box;
+    
+    
+}

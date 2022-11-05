@@ -1,6 +1,7 @@
 import React from 'react'
 import React, {useEffect, useState} from "react";
 import {todosProductos} from './funciones'
+import '../estilos/Ofertas.css'
 
 const ListaOfertas = () => {
     const [producto, setProducto]=useState(null)
@@ -11,7 +12,7 @@ const ListaOfertas = () => {
     const pr = producto || []
 
     const ofertados = pr.filter( ofert => 
-        ofert.Fecha!== ''
+        ofert.Fecha !== ' '
         
     )
 
