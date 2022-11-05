@@ -1,4 +1,4 @@
-import React from 'react'
+
 import React, {useEffect, useState} from "react";
 import {todosProductos} from './funciones'
 import '../estilos/Ofertas.css'
@@ -37,7 +37,7 @@ const ListaOfertas = () => {
    return (
     
     <div className="container">     
-      <h1 className=" text-center " > Lista de Ofertas </h1> 
+      <h1 className=" text-center" > Lista de Ofertas </h1> 
       <div className="ofertas"> {lista}</div>
      </div>
   )
