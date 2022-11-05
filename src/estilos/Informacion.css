@@ -11,6 +11,7 @@
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 3rem;
     text-transform: lowercase;
+    font-weight:bold;
    
 }
 .t::first-letter{
