@@ -10,10 +10,8 @@ import { useAuth } from '../context/authContext'
 
 function Productoslista({usuario}) {
     const { user, logout } = useAuth();
-
-//    console.log("id desde la lista es: "+ usuario)
     
-    if(usuario!="3JY7KuYaN9W5WOy5Jbz7U16KKuw2"){
+    if(usuario!=user.uid){
         return <Navigate to ="/"/>
     }
    

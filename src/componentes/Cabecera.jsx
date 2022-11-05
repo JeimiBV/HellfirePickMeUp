@@ -5,16 +5,10 @@ import { useAuth } from "../context/authContext";
 import { ProtectedRoute } from "./ProtectedRoute";
 import { Link, Navigate } from "react-router-dom";
 
-function Header({setUsuario}) {
+function Header() {
   const { user, logout } = useAuth();
-  
 
-  const controlUsuarioN=()=>{
-    setUsuario("QwXZyaODI9bQPoepSI1XyTYTeej1");
-  }
-  const controlUsuarioC=()=>{
-    setUsuario("3JY7KuYaN9W5WOy5Jbz7U16KKuw2");
-  }
+  
 
   const handleLogout = async () => {
     try {
@@ -33,16 +27,16 @@ function Header({setUsuario}) {
 
         <ul className="navbar-nav gap-5 ms-auto ">
           <li className="nav nav-pills flex-column flex-sm-row">
-            <Link onClick={controlUsuarioN}
+            <Link
               className="flex-sm-fill text-sm-center nav-link active "
               as
               to="/login"
             >
-              <i className="bi bi-shop "> </i > Negocio
+              <i className="bi bi-shop "> </i> Negocio
             </Link>
           </li>
           <li className="nav nav-pills flex-column flex-sm-row ">
-            <Link onClick={controlUsuarioC}
+            <Link
               className="flex-sm-fill text-sm-center nav-link active "
               as
               to="/login"

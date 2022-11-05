@@ -19,7 +19,7 @@ import LoginConsumidor from './paginas/LoginConsumidor';
 import LoginNegocio from './paginas/LoginNegocio';
 
 function App() {
-const [usuario,setUsuario]= useState ("");
+const [user,setUser]= useState ("QwXZyaODI9bQPoepSI1XyTYTeej1");
 
 /**<div className='App'>
      <Router>
@@ -31,20 +31,21 @@ const [usuario,setUsuario]= useState ("");
           </Routes>  
       </Router>
     </div> */
-  console.log("id desde app es: " + usuario);
+
   return (
     <BrowserRouter>
     <AuthProvider>
-    <Cabecera setUsuario={setUsuario}/> 
+   
+    <Cabecera/> 
     </AuthProvider>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/login" element={<AuthProvider> <Login usuario={usuario} /> </AuthProvider>} />
+        <Route path="/login" element={<AuthProvider> <Login usuario={user} /> </AuthProvider>} />
         <Route path="/formulario" element={
           <AuthProvider>
             <ProtectedRoute>
                <Plantilla >
-                  <Formulario usuario={usuario}/>
+                  <Formulario usuario={user}/>
                 </Plantilla>
             </ProtectedRoute>
           </AuthProvider>} />
@@ -52,14 +53,14 @@ const [usuario,setUsuario]= useState ("");
           <AuthProvider>
             <ProtectedRoute>
             <Plantilla>
-            <Productoslista usuario={usuario} />
+            <Productoslista usuario={user} />
             </Plantilla>
             </ProtectedRoute>
           </AuthProvider>} />
         <Route path="/informacion/:id" element={
           <AuthProvider>
             <ProtectedRoute>
-              <Informacion usuario={usuario} />
+              <Informacion usuario={user} />
             </ProtectedRoute>
           </AuthProvider>} />
       </Routes>
