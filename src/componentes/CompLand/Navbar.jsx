@@ -1,68 +1,13 @@
 import React from "react";
-import Image from "../imagenes/logo.png";
-import "../estilos/header.css";
-import { useAuth } from "../context/authContext";
-import { ProtectedRoute } from "./ProtectedRoute";
 import { Link, Navigate } from "react-router-dom";
+import "../../estilos/Landing.css";
 
-function Header({setUsuario}) {
-  const { user, logout } = useAuth();
-  
-
-  const controlUsuarioN=()=>{
-    setUsuario("QwXZyaODI9bQPoepSI1XyTYTeej1");
-  }
-  const controlUsuarioC=()=>{
-    setUsuario("3JY7KuYaN9W5WOy5Jbz7U16KKuw2");
-  }
-
-  const handleLogout = async () => {
-    try {
-      await logout();
-    } catch (error) {
-      console.error(error.message);
-    }
-  };
-
+const NabvarIni = () => {
+  /*const cambiarPagina=()=>{
+        <Navigate to="/login"/>
+    }*/
   return (
-    <div className="contenedor-cabecera">
-      <div className="logoYNombre">
-        <img className="logo" src={Image} />
-        <h1 className="nombre">Pick me up</h1>
-      </div>
-
-        <ul className="navbar-nav gap-5 ms-auto ">
-          <li className="nav nav-pills flex-column flex-sm-row">
-            <Link onClick={controlUsuarioN}
-              className="flex-sm-fill text-sm-center nav-link active "
-              as
-              to="/login"
-            >
-              <i className="bi bi-shop "> </i > Negocio
-            </Link>
-          </li>
-          <li className="nav nav-pills flex-column flex-sm-row ">
-            <Link onClick={controlUsuarioC}
-              className="flex-sm-fill text-sm-center nav-link active "
-              as
-              to="/login"
-            >
-              <i className="bi bi-person"></i> Consumidor
-            </Link>
-          </li>
-        </ul>
-     
-
-      {/*<h1 className="user">
-         {user?`bienvenido ${user.email}`:`bienvenido `}
-  </h1>*/}
-      {user ? <button onClick={handleLogout}>logout</button> : <div></div>}
-    </div>
-  );
-}
-
-/*return (
-    <div className="contenedor-cabecera">
+    <div className="contenedor-navbar">
       <nav className="navbar fixed-top navbar-expand-lg bg-sucess border-bottom border-dark border-2 ">
         <div className="container-lg">
           <div className="mr-auto">
@@ -119,5 +64,6 @@ function Header({setUsuario}) {
       </nav>
     </div>
   );
-}*/
-export default Header;
+};
+
+export default NabvarIni;
