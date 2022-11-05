@@ -16,19 +16,25 @@ const ListaOfertas = () => {
     )
 
     const lista = ofertados.map(oferta =>   
-      <div key={oferta.id}>)
+      <div key={oferta.id}>
+        <div className="row row-col" >  
+                <div class="card border-success mb-2 bg-sucess">
+                    <img src={oferta.Imagen} class="card-img-top mt-2 mr-2  " alt="..." width='50' height='150'/>         
+                     </div>
+                         </div>
+            
 
 
 
 
-      
+
   return (
-      <div className="container">     
-          <div className="ofertas"> {lista}</div>
-      </div>
-  )
     
-
+        <div className="container">                                                                                                                                             <h1 className=" text-center " > Lista de Ofertas </h1>      
+            <div className="ofertas"> {lista}</div>
+        </div>
+    
+    )
 }
 
 export default ListaOfertas
