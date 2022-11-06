@@ -17,6 +17,32 @@ function Mostraroferta({usuario}){
     },[] )
     console.log(ofertas)
 
+    const pr = ofertas || []
+    console.log(pr)
+
+    const ofertados = pr.filter( ofert => 
+        ofert.Hora !== ''
+    )
+    
+    const ListaOfertas = ofertados.map(oferta => (
+        <div class="list-card" key={oferta.id}>
+            
+                <section>
+                    <h1>{oferta.Nombre}</h1>
+                    <span class="price">Precio: {oferta.Precio}</span><br/>
+                    
+                    <span>Hora limite: {oferta.Hora} </span>
+                   
+                </section>
+                <section className="seccion1">
+                    <img src={oferta.Imagen} alt=""/>
+                    <span class="list-category">
+                    <p>{oferta.Descripcion} </p>
+                    </span>
+                </section>
+            </div>
+      )
+)
 return(
     <div className="container89">
        <div class="default-hero-banner">
@@ -39,28 +65,7 @@ return(
                 </div>
                 <div class="right-section">
                     <div class="list-cards">
-                    {ofertas != null? (
-
-                        ofertas.map(oferta => (
-                                <div class="list-card">
-                                    
-                                        <section>
-                                            <h1>{oferta.Nombre}</h1>
-                                            <span class="price">Precio: {oferta.Precio}</span><br/>
-                                            
-                                            <span>Hora limite: {oferta.Hora} </span>
-                                           
-                                        </section>
-                                        <section className="seccion1">
-                                            <img src={oferta.Imagen} alt=""/>
-                                            <span class="list-category">
-                                            <p>{oferta.Descripcion} </p>
-                                            </span>
-                                        </section>
-                                    </div>
-                              )
-                        )
-                    ):('No hay ofertas')}
+                            {ListaOfertas}
                     </div>
                 </div>
             </div>
