@@ -18,7 +18,7 @@ function Mostraroferta({usuario}){
     console.log(ofertas)
 
 return(
-    <div className="container">
+    <div className="container89">
        <div class="default-hero-banner">
                 <h1 className="gt">
                     Ofertas
