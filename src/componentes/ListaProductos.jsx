@@ -4,13 +4,20 @@ import IMG1 from "../imagenes/pique.png";
 import { Link } from "react-router-dom";
 import {todosProductos} from './funciones'
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { Navigate } from "react-router-dom";
+import { useAuth } from '../context/authContext'
 
-function Productoslista() {
 
+function Productoslista({usuario}) {
+    const { user } = useAuth();
+    
+    if(usuario!=user.uid){
+        return <Navigate to ="/"/>
+    }
+   
     const [productos, setProductos]=useState(null)
 
     useEffect(() => {
-
         todosProductos(setProductos)
     },[] )  
 

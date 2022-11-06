@@ -4,9 +4,17 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {todosCategorias} from "./funciones";
+import { Navigate } from "react-router-dom";
+import { useAuth } from '../context/authContext';
 
-function Mostrarmenu(){
-
+function Mostrarmenu({usuario}){
+    const { user } = useAuth();
+    // console.log(`1: ${usuario}`)
+    // console.log(user.uid)
+    if(usuario!=user.uid){
+        return <Navigate to ="/"/>
+    }
+   
   const [categorias , setCategorias] = useState(null);
 
   useEffect(()=>{

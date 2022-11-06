@@ -2,8 +2,14 @@ import React,{useState, useEffect}from "react";
 import "../estilos/ofertaM.css"
 import { useParams} from "react-router-dom";
 import {filtrarOfertas} from './funciones'
-
-function Mostraroferta(){
+import { Navigate } from "react-router-dom";
+import { useAuth } from '../context/authContext';
+function Mostraroferta({usuario}){
+    const { user } = useAuth();
+     
+    if(usuario!=user.uid){
+        return <Navigate to ="/"/>
+    }
     const [ofertas, setOfertas]=useState(null)
     const params = useParams()
     useEffect(() => {  

@@ -12,6 +12,7 @@
     justify-content: space-around;
     align-items: center;
     color: rgb(47, 62, 70);
+    height: 10vh;
 }
 
 .logo {
@@ -30,4 +31,20 @@
 
 .user {
     font-size: 3vh;
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+
+}
+ul li{
+    width: 12vw;
+    
+}
+.logoYNombre{
+    display: flex;
+    width: 60vw;
+    justify-content: space-around;
+    align-items: center;
 }

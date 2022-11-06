@@ -4,7 +4,16 @@ import imagen from "../imagenes/pique.png";
 import { Link , useParams} from "react-router-dom";
 import {unicoProducto} from './funciones'
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
-function Informacion(){
+import { Navigate } from "react-router-dom";
+import { useAuth } from '../context/authContext'
+function Informacion({usuario}){
+
+    const { user, logout } = useAuth();
+    
+    if(usuario!=user.uid){
+        return <Navigate to ="/"/>
+    }
+
     const [producto, setProductos]=useState(null)
     const params = useParams()
     useEffect(() => {  
