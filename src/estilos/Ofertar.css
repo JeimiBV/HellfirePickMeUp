@@ -1,0 +1,149 @@
+
+
+*{ 
+    margin: 0%;
+    padding: 0%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+.contenedor-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    background-color: gray;
+    position: relative;
+}
+.elementos-form-1{
+    min-width: 60%;
+    min-height: 70%;
+    padding: 30px ;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+    border-radius: 20px; 
+    justify-content: space-between;   
+
+}
+.label-1{ 
+    padding-top: .5%;
+    padding-bottom: 0.3%;
+    padding-left: 1.5%;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+
+}
+
+.label-2{ 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    font-weight: bold;
+
+}
+
+.entrada-1{
+
+    background-color: white;
+    height: 30px ;
+    margin-left: 1.5%; 
+    padding-left: 2%;
+    width: 20vw;
+}
+
+.entrada-2{
+    background-color: white;
+    height: 30px ;
+    margin-left: 3.5%; 
+    padding-left: 2%;
+    width: 10vw;
+    background-color: white;
+    height: 30px ;
+    margin-left: 3.5%; 
+    padding-left: 2%;
+    width: 10vw;
+    
+}
+.entrada-3{
+    background-color: white;
+    height: 30px ;
+    margin-left: 1.5%; 
+    padding-left: 2%;
+    width: 21vw;
+
+}
+
+.contenedor-input-1{
+    height: 7vh;
+    justify-content: flex-end;
+
+}
+
+.titulo-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:bold;
+    font-size: 2.5rem;
+}
+
+.validacion-1{
+    margin-left: 9.3%;
+    font-size: small;
+    color: red;
+    height: 3hv;
+}
+.transparent-1{
+    display: none;
+}
+.botonL-1{
+    height: 40px;
+    margin-left: 1.5%;
+    min-width: 20%;
+    margin: 2%;
+    background-color: gray;
+    transition: .5s;
+    cursor: pointer;
+    cursor: pointer;
+}
+.botonL-1:hover{
+    background-color: darkslategray;
+    color: azure;
+    transition: .5s;
+}
+.botonR-1{
+    height: 40px;
+    margin-left: 1.5%;
+    min-width: 20%;
+    margin: 2%;
+    height: 40px;
+    margin-left: 1.5%;
+    min-width: 20%;
+    margin: 2%;
+    background-color: gray;
+    transition: .5s;
+    cursor: pointer;
+    cursor: pointer;
+}
+.botonR-1:hover{
+    background-color: darkslategray;
+    color: azure;
+    transition: .5s;
+}
+
+.contenedor-botones{
+    display:inline-flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.mod{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content:center ; 
+    justify-content:center ; 
+}
