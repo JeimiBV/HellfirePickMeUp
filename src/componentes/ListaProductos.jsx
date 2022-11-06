@@ -19,18 +19,23 @@ function Productoslista({usuario}) {
 
     useEffect(() => {
         todosProductos(setProductos)
-    },[] )
+    },[] )  
 
+
+    let resultados 
+    
+ 
     return(   
     <>
-    
+     
     <div className="container">
     <h1 className="title"> Lista de productos </h1> 
     <div className="productos">
 
         {productos != null ? (
 
-            productos.map(producto => (
+            
+             productos.map(producto => (
   
                     <div className="producto" key={producto.id}> 
                              
@@ -44,13 +49,9 @@ function Productoslista({usuario}) {
                         <div className="P_footer">
                                     <h1 className="nombre">{producto.Nombre}</h1>       
                         </div>    
-                    </div>
-                
-                
-                
-              
+                    </div>  
             )           
-             )
+    )
         ):('no hay productos')}
       </div>
         </div> 

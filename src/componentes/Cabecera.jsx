@@ -10,12 +10,12 @@ function Header() {
   const navigate = useNavigate();
 
 
-
   const redirigirL = () => {
     navigate("/");
   };
   const handleLogout = async () => {
     try {
+      setBoton(true);
       await logout();
     } catch (error) {
       console.error(error.message);
@@ -24,6 +24,10 @@ function Header() {
   const [ boton, setBoton] =useState(true)
   const controlBoton=()=>{
     setBoton(false)
+  }
+
+  const back = () => {
+    window.history.back()
   }
 
   return (
@@ -53,6 +57,16 @@ function Header() {
           </Link>
         </li>
       </ul>
+      <li className="nav nav-pills flex-column flex-sm-row ">
+          <Link onClick={back}
+            className="flex-sm-fill text-sm-center nav-link active "
+            as
+            to="/loginC"
+          >
+            <i className="bi bi-person"></i> volver
+          </Link>
+        </li>
+        
 
 
       {/*<h1 className="user">

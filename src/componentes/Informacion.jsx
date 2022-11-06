@@ -16,8 +16,7 @@ function Informacion({usuario}){
 
     const [producto, setProductos]=useState(null)
     const params = useParams()
-    useEffect(() => {
-        
+    useEffect(() => {  
         unicoProducto(params.id,setProductos)
     },[] )
     

@@ -12,7 +12,6 @@ const NavPage = () =>{
                     <Route path="/listaProductos" element={<Productoslista/>}/>
                     <Route path="/formulario" element={<Formulario />}/>
                     <Route path="/Informacion/:id" element={<Informacion/>}/>
-                    <Route path="/Login" element={<Login/>}/>
                 </Routes>
     )
 }

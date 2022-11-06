@@ -35,7 +35,7 @@ function FormInicioSesion() {
         try {
             if (userf.correo == "user@gmail.com") {
                 await login(userf.correo, userf.contraseña);
-                navigate("/listaProductos");
+                navigate("/menu");
             }
             /*if (userf.correo != "user@gmail.com") {
                 console.log("entra al if")
