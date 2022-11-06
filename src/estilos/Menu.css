@@ -1,6 +1,6 @@
 .container1{
     max-width: 100%;
-    height: 100%;
+    height: 89.5vh;
     background-color: #CAD2C5;
     align-items: center;
   }
@@ -19,9 +19,11 @@
     width: 82%;
     height: 88%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 0fr));
-    gap: 0.5rem 3.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 0fr));
+    gap: 1.5rem 12rem;
     box-sizing: border-box;
+
+
 
 }
 
@@ -29,6 +31,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    
 }
 .pos1:hover{
     transform: scale(1.2);
@@ -44,9 +47,10 @@
     box-shadow: 1px 10px 10px rgba(0, 0, 0, .50);
     overflow: hidden;
     transition: all 500ms ease;
+  
 }
 .card>img{
-     width: 21.875rem;
+     width:24rem;
 }
 .nombre_titulo{
     position: absolute;

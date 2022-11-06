@@ -47,7 +47,7 @@ function Productoslista({usuario}) {
                 
 
                         <div className="P_footer">
-                                    <h1 className="nombre">{producto.Nombre}</h1>       
+                                    <h1 className="nombreL">{producto.Nombre}</h1>       
                         </div>    
                     </div>  
             )           

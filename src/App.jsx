@@ -85,20 +85,22 @@ function App() {
           element={
             <AuthProvider>
               <ProtectedRoute>
-                <Informacion usuario={userN} />
+                <Plantilla>
+                  <Informacion usuario={userN} />
+                </Plantilla>
               </ProtectedRoute>
             </AuthProvider>
           }
         />
         <Route
-            path="/menu"
-              element={
-                <AuthProvider>
-                  <ProtectedRoute>
-                    <Mostrarmenu usuario={userC} />
-                  </ProtectedRoute>
-                </AuthProvider>
-            }
+          path="/menu"
+          element={
+            <AuthProvider>
+              <ProtectedRoute>
+                <Mostrarmenu usuario={userC} />
+              </ProtectedRoute>
+            </AuthProvider>
+          }
         />
         <Route
           path="/oferta/:id"

@@ -192,7 +192,7 @@ function Form({usuario}) {
             Registrar Producto
         </label>
 
-        <form action="http://localhost:5000/base-de-datos-h/us-central1/app/api/products" method="POST" id="Formul" className="elementos-form" >
+        <form action="https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products" method="POST" id="Formul" className="elementos-form" >
 
             <label className="label">
                 Nombre del producto
