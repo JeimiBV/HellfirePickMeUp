@@ -3,7 +3,7 @@
     padding: 0%;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
-.contenedor{
+.contenedorF{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -11,7 +11,7 @@
     width: 80%;
     background-color: gray;
     position: relative;
-    
+    height: 90vh;
 }
 .elementos-form{
     min-width: 70%;

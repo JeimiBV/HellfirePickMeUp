@@ -99,7 +99,7 @@ function FormInicioSesion() {
     }
 
     return (
-        <div class="w-100 h-100 ">
+        <div class="w-100 h-100 container">
             <div class="row ">
                 <div class="col d-flex justify-content-center align-middle mt-5">
                     <label class="fs-1 pt-5 ">

@@ -32,6 +32,16 @@ function Header() {
 
   return (
     <div className="contenedor-cabecera">
+       <li className={boton?"invisible":"nav nav-pills flex-column flex-sm-row "}>
+          <Link onClick={back}
+            className="flex-sm-fill text-sm-center nav-link active "
+            as
+            to="/loginC"
+          >
+            <i className="bi bi-person"></i> volver
+          </Link>
+        </li>
+
       <div className="logoYNombre">
         <img className="logo" src={Image} onClick={redirigirL} />
         <h1 className="nombre">Pick me up</h1>
@@ -57,15 +67,7 @@ function Header() {
           </Link>
         </li>
       </ul>
-      <li className="nav nav-pills flex-column flex-sm-row ">
-          <Link onClick={back}
-            className="flex-sm-fill text-sm-center nav-link active "
-            as
-            to="/loginC"
-          >
-            <i className="bi bi-person"></i> volver
-          </Link>
-        </li>
+     
         
 
 

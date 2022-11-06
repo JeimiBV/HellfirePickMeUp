@@ -28,7 +28,7 @@ function Productoslista({usuario}) {
     return(   
     <>
      
-    <div className="container">
+    <div className="containerL">
     <h1 className="title"> Lista de productos </h1> 
     <div className="productos">
 
