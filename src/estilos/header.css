@@ -16,9 +16,9 @@
 }
 
 .logo {
-
+    
     height: 10vh;
-
+    margin-left: 10vw;
 
 }
 
@@ -27,6 +27,7 @@
     font-style: italic;
     font-family: cursive;
     font-size: 5vh !important;
+    margin-left: 17vw;
 }
 
 .user {
@@ -45,6 +46,14 @@ ul li{
 .logoYNombre{
     display: flex;
     width: 60vw;
-    justify-content: space-around;
+    
     align-items: center;
+}
+.botonL{
+    width: 9vw;
+    background: #84A98C;
+    color: white;
+    border-radius: 7px;
+    height: 4.3vh;
+    border: none;
 }

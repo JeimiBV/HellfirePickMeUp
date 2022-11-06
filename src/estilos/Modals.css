@@ -17,7 +17,7 @@
 }
 .over-complete{
     width: 100%;
-    height: 88vh;
+    height: 90vh;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -31,4 +31,10 @@
 }
 .transparent{
     display: none;
+}
+.ModalForm{
+    min-width: 20vw;
+    max-width: 40vw;
+    max-height: 40vh;
+    
 }

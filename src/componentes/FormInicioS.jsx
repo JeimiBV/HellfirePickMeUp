@@ -102,7 +102,7 @@ function FormInicioSesion() {
         <div class="w-100 h-100 container">
             <div class="row ">
                 <div class="col d-flex justify-content-center align-middle mt-5">
-                    <label class="fs-1 pt-5 ">
+                    <label class="fs-1 pt-5  textoF">
                         Detener la <br />
                         pérdida y el <br />
                         desperdicio de <br />

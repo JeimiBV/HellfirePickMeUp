@@ -29,7 +29,7 @@ function Productoslista({usuario}) {
     <>
      
     <div className="containerL">
-    <h1 className="title"> Lista de productos </h1> 
+    <h1 className="titleL"> Lista de productos </h1> 
     <div className="productos">
 
         {productos != null ? (

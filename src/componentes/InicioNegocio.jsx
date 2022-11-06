@@ -63,7 +63,7 @@ function FormInicioSesion() {
         cambiarEstado(true)
     }
     const validar = () => {
-        if (userf.correo == "usuario1@gmail.com") {
+        if (userf.correo == "usuario1@gmail.com" && userf.correo!=null) {
             if (verificarEspacio(userf.correo) && verificarEspacio(userf.contraseña)) {
                 console.log("espacios con contenido")
             }
@@ -84,7 +84,20 @@ function FormInicioSesion() {
 
             }
         } else {
-            mostrar(setmodalInvalido);
+            if (!verificarEspacio(userf.correo) && !verificarEspacio(userf.contraseña)) {
+                console.log("contraseña y correo estan vacíos")
+                mostrar(setModalAmbos)
+            }else{
+                if (!verificarEspacio(userf.correo)) {
+                        console.log("correo vacío")
+                        mostrar(setModalCorreo)
+                        return true
+                    }
+                mostrar(setmodalInvalido);
+
+            }
+
+          
         }
 
     }

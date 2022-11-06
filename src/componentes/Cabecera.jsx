@@ -74,7 +74,7 @@ function Header() {
       {/*<h1 className="user">
          {user?`bienvenido ${user.email}`:`bienvenido `}
   </h1>*/}
-      {user ? <button  onClick={handleLogout}>logout</button> : <div></div>}
+      {user ? <button className=" botonL text-sm-center nav-link active" onClick={handleLogout}>logout</button> : <div></div>}
     </div>
   );
 }

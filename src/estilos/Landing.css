@@ -9,7 +9,7 @@
 
 .nav-pills .nav-link.active,
 .show>.nav-pills .nav-link{
-    background: #84A98C !important
+    background-color: #84a98c; 
 }
 
 .nav-link:hover{
