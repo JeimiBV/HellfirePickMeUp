@@ -23,13 +23,13 @@ export const MensajesP = () => {
 
                  <div class="col-sm-4 p-5">
 
-                    <img className="imagen2"  src="../../../src/imagenes/happy.jpg" alt="..." width="400" height="300" />
+                    <img className="imagen2"  src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2018/06/mesa-mucha-gente-comiendo.jpg" alt="..." width="400" height="300" />
                  </div>
                 </div>
 
             <div class="row body color-titulo">
                  <div class="col-sm p-5">
-                   <img className=""  src="../../../src/imagenes/planet.jpg" width="90" height="90"/>
+                   <img className=""  src="https://img.freepik.com/vector-premium/planeta-verde-iconos-ecologia-aislado-ilustracion-vectorial_24908-36326.jpg?w=2000" width="90" height="90"/>
                    <h3>
                      Usando la aplicacion ayudas a reducir 
                      el desperdicio de comida
@@ -37,13 +37,13 @@ export const MensajesP = () => {
                  </div>
 
                  <div class="col-sm p-5">
-                     <img className=""  src="../../../src/imagenes/icono.jpg" width="90" height="90"/>
+                     <img className=""  src="https://static.vecteezy.com/system/resources/previews/008/302/516/non_2x/eps10-green-user-icon-or-logo-in-simple-flat-trendy-modern-style-isolated-on-white-background-free-vector.jpg" width="90" height="90"/>
                     <h3>
                     ¡Ya son 1000 usuarios que tienen la App!
                     </h3>   
                     </div>
                     <div class="col-sm p-5">
-                     <img className=""  src="../../../src/imagenes/ofertaa.webp" width="90" height="90"/>
+                     <img className=""  src="https://previews.123rf.com/images/fordzolo/fordzolo1511/fordzolo151100137/47606229-texto-de-sello-de-oferta-especial-en-c%C3%ADrculo-verde-sobre-un-fondo-blanco-y-estrella.jpg" width="90" height="90"/>
                      <h3>
                     ¡Tenemos variedad de ofertas para ti!
                     </h3>   

@@ -49,31 +49,31 @@ export default class SwipeToSlide extends Component {
             
             <Slider {...settings}>
               <div className = "container-slides-item">
-                <img src="../../../src/imagenes/imagen1.jpg" alt="..." width={270} height={200}/>
+                <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="..." width={270} height={200}/>
               </div>
               <div className = "container-slides-item">
-                <img src="../../../src/imagenes/imagen2.jpg" alt="..." width={270} height={200}/>
+                <img src="https://www.evecorp.bo/wp-content/uploads/2020/10/7-3.jpg" alt="..." width={270} height={200}/>
               </div>
               <div className = "container-slides-item">
-                <img src="../../../src/imagenes/imagen3.jpg" alt="..." width={270} height={200}/>
+                <img src="https://images.pexels.com/photos/8173488/pexels-photo-8173488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="..." width={270} height={200}/>
               </div>
               <div className = "container-slides-item">
-                <img src="../../../src/imagenes/imagen4.jpg" alt="..." width={270} height={200}/>
+                <img src="https://images.pexels.com/photos/918327/pexels-photo-918327.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="..." width={270} height={200}/>
               </div>
               <div className = "container-slides-item">
-              <img src="../../../src/imagenes/imagen5.jpg" alt="..." width={270} height={200}/>
+              <img src="https://images.pexels.com/photos/1448721/pexels-photo-1448721.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="..." width={270} height={200}/>
               </div>
               <div className = "container-slides-item">
-                <img src="../../../src/imagenes/imagen6.jpg" alt="..." width={270} height={200}/>
+                <img src="https://images.pexels.com/photos/3026810/pexels-photo-3026810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="..." width={270} height={200}/>
               </div>
               <div className = "container-slides-item">
-                <img src="../../../src/imagenes/imagen7.jpg" alt="..." width={270} height={200}/>
+                <img src="https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="..." width={270} height={200}/>
               </div>
               <div className = "container-slides-item">
-                <img src="../../../src/imagenes/imagen8.jpg" alt="..." width={270} height={200}/>
+                <img src="https://images.pexels.com/photos/4731078/pexels-photo-4731078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="..." width={270} height={200}/>
               </div>
               <div className = "container-slides-item">
-                <img src="../../../src/imagenes/imagen10.jpg" alt="..." width={270} height={200}/>
+                <img src="https://images.pexels.com/photos/5604809/pexels-photo-5604809.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="..." width={270} height={200}/>
               </div>
             </Slider>
   

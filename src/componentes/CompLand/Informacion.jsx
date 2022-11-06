@@ -8,7 +8,7 @@ const Informacion = () => {
         <div>
         <div className="contenedor">
 
-            <img src="../../../src/imagenes/comida19.png" class="img-fluid opacity-50" width='100%'/>
+            <img src="https://images.pexels.com/photos/1634062/pexels-photo-1634062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid opacity-50" />
             
         </div>
     </div>
@@ -24,7 +24,7 @@ const Informacion = () => {
                         <p >
                         Somos una página web que hace de intermediario entre restaurantes, 
                         reposterias o supermercados que ponen a la venta productos
-                        o alimentos que no han vendido al servicio de los consumidores
+                        o alimentos que no han sido vendidos al servicio de los consumidores
                         para no malgastar la comida. 
         
                         </p>             
