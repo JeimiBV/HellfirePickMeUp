@@ -24,7 +24,7 @@ function Mostrarmenu({usuario}){
   const pr = categorias || []
   const Cat =  pr.map(categoria => (
                 <Link to ={`/Oferta/${categoria.id}`} >
-                <><div class="card" key={categoria.id}>    
+                <><div class="card cardMajo " key={categoria.id}>    
                             
                             <img className="pos1" src={categoria.Imagen} alt="" />
                             <div className="nombre_titulo">{categoria.Name} </div>

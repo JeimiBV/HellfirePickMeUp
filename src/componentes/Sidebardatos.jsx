@@ -10,4 +10,9 @@ export const Sidebardatos = [
         path: "/formulario"
 
     },
+    {
+        title: "Lista de Ofertas",
+        path: "/listaOfertas"
+
+    },
 ]

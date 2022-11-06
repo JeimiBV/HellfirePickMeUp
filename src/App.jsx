@@ -16,6 +16,7 @@ import { useState } from "react";
 import Landing from "./componentes/Landing";
 import Mostrarmenu from "./componentes/Menu";
 import Mostraroferta from "./componentes/Oferta";
+import ListaOfertas from "./componentes/ListaOferta";
 
 function App() {
   const [userN, setUserN] = useState("QwXZyaODI9bQPoepSI1XyTYTeej1");
@@ -108,6 +109,18 @@ function App() {
             <AuthProvider>
               <ProtectedRoute>
                 <Mostraroferta usuario={userC} />
+              </ProtectedRoute>
+            </AuthProvider>
+          }
+        />
+        <Route
+          path="/listaOfertas"
+          element={
+            <AuthProvider>
+              <ProtectedRoute>
+                <Plantilla>
+                  <ListaOfertas usuario={userN} />
+                </Plantilla>
               </ProtectedRoute>
             </AuthProvider>
           }

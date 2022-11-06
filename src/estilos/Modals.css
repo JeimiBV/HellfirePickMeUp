@@ -26,7 +26,7 @@
     align-items: center;
     justify-content: center;
 }
-.card{
+.cardM{
     min-width: 25vw;
 }
 .transparent{
@@ -37,4 +37,8 @@
     max-width: 40vw;
     max-height: 40vh;
     
+}
+.botonSN{
+    position: absolute;
+    bottom: 0px;
 }
