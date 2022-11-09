@@ -309,7 +309,8 @@ function Informacion() {
                             cambiarEstado={setModalConf}
                             estadoPantalla={true}
                             texto={"Esta seguro de realizar su oferta?"}
-                            icon={false}
+                            icon={true}
+                            
                         />
 
                         <Modals
@@ -321,6 +322,7 @@ function Informacion() {
                             estadoPantalla={true}
                             texto={"Guardando registro ..."}
                             icon={false}
+                            
                         />
                         <Modals
                             titulo={""}
@@ -331,6 +333,7 @@ function Informacion() {
                             estadoPantalla={true}
                             texto={"Cancelado"}
                             icon={false}
+                            
                         />
                     </div>
                 </Ofertar>
