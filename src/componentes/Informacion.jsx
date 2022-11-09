@@ -223,7 +223,7 @@ function Informacion() {
                                                 : "invisible"
                                         }
                                     >
-                                        Ingrese un numero positivo
+                                        Ingrese un número positivo
                                     </h3>
                                 </div>
                             </label>
