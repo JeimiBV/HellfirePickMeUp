@@ -18,16 +18,16 @@
 .logo {
     
     height: 10vh;
-    margin-left: 10vw;
 
 }
 
 .nombre {
-    text-transform: initial !important;
+    text-transform: initial;
     font-style: italic;
     font-family: cursive;
-    font-size: 5vh !important;
-    margin-left: 17vw;
+    font-size: 26px;
+    white-space: nowrap;
+    color: black;
 }
 
 .user {
@@ -50,6 +50,7 @@ ul li{
     align-items: center;
 }
 .botonL{
+    
     width: 9vw;
     background: #84A98C;
     color: white;

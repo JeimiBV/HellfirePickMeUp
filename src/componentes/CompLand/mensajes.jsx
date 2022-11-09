@@ -4,7 +4,7 @@ export const MensajesP = () => {
 
       <div className=' p-5 top-150 start-20 '>
         <div class="text-center body-1 ">
-          <div class="row body">
+          <div class="row body justify-content-center">
             <div class="col-sm-8 p-5" top="50" size={20}  >
                 <p>   
                   Nuestro sustento está íntimamente ligado a la comida que comemos 
@@ -21,9 +21,9 @@ export const MensajesP = () => {
 
                 </div> 
 
-                 <div class="col-sm-4 p-5">
+                 <div class="col-sm-12 col-md-6">
 
-                    <img className="imagen2"  src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2018/06/mesa-mucha-gente-comiendo.jpg" alt="..." width="400" height="300" />
+                    <img className="imagen2 w-100"  src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2018/06/mesa-mucha-gente-comiendo.jpg" alt="..." />
                  </div>
                 </div>
 

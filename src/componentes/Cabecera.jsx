@@ -21,7 +21,7 @@ function Header() {
       console.error(error.message);
     }
   };
-  const [ boton, setBoton] =useState(true)
+  const [ boton, setBoton] = useState()
   const controlBoton=()=>{
     setBoton(false)
   }
@@ -32,41 +32,50 @@ function Header() {
 
   return (
     <div className="contenedor-cabecera">
-       <li className={boton?"invisible":"nav nav-pills flex-column flex-sm-row "}>
-          <Link onClick={back}
-            className="flex-sm-fill text-sm-center nav-link active "
-            as
-            to="/loginC"
-          >
-            <i className="bi bi-person"></i> volver
+       <nav className="navbar fixed-top navbar-expand-lg bg-sucess border-bottom border-dark border-2 ">
+          <Link className="flex-sm-fill text-sm-center nav-link active" to="/">
+            <div className="logoYNombre mx-5">
+              <img className="logo" src={Image} onClick={redirigirL} />
+              <div className="d-flex w-100 justify-content-center">
+                <h1 className="nombre">Pick me up</h1>
+              </div>
+            </div>
           </Link>
-        </li>
 
-      <div className="logoYNombre">
-        <img className="logo" src={Image} onClick={redirigirL} />
-        <h1 className="nombre">Pick me up</h1>
+          <button
+            className=" navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          />
+      
+
+      <div className="collapse navbar-collapse mx-3" id="navbarTogglerDemo02">
+        {!user &&
+          <ul className={"navbar-nav gap-5 ms-auto"}>
+            <li className="nav nav-pills flex-column flex-sm-row">
+              <Link onClick={controlBoton}
+                className="flex-sm-fill text-sm-center nav-link active "
+                to="/loginN"
+              >
+                <i className="bi bi-shop "> </i> Negocio
+              </Link>
+            </li>
+            <li className="nav nav-pills flex-column flex-sm-row ">
+              <Link onClick={controlBoton}
+                className="flex-sm-fill text-sm-center nav-link active "
+                as
+                to="/loginC"
+              >
+                <i className="bi bi-person"></i> Consumidor
+              </Link>
+            </li>
+          </ul>
+        }
       </div>
-
-      <ul className={boton ? " navbar-nav gap-5 ms-auto " : " invisible"}>
-        <li className="nav nav-pills flex-column flex-sm-row">
-          <Link onClick={controlBoton}
-            className="flex-sm-fill text-sm-center nav-link active "
-            as
-            to="/loginN"
-          >
-            <i className="bi bi-shop "> </i> Negocio
-          </Link>
-        </li>
-        <li className="nav nav-pills flex-column flex-sm-row ">
-          <Link onClick={controlBoton}
-            className="flex-sm-fill text-sm-center nav-link active "
-            as
-            to="/loginC"
-          >
-            <i className="bi bi-person"></i> Consumidor
-          </Link>
-        </li>
-      </ul>
      
         
 
@@ -74,7 +83,8 @@ function Header() {
       {/*<h1 className="user">
          {user?`bienvenido ${user.email}`:`bienvenido `}
   </h1>*/}
-      {user ? <button className=" botonL text-sm-center nav-link active" onClick={handleLogout}>logout</button> : <div></div>}
+      {user && <button className=" botonL text-sm-center nav-link active mx-3" onClick={handleLogout}>logout</button>}
+    </nav>
     </div>
   );
 }
