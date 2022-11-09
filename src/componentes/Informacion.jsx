@@ -55,7 +55,8 @@ function Informacion() {
         if (
             Precio.valor > 0 &&
             Fecha.valor !== "AAAA-MM-DD" &&
-            Hora.valor !== "--:--"
+            Fecha.valor >= formatoFecha("yyyy-mm-dd") &&
+            (Hora.valor !== "--:--")
         ) {
             setPrecio((prevState) => ({ ...prevState, estado: false }));
             setFecha((prevState) => ({ ...prevState, estado: false }));
@@ -70,7 +71,7 @@ function Informacion() {
             } else {
                 setPrecio((prevState) => ({ ...prevState, estado: true }));
             }
-            if (Fecha.valor !== "AAAA-MM-DD") {
+            if (Fecha.valor !== "AAAA-MM-DD" && Fecha.valor >= formatoFecha("yyyy-mm-dd")) {
                 setFecha((prevState) => ({ ...prevState, estado: false }));
             } else {
                 setFecha((prevState) => ({ ...prevState, estado: true }));
