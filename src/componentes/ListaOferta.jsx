@@ -17,28 +17,25 @@ const ListaOfertas = ({usuario}) => {
     }, [])
 
     const fechaActual = new Date()
-
-
     const pr = productos || []
 
-    const ofertados = pr.filter(producto =>
-        {
+    const ofertados = pr.filter(producto => 
+        {   
             const fechaPr = new Date(producto.Fecha + 'T' + producto.Hora) 
-            return fechaPr > fechaActual && producto.Precio !== ''
+            return  fechaPr > fechaActual && producto.Precio !== '';
         }
-    )
-
-
-
+    )   
+        
     return (
 
         <>
             <div className="container">
                 <h1 className="text-center " > Lista de Ofertas </h1>
                 <div className="ofertasP">
+                
                     {ofertados != null ? (
                         ofertados.map(oferta => (
-                            <div className="row row-col" key={oferta.id}>
+                            <div  className="row row-col" key={oferta.id}>
                                 <div class="card card-of border-success mb-2 bg-sucessP">
 
                                     <img src={oferta.Imagen} class="card-img-top imagenOf mt-2 mr-2" alt="..." />
