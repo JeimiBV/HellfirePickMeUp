@@ -44,17 +44,13 @@ ul li{
     
 }
 .logoYNombre{
-    display: flex;
-    width: 60vw;
-    
+    display: flex;   
     align-items: center;
 }
 .botonL{
     
-    width: 9vw;
     background: #84A98C;
     color: white;
     border-radius: 7px;
-    height: 4.3vh;
     border: none;
 }
