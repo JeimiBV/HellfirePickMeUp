@@ -15,7 +15,7 @@ const Footer = () => {
                 <p className='text-center' >
                     
                     El repositorio de la pagina se encuentra en    
-                    <a href='https://github.com/JeimiBV/HellfirePickMeUp.git'>Pick me up</a>
+                    <a href='https://github.com/JeimiBV/HellfirePickMeUp.git'>Pick-me-up</a>
                 </p>
             </div>
             
