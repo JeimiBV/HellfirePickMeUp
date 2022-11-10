@@ -52,37 +52,38 @@ function Informacion() {
     }
 
     const Validar = () => {
-        if (
-            Precio.valor > 0 &&
-            Fecha.valor !== "AAAA-MM-DD" &&
-            Fecha.valor >= formatoFecha("yyyy-mm-dd") &&
-            (Hora.valor !== "--:--")
-        ) {
-            setPrecio((prevState) => ({ ...prevState, estado: false }));
-            setFecha((prevState) => ({ ...prevState, estado: false }));
-            setHora((prevState) => ({ ...prevState, estado: false }));
-            setIsLoading(false);
+      
+        
+        const aux2 = Fecha.valor <= formatoFecha('yyyy-mm-dd',5);
+        if ((Precio.valor > 0) && (Fecha.valor !== 'AAAA-MM-DD' && (Fecha.valor >= formatoFecha('yyyy-mm-dd',0))) && (Hora.valor !== '--:--') && aux2) {
+            setPrecio(prevState => ({ ...prevState, estado: false }))
+            setFecha(prevState => ({ ...prevState, estado: false }));
+            setHora(prevState => ({ ...prevState, estado: false }));
+            setIsLoading(false)
             setModalConf(true);
+
         } else {
             setIsLoading(true);
 
             if (Precio.valor > 0) {
-                setPrecio((prevState) => ({ ...prevState, estado: false }));
+                setPrecio(prevState => ({ ...prevState, estado: false }));
             } else {
-                setPrecio((prevState) => ({ ...prevState, estado: true }));
+                setPrecio(prevState => ({ ...prevState, estado: true }));
             }
-            if (Fecha.valor !== "AAAA-MM-DD" && Fecha.valor >= formatoFecha("yyyy-mm-dd")) {
-                setFecha((prevState) => ({ ...prevState, estado: false }));
+            if (Fecha.valor !== 'AAAA-MM-DD' && Fecha.valor >= formatoFecha('yyyy-mm-dd',0) && aux2) {
+                setFecha(prevState => ({ ...prevState, estado: false }));
             } else {
-                setFecha((prevState) => ({ ...prevState, estado: true }));
+                setFecha(prevState => ({ ...prevState, estado: true }));
             }
-            if (Hora.valor !== "--:--") {
-                setHora((prevState) => ({ ...prevState, estado: false }));
+            if (Hora.valor !== '--:--') {
+                setHora(prevState => ({ ...prevState, estado: false }));
+
             } else {
-                setHora((prevState) => ({ ...prevState, estado: true }));
+                setHora(prevState => ({ ...prevState, estado: true }));
             }
         }
-    };
+
+    }
 
     const mostrarSi = () => {
         setTimeout(() => {
@@ -114,19 +115,19 @@ function Informacion() {
         setModalNo(true);
     };
 
-    function formatoFecha(formato) {
+    function formatoFecha(formato,year) {
         const date = new Date();
         const map = {
             dd: date.getDate(),
             mm: date.getMonth() + 1,
-            yyyy: date.getFullYear(),
-        };
-
-        if (date.getDate() < 10) {
-            map.dd = "0" + date.getDate();
+            yyyy: date.getFullYear() + year
         }
 
-        return formato.replace(/dd|mm|yyyy/gi, (matched) => map[matched]);
+        if (date.getDate() < 10) {
+            map.dd = '0' + date.getDate()
+        }
+
+        return (formato.replace(/dd|mm|yyyy/gi, matched => map[matched]))
     }
 
     const [show, setShow] = useState(false);
@@ -146,21 +147,11 @@ function Informacion() {
     };
     const ocultarModalOf = () => {
         setModalOf(false);
+        setPrecio(prevState => ({ ...prevState, estado: false }));
+        setFecha(prevState => ({ ...prevState, estado: false }));
+        setHora(prevState => ({ ...prevState, estado: false }));
     };
-    function formatoFecha(formato) {
-        const date = new Date();
-        const map = {
-            dd: date.getDate(),
-            mm: date.getMonth() + 1,
-            yyyy: date.getFullYear(),
-        };
-
-        if (date.getDate() < 10) {
-            map.dd = "0" + date.getDate();
-        }
-
-        return formato.replace(/dd|mm|yyyy/gi, (matched) => map[matched]);
-    }
+    
 
     if (producto != null) {
         return (
@@ -239,7 +230,7 @@ function Informacion() {
                                         className="entrada-3"
                                         id="fecha"
                                         type="date"
-                                        min={formatoFecha("yyyy-mm-dd")}
+                                        min={formatoFecha('yyyy-mm-dd',0)}
                                         required
                                         onChange={(e) =>
                                             setFecha((prevState) => ({
