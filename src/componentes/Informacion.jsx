@@ -55,7 +55,10 @@ function Informacion() {
       
         
         const aux2 = Fecha.valor <= formatoFecha('yyyy-mm-dd',5);
-        if ((Precio.valor > 0) && (Fecha.valor !== 'AAAA-MM-DD' && (Fecha.valor >= formatoFecha('yyyy-mm-dd',0))) && (Hora.valor !== '--:--') && aux2) {
+        if ((Precio.valor > 0) && 
+        (Precio.valor < 99999)&&
+        (Fecha.valor !== 'AAAA-MM-DD' && (Fecha.valor >= formatoFecha('yyyy-mm-dd',0))) &&
+         (Hora.valor !== '--:--') && aux2) {
             setPrecio(prevState => ({ ...prevState, estado: false }))
             setFecha(prevState => ({ ...prevState, estado: false }));
             setHora(prevState => ({ ...prevState, estado: false }));
@@ -65,7 +68,7 @@ function Informacion() {
         } else {
             setIsLoading(true);
 
-            if (Precio.valor > 0) {
+            if (Precio.valor > 0 && Precio.valor < 99999) {
                 setPrecio(prevState => ({ ...prevState, estado: false }));
             } else {
                 setPrecio(prevState => ({ ...prevState, estado: true }));
@@ -203,8 +206,9 @@ function Informacion() {
                                         id="numero"
                                         type="number"
                                         required
-                                        placeholder="$"
+                                        placeholder="Bs."
                                         min="1"
+                                        max="99999"
                                         onChange={(e) =>
                                             setPrecio((prevState) => ({
                                                 ...prevState,
@@ -212,6 +216,7 @@ function Informacion() {
                                             }))
                                         }
                                     />
+                                    Bs.
                                     <h3
                                         className={
                                             Precio.estado
@@ -305,7 +310,7 @@ function Informacion() {
                             cambiarEstado={setModalConf}
                             estadoPantalla={true}
                             texto={"Esta seguro de realizar su oferta?"}
-                            icon={true}
+                            icon={false}
                             
                         />
 
