@@ -100,11 +100,15 @@ function Informacion() {
     };
 
     const guardarOferta = () => { };
+
     const mostrarNo = () => {
         setTimeout(() => {
             setModalNo(false);
             setModalSi(false);
         }, 3000);
+        setPrecio(prevState => ({ ...prevState, valor: '' }));
+        setFecha(prevState => ({ ...prevState, valor: 'AAAA-MM-DD' }));
+        setHora(prevState => ({ ...prevState, valor: '--:--' }));
         document.getElementById("form").reset();
         setModalConf(false);
         setModalNo(true);
