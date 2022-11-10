@@ -224,7 +224,7 @@ function Informacion() {
                                                 : "invisible"
                                         }
                                     >
-                                        Ingrese un número positivo
+                                        Ingrese un número positivo y menor a 99999
                                     </h3>
                                 </div>
                             </label>
