@@ -96,6 +96,7 @@ function Informacion() {
         setPrecio((prevState) => ({ ...prevState, estado: false }));
         setFecha((prevState) => ({ ...prevState, estado: false }));
         setHora((prevState) => ({ ...prevState, estado: false }));
+        window.location.pathname = "/listaOfertas";
     };
 
     const guardarOferta = () => { };
