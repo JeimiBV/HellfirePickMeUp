@@ -11,17 +11,24 @@ const ListaOfertas = ({usuario}) => {
                 return <Navigate to ="/"/>
             }
 
-    const [producto, setProducto] = useState(null)
+    const [productos, setProductos] = useState(null)
     useEffect(() => {
-        todosProductos(setProducto)
+        todosProductos(setProductos)
     }, [])
 
-    const pr = producto || []
+    const fechaActual = new Date()
 
-    const ofertados = pr.filter(ofert =>
-        ofert.Precio !== ''
 
+    const pr = productos || []
+
+    const ofertados = pr.filter(producto =>
+        {
+            const fechaPr = new Date(producto.Fecha + 'T' + producto.Hora) 
+            return fechaPr > fechaActual && producto.Precio !== ''
+        }
     )
+
+
 
     return (
 

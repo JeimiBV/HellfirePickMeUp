@@ -66,7 +66,7 @@ function Header() {
                 className="flex-sm-fill text-sm-center nav-link active "
                 to="/listaProductos"
               >
-                <i className="bi bi-person"></i> Productos
+                 Productos
               </Link>
             </li>
 
