@@ -21,7 +21,7 @@ export const MensajesP = () => {
 
                 </div> 
 
-                 <div class="col-sm-12 col-md-6">
+                 <div class="col-sm-12 pt-4 mt-5 col-md-3">
 
                     <img className="imagen2 w-100"  src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2018/06/mesa-mucha-gente-comiendo.jpg" alt="..." />
                  </div>

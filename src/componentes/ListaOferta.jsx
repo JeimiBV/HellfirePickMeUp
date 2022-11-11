@@ -30,7 +30,7 @@ const ListaOfertas = ({usuario}) => {
 
         <>
             <div className="container containerL">
-                <h1 className="text-center mt-5" > Lista de Ofertas </h1>
+                <h1 className="text-center mt-3" > Lista de Ofertas </h1>
                 <div className="ofertasP">
                 
                     {ofertados != null ? (
@@ -43,9 +43,9 @@ const ListaOfertas = ({usuario}) => {
                                     <div class="card-body card-letra text-capitalize">
                                         <h5 class="card-titleP text-center " >{oferta.Nombre}</h5>
                                         <p className="">
-                                            <span > Precio: {oferta.Precio} </span>
-                                            <span className="d-block"> Hora Limite:{oferta.Hora} </span>
-                                            <span className="d-block">Fecha Limite: {oferta.Fecha} </span>
+                                            <span > Precio: {oferta.Precio} bs.</span>
+                                            <span className="d-block"> Hora Límite:{oferta.Hora} </span>
+                                            <span className="d-block">Fecha Límite: {oferta.Fecha} </span>
                                         </p>
                                     </div>
                                 </div>

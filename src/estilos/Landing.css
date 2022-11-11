@@ -35,13 +35,13 @@
 .contenedor{
     
     height: 100vh !important;
-    width: 98.9vw !important;
+    width: 100% !important;
     
     
  }
  .img-fluid{
     height: 100vh !important;
-    width: 98.9vw !important;
+    width: 100% !important;
  }
  
  .body{
@@ -80,6 +80,7 @@
 
  /*Mensajes*/
 .estadisticasM{
+    width: 98%;
     margin-top: 50%;
 }
 

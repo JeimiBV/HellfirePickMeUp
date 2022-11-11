@@ -15,7 +15,7 @@ const Informacion = () => {
 
         <div className='contenedor-2 text-center body'>
                 <div className="row " >
-                    <div class="col-sm p-5"> 
+                    <div class="col-sm p-5 pt-5 pb-5 mt-5"> 
                         <h1 className='color-titulo'>
                             ¿Quienes Somos?
                         </h1>
@@ -29,11 +29,11 @@ const Informacion = () => {
         
                         </p>             
                     </div>
-                    <div className="col-sm p-5">
+                    <div className="col-sm p-5 mt-5">
                         <h1 className='color-titulo' >
                             Nuestro objetivo
                         </h1>
-                        <hr class="border border-dark border-" />
+                        <hr class="border border-dark border" />
                         
                         <p>
                         Es ser un movimiento que lucha contra la pérdida y el desperdicio de alimentos
