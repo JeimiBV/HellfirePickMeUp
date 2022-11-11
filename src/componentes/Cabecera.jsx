@@ -15,7 +15,6 @@ function Header() {
       console.error(error.message);
     }
   };
- 
 
   return (
     <div className="contenedor-cabecera">
@@ -67,12 +66,6 @@ function Header() {
         <>
         <ul className="navbar-nav gap-5 ms-auto mx-3 justify-content-end">
             <li className="nav nav-pills flex-column flex-sm-row ">
-              <Link 
-                className="flex-sm-fill text-sm-center nav-link active "
-                to="/listaProductos"
-              >
-                 Productos
-              </Link>
             </li>
             <li className="nav nav-pills flex-column flex-sm-row ">
             <button className=" flex-sm-fill text-sm-center nav-link active " onClick={handleLogout}>Cerrar sesión</button>
