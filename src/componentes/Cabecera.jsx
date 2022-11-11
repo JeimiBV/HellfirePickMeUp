@@ -57,8 +57,10 @@ function Header() {
 
           </ul>
         }
-
-        {user && 
+      </div>  
+      </div>
+     
+      {user && 
         <>
         <ul className="navbar-nav gap-5 ms-auto mx-3 justify-content-end">
             <li className="nav nav-pills flex-column flex-sm-row ">
@@ -74,16 +76,6 @@ function Header() {
         <button className=" botonL text-sm-center nav-link active mx-3 p-1" onClick={handleLogout}>logout</button>
         </>
         }
-      </div>
-        
-      </div>
-     
-        
-
-
-      {/*<h1 className="user">
-         {user?`bienvenido ${user.email}`:`bienvenido `}
-  </h1>*/}
       
     </nav>
     </div>

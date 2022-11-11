@@ -11,10 +11,12 @@
 .show>.nav-pills .nav-link{
     background-color: #84a98c; 
     color: white;
+    white-space: nowrap;
 }
 
-.nav-link:hover{
-    color: rgb(252, 251, 255) !important;
+.nav-pills .nav-link.active:hover,
+.show>.nav-pills .nav-link:hover{
+    background-color: #a8ccb0; 
 }
 
 .nav-pills{

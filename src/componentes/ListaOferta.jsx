@@ -16,6 +16,16 @@ const ListaOfertas = ({usuario}) => {
         todosProductos(setProductos)
     }, [])
 
+    const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (loading) {
+      window.location.reload();
+    } else {
+      console.log('page already loaded');
+    }
+  }, [loading]);
+
     const fechaActual = new Date()
     const pr = productos || []
 
@@ -29,8 +39,8 @@ const ListaOfertas = ({usuario}) => {
     return (
 
         <>
-            <div className="container">
-                <h1 className="text-center " > Lista de Ofertas </h1>
+            <div className="container containerL">
+                <h1 className="text-center mt-5" > Lista de Ofertas </h1>
                 <div className="ofertasP">
                 
                     {ofertados != null ? (
