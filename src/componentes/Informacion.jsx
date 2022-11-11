@@ -53,12 +53,12 @@ function Informacion() {
 
     const Validar = () => {
       
-        
+        const aux = formatoFecha('yyyy-mm-dd',0) == Fecha.valor && Hora.valor <= formatoHora();
         const aux2 = Fecha.valor <= formatoFecha('yyyy-mm-dd',5);
         if ((Precio.valor > 0) && 
         (Precio.valor < 99999)&&
         (Fecha.valor !== 'AAAA-MM-DD' && (Fecha.valor >= formatoFecha('yyyy-mm-dd',0))) &&
-         (Hora.valor !== '--:--') && aux2) {
+         (Hora.valor !== '--:--') && !aux && aux2) {
             setPrecio(prevState => ({ ...prevState, estado: false }))
             setFecha(prevState => ({ ...prevState, estado: false }));
             setHora(prevState => ({ ...prevState, estado: false }));
@@ -79,7 +79,11 @@ function Informacion() {
                 setFecha(prevState => ({ ...prevState, estado: true }));
             }
             if (Hora.valor !== '--:--') {
-                setHora(prevState => ({ ...prevState, estado: false }));
+                if (aux) {
+                    setHora(prevState => ({ ...prevState, estado: true }));
+                } else {
+                    setHora(prevState => ({ ...prevState, estado: false }));
+                }
 
             } else {
                 setHora(prevState => ({ ...prevState, estado: true }));
@@ -131,6 +135,11 @@ function Informacion() {
         }
 
         return (formato.replace(/dd|mm|yyyy/gi, matched => map[matched]))
+    }
+    function formatoHora() {
+        const tiempoT = new Date();
+        const hoy = tiempoT.getHours() + ':' + tiempoT.getMinutes();
+        return (hoy);
     }
 
     const [show, setShow] = useState(false);
