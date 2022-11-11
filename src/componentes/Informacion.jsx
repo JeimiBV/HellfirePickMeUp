@@ -173,7 +173,7 @@ function Informacion() {
 
                     <div className="Informacion">
                         <div className="desytip">
-                            <h2 className="encabezado">Descripcion:</h2>
+                            <h2 className="encabezado">Descripción:</h2>
                             <p className="Parrafo">{producto.Descripcion}</p>
                             <h2 className="encabezado">
                                 Tipo de producto:

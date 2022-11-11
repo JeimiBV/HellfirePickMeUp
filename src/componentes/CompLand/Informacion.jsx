@@ -15,7 +15,7 @@ const Informacion = () => {
 
         <div className='contenedor-2 text-center body'>
                 <div className="row " >
-                    <div class="col-sm p-5 m-5"> 
+                    <div class="col-sm p-5"> 
                         <h1 className='color-titulo'>
                             ¿Quienes Somos?
                         </h1>
@@ -29,7 +29,7 @@ const Informacion = () => {
         
                         </p>             
                     </div>
-                    <div className="col-sm p-5 m-5">
+                    <div className="col-sm p-5">
                         <h1 className='color-titulo' >
                             Nuestro objetivo
                         </h1>

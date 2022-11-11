@@ -38,7 +38,7 @@ const NabvarIni = () => {
 
           <div className="position-absolute top-0 start-50 translate-middle-x">
             <li className="navbar-nav ">
-              <p class="fs-3">Pick me up</p>
+              <p class="fs-3">Pick me ups</p>
             </li>
           </div>
 

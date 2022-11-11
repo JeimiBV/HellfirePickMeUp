@@ -9,12 +9,17 @@ import { useAuth } from '../context/authContext'
 
 
 function Productoslista({usuario}) {
+     //codigo para bloquear la ida hacia atras
+     window.location.hash="no-back-button";
+     window.location.hash="Again-No-back-button";//esta linea es necesaria para chrome
+     window.onhashchange=function(){window.location.hash="no-back-button";}
     const { user } = useAuth();
     
     if(usuario!=user.uid){
         return <Navigate to ="/"/>
     }
-   
+  
+
     const [productos, setProductos]=useState(null)
 
     useEffect(() => {
@@ -28,7 +33,7 @@ function Productoslista({usuario}) {
     return(   
     <>
      
-    <div className="containerL">
+    <div className="containerL mt-3">
     <h1 className="titleL"> Lista de productos </h1> 
     <div className="productos">
 
