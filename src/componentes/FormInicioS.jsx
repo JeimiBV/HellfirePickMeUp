@@ -7,6 +7,7 @@ import Modals from "./Modals";
 import { useState } from "react";
 import { useAuth } from '../context/authContext'
 import { Navigate, useNavigate } from 'react-router-dom'
+import "../estilos/formularioInicio.css"
 
 
 function FormInicioSesion() {
@@ -15,7 +16,7 @@ function FormInicioSesion() {
     const [modalAmbos, setModalAmbos] = useState(false)
     const [ojo, setOjo] = useState(false);
     const [error, setError] = useState();
-    const [modalInvalido, setmodalInvalido] = useState(false);
+    const [modalInvalido, setModalInvalido] = useState(false);
     const [userf, setUser] = useState({
         correo: '',
         contraseña: ''
@@ -37,21 +38,11 @@ function FormInicioSesion() {
                 await login(userf.correo, userf.contraseña);
                 navigate("/menu");
             }
-            /*if (userf.correo != "user@gmail.com") {
-                console.log("entra al if")
-                navigate("/");
-            }
-            else {
-                console.log("entra al else")
-                navigate("/formulario");
-
-            }*/
 
         } catch (error) {
             console.log(error.code);
             if (error.code === "auth/userf-not-found" || error.code === "auth/wrong-password") {
                 console.log("no hay usuario")
-                mostrar(setmodalInvalido)
             }
         }
     }
@@ -71,51 +62,50 @@ function FormInicioSesion() {
         }, 2000);
         cambiarEstado(true)
     }
+
     const validar = () => {
-        if (userf.correo == "user@gmail.com") {
-            if (verificarEspacio(userf.correo) && verificarEspacio(userf.contraseña)) {
-                console.log("espacios con contenido")
-            }
-            else {
-                if (!verificarEspacio(userf.correo) && !verificarEspacio(userf.contraseña)) {
-                    console.log("contraseña y correo estan vacíos")
-                    mostrar(setModalAmbos)
-                }
-                else {
-                    if (!verificarEspacio(userf.correo)) {
-                        console.log("correo vacío")
-                        mostrar(setModalCorreo)
-                        return true
-                    }
-                    console.log("contraseña vacía")
-                    mostrar(setModalContraseña)
-                }
-
-            }
+        if (
+            !verificarEspacio(userf.contraseña) &&
+            !verificarEspacio(userf.correo)
+        ) {
+            mostrar(setModalAmbos);
         } else {
-            mostrar(setmodalInvalido);
+            if (!verificarEspacio(userf.correo)) {
+                mostrar(setModalCorreo);
+            } else {
+                if (!verificarEspacio(userf.contraseña)) {
+                    mostrar(setModalContraseña);
+                    console.log("entra a aqui ");
+                } else {
+                    if (
+                        userf.correo != "user@gmail.com" &&
+                        verificarEspacio(userf.correo) || userf.contraseña != "1234567"
+                    ) {
+                        mostrar(setModalInvalido);
+                        console.log("entra a aqui ");
+                    }
+                }
+            }
         }
-
-    }
+    };
 
     return (
         <div class="w-100 h-100 container">
             <div class="row ">
                 <div class="col d-flex justify-content-center align-middle mt-5">
-                    <label class="fs-1 pt-5  textoF">
-                        Detener la <br />
-                        pérdida y el <br />
-                        desperdicio de <br />
+                    <label class="fs-1 pt-5 textoReflexion">
+                        Detener la pérdida y <br />
+                        el desperdicio de <br />
                         alimentos<br />
                         por las personas<br />
                         por el planeta
                     </label>
 
                 </div>
-                <div class="col p-5 align-middle">
-                    <form onSubmit={handleSubmit}>
+                <div class="col p-5 align-middle contenedorInicio">
+                    <form onSubmit={handleSubmit} className="contenedorInicio">
                         <div class="text-center fs-4 w-75 font-bold pt-5 mt-5">
-                            <label> Inicio de Sesión</label>
+                            <label> Inicio de sesión</label>
                             <div class="border border-dark"> </div>
                         </div>
 
@@ -138,37 +128,37 @@ function FormInicioSesion() {
 
 
                     </form>
-                    <div class="text-center w-75">
+                    <div class="text-center w-75 botonInicio">
                         <button type="submit" class="btn btn-secondary" onClick={handleSubmit}>Acceder</button>
                     </div>
 
                     <Modals
                         estado={modalAmbos}
-                        cambiarEstado={setModalAmbos}
                         estadoPantalla={false}
                         texto={"No se aceptan espacios vacíos"}
                         buttons={false}
+                        icon={true}
                     />
                     <Modals
                         estado={modalContraseña}
-                        cambiarEstado={setModalContraseña}
                         estadoPantalla={false}
                         texto={"Ingrese su contraseña "}
                         buttons={false}
+                        icon={true}
                     />
                     <Modals
                         estado={modalCorreo}
-                        cambiarEstado={setModalCorreo}
                         estadoPantalla={false}
                         texto={"Ingrese su correo"}
                         buttons={false}
+                        icon={true}
                     />
                     <Modals
                         estado={modalInvalido}
-                        cambiarEstado={setmodalInvalido}
                         estadoPantalla={false}
-                        texto={"Verifique que su correo y contraseña sean correctas"}
+                        texto={"Verifique el correo y la contraseña"}
                         buttons={false}
+                        icon={true}
                     />
 
                 </div>
