@@ -52,36 +52,45 @@ function Informacion() {
     }
 
     const Validar = () => {
-        if (
-            Precio.valor > 0 &&
-            Fecha.valor !== "AAAA-MM-DD" &&
-            Hora.valor !== "--:--"
-        ) {
-            setPrecio((prevState) => ({ ...prevState, estado: false }));
-            setFecha((prevState) => ({ ...prevState, estado: false }));
-            setHora((prevState) => ({ ...prevState, estado: false }));
-            setIsLoading(false);
+      
+        const aux = formatoFecha('yyyy-mm-dd',0) == Fecha.valor && Hora.valor <= formatoHora();
+        const aux2 = Fecha.valor <= formatoFecha('yyyy-mm-dd',5);
+        if ((Precio.valor > 0) && 
+        (Precio.valor < 99999)&&
+        (Fecha.valor !== 'AAAA-MM-DD' && (Fecha.valor >= formatoFecha('yyyy-mm-dd',0))) &&
+         (Hora.valor !== '--:--') && !aux && aux2) {
+            setPrecio(prevState => ({ ...prevState, estado: false }))
+            setFecha(prevState => ({ ...prevState, estado: false }));
+            setHora(prevState => ({ ...prevState, estado: false }));
+            setIsLoading(false)
             setModalConf(true);
+
         } else {
             setIsLoading(true);
 
-            if (Precio.valor > 0) {
-                setPrecio((prevState) => ({ ...prevState, estado: false }));
+            if (Precio.valor > 0 && Precio.valor < 99999) {
+                setPrecio(prevState => ({ ...prevState, estado: false }));
             } else {
-                setPrecio((prevState) => ({ ...prevState, estado: true }));
+                setPrecio(prevState => ({ ...prevState, estado: true }));
             }
-            if (Fecha.valor !== "AAAA-MM-DD") {
-                setFecha((prevState) => ({ ...prevState, estado: false }));
+            if (Fecha.valor !== 'AAAA-MM-DD' && Fecha.valor >= formatoFecha('yyyy-mm-dd',0) && aux2) {
+                setFecha(prevState => ({ ...prevState, estado: false }));
             } else {
-                setFecha((prevState) => ({ ...prevState, estado: true }));
+                setFecha(prevState => ({ ...prevState, estado: true }));
             }
-            if (Hora.valor !== "--:--") {
-                setHora((prevState) => ({ ...prevState, estado: false }));
+            if (Hora.valor !== '--:--') {
+                if (aux) {
+                    setHora(prevState => ({ ...prevState, estado: true }));
+                } else {
+                    setHora(prevState => ({ ...prevState, estado: false }));
+                }
+
             } else {
-                setHora((prevState) => ({ ...prevState, estado: true }));
+                setHora(prevState => ({ ...prevState, estado: true }));
             }
         }
-    };
+
+    }
 
     const mostrarSi = () => {
         setTimeout(() => {
@@ -95,32 +104,42 @@ function Informacion() {
         setPrecio((prevState) => ({ ...prevState, estado: false }));
         setFecha((prevState) => ({ ...prevState, estado: false }));
         setHora((prevState) => ({ ...prevState, estado: false }));
+        window.location.pathname = "/listaOfertas";
     };
 
     const guardarOferta = () => { };
+
     const mostrarNo = () => {
         setTimeout(() => {
             setModalNo(false);
             setModalSi(false);
         }, 3000);
+        setPrecio(prevState => ({ ...prevState, valor: '' }));
+        setFecha(prevState => ({ ...prevState, valor: 'AAAA-MM-DD' }));
+        setHora(prevState => ({ ...prevState, valor: '--:--' }));
         document.getElementById("form").reset();
         setModalConf(false);
         setModalNo(true);
     };
 
-    function formatoFecha(formato) {
+    function formatoFecha(formato,year) {
         const date = new Date();
         const map = {
             dd: date.getDate(),
             mm: date.getMonth() + 1,
-            yyyy: date.getFullYear(),
-        };
-
-        if (date.getDate() < 10) {
-            map.dd = "0" + date.getDate();
+            yyyy: date.getFullYear() + year
         }
 
-        return formato.replace(/dd|mm|yyyy/gi, (matched) => map[matched]);
+        if (date.getDate() < 10) {
+            map.dd = '0' + date.getDate()
+        }
+
+        return (formato.replace(/dd|mm|yyyy/gi, matched => map[matched]))
+    }
+    function formatoHora() {
+        const tiempoT = new Date();
+        const hoy = tiempoT.getHours() + ':' + tiempoT.getMinutes();
+        return (hoy);
     }
 
     const [show, setShow] = useState(false);
@@ -140,21 +159,11 @@ function Informacion() {
     };
     const ocultarModalOf = () => {
         setModalOf(false);
+        setPrecio(prevState => ({ ...prevState, estado: false }));
+        setFecha(prevState => ({ ...prevState, estado: false }));
+        setHora(prevState => ({ ...prevState, estado: false }));
     };
-    function formatoFecha(formato) {
-        const date = new Date();
-        const map = {
-            dd: date.getDate(),
-            mm: date.getMonth() + 1,
-            yyyy: date.getFullYear(),
-        };
-
-        if (date.getDate() < 10) {
-            map.dd = "0" + date.getDate();
-        }
-
-        return formato.replace(/dd|mm|yyyy/gi, (matched) => map[matched]);
-    }
+    
 
     if (producto != null) {
         return (
@@ -164,7 +173,7 @@ function Informacion() {
 
                     <div className="Informacion">
                         <div className="desytip">
-                            <h2 className="encabezado">Descripcion:</h2>
+                            <h2 className="encabezado">Descripción:</h2>
                             <p className="Parrafo">{producto.Descripcion}</p>
                             <h2 className="encabezado">
                                 Tipo de producto:
@@ -206,8 +215,9 @@ function Informacion() {
                                         id="numero"
                                         type="number"
                                         required
-                                        placeholder="$"
+                                        placeholder="Bs."
                                         min="1"
+                                        max="99999"
                                         onChange={(e) =>
                                             setPrecio((prevState) => ({
                                                 ...prevState,
@@ -215,6 +225,7 @@ function Informacion() {
                                             }))
                                         }
                                     />
+                                    Bs.
                                     <h3
                                         className={
                                             Precio.estado
@@ -222,7 +233,7 @@ function Informacion() {
                                                 : "invisible"
                                         }
                                     >
-                                        Ingrese un numero positivo
+                                        Ingrese un número positivo y menor a 99999
                                     </h3>
                                 </div>
                             </label>
@@ -233,7 +244,7 @@ function Informacion() {
                                         className="entrada-3"
                                         id="fecha"
                                         type="date"
-                                        min={formatoFecha("yyyy-mm-dd")}
+                                        min={formatoFecha('yyyy-mm-dd',0)}
                                         required
                                         onChange={(e) =>
                                             setFecha((prevState) => ({
@@ -309,6 +320,7 @@ function Informacion() {
                             estadoPantalla={true}
                             texto={"Esta seguro de realizar su oferta?"}
                             icon={false}
+                            
                         />
 
                         <Modals
@@ -320,6 +332,7 @@ function Informacion() {
                             estadoPantalla={true}
                             texto={"Guardando registro ..."}
                             icon={false}
+                            
                         />
                         <Modals
                             titulo={""}
@@ -330,6 +343,7 @@ function Informacion() {
                             estadoPantalla={true}
                             texto={"Cancelado"}
                             icon={false}
+                            
                         />
                     </div>
                 </Ofertar>

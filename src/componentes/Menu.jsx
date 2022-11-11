@@ -37,7 +37,7 @@ function Mostrarmenu({usuario}){
   return (
 
     <div className="container1">
-        <h5 className="title15"> Categorias </h5> 
+        <h5 className="title15"> Categorías </h5> 
                 <div className="item">            
                      {Cat}
                 </div>
