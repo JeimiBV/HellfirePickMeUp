@@ -16,16 +16,6 @@ const ListaOfertas = ({usuario}) => {
         todosProductos(setProductos)
     }, [])
 
-    const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    if (loading) {
-      window.location.reload();
-    } else {
-      console.log('page already loaded');
-    }
-  }, [loading]);
-
     const fechaActual = new Date()
     const pr = productos || []
 
