@@ -23,7 +23,7 @@ function Header() {
           <Link className="flex-sm-fill text-sm-center nav-link active" to="/">
             <div className="logoYNombre mx-5">
               <img className="logo" src={Image} />
-              <div className="d-flex w-100 justify-content-center">
+              <div className="d-flex w-100 justify-content-end ">
                 <h1 className="nombre">Pick me up</h1>
               </div>
             </div>
@@ -35,7 +35,7 @@ function Header() {
       
 
       <div className="collapse navbar-collapse mx-3 justify-content-end " id="navbarTogglerDemo02">
-      <div className="d-flex justify-content-end">
+      <div className="d-flex justify-content-right">
       {!user &&
           <ul className="navbar-nav gap-5 ms-auto mx-3 justify-content-end">
             <li className="nav nav-pills flex-column flex-sm-row">
@@ -57,8 +57,13 @@ function Header() {
 
           </ul>
         }
+        
+        </div>
+        
+        <div className="d-flex justify-content">
 
-        {user && 
+        
+      {user && 
         <>
         <ul className="navbar-nav gap-5 ms-auto mx-3 justify-content-end">
             <li className="nav nav-pills flex-column flex-sm-row ">
@@ -69,22 +74,14 @@ function Header() {
                  Productos
               </Link>
             </li>
-
+            <li className="nav nav-pills flex-column flex-sm-row ">
+            <button className=" flex-sm-fill text-sm-center nav-link active " onClick={handleLogout}>Cerrar sesión</button>
+            </li>
           </ul>
-        <button className=" botonL text-sm-center nav-link active mx-3 p-1" onClick={handleLogout}>logout</button>
         </>
         }
+        </div>
       </div>
-        
-      </div>
-     
-        
-
-
-      {/*<h1 className="user">
-         {user?`bienvenido ${user.email}`:`bienvenido `}
-  </h1>*/}
-      
     </nav>
     </div>
   );

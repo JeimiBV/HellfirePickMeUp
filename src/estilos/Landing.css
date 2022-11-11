@@ -11,10 +11,12 @@
 .show>.nav-pills .nav-link{
     background-color: #84a98c; 
     color: white;
+    white-space: nowrap;
 }
 
-.nav-link:hover{
-    color: rgb(252, 251, 255) !important;
+.nav-pills .nav-link.active:hover,
+.show>.nav-pills .nav-link:hover{
+    background-color: #a8ccb0; 
 }
 
 .nav-pills{
@@ -33,13 +35,13 @@
 .contenedor{
     
     height: 100vh !important;
-    width: 98.9vw !important;
+    width: 100% !important;
     
     
  }
  .img-fluid{
     height: 100vh !important;
-    width: 98.9vw !important;
+    width: 100% !important;
  }
  
  .body{
@@ -78,6 +80,7 @@
 
  /*Mensajes*/
 .estadisticasM{
+    width: 98%;
     margin-top: 50%;
 }
 
