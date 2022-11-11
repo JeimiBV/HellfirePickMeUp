@@ -159,9 +159,9 @@ function Informacion() {
                 <div className="todo">
                     <h1 className="t"> {producto.Nombre}</h1>
 
-                    <div className="Informacion">
+                   
                         <div className="desytip">
-                            <h2 className="encabezado">Descripcion:</h2>
+                            <h2 className="encabezado">Descripción:</h2>
                             <p className="Parrafo">{producto.Descripcion}</p>
                             <h2 className="encabezado">
                                 Tipo de producto:
@@ -183,7 +183,7 @@ function Informacion() {
                             <Link to="/listaProductos">
                                 <button className="b12">Cerrar</button>
                             </Link>
-                        </div>
+                       
                     </div>
                 </div>
                 <Ofertar estado={modalOf}>

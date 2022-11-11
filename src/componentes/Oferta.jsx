@@ -20,12 +20,16 @@ function Mostraroferta({usuario}){
     },[] )
     console.log(ofertas)
 
+    const fechaActual = new Date()
     const pr = ofertas || []
     console.log(pr)
-
-    const ofertados = pr.filter( ofert => 
-        ofert.Hora !== ''
-    )
+    
+    const ofertados = pr.filter(producto => 
+        {   
+            const fechaPr = new Date(producto.Fecha + 'T' + producto.Hora) 
+            return  fechaPr > fechaActual && producto.Precio !== '';
+        }
+    ) 
     
     const ListaOfertas = ofertados.map(oferta => (
         <div class="list-card" key={oferta.id}>
