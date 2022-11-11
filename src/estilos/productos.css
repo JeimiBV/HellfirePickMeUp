@@ -1,4 +1,4 @@
-.container{
+.containerL{
     position: relative;
     width: 80%;
     height: 89.5vh;
@@ -11,13 +11,13 @@
     width: 200px;
     height: 200px;
   }
-.title{
+.titleL{
     text-align:center;  
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 3rem;
     top: 20rem;
 }
-.nombre{
+.nombreL{
     text-align:center;  
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 1rem;

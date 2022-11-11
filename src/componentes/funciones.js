@@ -6,8 +6,9 @@ const todosProductos = async (setProductos) =>{
 
     const peticion =  Axios({
         method: "GET",
-        withCredentials: true,
-        url: "http://localhost:5000/pruebafirebase-30018/us-central1/app/api/products",
+        //withCredentials: true,
+        
+        url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products",
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)
@@ -35,8 +36,8 @@ const unicoProducto = async (id, setProducto) => {
 
     const peticion =  Axios({
         method: "GET",
-        withCredentials: true,
-        url: `http://localhost:5000/pruebafirebase-30018/us-central1/app/api/products/${id}`,
+        //withCredentials: true,
+        url: `https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products/${id}`,
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)
@@ -52,10 +53,57 @@ const unicoProducto = async (id, setProducto) => {
     console.log(peticion)
 }
 
+const todosCategorias = async (setCategorias) =>{
+
+    const peticion =  Axios({
+        method: "GET",
+        //withCredentials: true,
+        url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/oferts",
+    }).then(response => {
+        if (!response.data.error) {
+            console.log(response.data)
+            setCategorias(response.data)
+        } else {
+            console.log(response.data.error[0]);
+        }
+    })
+        .catch(err => {
+            console.log(err)
+        });
+   // state(peticion.data.results)
+    console.log(peticion)
+
+}
+const filtrarOfertas = async (id, setOfertas) => {
+    console.log(id)
+    //console.log(req.params.id)
+
+    const peticion =  Axios({
+        method: "GET",
+        //withCredentials: true,
+        url: `https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/oferts/${id}`,
+    }).then(response => {
+        if (!response.data.error) {
+            console.log(response.data)
+            setOfertas(response.data)
+        } else {
+            console.log(response.data.error[0]);
+        }
+    })
+        .catch(err => {
+            console.log(err)
+        });
+   // state(peticion.data.results)
+    console.log(peticion)
+}
+
+
 export {
 
     todosProductos,
-    unicoProducto
+    unicoProducto, 
+    todosCategorias, 
+    filtrarOfertas
 }
 
 /*const peticion = await axios.get(`http://localhost:5000/pruebafirebase-30018/us-central1/app/api/products/${id}`)

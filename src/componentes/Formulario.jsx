@@ -4,10 +4,17 @@ import Modals from "./Modals";
 import "../estilos/formulario.css"
 import { useState } from 'react'
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { Navigate } from "react-router-dom";
+import { useAuth } from '../context/authContext'
 
 
-
-function Form() {
+function Form({usuario}) {
+    const { user } = useAuth();
+    
+            if(usuario!=user.uid){
+                return <Navigate to ="/"/>
+            }
+    
     const [nombre, setNombre] = useState({ valor: '', estado: false, check: false })
     const [descripcion, setDescripcion] = useState({ valor: '', estado: false, check: false })
     const [archivo, setArchivo] = useState(false)
@@ -22,6 +29,7 @@ function Form() {
     const [archivoUrl, setArchivoUrl] = React.useState("");
     const [isLoading, setIsLoading] = useState(true);
     const [urlImagen, setUrlImagen] = useState("");
+    
 
     const cargarFoto = async (event) => {
         event.preventDefault();
@@ -178,12 +186,13 @@ function Form() {
 
     //http://localhost:5000/fir-crud-c44e7/us-central1/app/api/products
 
-    return <div className="contenedor">
+    return <div className="contenedorF">
+        
         <label className="titulo">
             Registrar Producto
         </label>
 
-        <form action="http://localhost:5000/pruebafirebase-30018/us-central1/app/api/products" method="POST" id="Formul" className="elementos-form" >
+        <form action="https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products" method="POST" id="Formul" className="elementos-form" >
 
             <label className="label">
                 Nombre del producto
@@ -255,49 +264,47 @@ function Form() {
             </button>
         </form>
 
+                        <Modals
+                    estado={modalConf}
+                    cambiarEstado={setModalConf}
+                    estadoPantalla={true}
+                    texto={"Seguro de guardar el producto?"} 
+                    titulo={" Registro de producto"}
+                    mostrarSi={mostrarSi}
+                    mostrarNo={mostrarNo}
+                    buttons={true}
+                    />
+                    <Modals                        
+                    estado={modalSi}
+                    cambiarEstado={setModalSi}
+                    estadoPantalla={true}
+                    texto={"Guardando registro ..."} 
+                    buttons={false}
+                    />
+                     <Modals                        
+                    estado={modalNo}
+                    cambiarEstado={setModalNo}
+                    estadoPantalla={true}
+                    texto={"Cancelado"} 
+                    buttons={false}
+                    />
+                    <Modals                        
+                    estado={modalNo}
+                    cambiarEstado={setModalNo}
+                    estadoPantalla={true}
+                    texto={"Cancelado"} 
+                    buttons={false}
+                   />
 
-        <Modals
-            estado={modalConf}
-            cambiarEstado={setModalConf}
-        >
-            <div className="modals">
-                <h2>
-                    Registro de producto
-                </h2>
-                <h3 className="texto-confirmacion">¿Está seguro de registrar el producto?</h3>
-                <div className="botones">
-                    <button type="submit" className="left" onClick={mostrarSi}>Si</button>
-                    <button className="right" onClick={mostrarNo}>No</button>
-                </div>
-            </div>
-        </Modals>
+                    <Modals                        
+                    estado={modalError}
+                    cambiarEstado={setModalError}
+                    estadoPantalla={true}
+                    texto={"Se debe insertar una imagen"} 
+                    buttons={false}
+                   />
 
-        <Modals
-            estado={modalSi}
-            cambiarEstado={setModalSi}
-        >
-            <div className="modalSiNo">
-                <h3 className="texto-confirmacion">Guardando registro ...</h3>
-            </div>
-        </Modals>
-
-        <Modals
-            estado={modalNo}
-            cambiarEstado={setModalNo}
-        >
-            <div className="modalSiNo">
-                <h3 className="texto-confirmacion">Cancelado</h3>
-            </div>
-        </Modals>
         
-        <Modals
-            estado={modalError}
-            cambiarEstado={setModalError}
-        >
-            <div className="modalSiNo">
-                <h3 className="texto-confirmacion">Se debe insertar una imagen </h3>
-            </div>
-        </Modals>
 
     </div>
 
