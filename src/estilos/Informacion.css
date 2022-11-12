@@ -1,6 +1,6 @@
 .todo{
     align-items: center;
-    width: 80%;
+    width: 100%;
     min-height:89.6vh ;
     background-color: gray;
     position: relative;
@@ -12,6 +12,7 @@
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 3rem;
     text-transform: lowercase;
+    margin-top: 2%;
    
 }
 .t::first-letter{
@@ -20,7 +21,7 @@
 
 .desytip{
     position: relative;
-    height: 95%;
+    height: auto;
     margin: 0px auto; 
     width: 50%;
     background-color: azure;
@@ -81,7 +82,7 @@
 }
 .Informacion{
     width: auto;
-    height: 85%;
+    height: auto;
 
 
 }
@@ -90,14 +91,17 @@
         margin-top: 10%;
         width: 90%;
         height: 100%;
+        flex: auto;
     }
     .encabezado{
+        
         font-size: 8vw;
         
     }
     .Parrafo{
         font-size: 5vw;
         margin-bottom: 10%;
+       
     }
     .imagen_1{
         width: 190px;
@@ -110,18 +114,22 @@
         margin-top: 10%;
         width: 90%;
         height: 80%;
+        flex: auto;
+
     }
     .encabezado{
         font-size: 8vw;
+        flex: auto;
         
     }
     .Parrafo{
         font-size: 5vw;
-        margin-bottom: 5%;
+        margin-bottom: auto;
+        flex: auto;
     }
     .imagen_1{
         width: 190px;
         height: 190px;
-        
+        flex: auto;
     }
 }
