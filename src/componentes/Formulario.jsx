@@ -25,9 +25,8 @@ function Form({usuario}) {
     const [modalConf, setModalConf] = useState(false)
     const [modalSi, setModalSi] = useState(false)
     const [modalNo, setModalNo] = useState(false)
-    const [imagen, setImagen] = useState({ estad: false })
+    const [imagen, setImagen] = useState({ estado: false })
     const [modalError, setModalError] = useState(false)
-    const [data, setData] = useState();
     const opciones =["Alimentos enlatados", "Bebidas calientes", "Bebidas Frias", "Carnes y pescado", "Cereales", "Comidas", "Ensalada", "Frutas y verduras", "Lácteos y huevos", "Panadería y pastelería", "Postres", "Snacks"];
     const [producto, setProducto] = useState({ valor: 'seleccione el tipo', estado: false });
     const [archivoUrl, setArchivoUrl] = React.useState("");
@@ -44,8 +43,25 @@ function Form({usuario}) {
 
         setIsLoading(true)
         await uploadBytes(storageRef, file).then((snapshot) => {
+            
             setIsLoading(false)
         });
+
+
+        const controlForm=()=>{
+
+            axios({
+                method :'POST',
+                url : 'https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products',
+                data: {
+                    Nombre: nombre,
+                    Descripcion: descripcion,
+                    Tipo: producto,
+                    Imagen: urlImagen
+                } 
+            }).then(res=>console.log(res.data))
+        }
+
 
         const laUrl = await getDownloadURL(storageRef);
         let test = laUrl.toString();
@@ -54,6 +70,7 @@ function Form({usuario}) {
 
         validarImagen(event);
         validarTamImagen(event);
+        
     };
 
     const validarImagen = (ev) =>{
@@ -114,7 +131,7 @@ function Form({usuario}) {
     }
 
     const validacion = () => {
-        if ((nombre.valor.length >= 2 && nombre.valor.length <= 30) && (descripcion.valor.length >= 10 && descripcion.valor.length <= 100) && (producto.valor !== "seleccione el tipo") && (urlImagen != null) && validacionEspacios(nombre.valor) && validacionEspacios(descripcion.valor)) {
+        if ((nombre.valor.length >= 2 && nombre.valor.length <= 30) && (descripcion.valor.length >= 10 && descripcion.valor.length <= 100) && (producto.valor !== "seleccione el tipo") && (urlImagen != "") && validacionEspacios(nombre.valor) && validacionEspacios(descripcion.valor)) {
             setNombre((prevState) => ({ ...prevState, estado: false }));
             setDescripcion((prevState) => ({ ...prevState, estado: false }));
             setProducto((prevState) => ({ ...prevState, estado: false }));
@@ -137,10 +154,10 @@ function Form({usuario}) {
             } else {
                 setProducto((prevState) => ({ ...prevState, estado: true }))
             }
-            if ((urlImagen !== null)) {
+            if ((urlImagen != "")) {
                 setImagen((prevState) => ({ ...prevState, estado: false }))
             } else {
-                setImagen((prevState) => ({ ...prevState, estado: true })) 
+                setImagen((prevState) => ({ ...prevState, estado: true }))
             }
         }
 
@@ -154,7 +171,7 @@ function Form({usuario}) {
             return true;
         }
     }
-
+    
     const mostrarError = () => {
         setTimeout(() => {
             setModalNo(false)
@@ -166,6 +183,7 @@ function Form({usuario}) {
     }
 
     const mostrarSi = () => {
+        controlForm()
         setTimeout(() => {
             setModalNo(false)
             setModalSi(false)
@@ -196,7 +214,7 @@ function Form({usuario}) {
             Registrar Producto
         </label>
 
-        <form action="https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products" method="POST" id="Formul" className="elementos-form" >
+        <form  method="POST" id="Formul" className="elementos-form" >
 
             <label className="label">
                 Nombre del producto
@@ -263,10 +281,11 @@ function Form({usuario}) {
                     Solo se permite imágenes superiores a 200 x 200
             </h3> 
 
-            <button className="botonR" onClick={validacion} disabled={isLoading}>
+            
+        </form>
+        <button className="botonR" onClick={validacion} >
                 Registrar
             </button>
-        </form>
 
                         <Modals
                     estado={modalConf}
