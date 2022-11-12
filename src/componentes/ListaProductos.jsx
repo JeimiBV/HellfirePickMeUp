@@ -33,7 +33,7 @@ function Productoslista({usuario}) {
     return(   
     <>
      
-    <div className="containerL mt-3">
+    <div className="containerG mt-3">
     <h1 className="titleL"> Lista de productos </h1> 
     <div className="productos">
 
