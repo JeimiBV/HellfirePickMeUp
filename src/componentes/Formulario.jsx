@@ -6,19 +6,21 @@ import { useState } from 'react'
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { Navigate } from "react-router-dom";
 import { useAuth } from '../context/authContext'
+import axios from "axios"
 
 
-function Form({usuario}) {
-        //codigo para bloquear la ida hacia atras
-        window.location.hash="no-back-button";
-        window.location.hash="Again-No-back-button";//esta linea es necesaria para chrome
-        window.onhashchange=function(){window.location.hash="no-back-button";}
+
+function Form({ usuario }) {
+    //codigo para bloquear la ida hacia atras
+    window.location.hash = "no-back-button";
+    window.location.hash = "Again-No-back-button";//esta linea es necesaria para chrome
+    window.onhashchange = function () { window.location.hash = "no-back-button"; }
     const { user } = useAuth();
-    
-            if(usuario!=user.uid){
-                return <Navigate to ="/"/>
-            }
-    
+
+    if (usuario != user.uid) {
+        return <Navigate to="/" />
+    }
+
     const [nombre, setNombre] = useState({ valor: '', estado: false, check: false })
     const [descripcion, setDescripcion] = useState({ valor: '', estado: false, check: false })
     const [archivo, setArchivo] = useState(false)
@@ -27,12 +29,11 @@ function Form({usuario}) {
     const [modalNo, setModalNo] = useState(false)
     const [imagen, setImagen] = useState({ estado: false })
     const [modalError, setModalError] = useState(false)
-    const opciones =["Alimentos enlatados", "Bebidas calientes", "Bebidas Frias", "Carnes y pescado", "Cereales", "Comidas", "Ensalada", "Frutas y verduras", "Lácteos y huevos", "Panadería y pastelería", "Postres", "Snacks"];
+    const opciones = ["Alimentos enlatados", "Bebidas calientes", "Bebidas Frias", "Carnes y pescado", "Cereales", "Comidas", "Ensalada", "Frutas y verduras", "Lácteos y huevos", "Panadería y pastelería", "Postres", "Snacks"];
     const [producto, setProducto] = useState({ valor: 'seleccione el tipo', estado: false });
-    const [archivoUrl, setArchivoUrl] = React.useState("");
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const [urlImagen, setUrlImagen] = useState("");
-    
+
 
     const cargarFoto = async (event) => {
         event.preventDefault();
@@ -43,25 +44,9 @@ function Form({usuario}) {
 
         setIsLoading(true)
         await uploadBytes(storageRef, file).then((snapshot) => {
-            
+
             setIsLoading(false)
         });
-
-
-        const controlForm=()=>{
-
-            axios({
-                method :'POST',
-                url : 'https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products',
-                data: {
-                    Nombre: nombre,
-                    Descripcion: descripcion,
-                    Tipo: producto,
-                    Imagen: urlImagen
-                } 
-            }).then(res=>console.log(res.data))
-        }
-
 
         const laUrl = await getDownloadURL(storageRef);
         let test = laUrl.toString();
@@ -70,30 +55,30 @@ function Form({usuario}) {
 
         validarImagen(event);
         validarTamImagen(event);
-        
+
     };
 
-    const validarImagen = (ev) =>{
+    const validarImagen = (ev) => {
 
         const file = ev.target.files[0],
-        pattern = /^image/
-        
-        if (!pattern.test(file.type)) {         
+            pattern = /^image/
+
+        if (!pattern.test(file.type)) {
             mostrarError();
             ev.target.value = null;
-        }               
+        }
     }
 
-    const validarTamImagen = (ev) =>{
+    const validarTamImagen = (ev) => {
 
         const file = ev.target.files[0]
         var height = file.height;
         var width = file.width;
         if (height < 200 || width < 200) {
             setArchivo(true);
-        } else{
+        } else {
             setArchivo(false)
-        }       
+        }
 
     }
 
@@ -136,10 +121,9 @@ function Form({usuario}) {
             setDescripcion((prevState) => ({ ...prevState, estado: false }));
             setProducto((prevState) => ({ ...prevState, estado: false }));
             setImagen((prevState) => ({ ...prevState, estado: false }));
-            setIsLoading(false)
+            
             setModalConf(true);
         } else {
-            setIsLoading(true);
 
             if ((nombre.valor.length >= 2 && nombre.valor.length <= 30) && validacionEspacios(nombre.valor)) {
                 setNombre((prevState) => ({ ...prevState, estado: false }));
@@ -165,13 +149,13 @@ function Form({usuario}) {
 
     const validacionEspacios = (parametro) => {
         var patron = /^\s+$/;
-        if(patron.test(parametro)){
+        if (patron.test(parametro)) {
             return false;
-        } else{
+        } else {
             return true;
         }
     }
-    
+
     const mostrarError = () => {
         setTimeout(() => {
             setModalNo(false)
@@ -183,18 +167,42 @@ function Form({usuario}) {
     }
 
     const mostrarSi = () => {
-        controlForm()
+        axios({
+            method: "POST",
+            data: {
+                Nombre: nombre.valor,
+                Descripcion: descripcion.valor,
+                Tipo: producto.valor,
+                Imagen: urlImagen
+            },
+            url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products",
+        }).then(response => {
+            if (!response.data.error) {
+                console.log(response.data)
+            } else {
+                console.log(response.data.error[0]);
+            }
+            setIsLoading(false);
+        })
+            .catch(err => {
+                console.log(err)
+                setIsLoading(false);
+            });
         setTimeout(() => {
             setModalNo(false)
             setModalSi(false)
         }, 3000);
-
-        document.getElementById('Formul').reset();
+        setModalConf(false);
+        setModalSi(true);
+        console.log('datos enviados');
+        
+        document.getElementById("formProducto").reset();
         setModalConf(false);
         setModalSi(true);
         setNombre(prevState => ({ ...prevState, valor: '', check: false }))
         setDescripcion(prevState => ({ ...prevState, valor: '', check: false }));
         setProducto(prevState => ({ ...prevState, valor: 'seleccione el tipo', check: false }));
+
     }
     const mostrarNo = () => {
         setTimeout(() => {
@@ -209,125 +217,131 @@ function Form({usuario}) {
     //http://localhost:5000/fir-crud-c44e7/us-central1/app/api/products
 
     return <div className="contenedorF">
-        
+
         <label className="titulo">
             Registrar Producto
         </label>
 
-        <form  method="POST" id="Formul" className="elementos-form" >
+        <div id="Formul" className="elementos-form">
+            <form id="formProducto">
 
-            <label className="label">
-                Nombre del producto
-                <div className="contenedor-input">
-                    <div className="icono">
-                        <input className="entrada" name="Nombre" placeholder="Ingrese el nombre" onChange={ev => checkNombre(ev)}></input>
-                        <i class={nombre.check ? "fa-regular fa-circle-check fa-2x" : "transparent"}></i>
+                <label className="label">
+                    Nombre del producto
+                    <div className="contenedor-input">
+                        <div className="icono">
+                            <input className="entrada" name="Nombre" placeholder="Ingrese el nombre" onChange={ev => checkNombre(ev)}></input>
+                            <i class={nombre.check ? "fa-regular fa-circle-check fa-2x" : "transparent"}></i>
+                        </div>
+                        <h3 className={nombre.estado ? "validacion" : "invisible"} >
+                            El nombre debe contener de 2 a 30 caracteres
+                        </h3>
                     </div>
-                    <h3 className={nombre.estado ? "validacion" : "invisible"} >
-                        El nombre debe contener de 2 a 30 caracteres
-                    </h3>
-                </div>
 
-            </label>
-            <label className="label">
-                Descripción del producto
-                <div className="contenedor-input">
-                    <div className="icono">
-                        <input className="entrada" name="Descripcion" placeholder="Ingrese la descripción" onChange={ev => checkDescripcion(ev)}></input>
-                        <i class={descripcion.check ? "fa-regular fa-circle-check fa-2x" : "transparent"}></i>
+                </label>
+                <label className="label">
+                    Descripción del producto
+                    <div className="contenedor-input">
+                        <div className="icono">
+                            <input className="entrada" name="Descripcion" placeholder="Ingrese la descripción" onChange={ev => checkDescripcion(ev)}></input>
+                            <i class={descripcion.check ? "fa-regular fa-circle-check fa-2x" : "transparent"}></i>
+                        </div>
+                        <h3 className={descripcion.estado ? "validacion" : "invisible"}>
+                            La descripción debe contener de 10 a 100 caracteres
+                        </h3>
                     </div>
-                    <h3 className={descripcion.estado ? "validacion" : "invisible"}>
-                        La descripción debe contener de 10 a 100 caracteres
-                    </h3>
-                </div>
-            </label>
+                </label>
 
-            <label className="label">
-                Tipo de producto
-                <div className="contenedor-input">
-                    <div className="icono">
-                        <select className="drop" name="Tipo" placeholder="Seleccione el tipo"
-                            defaultValue="seleccione el tipo"
-                            onClick={
-                                checkProducto
-                            }
-                            onChange={
-                                e => setProducto(prevState => ({ ...prevState, valor: e.target.value }))}>
-                            <option value="seleccione el tipo" disabled hidden>Seleccione el tipo</option>
-                            {opciones.map((value) => (
-                                <option value={value} key={value}>
-                                    {value}
-                                </option>
-                            ))}
-                        </select>
-                        <i class={producto.check ? "fa-regular fa-circle-check fa-2x" : "transparent"}></i>
+                <label className="label">
+                    Tipo de producto
+                    <div className="contenedor-input">
+                        <div className="icono">
+                            <select className="drop" name="Tipo" placeholder="Seleccione el tipo"
+                                defaultValue="seleccione el tipo"
+                                onClick={
+                                    checkProducto
+                                }
+                                onChange={
+                                    e => setProducto(prevState => ({ ...prevState, valor: e.target.value }))}>
+                                <option value="seleccione el tipo" disabled hidden>Seleccione el tipo</option>
+                                {opciones.map((value) => (
+                                    <option value={value} key={value}>
+                                        {value}
+                                    </option>
+                                ))}
+                            </select>
+                            <i class={producto.check ? "fa-regular fa-circle-check fa-2x" : "transparent"}></i>
+                        </div>
+                        <h3 className={producto.estado ? "validacion" : "invisible"}>
+                            Se debe seleccionar una opción
+                        </h3>
                     </div>
-                    <h3 className={producto.estado ? "validacion" : "invisible"}>
-                        Se debe seleccionar una opción
-                    </h3>
-                </div>
-            </label>
-            <label className="imagenes-label" >
-                Insertar imagen
-            </label>
+                </label>
+                <label className="imagenes-label" >
+                    Insertar imagen
+                </label>
 
-            <input id="img" type="file" className="botonA" accept="image/png, image/jpeg, image/jpg" onChange={cargarFoto} />
-            <input type="hidden" name="Imagen" value={urlImagen} />
-            <h3 className={imagen.estado ? "validacion" : "invisible"}>
-                Se debe seleccionar una imagen
-            </h3>
+                <input id="img" type="file" className="botonA" accept="image/png, image/jpeg, image/jpg" onChange={cargarFoto} />
+                <input type="hidden" name="Imagen" value={urlImagen} />
+                <h3 className={imagen.estado ? "validacion" : "invisible"}>
+                    Se debe seleccionar una imagen
+                </h3>
+                <h3 className={isLoading ? "validacion" : "invisible"}>
+                    Cargando imagen ...
+                </h3>
 
-            <h3 className={archivo ? "validacion" : "invisible"}>
+                <h3 className={archivo ? "validacion" : "invisible"}>
                     Solo se permite imágenes superiores a 200 x 200
-            </h3> 
+                </h3>
 
-            
-        </form>
-        <button className="botonR" onClick={validacion} >
+            </form>
+
+            <button className="botonR" onClick={validacion} >
                 Registrar
             </button>
+        </div>
 
-                        <Modals
-                    estado={modalConf}
-                    cambiarEstado={setModalConf}
-                    estadoPantalla={true}
-                    texto={"Seguro de guardar el producto?"} 
-                    titulo={" Registro de producto"}
-                    mostrarSi={mostrarSi}
-                    mostrarNo={mostrarNo}
-                    buttons={true}
-                    />
-                    <Modals                        
-                    estado={modalSi}
-                    cambiarEstado={setModalSi}
-                    estadoPantalla={true}
-                    texto={"Guardando registro ..."} 
-                    buttons={false}
-                    />
-                     <Modals                        
-                    estado={modalNo}
-                    cambiarEstado={setModalNo}
-                    estadoPantalla={true}
-                    texto={"Cancelado"} 
-                    buttons={false}
-                    />
-                    <Modals                        
-                    estado={modalNo}
-                    cambiarEstado={setModalNo}
-                    estadoPantalla={true}
-                    texto={"Cancelado"} 
-                    buttons={false}
-                   />
 
-                    <Modals                        
-                    estado={modalError}
-                    cambiarEstado={setModalError}
-                    estadoPantalla={true}
-                    texto={"Se debe insertar una imagen"} 
-                    buttons={false}
-                   />
+        <Modals
+            estado={modalConf}
+            cambiarEstado={setModalConf}
+            estadoPantalla={true}
+            texto={"Seguro de guardar el producto?"}
+            titulo={" Registro de producto"}
+            mostrarSi={mostrarSi}
+            mostrarNo={mostrarNo}
+            buttons={true}
+        />
+        <Modals
+            estado={modalSi}
+            cambiarEstado={setModalSi}
+            estadoPantalla={true}
+            texto={"Guardando registro ..."}
+            buttons={false}
+        />
+        <Modals
+            estado={modalNo}
+            cambiarEstado={setModalNo}
+            estadoPantalla={true}
+            texto={"Cancelado"}
+            buttons={false}
+        />
+        <Modals
+            estado={modalNo}
+            cambiarEstado={setModalNo}
+            estadoPantalla={true}
+            texto={"Cancelado"}
+            buttons={false}
+        />
 
-        
+        <Modals
+            estado={modalError}
+            cambiarEstado={setModalError}
+            estadoPantalla={true}
+            texto={"Se debe insertar una imagen"}
+            buttons={false}
+        />
+
+
 
     </div>
 

@@ -24,6 +24,10 @@
     border-radius: 20px; 
     justify-content: center;   
 }
+#formProducto{
+    display: flex;
+    flex-direction: column;
+}
 .label{ 
     padding-top: .5%;
     padding-bottom: 0.3%;
@@ -48,8 +52,9 @@
     min-width: 10%;
     margin: 2% auto;
     background-color: gray;
-    transition: .5s;
     cursor: pointer;
+
+
 }
 .botonR:hover{
     background-color: darkslategray;
