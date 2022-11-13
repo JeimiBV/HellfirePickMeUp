@@ -75,13 +75,13 @@
 }
 @media(width: 375px){
   #side::before { 
-    font-size: 2em;
+    font-size: 3em;
     top:8%;
   }
 }
 @media(max-width: 414px){
   #side::before { 
-    font-size: 2em;
+    font-size: 3em;
     top:14%;
   }
   #side {
@@ -97,13 +97,23 @@
     top: 11%;    
   }
 }
-@media(min-width: 1280px){
+@media(width: 1024px){
   #side::before { 
-    font-size: 3em;
-    top:12%;
+    font-size: 1.5em;
+    top:14%;
   }
   #side {
     top: 11%;    
+  }
+}
+@media(width: 280px){
+  #side::before { 
+    font-size: 1em;
+    top:20%;
+  }
+  #side {
+    top: 18%; 
+    width: 14em;   
   }
 }
 

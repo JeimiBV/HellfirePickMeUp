@@ -84,7 +84,7 @@
     }
     .productos{   
         margin-top: 8%;
-        margin-left: 16%;
+        margin-left: 10%;
         grid-template-columns: repeat(auto-fit, minmax(14rem, 0fr));
      
     }
@@ -98,3 +98,24 @@
         height: 200px;
       }
 }   
+@media(width: 280px){
+    .titleL{
+        margin-top: 20%;
+        font-size: 2rem;
+    }
+    .productos{   
+        margin-top: 8%;
+        margin-left: 10%;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 0fr));
+     
+    }
+      .nombreL{
+        
+        font-size: 1.8rem;
+        
+    }
+    .imagen{
+        width: 210px;
+        height: 200px;
+      }
+}
