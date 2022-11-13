@@ -5,7 +5,7 @@
 }
 
 .over{
-    width: 80%;
+    width: 100%;
     height: 89.5vh;
     position: fixed;
     bottom: 0;
@@ -42,3 +42,30 @@
     position: absolute;
     bottom: 0px;
 }
+
+.ttmod{
+    font-size: 220%;
+}
+
+.txmod{
+    font-size: 100%;
+}
+
+  @media(max-width: 562px){
+    .ttmod{
+        font-size: 1.5rem;
+    }
+    .txmod{
+        font-size: 0.8rem;
+    }
+        
+  }
+ 
+  @media(max-width: 280px){
+    .ttmod{
+        font-size: 1rem;
+    }
+    .txmod{
+        font-size: 0.6rem;
+    }
+  }

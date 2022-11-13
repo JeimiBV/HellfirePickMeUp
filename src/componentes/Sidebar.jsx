@@ -4,7 +4,7 @@ import "../estilos/Sidebar.css"
 
 const Sidebar = () => {
     return (
-                <div className='Sidebar mt-3 pt-2'>
+            <div id="side">
                     <ul className='listaSidebar'>
                     {
                         Sidebardatos.map((item, index)=>{
