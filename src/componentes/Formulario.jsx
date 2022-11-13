@@ -216,13 +216,8 @@ function Form({ usuario }) {
 
     //http://localhost:5000/fir-crud-c44e7/us-central1/app/api/products
 
-<<<<<<< HEAD
     return <div className="contenedorF">
 
-=======
-    return <div className="contenedorF ">
-        
->>>>>>> MajoMenu
         <label className="titulo">
             Registrar Producto
         </label>
