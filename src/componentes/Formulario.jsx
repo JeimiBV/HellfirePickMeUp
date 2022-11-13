@@ -29,7 +29,7 @@ function Form({ usuario }) {
     const [modalNo, setModalNo] = useState(false)
     const [imagen, setImagen] = useState({ estado: false })
     const [modalError, setModalError] = useState(false)
-    const opciones = ["Alimentos enlatados", "Bebidas calientes", "Bebidas Frias", "Carnes y pescado", "Cereales", "Comidas", "Ensalada", "Frutas y verduras", "Lácteos y huevos", "Panadería y pastelería", "Postres", "Snacks"];
+    const opciones = ["Alimentos enlatados", "Bebidas calientes", "Bebidas frías", "Carnes y pescado", "Cereales", "Comidas", "Ensalada", "Frutas y verduras", "Lácteos y huevos", "Panadería y pastelería", "Postres", "Snacks"];
     const [producto, setProducto] = useState({ valor: 'seleccione el tipo', estado: false });
     const [isLoading, setIsLoading] = useState(false);
     const [urlImagen, setUrlImagen] = useState("");
