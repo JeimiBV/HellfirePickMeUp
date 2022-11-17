@@ -1,0 +1,54 @@
+
+.contenedor-pedidos{
+    background-color: azure;
+    width: 40vw;
+    height: 55vh;
+    padding: 2vh;
+    border-radius: 20px;
+}
+#form-Pedido{
+    display: flex;
+    flex-direction: column;
+    width: 28vw;
+    margin-left: 2vw;
+    margin-top: 4vh;
+    
+}
+.agregador{
+    display: flex;
+   
+    
+}
+.boton-controlar-pedido{
+    border: 1px solid black;
+    padding:0 10px 0 10px ;
+    height: 1.9rem;
+    cursor: pointer;
+}
+
+.boton-conf{
+    padding: 0 2vw;
+    margin-top: 2vh;
+}
+.boton-controlar-pedido:hover{
+    background-color: rgb(19, 106, 147);
+    color: aliceblue;
+}
+.contenedor-agregar{
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-between;
+    width: 12vw;
+    align-items: center;
+}
+.botones-pedido{
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#notas{
+    height: 10vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}

@@ -22,7 +22,7 @@ function Form({usuario}) {
     const [nombre, setNombre] = useState({ valor: '', estado: false, check: false })
     const [descripcion, setDescripcion] = useState({ valor: '', estado: false, check: false })
     const [archivo, setArchivo] = useState(false)
-    const [modalConf, setModalConf] = useState(false)
+    const [modalConf, setModalConf] = useState(true)
     const [modalSi, setModalSi] = useState(false)
     const [modalNo, setModalNo] = useState(false)
     const [imagen, setImagen] = useState({ estad: false })

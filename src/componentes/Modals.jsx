@@ -11,9 +11,9 @@ function Modals({  estado, estadoPantalla,texto, titulo, mostrarSi, mostrarNo,bu
                 <div className="card-body position-relative text-center">
 
                 <i class={icon?"fa-solid fa-circle-exclamation fa-5x pb-3  ": " "}></i>
-                    <h2>
+                    <p className="tituloModal">
                     {titulo}
-                    </h2>
+                    </p>
                     <h4>
                         {texto}
                     </h4>

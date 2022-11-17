@@ -5,6 +5,7 @@ import { filtrarOfertas } from './funciones'
 import { Navigate } from "react-router-dom";
 import { useAuth } from '../context/authContext';
 import { todosCategorias } from "./funciones";
+import Pedido from "./Pedido"
 function Mostraroferta({ usuario }) {
     const { user } = useAuth();
 
@@ -14,6 +15,9 @@ function Mostraroferta({ usuario }) {
     const [categorias, setCategorias] = useState(null);
     const [ofertas, setOfertas] = useState(null)
     const params = useParams()
+    const [modalPedido, setModalPedido]=useState(false);
+    const [contador, setContador]=useState(1);
+    const [precio, setPrecio]=useState(10);
     useEffect(() => {
         filtrarOfertas(params.id, setOfertas)
         todosCategorias(setCategorias)
@@ -23,7 +27,17 @@ function Mostraroferta({ usuario }) {
     const fechaActual = new Date()
     const pr = ofertas || []
     console.log(pr)
-
+    const sumar=()=>{
+        setContador(contador+1)
+        setPrecio(precio+10)
+    }
+    const disminuir=()=>{
+        if(contador>1){
+            setContador(contador-1)
+            setPrecio(precio-10)
+        }
+        
+    }
     const ofertados = pr.filter(producto => {
         const fechaPr = new Date(producto.Fecha + 'T' + producto.Hora)
         return fechaPr > fechaActual && producto.Precio !== '';
@@ -39,6 +53,10 @@ function Mostraroferta({ usuario }) {
 
                 <span class="price">Hora límite: {oferta.Hora} </span>
 
+                <button onClick={()=>{setModalPedido(true)}} className="mt-5 p-1 ps-2 pe-2 ms-5 btn btn-outline-dark ">
+                    Hacer pedido
+                 </button>
+
             </section>
             <section className="seccion1">
                 <img src={oferta.Imagen} alt="" />
@@ -46,8 +64,13 @@ function Mostraroferta({ usuario }) {
                     <p>{oferta.Descripcion} </p>
                 </span>
             </section>
+         
         </div>
+
+        
     )
+        
+    
     )
     const pr1 = categorias || []
     const ListaCategorias = pr1.map(categoria => (
@@ -77,6 +100,38 @@ function Mostraroferta({ usuario }) {
                     </div>
                 </div>
             </div>
+            <Pedido estado={modalPedido}>
+
+                <div className="contenedor-pedidos ">  
+                 <h2 className="label-2">Producto 1</h2>
+                 <form id="form-Pedido">
+                     <label htmlFor="notas">Notas para este producto</label>
+                    <input type="text" id="notas" />
+                    <label htmlFor="">
+                            Agregar
+                        </label>
+                    <div className=" contenedor-agregar">
+                        
+                    <div className="  agregador ">
+
+                        <div className="boton-controlar-pedido"  onClick={disminuir}>-</div>
+                        <div className="boton-controlar-pedido"  >{contador}</div>
+                        <div className="boton-controlar-pedido" onClick={sumar}>+</div>
+                    </div>
+                    <div className="sumador-precio p-2">
+                        Bs : {precio}
+                    </div>
+                    </div>
+                 </form>
+                 <div className="botones-pedido" >
+                        <button className="boton-conf"> Realizar pedido</button>
+                        <button className="boton-conf" onClick={()=>{setModalPedido(false)}}> Cancelar pedido</button>
+                 </div>
+                
+                
+                </div>
+
+            </Pedido>
         </div>
 
     )
