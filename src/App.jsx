@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import LandingPage from './componentes/Landingpage'
 import LoginC from "./componentes/FormInicioS";
@@ -17,6 +18,8 @@ import Landing from "./componentes/Landing";
 import Mostrarmenu from "./componentes/Menu";
 import Mostraroferta from "./componentes/Oferta";
 import ListaOfertas from "./componentes/ListaOferta";
+import { PlantillaC } from "./componentes/Consumidor/PlantillaConsu";
+
 
 function App() {
   const [userN, setUserN] = useState("QwXZyaODI9bQPoepSI1XyTYTeej1");
@@ -98,8 +101,11 @@ function App() {
           element={
             <AuthProvider>
               <ProtectedRoute>
-                <Mostrarmenu usuario={userC} />
+               <PlantillaC>
+               <Mostrarmenu usuario={userC} />
+               </PlantillaC>
               </ProtectedRoute>
+             
             </AuthProvider>
           }
         />
@@ -108,7 +114,22 @@ function App() {
           element={
             <AuthProvider>
               <ProtectedRoute>
-                <Mostraroferta usuario={userC} />
+              <PlantillaC>
+              <Mostraroferta usuario={userC} />
+              </PlantillaC>
+              </ProtectedRoute>
+            </AuthProvider>
+          }
+        />
+        
+        <Route
+          path="/categorias"
+          element={
+            <AuthProvider>
+              <ProtectedRoute>
+              <PlantillaC>
+                <Mostrarmenu usuario={userC} />
+                </PlantillaC>
               </ProtectedRoute>
             </AuthProvider>
           }
