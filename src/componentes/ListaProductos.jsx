@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "../estilos/productos.css";
-import {todosProductos} from './funciones'
+
 import { Navigate } from "react-router-dom";
 import { useAuth } from '../context/authContext'
 
@@ -17,16 +17,6 @@ function Productoslista({usuario}) {
         return <Navigate to ="/"/>
     }
   
-
-    const [productos, setProductos]=useState(null)
-
-    useEffect(() => {
-        todosProductos(setProductos)
-    },[] )  
-
-
-    let resultados 
-    
  
     return(   
     <>
@@ -34,30 +24,36 @@ function Productoslista({usuario}) {
     <div className="containerG mt-3">
     
     <h1 className="titleL"> Lista de productos </h1> 
+
+        <div className="buscador">
+             <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
+                <input class="form-control inputBusc me-2" type="search" placeholder="Buscar" aria-label="Search"  />                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+        </div>
+
     <div className="productos">
 
-        {productos != null ? (
-
+    {productos && 
             
-             productos.map(producto => (
+        productos.map(producto => (
   
-                    <div className="producto" key={producto.id}> 
-                             
-                            <div className="producto_imagen">
-                                <a href={`/Informacion/${producto.id}`}>
-                                    <img className="imagen" src={producto.Imagen} alt="" />
-                                </a>
-                            </div>      
-                
+            <div className="producto" key={producto.id}>                  
+                <div className="producto_imagen">
+                    <a href={`/Informacion/${producto.id}`}>
+                        <img className="imagen" src={producto.Imagen} alt="" />
+                    </a>
+                </div> 
 
-                        <div className="P_footer">
-                                    <h1 className="nombreL">{producto.Nombre}</h1>       
-                        </div>    
-                    </div>  
+                <div className="P_footer">
+                    <h1 className="nombreL">{producto.Nombre}</h1>       
+                </div>    
+            </div>  
             )           
-    )
-        ):('no hay productos')}
-      </div>
+        )
+      
+    }
+    </div>
+    
         </div> 
     
     </>    
