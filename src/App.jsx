@@ -19,6 +19,7 @@ import Mostrarmenu from "./componentes/Menu";
 import Mostraroferta from "./componentes/Oferta";
 import ListaOfertas from "./componentes/ListaOferta";
 import { PlantillaC } from "./componentes/Consumidor/PlantillaConsu";
+import ListaPedidos from "./componentes/Consumidor/ListaPedidos"
 
 
 function App() {
@@ -129,6 +130,18 @@ function App() {
               <ProtectedRoute>
               <PlantillaC>
                 <Mostrarmenu usuario={userC} />
+                </PlantillaC>
+              </ProtectedRoute>
+            </AuthProvider>
+          }
+        />
+        <Route
+          path="/listaPedidos"
+          element={
+            <AuthProvider>
+              <ProtectedRoute>
+              <PlantillaC>
+                <ListaPedidos usuario={userC} />
                 </PlantillaC>
               </ProtectedRoute>
             </AuthProvider>
