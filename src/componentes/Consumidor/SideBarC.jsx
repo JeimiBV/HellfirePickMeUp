@@ -1,5 +1,5 @@
 import React from 'react'
-import {SidebarDatosC} from './SidebarDatosC'
+import {SidebarDatosC} from './SideBarDatosC'
 import "../../estilos/Sidebar.css"
 
 const SidebarC = () => {

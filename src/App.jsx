@@ -136,7 +136,7 @@ function App() {
           }
         />
         <Route
-          path="/listaPedidos"
+          path="/pedidos"
           element={
             <AuthProvider>
               <ProtectedRoute>

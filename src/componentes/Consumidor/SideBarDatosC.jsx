@@ -2,13 +2,13 @@ export const SidebarDatosC = [
 
     {
         title: "Categorias",
-        path: "/categorias"
+        path: "/menu"
 
     },
     {
-        title: "Lista de pedidos",
-        path: "/listaPedidos"
+        title: "Pedidos",
+        path: "/pedidos"
 
-    }
+    },
     
 ]
