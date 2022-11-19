@@ -24,7 +24,7 @@ function Informacion() {
 
     const [post, setPost] = useState(null);
     const url =
-        "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products";
+        "http://localhost:5000/base-de-datos-h/us-central1/app/api/products";
     useEffect(() => {
         unicoProducto(params.id, setProductos);
 
@@ -45,10 +45,14 @@ function Informacion() {
                 Precio: document.getElementById("numero").value,
                 Fecha: document.getElementById("fecha").value,
                 Hora: document.getElementById("hora").value,
+                Stock: document.getElementById("stock").value,
+                
             })
+            
             .then((response) => {
                 setPost(response.data);
                 mostrarSi();
+            
             });
     }
 
