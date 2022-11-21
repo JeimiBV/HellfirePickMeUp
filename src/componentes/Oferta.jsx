@@ -53,7 +53,7 @@ function Mostraroferta({ usuario }) {
 
                 <span class="price">Hora límite: {oferta.Hora} </span>
 
-                <button onClick={()=>{setModalPedido(true)}} className="mt-5 p-1 ps-2 pe-2 ms-5 btn btn-outline-dark ">
+                <button onClick={()=>{setModalPedido(true)}} className=" invisible mt-5 p-1 ps-2 pe-2 ms-5 btn btn-outline-dark ">
                     Hacer pedido
                  </button>
 
