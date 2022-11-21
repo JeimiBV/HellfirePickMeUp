@@ -103,6 +103,16 @@ transform: perspective(600px)rotateY(180deg);
     transform: perspective(600px)rotateY(360deg);
     } 
 
+.botonEliminar{
+    position: absolute;
+    top: 85%;
+    right: 5%;
+    width: 10%;
+    background-color: #84A98C;
+    border: none;
+}
+
+
 /* .card-Pedido > .card-letra {
     text-align: left;
 }
