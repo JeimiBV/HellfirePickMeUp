@@ -45,10 +45,14 @@ function Informacion() {
                 Precio: document.getElementById("numero").value,
                 Fecha: document.getElementById("fecha").value,
                 Hora: document.getElementById("hora").value,
+                Stock: document.getElementById("stock").value,
+                
             })
+            
             .then((response) => {
                 setPost(response.data);
                 mostrarSi();
+            
             });
     }
 

@@ -58,7 +58,7 @@ const todosCategorias = async (setCategorias) =>{
     const peticion =  Axios({
         method: "GET",
         //withCredentials: true,
-        url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/oferts",
+        url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/ofets",
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)
