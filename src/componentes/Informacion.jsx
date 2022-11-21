@@ -360,7 +360,7 @@ function Informacion() {
                             estado={modalConf}
                             cambiarEstado={setModalConf}
                             estadoPantalla={true}
-                            texto={"Esta seguro de realizar su oferta?"}
+                            texto={"¿Está seguro de realizar su oferta?"}
                             icon={false}
                             
                         />

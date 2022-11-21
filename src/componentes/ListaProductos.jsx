@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from "react";
 import "../estilos/productos.css";
-import IMG1 from "../imagenes/pique.png";
-import { Link } from "react-router-dom";
 import {todosProductos} from './funciones'
-import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { Navigate } from "react-router-dom";
 import { useAuth } from '../context/authContext'
+
 
 
 function Productoslista({usuario}) {
@@ -33,7 +31,8 @@ function Productoslista({usuario}) {
     return(   
     <>
      
-    <div className="containerL mt-3">
+    <div className="containerG mt-3">
+    
     <h1 className="titleL"> Lista de productos </h1> 
     <div className="productos">
 

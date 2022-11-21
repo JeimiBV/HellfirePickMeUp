@@ -1,18 +1,16 @@
 
-
 *{ 
     margin: 0%;
     padding: 0%;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
-.contenedor-1{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.todo{
     align-items: center;
-    width: 80%;
+    width: 100%;
+    min-height:89.6vh ;
     background-color: gray;
-    position: relative;
+    position: relative;
+    text-align: center;
 }
 .elementos-form-1{
     min-width: 60%;

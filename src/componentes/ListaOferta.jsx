@@ -29,7 +29,7 @@ const ListaOfertas = ({usuario}) => {
     return (
 
         <>
-            <div className="container containerL">
+            <div className=" containerL">
                 <h1 className="text-center mt-3" > Lista de Ofertas </h1>
                 <div className="ofertasP">
                 

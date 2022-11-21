@@ -11,12 +11,12 @@ function Modals({  estado, estadoPantalla,texto, titulo, mostrarSi, mostrarNo,bu
                 <div className="card-body position-relative text-center">
 
                 <i class={icon?"fa-solid fa-circle-exclamation fa-5x pb-3  ": " "}></i>
-                    <p className="tituloModal">
+                   <p className="ttmod">
                     {titulo}
                     </p>
-                    <h4>
+                    <p className="txmod">
                         {texto}
-                    </h4>
+                    </p>
 
                 </div>
                 <div className={buttons?"botones botonSN":"transparent"}>

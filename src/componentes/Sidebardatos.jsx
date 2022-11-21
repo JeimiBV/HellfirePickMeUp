@@ -1,7 +1,7 @@
 export const Sidebardatos = [
 
     {
-        title: "Lista de Productos",
+        title: "Lista de productos",
         path: "/listaProductos"
 
     },
@@ -11,7 +11,7 @@ export const Sidebardatos = [
 
     },
     {
-        title: "Lista de Ofertas",
+        title: "Lista de ofertas",
         path: "/listaOfertas"
 
     },
