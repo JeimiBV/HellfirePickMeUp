@@ -175,7 +175,7 @@ function Form({ usuario }) {
                 Tipo: producto.valor,
                 Imagen: urlImagen
             },
-            url: "http://localhost:5000/base-de-datos-h/us-central1/app/api/products",
+            url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products",
         }).then(response => {
             if (!response.data.error) {
                 console.log(response.data)

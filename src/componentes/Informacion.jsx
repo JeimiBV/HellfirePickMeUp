@@ -24,7 +24,7 @@ function Informacion() {
 
     const [post, setPost] = useState(null);
     const url =
-        "http://localhost:5000/base-de-datos-h/us-central1/app/api/products";
+        "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products";
     useEffect(() => {
         unicoProducto(params.id, setProductos);
 
@@ -45,7 +45,7 @@ function Informacion() {
                 Precio: document.getElementById("numero").value,
                 Fecha: document.getElementById("fecha").value,
                 Hora: document.getElementById("hora").value,
-                Stock: document.getElementById("stock").value,
+                Stock: 0,
                 
             })
             
@@ -219,7 +219,7 @@ function Informacion() {
                         <form
                             className="fo"
                             id="form"
-                            action="http://localhost:5000/base-de-datos-h/us-central1/app/api/products/${id}"
+                            action="https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products/${id}"
                             method="PUT"
                         >
                             <label className="label-1">
@@ -308,7 +308,7 @@ function Informacion() {
                                 </div>
                                 
                             </label>
-                            <label className="label-1">
+                            <label className="label-1 invisible">
                                 <div className="contenedor-input-1">
                                     Stock:
                                     <input
