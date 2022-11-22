@@ -16,6 +16,10 @@
             height: 90vh;
             background-color: #CAD2C5;
           }
+
+        .container89 > .buscador .inputBusc{
+            width: 60%;
+        }
         
         .title{
             position: absolute;

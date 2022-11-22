@@ -3,7 +3,8 @@ import "../estilos/productos.css";
 
 import { Navigate } from "react-router-dom";
 import { useAuth } from '../context/authContext'
-import Axios from "axios";
+import { todosProductos } from './funciones'
+import '../estilos/Ofertas.css'
 
 
 function Productoslista({usuario}) {
@@ -17,46 +18,34 @@ function Productoslista({usuario}) {
         return <Navigate to ="/"/>
     }
   
-    const[productos, setProductos] = useState([])
-    const [tablaProductos, setTablaProductos]= useState([]);
-    const [busqueda, setBusqueda]= useState("");
-     
-    const todosProductos = async () =>{
-
-        const peticion =  Axios({
-            method: "GET",
-            url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products",
-        }).then(response => {
-            if (!response.data.error) {
-                setProductos(response.data)
-                setTablaProductos(response.data)
-            } else {
-                console.log(response.data.error[0]);
-            }
-        })
-            .catch(err => {
-                console.log(err)
-            });
-        console.log(peticion)
-    }
+    const [productos, setProductos] = useState([])
+     const [tablaProductos, setTablaProductos]= useState([]);
+     const [busqueda, setBusqueda]= useState("");
+      
+        useEffect(() => {            
+        todosProductos(setProductos)
+        todosProductos(setTablaProductos)
+    }, [])
 
     const handleChange=e=>{
-        setBusqueda(e.target.value);
-        filtrar(e.target.value);
+        setBusqueda(e.target.value);         
+        if (busqueda == " ") {
+            alert("No puede ingresar espacios vacios");
+
+        }else{
+            
+            filtrar(e.target.value); 
+        }                  
     }
 
     const filtrar=(terminoBusqueda)=>{
         var resultadosBusqueda=tablaProductos.filter((elemento)=>{
-          if(elemento.Nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+          if( elemento.Nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
             return elemento;
           }
         });
         setProductos(resultadosBusqueda);
       } 
-  
-      useEffect(()=>{
-        todosProductos();
-        },[])
  
     return(   
     <>
@@ -67,7 +56,7 @@ function Productoslista({usuario}) {
 
         <div className="buscador">
              <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
-                <input class="form-control inputBusc me-2" type="search" placeholder="Buscar" aria-label="Search"  />                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                <input class="form-control inputBusc me-2" type="search" placeholder="Buscar" aria-label="Search"  />    
             </form>
         </div>
 

@@ -1,3 +1,4 @@
+
 .containerG{
     position: relative;
     width: 100%;
@@ -9,7 +10,18 @@
 
 .containerG > .buscador .inputBusc{
     width: 60%;
+    padding-right: 2.5rem;
 }
+
+.containerG > .buscador .inputBusc .logoBuscar  {
+    color: #191919;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 4px;
+    top: 1%;
+    transform: translateY(-50%);
+  }
 
 .imagen{
     width: 200px;

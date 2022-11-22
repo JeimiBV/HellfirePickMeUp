@@ -17,6 +17,7 @@ import Landing from "./componentes/Landing";
 import Mostrarmenu from "./componentes/Menu";
 import Mostraroferta from "./componentes/Oferta";
 import ListaOfertas from "./componentes/ListaOferta";
+import InicioConsu from "./componentes/InicioConsu";
 
 function App() {
   const [userN, setUserN] = useState("QwXZyaODI9bQPoepSI1XyTYTeej1");
@@ -103,6 +104,18 @@ function App() {
             </AuthProvider>
           }
         />
+
+        <Route
+          path="/inicioConsu"
+          element={
+            <AuthProvider>
+              <ProtectedRoute>
+                <InicioConsu usuario={userC} />
+              </ProtectedRoute>
+            </AuthProvider>
+          }
+        />
+
         <Route
           path="/oferta/:id"
           element={

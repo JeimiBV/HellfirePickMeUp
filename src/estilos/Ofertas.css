@@ -4,8 +4,14 @@
     height: 89.6vh;
     background-color: #CAD2C5;
     overflow-y: scroll;
+    
    
 }
+
+.containerL > .buscador .inputBusc{
+    width: 60%;
+}
+
 .ofertasP{
     position: relative; 
     padding: 1rem 2rem ;
@@ -17,6 +23,7 @@
     grid-template-columns: repeat(auto-fit, minmax(12.5rem, 0fr));
     gap: 3rem ;
     box-sizing: border-box;
+    justify-content: center;
 }
 
 .card-of > .imagenOf {

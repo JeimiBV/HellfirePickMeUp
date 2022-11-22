@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { todosProductos } from './funciones'
 import '../estilos/Ofertas.css'
 import { useAuth } from "../context/authContext";
+import { todosProductos } from './funciones'
 
 const ListaOfertas = ({usuario}) => {
 
@@ -11,29 +11,58 @@ const ListaOfertas = ({usuario}) => {
                 return <Navigate to ="/"/>
             }
 
-    const [productos, setProductos] = useState(null)
-    useEffect(() => {
+     const [productos, setProductos] = useState([])
+     const [tablaProductos, setTablaProductos]= useState([]);
+     const [busqueda, setBusqueda]= useState("");
+      
+        useEffect(() => {            
         todosProductos(setProductos)
+        todosProductos(setTablaProductos)
     }, [])
 
-    const fechaActual = new Date()
-    const pr = productos || []
+    const handleChange=e=>{
+        setBusqueda(e.target.value);         
+        if (busqueda == " ") {
+            alert("No puede ingresar espacios vacios");
+        }else{
+            filtrar(e.target.value); 
+        } 
+    }
+    
+    const fechaActual = new Date()  
 
-    const ofertados = pr.filter(producto => 
+    const ofertados = productos.filter(producto => 
         {   
             const fechaPr = new Date(producto.Fecha + 'T' + producto.Hora) 
             return  fechaPr > fechaActual && producto.Precio !== '';
         }
-    )   
-        
+    ) 
+  
+    const filtrar=(terminoBusqueda)=>{
+        var resultadosBusqueda= tablaProductos.filter((elemento)=>{
+            const fechaPr = new Date(elemento.Fecha + 'T' + elemento.Hora)
+          if(elemento.Nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+            return fechaPr > fechaActual && elemento.Precio !== '';
+          }
+        });
+        setProductos(resultadosBusqueda);
+      } 
+    
     return (
 
         <>
             <div className=" containerL">
                 <h1 className="text-center mt-3" > Lista de Ofertas </h1>
+
+                <div className="buscador">
+                    <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
+                        <input class="form-control inputBusc me-2" type="search" placeholder="Buscar" aria-label="Search"  />              
+                    </form>
+                </div>
+
                 <div className="ofertasP">
                 
-                    {ofertados != null ? (
+                    {
                         ofertados.map(oferta => (
                             <div  className="row row-col" key={oferta.id}>
                                 <div class="card card-of border-success mb-2 bg-sucessP">
@@ -53,7 +82,7 @@ const ListaOfertas = ({usuario}) => {
                             </div>
                         )
                         )
-                    ) : ('no hay productos')}
+                   }
                 </div>
             </div>
 
