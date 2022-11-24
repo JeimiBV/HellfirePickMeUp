@@ -17,6 +17,7 @@ import Landing from "./componentes/Landing";
 import Mostrarmenu from "./componentes/Menu";
 import Mostraroferta from "./componentes/Oferta";
 import ListaOfertas from "./componentes/ListaOferta";
+import MostrarPedidosN from "./componentes/Pedidos";
 
 function App() {
   const [userN, setUserN] = useState("QwXZyaODI9bQPoepSI1XyTYTeej1");
@@ -120,6 +121,18 @@ function App() {
               <ProtectedRoute>
                 <Plantilla>
                   <ListaOfertas usuario={userN} />
+                </Plantilla>
+              </ProtectedRoute>
+            </AuthProvider>
+          }
+        />
+        <Route
+          path="/Pedidos"
+          element={
+            <AuthProvider>
+              <ProtectedRoute>
+                <Plantilla>
+                  <MostrarPedidosN usuario={userN} />
                 </Plantilla>
               </ProtectedRoute>
             </AuthProvider>

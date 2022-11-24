@@ -7,8 +7,7 @@ const todosProductos = async (setProductos) =>{
     const peticion =  Axios({
         method: "GET",
         //withCredentials: true,
-        
-        url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products",
+        url: "http://localhost:5000/base-de-datos-h/us-central1/app/api/products",
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)
@@ -20,24 +19,19 @@ const todosProductos = async (setProductos) =>{
         .catch(err => {
             console.log(err)
         });
-   // state(peticion.data.results)
+
     console.log(peticion)
 
 }
-/*const todosProductos = async () => {
-    const url = "http://localhost:5000/pruebafirebase-30018/us-central1/app/api/products"
-        .then(Response => Response.json()
-            .then(data => { console.log(data) })
-        )
-}*/
+
 const unicoProducto = async (id, setProducto) => {
     console.log(id)
-    //console.log(req.params.id)
+
 
     const peticion =  Axios({
         method: "GET",
         //withCredentials: true,
-        url: `https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products/${id}`,
+        url: `http://localhost:5000/base-de-datos-h/us-central1/app/api/products/${id}`,
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)
@@ -58,7 +52,7 @@ const todosCategorias = async (setCategorias) =>{
     const peticion =  Axios({
         method: "GET",
         //withCredentials: true,
-        url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/oferts",
+        url: "http://localhost:5000/base-de-datos-h/us-central1/app/api/oferts",
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)
@@ -81,7 +75,7 @@ const filtrarOfertas = async (id, setOfertas) => {
     const peticion =  Axios({
         method: "GET",
         //withCredentials: true,
-        url: `https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/oferts/${id}`,
+        url: `http://localhost:5000/base-de-datos-h/us-central1/app/api/oferts/${id}`,
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)
@@ -105,7 +99,3 @@ export {
     todosCategorias, 
     filtrarOfertas
 }
-
-/*const peticion = await axios.get(`http://localhost:5000/pruebafirebase-30018/us-central1/app/api/products/${id}`)
-state(peticion.data)*/
-//https://rickandmortyapi.com/api/character

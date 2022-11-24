@@ -41,7 +41,7 @@ function Mostraroferta({ usuario }) {
 
             </section>
             <section className="seccion1">
-                <img src={oferta.Imagen} alt="" />
+                <img className="imgMajo"src={oferta.Imagen} alt="" />
                 <span class="list-category">
                     <p>{oferta.Descripcion} </p>
                 </span>
