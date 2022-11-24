@@ -15,4 +15,9 @@ export const Sidebardatos = [
         path: "/listaOfertas"
 
     },
+    {
+         title: "Lista de pedidos",
+         path: "/Pedidos"
+
+    },
 ]

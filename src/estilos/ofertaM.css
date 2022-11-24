@@ -11,10 +11,8 @@
         }
         
         .container89{
-
             max-width: 100%;
-            height: 90vh;
-            background-color: #CAD2C5;
+            height: 86.6vh;
           }
         
         .title{
@@ -48,7 +46,11 @@
 
         }
         .nombreO{
-            font-size: 6vh;
+            font-size: 5vh;
+            text-transform: lowercase;
+        }
+        .nombreO::first-letter{
+            text-transform: uppercase;
         }
         .default-hero-banner section{
         text-align:center;
@@ -58,10 +60,11 @@
         /*LIST SECTION*/
         .list-section{
         width:100%;
-        height: 87.3%;
+        height: 87%;
         display:flex;
         align-items:top;
         overflow-y: scroll;
+        background-color: #CAD2C5;
  
         }
         
@@ -177,7 +180,10 @@
         .list-cards .list-card:hover  .list-category{
         left:0%;
         }
-        
+        .imgMajo{
+            width: 200px;
+            height: 200px;
+        }
         
         @media (max-width:920px){
         .list-section{
@@ -197,6 +203,9 @@
         display:inline-block;
         margin:0 0.625em;
         }
+        .nombreO{
+            font-size: 2vh;
+        }
         }
         
         @media (max-width:640px){
@@ -208,7 +217,7 @@
         }
         @media(max-width:412px) {
             .nombreO{
-                font-size: 4.6vh;
+                font-size: 3vh;
             }
 
         }
@@ -216,6 +225,9 @@
             .default-hero-banner {
                padding: 4rem;
                padding-top: 15%;
+            }
+            .nombreO{
+                font-size: 2vh;
             }
 
         }
