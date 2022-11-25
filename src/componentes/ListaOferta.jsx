@@ -21,13 +21,16 @@ const ListaOfertas = ({usuario}) => {
     }, [])
 
     const handleChange=e=>{
-        setBusqueda(e.target.value);         
-        if (busqueda == " ") {
-            alert("No puede ingresar espacios vacios");
+
+        if (/\s/.test(e.target.value)) {
+            e.target.value = "";
+            setBusqueda(e.target.value);
+            filtrar(e.target.value); 
         }else{
             filtrar(e.target.value); 
-        } 
+        }                  
     }
+
     
     const fechaActual = new Date()  
 

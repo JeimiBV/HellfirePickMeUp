@@ -27,17 +27,20 @@ function Productoslista({usuario}) {
         todosProductos(setTablaProductos)
     }, [])
 
-    const handleChange=e=>{
-        setBusqueda(e.target.value);         
-        if (busqueda == " ") {
-            alert("No puede ingresar espacios vacios");
 
+    const handleChange=e=>{
+      
+        setBusqueda(e.target.value);
+        if (/\s/.test(e.target.value)) {
+            e.target.value = "";
+            setBusqueda(e.target.value);
+            filtrar(e.target.value); 
         }else{
-            
             filtrar(e.target.value); 
         }                  
     }
 
+  
     const filtrar=(terminoBusqueda)=>{
         var resultadosBusqueda=tablaProductos.filter((elemento)=>{
           if( elemento.Nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
@@ -45,7 +48,8 @@ function Productoslista({usuario}) {
           }
         });
         setProductos(resultadosBusqueda);
-      } 
+      }
+
  
     return(   
     <>
@@ -55,7 +59,7 @@ function Productoslista({usuario}) {
     <h1 className="titleL"> Lista de productos </h1> 
 
         <div className="buscador">
-             <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
+             <form className="d-flex justify-content-center" id="caja" value={busqueda}  role="search" onChange={handleChange}>
                 <input class="form-control inputBusc me-2" type="search" placeholder="Buscar" aria-label="Search"  />    
             </form>
         </div>
