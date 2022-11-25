@@ -69,23 +69,21 @@ function Mostraroferta({ usuario }) {
         mostrarRealPedido
     }
 
-    const mostrarDatos = () => {
-        console.log(producto)
-        console.log(producto.Hora)
-    }
-
     const mostrarRealPedido = () => {
         if (valida) {
             axios({
                 method: "POST",
                 data: {
+                    Nombre: nombre,
                     Imagen: producto.Imagen,
                     PrecioUnitario: precio,
                     PrecioTotal: producto.Precio,
                     Hora: producto.Hora,
                     FechaLimite: producto.Fecha,
                     Cantidad: contador,
-                    Nota: notas.valor
+                    Nota: notas.valor,
+                    FlagC: true,
+                    FlagN: true
                 },
                 url: "http://localhost:5000/base-de-datos-h/us-central1/app/api/pedido",
             }).then(response => {
@@ -131,15 +129,12 @@ function Mostraroferta({ usuario }) {
 
                 <span class="price">Hora límite: {oferta.Hora} </span>
 
-                <button onClick={() => { pasarDatos(oferta.id, oferta.Precio, oferta.Nombre) }} className=" mt-5 p-1 ps-2 pe-2 ms-5 boton-pedido ">
-                    Hacer pedido
-                </button>
-
             </section>
-            <section className="seccion1">
-                <img src={oferta.Imagen} alt="" />
+            <section className="seccion1" onClick={() => { pasarDatos(oferta.id, oferta.Precio, oferta.Nombre) }}>
+                <img className="imgMajo" src={oferta.Imagen} alt="" />
                 <span class="list-category">
                     <p>{oferta.Descripcion} </p>
+
                 </span>
             </section>
 
