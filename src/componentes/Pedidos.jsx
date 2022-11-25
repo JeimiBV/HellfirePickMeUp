@@ -58,11 +58,11 @@ function MostrarPedidosN({ usuario }) {
                         <ul id="food_meta">
                         <li>
                             Cantidad:
-                        <span>325 CAL</span>
+                        <span>{pedido.Cantidad}</span>
                         </li>
                         <li>
-                            Precio:
-                        <span><i class="fa fa-inr"></i> 550</span>
+                            Precio Total:
+                        <span>Bs {pedido.PrecioTotal}</span>
                         </li>
                         </ul>    
                         <div class="botonN">
