@@ -1,29 +1,45 @@
 import React, {useEffect, useState} from "react";
 import "../estilos/productos.css";
-import IMG1 from "../imagenes/pique.png";
-import { Link } from "react-router-dom";
 import {todosProductos} from './funciones'
-import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { Navigate } from "react-router-dom";
+import { useAuth } from '../context/authContext'
 
-function Productoslista() {
+
+
+function Productoslista({usuario}) {
+     //codigo para bloquear la ida hacia atras
+     window.location.hash="no-back-button";
+     window.location.hash="Again-No-back-button";//esta linea es necesaria para chrome
+     window.onhashchange=function(){window.location.hash="no-back-button";}
+    const { user } = useAuth();
+    
+    if(usuario!=user.uid){
+        return <Navigate to ="/"/>
+    }
+  
 
     const [productos, setProductos]=useState(null)
 
     useEffect(() => {
-
         todosProductos(setProductos)
-    },[] )
+    },[] )  
 
+
+    let resultados 
+    
+ 
     return(   
     <>
+     
+    <div className="containerG mt-3">
     
-    <div className="container">
-    <h1 className="title"> Lista de productos </h1> 
+    <h1 className="titleL"> Lista de productos </h1> 
     <div className="productos">
 
         {productos != null ? (
 
-            productos.map(producto => (
+            
+             productos.map(producto => (
   
                     <div className="producto" key={producto.id}> 
                              
@@ -35,15 +51,11 @@ function Productoslista() {
                 
 
                         <div className="P_footer">
-                                    <h1 className="nombre">{producto.Nombre}</h1>       
+                                    <h1 className="nombreL">{producto.Nombre}</h1>       
                         </div>    
-                    </div>
-                
-                
-                
-              
+                    </div>  
             )           
-             )
+    )
         ):('no hay productos')}
       </div>
         </div> 

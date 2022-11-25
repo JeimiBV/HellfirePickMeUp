@@ -1,6 +1,7 @@
 .todo{
     align-items: center;
-    width: 80%;
+    width: 100%;
+    min-height:89.6vh ;
     background-color: gray;
     position: relative;
     text-align: center;
@@ -11,6 +12,7 @@
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 3rem;
     text-transform: lowercase;
+    margin-top: 2%;
    
 }
 .t::first-letter{
@@ -18,13 +20,10 @@
 }
 
 .desytip{
-    position: absolute;
-    align-items: center;
-    text-align: center;
     position: relative;
-    margin: 0rem auto;
-    width: 65%;
-    height: 100%;
+    height: auto;
+    margin: 0px auto; 
+    width: 50%;
     background-color: azure;
     border: solid black;
     
@@ -33,40 +32,143 @@
 .encabezado{
      font-size: 2vw;
      margin-top: 3%;
+     
+     
+     
 }
 .Parrafo{
-     font-size: 1.3vw;
+     font-size: 1.2vw;
      margin-bottom: 1%;
      text-transform: lowercase;
+     
+    
 }
 .Parrafo::first-letter{
     text-transform: uppercase;
+   
+    
 }
 
 .imagen_1{
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     display:block;
     max-width: 50% ;
     max-height: 50%;   
     margin: auto;
+    flex: auto;
+    
 }
 .b12{
-    height: 35px;
-    margin-left: 1.5%;
+    height: fit-content;
+    margin-left: 12%;
     min-width: 10%;
     margin-top: 2%;
     margin-bottom: 3%;
     background-color: gray;
     transition: .5s;
-    cursor: pointer; 
+    cursor: pointer;
+    font-size: x-large;
+    width: fit-content;
 }
 .b12:hover{
     background-color: darkslategray;
     color: azure;
     transition: .5s;
+    flex: auto;
+}
+.b13{
+    height: fit-content;
+    width: fit-content;
+    margin-left: 1.5%;
+    min-width: auto;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    background-color: gray;
+    transition: .5s;
+    cursor: pointer; 
+    font-size: x-large;
+}
+.b13:hover{
+    background-color: darkslategray;
+    color: azure;
+    transition: .5s;
+    
 }
 .Informacion{
-    height: 85%;
+    width: auto;
+    height: auto;
 
+
+}
+@media(max-width: 912px){
+    .desytip{
+        margin-top: 10%;
+        width: 90%;
+        height: 100%;
+        flex: auto;
+    }
+    .encabezado{
+        
+        font-size: 8vw;
+        
+    }
+    .Parrafo{
+        font-size: 5vw;
+        margin-bottom: 10%;
+       
+    }
+    .imagen_1{
+        width: 190em;
+        height: auto;
+        flex: auto; 
+    }
+    .t{
+        
+        font-size: 2rem;
+        margin-top: 7%;
+       
+    }
+}
+@media(width: 375px){
+    .desytip{
+        margin-top: 10%;
+        width: 90%;
+        height: 80%;
+        flex: auto;
+
+    }
+    .encabezado{
+        font-size: 8vw;
+        flex: auto;
+        
+    }
+    .Parrafo{
+        font-size: 5vw;
+        margin-bottom: auto;
+        flex: auto;
+    }
+    .imagen_1{
+        width: auto;
+        height: auto;
+        flex: auto;
+    }
+}
+@media(min-width:768px){
+    
+    .t{
+        
+        font-size: 3rem;
+        margin-top: 2%;
+       
+    }
+}
+@media(width:280px){
+    
+    .t{
+        
+        font-size: 1.5rem;
+        margin-top: 20%;
+       
+    }
 }
