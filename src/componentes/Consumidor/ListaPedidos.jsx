@@ -75,7 +75,7 @@ const ListaPedidos = ({ usuario }) => {
                                         <h5 class="card-tituloNombre text-center ">{pedidosC.Nombre}</h5>
                                     </div>
                                     <div class="face front">
-                                        <img src={pedidosC.Imagen} alt=" " />
+                                    <img className="imgn" src={pedidosC.Imagen} alt=" " />
                                     </div>
                                     <div className=" face back" >
                                         <p className="" >
