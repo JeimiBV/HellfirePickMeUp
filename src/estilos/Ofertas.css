@@ -20,7 +20,9 @@
    
 }
 
-
+.containerL > .buscador .inputBusc{
+    width: 60%;
+}
 
 .card-of > .imagenOf {
     width: 100%;
