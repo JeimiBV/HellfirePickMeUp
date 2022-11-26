@@ -23,7 +23,7 @@ const Informacion = () => {
                         
                         <p >
                         Somos una página web que hace de intermediario entre restaurantes, 
-                        reposterias o supermercados que ponen a la venta productos
+                        reposterías o supermercados que ponen a la venta productos
                         o alimentos que no han sido vendidos al servicio de los consumidores
                         para no malgastar la comida. 
         
