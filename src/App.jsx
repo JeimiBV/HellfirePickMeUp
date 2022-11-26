@@ -20,7 +20,7 @@ import Mostraroferta from "./componentes/Oferta";
 import ListaOfertas from "./componentes/ListaOferta";
 import { PlantillaC } from "./componentes/Consumidor/PlantillaConsu";
 import ListaPedidos from "./componentes/Consumidor/ListaPedidos"
-import BuscarProducto from "./componentes/Consumidor/VistaConsumidor"
+import VistaConsumidor from "./componentes/Consumidor/VistaConsumidor";
 
 function App() {
   const [userN, setUserN] = useState("QwXZyaODI9bQPoepSI1XyTYTeej1");
@@ -160,13 +160,13 @@ function App() {
           }
         />
           <Route
-          path="/buscarProducto"
+          path="/vistaConsumidor"
           element={
             <AuthProvider>
               <ProtectedRoute>
-                <Plantilla>
-                  <BuscarProducto usuario={userN} />
-                </Plantilla>
+                <PlantillaC>
+                  <VistaConsumidor usuario={userC} />
+                </PlantillaC>
               </ProtectedRoute>
             </AuthProvider>
           }

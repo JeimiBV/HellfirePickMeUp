@@ -1,7 +1,7 @@
 export const SidebarDatosC = [
     {
         title: "Buscar producto",
-        path: "/buscarProdcuto"
+        path: "/vistaConsumidor"
 
     },
 
