@@ -22,11 +22,10 @@ const ListaOfertas = ({usuario}) => {
 
     const handleChange=e=>{
 
-     
+        
             setBusqueda(e.target.value);
             filtrar(e.target.value); 
-                          
-    }
+        
 
     const fechaActual = new Date()  
 
@@ -37,7 +36,15 @@ const ListaOfertas = ({usuario}) => {
         }
     ) 
   
-     
+    const filtrar=(terminoBusqueda)=>{
+        var resultadosBusqueda= tablaProductos.filter((elemento)=>{
+            const fechaPr = new Date(elemento.Fecha + 'T' + elemento.Hora)
+          if(elemento.Nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+            return fechaPr > fechaActual && elemento.Precio !== '';
+          }
+        });
+        setProductos(resultadosBusqueda);
+      }  
         
     return (
 
