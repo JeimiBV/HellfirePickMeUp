@@ -28,10 +28,15 @@ function Productoslista({usuario}) {
     },[] )
     
     const handleChange=e=>{
-    
+      
+        setBusqueda(e.target.value);
+        if (/\s/.test(e.target.value)) {
+            e.target.value = "";
             setBusqueda(e.target.value);
             filtrar(e.target.value); 
-                          
+        }else{
+            filtrar(e.target.value); 
+        }                  
     }
 
     const filtrar=(terminoBusqueda)=>{
