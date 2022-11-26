@@ -11,27 +11,57 @@ const ListaOfertas = ({usuario}) => {
                 return <Navigate to ="/"/>
             }
 
-    const [productos, setProductos] = useState(null)
+    const [productos, setProductos] = useState([])
+    const [tablaProductos, setTablaProductos]= useState([]);
+    const [busqueda, setBusqueda]= useState("");
+
     useEffect(() => {
         todosProductos(setProductos)
+        todosProductos(setTablaProductos)
     }, [])
 
-    const fechaActual = new Date()
-    const pr = productos || []
+    const handleChange=e=>{
 
-    const ofertados = pr.filter(producto => 
+        if (/\s/.test(e.target.value)) {
+            e.target.value = "";
+            setBusqueda(e.target.value);
+            filtrar(e.target.value); 
+        }else{
+            filtrar(e.target.value); 
+        }                  
+    }
+
+    const fechaActual = new Date()  
+
+    const ofertados = productos.filter(producto => 
         {   
             const fechaPr = new Date(producto.Fecha + 'T' + producto.Hora) 
             console.log("El Stock es: "+producto.Stock)
             return  fechaPr > fechaActual && producto.Precio !== '';
         }
-    )   
+    ) 
+  
+    const filtrar=(terminoBusqueda)=>{
+        var resultadosBusqueda= tablaProductos.filter((elemento)=>{
+            const fechaPr = new Date(elemento.Fecha + 'T' + elemento.Hora)
+          if(elemento.Nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+            return fechaPr > fechaActual && elemento.Precio !== '';
+          }
+        });
+        setProductos(resultadosBusqueda);
+      }  
         
     return (
 
         <>
             <div className=" containerL">
-                <h1 className="text-center mt-3" > Lista de Ofertas </h1>
+                <h1 className="text-center mt-3" > Lista de ofertas </h1>
+                <div className="buscador">
+                    <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
+                           <i class="bi bi-search px-3"></i>
+                        <input class="form-control inputBusc me-2 px-4" type="search" placeholder=" Ingrese nombre del producto ofertado..." aria-label="Search"  />              
+                    </form>
+                </div>
                 <div className="ofertasP">
                 
                     {ofertados != null ? (
@@ -45,8 +75,8 @@ const ListaOfertas = ({usuario}) => {
                                         <h5 class="card-titleP text-center " >{oferta.Nombre}</h5>
                                         <p className="">
                                             <span > Precio: {oferta.Precio} bs.</span>
-                                            <span className="d-block"> Hora Límite:{oferta.Hora} </span>
-                                            <span className="d-block">Fecha Límite: {oferta.Fecha} </span>
+                                            <span className="d-block"> Hora límite:{oferta.Hora} </span>
+                                            <span className="d-block">Fecha límite: {oferta.Fecha} </span>
                                         </p>
                                     </div>
                                 </div>

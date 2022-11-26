@@ -120,6 +120,19 @@ div.food_tile.active img
     padding: 0;
 }
 
+.buscador .inputBusc{
+    width: 60%;
+} 
+
+.buscador .bi{
+    position: absolute;
+    margin-right: 58%;
+    margin-left: 0%;
+    margin-top: 0.5%;
+}
+
+
+
 #food_meta li
 {
     list-style: none;

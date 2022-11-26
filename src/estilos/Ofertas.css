@@ -20,6 +20,17 @@
    
 }
 
+.containerL > .buscador .inputBusc{
+    width: 60%;
+}
+
+.containerL > .buscador .bi{
+    position: absolute;
+    margin-right: 59%;
+    
+    margin-top: 0.5%;
+}
+
 .card-of > .imagenOf {
     width: 100%;
     height: 150px;

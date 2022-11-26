@@ -12,11 +12,15 @@ function MostrarPedidosN({ usuario }) {
     if (usuario != user.uid) {
         return <Navigate to="/" />
     }
-    const [pedidos, setPedidos]=useState(null)
+    const [pedidos, setPedidos]=useState([])
+    const [tablaPedi, setTablaPedi]= useState([]);
+    const [busqueda, setBusqueda]= useState("");
+
     const url = "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido";
 
     useEffect(() => {
         todosPedidos(setPedidos)
+        todosPedidos(setTablaPedi)
     },[] )  
     
     function updatePedido(pedido) {
@@ -35,13 +39,37 @@ function MostrarPedidosN({ usuario }) {
                 FlagN: false,
                 
             })
+            .then((response) => {
+                setPost(response.data);
+                mostrarSi();
+            });
+        }
+
+        const handleChange=e=>{
+    
+            if (/\s/.test(e.target.value)) {
+                e.target.value = "";
+                setBusqueda(e.target.value);
+               
+            }else{
+                filtrar(e.target.value); 
+            }                  
+        }
          
-    }
+    
     const pr1 = pedidos || []
     const pedidos1 = pr1.filter(pedido => {  
         return pedido.FlagN == true;
     }
     )
+    const filtrar=(terminoBusqueda)=>{
+        var resultadosBusqueda= tablaPedi.filter((elemento)=>{
+          if(elemento.Nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+            return elemento.FlagN == true;
+          }
+        });
+        setPedidos(resultadosBusqueda);
+      } 
 
     const ListaPedidos = pedidos1.map(pedido => (
        
@@ -76,8 +104,15 @@ function MostrarPedidosN({ usuario }) {
     return(
      <div className="containerG mt-3">
     
-        <h1 className="titleL"> Lista de pedidos </h1> 
+    <h1 className="titleL"> Lista de pedidos </h1> 
                 <div class="container-fluid">
+
+                <div className="buscador">
+                    <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
+                    <i class="bi bi-search px-3"></i>
+                        <input class="form-control inputBusc me-2 px-4" type="search" placeholder=" Ingrese el nombre del pedido..." aria-label="Search"  />              
+                    </form>
+                </div>
 
                     <div id="fda_app" class="row">
             

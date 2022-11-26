@@ -17,13 +17,13 @@ const Informacion = () => {
                 <div className="row " >
                     <div class="col-sm p-5 pt-5 pb-5 mt-5"> 
                         <h1 className='color-titulo'>
-                            ¿Quienes Somos?
+                            ¿Quiénes Somos?
                         </h1>
                         <hr class="border border-dark border-1 " />
                         
                         <p >
                         Somos una página web que hace de intermediario entre restaurantes, 
-                        reposterias o supermercados que ponen a la venta productos
+                        reposterías o supermercados que ponen a la venta productos
                         o alimentos que no han sido vendidos al servicio de los consumidores
                         para no malgastar la comida. 
         
@@ -37,7 +37,7 @@ const Informacion = () => {
                         
                         <p>
                         Es ser un movimiento que lucha contra la pérdida y el desperdicio de alimentos
-                        reduciendo considerablemente las cifras de desperdicio
+                        reduciendo considerablemente las cifras de desperdicio.
                     
                         </p>
 

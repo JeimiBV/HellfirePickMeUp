@@ -18,15 +18,35 @@ function Productoslista({usuario}) {
     }
   
 
-    const [productos, setProductos]=useState(null)
+    const [productos, setProductos]=useState([])
+    const [tablaProductos, setTablaProductos]= useState([]);
+    const [busqueda, setBusqueda]= useState("");
 
     useEffect(() => {
         todosProductos(setProductos)
-    },[] )  
-
-
-    let resultados 
+        todosProductos(setTablaProductos)
+    },[] )
     
+    const handleChange=e=>{
+      
+        setBusqueda(e.target.value);
+        if (/\s/.test(e.target.value)) {
+            e.target.value = "";
+            setBusqueda(e.target.value);
+            filtrar(e.target.value); 
+        }else{
+            filtrar(e.target.value); 
+        }                  
+    }
+
+    const filtrar=(terminoBusqueda)=>{
+        var resultadosBusqueda=tablaProductos.filter((elemento)=>{
+          if( elemento.Nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+            return elemento;
+          }
+        });
+        setProductos(resultadosBusqueda);
+      }
  
     return(   
     <>
@@ -34,6 +54,13 @@ function Productoslista({usuario}) {
     <div className="containerG mt-3">
     
     <h1 className="titleL"> Lista de productos </h1> 
+    <div className="buscador">
+        <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
+            <i class="bi bi-search px-3"></i>
+            <input class="form-control inputBusc me-2 px-4" type="search" placeholder=" Ingrese nombre del producto..." aria-label="Search"  />              
+        </form>
+    </div>
+
     <div className="productos">
 
         {productos != null ? (
