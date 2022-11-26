@@ -22,11 +22,7 @@ function Productoslista({usuario}) {
 
     useEffect(() => {
         todosProductos(setProductos)
-    },[] )  
-
-
-    let resultados 
-    
+    },[] )   
  
     return(   
     <>
@@ -34,6 +30,12 @@ function Productoslista({usuario}) {
     <div className="containerG mt-3">
     
     <h1 className="titleL"> Lista de productos </h1> 
+    <div className="buscador">
+        <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
+            <input class="form-control inputBusc me-2" type="search" placeholder="Buscar" aria-label="Search"  />              
+        </form>
+    </div>
+
     <div className="productos">
 
         {productos != null ? (
