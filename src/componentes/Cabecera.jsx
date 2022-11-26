@@ -19,14 +19,17 @@ function Header() {
   return (
     <div className="contenedor-cabecera">
        <nav className="navbar fixed-top navbar-expand-sm bg-sucess border-bottom border-dark border-2 ">
-          <Link className="flex-sm-fill text-sm-center nav-link active" to="/">
+        <div className="d-flex  w-50  justify-content">
+       <Link className="flex-sm-fill  nav-link active" to="/">
             <div className="logoYNombre mx-5">
               <img className="logo" src={Image} />
-              <div className="d-flex w-100 justify-content-end ">
-                <h1 className="nombre">Pick me up</h1>
               </div>
-            </div>
-          </Link>
+          </Link>         
+                <h1 className="nombre p-2">Pick me up</h1>  
+        </div>
+          
+              
+            
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
