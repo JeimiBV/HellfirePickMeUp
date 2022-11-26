@@ -18,11 +18,26 @@ function Productoslista({usuario}) {
     }
   
 
-    const [productos, setProductos]=useState(null)
+    const [productos, setProductos]=useState([])
+    const [tablaProductos, setTablaProductos]= useState([]);
+    const [busqueda, setBusqueda]= useState("");
 
     useEffect(() => {
         todosProductos(setProductos)
-    },[] )   
+        todosProductos(setTablaProductos)
+    },[] )
+    
+    const handleChange=e=>{
+      
+        setBusqueda(e.target.value);
+        if (/\s/.test(e.target.value)) {
+            e.target.value = "";
+            setBusqueda(e.target.value);
+            filtrar(e.target.value); 
+        }else{
+            filtrar(e.target.value); 
+        }                  
+    }
  
     return(   
     <>
