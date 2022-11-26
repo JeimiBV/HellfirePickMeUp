@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom";
 import { useAuth } from '../context/authContext';
 import {todosPedidos} from './funciones'
 import "../estilos/PedidosN.css"
+import axios from "axios";
 
 function MostrarPedidosN({ usuario }) {
    
@@ -12,34 +13,32 @@ function MostrarPedidosN({ usuario }) {
         return <Navigate to="/" />
     }
     const [pedidos, setPedidos]=useState(null)
+    const url = "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido";
 
     useEffect(() => {
         todosPedidos(setPedidos)
     },[] )  
     
-    function updatePedido() {
+    function updatePedido(pedido) {
+        console.log(`Id: ${pedido.id}`)
         axios
-            .put(`${url}/${params.id}`, {
+            .put(`${url}/${pedido.id}`, {
                 
-                Imagen: pedidos.Imagen,
-                PrecioUnitario: pedidos.PrecioUnitario,
-                PrecioTotal: pedidos.PrecioTotal,
-                Hora: pedidos.Hora,
-                FechaLimite: pedidos.FechaLimite,
-                Cantidad: pedidos.Cantidad,
-                Nota: pedidos.Nota,
-                FlagC: pedidos.FlagC,
+                Imagen: pedido.Imagen,
+                PrecioUnitario: pedido.PrecioUnitario,
+                PrecioTotal: pedido.PrecioTotal,
+                Hora: pedido.Hora,
+                FechaLimite: pedido.FechaLimite,
+                Cantidad: pedido.Cantidad,
+                Nota: pedido.Nota,
+                FlagC: pedido.FlagC,
                 FlagN: false,
                 
             })
-            .then((response) => {
-                setPost(response.data);
-                mostrarSi();
-            });
+         
     }
     const pr1 = pedidos || []
-    const pedidos1 = pr1.filter(pedido => {
-        
+    const pedidos1 = pr1.filter(pedido => {  
         return pedido.FlagN == true;
     }
     )
@@ -54,19 +53,20 @@ function MostrarPedidosN({ usuario }) {
                         <span class="food_name">{pedido.Nombre}</span>
 
                         <span class="food_detail">{pedido.Nota}</span>
-
-                        <ul id="food_meta">
-                        <li>
-                            Cantidad:
-                        <span>{pedido.Cantidad}</span>
-                        </li>
-                        <li>
-                            Precio Total:
-                        <span>Bs {pedido.PrecioTotal}</span>
-                        </li>
-                        </ul>    
+                        <div className="listas">
+                            <ul id="food_meta">
+                                <li>
+                                    Cantidad:
+                                <span>{pedido.Cantidad}</span>
+                                </li>
+                                <li>
+                                    Precio total:
+                                <span>Bs {pedido.PrecioUnitario}</span>
+                                </li>
+                            </ul> 
+                        </div>   
                         <div class="botonN">
-                        <button type="button" class="btn btn-sm btn-default" onChange={updatePedido}>Entregado</button>
+                            <button type="button" class="btn btn-sm btn-default" onClick={()=> {updatePedido(pedido)}}>Entregado</button>
                         </div>    
              </div>
          </div>
