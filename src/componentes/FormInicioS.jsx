@@ -36,7 +36,7 @@ function FormInicioSesion() {
         try {
             if (userf.correo == "user@gmail.com") {
                 await login(userf.correo, userf.contraseña);
-                navigate("/menu");
+                navigate("/vistaConsumidor");
             }
 
         } catch (error) {

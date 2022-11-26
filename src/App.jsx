@@ -20,7 +20,8 @@ import Mostraroferta from "./componentes/Oferta";
 import ListaOfertas from "./componentes/ListaOferta";
 import { PlantillaC } from "./componentes/Consumidor/PlantillaConsu";
 import ListaPedidos from "./componentes/Consumidor/ListaPedidos"
-import BuscarProducto from "./componentes/Consumidor/VistaConsumidor"
+import VistaConsumidor from "./componentes/Consumidor/VistaConsumidor";
+import MostrarPedidosN from "./componentes/Pedidos";
 
 function App() {
   const [userN, setUserN] = useState("QwXZyaODI9bQPoepSI1XyTYTeej1");
@@ -136,7 +137,7 @@ function App() {
           }
         />
         <Route
-          path="/pedidos"
+          path="/pedidosC"
           element={
             <AuthProvider>
               <ProtectedRoute>
@@ -160,25 +161,24 @@ function App() {
           }
         />
         <Route
-          path="/buscarProducto"
+          path="/vistaConsumidor"
           element={
             <AuthProvider>
               <ProtectedRoute>
-                <Plantilla>
-                  <BuscarProducto usuario={userN} />
-                </Plantilla>
+                <PlantillaC>
+                  <VistaConsumidor usuario={userC} />
+                </PlantillaC>
               </ProtectedRoute>
             </AuthProvider>
           }
         />
-
         <Route
-          path="/buscarProducto"
+          path="/Pedidos"
           element={
             <AuthProvider>
               <ProtectedRoute>
                 <Plantilla>
-                  <BuscarProducto usuario={userN} />
+                  <MostrarPedidosN usuario={userN} />
                 </Plantilla>
               </ProtectedRoute>
             </AuthProvider>

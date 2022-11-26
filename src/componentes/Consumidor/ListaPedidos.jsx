@@ -16,12 +16,15 @@ const ListaPedidos = ({ usuario }) => {
 
     const [pedidos, setPedidos] = useState(null)
     const [post, setPost] = useState(null);
+    const [tablaPedi, setTablaPedi]= useState([]);
+    const [busqueda, setBusqueda]= useState("");
     const url = "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido";
     //const [productos, setProductos] = useState(null)
     //const [pedido, setPedidos] = useState(null)
     const params = useParams()
     useEffect(() => {
         todosPedidos(setPedidos)
+        todosPedidos(setTablaPedi)
         if (post !== null) {
             axios.get(`${url}/1`).then((response) => {
                 setPost(response.data);
@@ -46,6 +49,17 @@ const ListaPedidos = ({ usuario }) => {
             });
     }
 
+    const handleChange=e=>{
+
+        if (/\s/.test(e.target.value)) {
+            e.target.value = "";
+            setBusqueda(e.target.value);
+            filtrar(e.target.value); 
+        }else{
+            filtrar(e.target.value); 
+        }                  
+    }
+
     const fechaActual = new Date()
     const pr = pedidos || []
 
@@ -54,6 +68,14 @@ const ListaPedidos = ({ usuario }) => {
         return pedido.FlagC == true;
     }
     )
+    const filtrar=(terminoBusqueda)=>{
+        var resultadosBusqueda= tablaPedi.filter((elemento)=>{
+          if(elemento.Nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+            return elemento.FlagN == true;
+          }
+        });
+        setPedidos(resultadosBusqueda);
+      } 
 
     /*const deleteTask = (id) => {
         const filteredTasks = pr.filter(pedido => pedido.id !== id)
@@ -66,6 +88,14 @@ const ListaPedidos = ({ usuario }) => {
         <>
             <div className=" containerPed">
                 <h1 className="titulo text-center m-4" > Pedidos </h1>
+
+                <div className="buscador">
+                    <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
+                           <i class="bi bi-search px-3"></i>
+                        <input class="form-control inputBusc me-2 px-5" type="search" placeholder=" Ingrese el nombre de tu pedido..." aria-label="Search"  />              
+                    </form>
+                </div>
+
                 <div className="PedidosP">
 
                     {listaP != null ? (

@@ -1,7 +1,7 @@
 export const SidebarDatosC = [
     {
         title: "Buscar producto",
-        path: "/buscarProdcuto"
+        path: "/vistaConsumidor"
 
     },
 
@@ -12,7 +12,7 @@ export const SidebarDatosC = [
     },
     {
         title: "Pedidos",
-        path: "/pedidos"
+        path: "/pedidosC"
 
     },
     

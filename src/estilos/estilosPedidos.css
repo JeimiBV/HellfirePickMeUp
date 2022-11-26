@@ -6,6 +6,13 @@
     background-color: #84A98C;
     overflow-y: scroll;
     padding-top: 2%
+}.buscador .inputBusc{
+    width: 60%;
+}
+.buscador .bi{
+    position: absolute;
+    margin-right: 57%;
+    margin-top: 0.6%;
 }
 
 .cards {
