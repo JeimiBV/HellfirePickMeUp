@@ -17,7 +17,7 @@ const Informacion = () => {
                 <div className="row " >
                     <div class="col-sm p-5 pt-5 pb-5 mt-5"> 
                         <h1 className='color-titulo'>
-                            ¿Quienes Somos?
+                            ¿Quiénes Somos?
                         </h1>
                         <hr class="border border-dark border-1 " />
                         
