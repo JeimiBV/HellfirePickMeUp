@@ -109,6 +109,7 @@ function MostrarPedidosN({ usuario }) {
 
                 <div className="buscador">
                     <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
+                    <i class="bi bi-search px-3"></i>
                         <input class="form-control inputBusc me-2" type="search" placeholder="Buscar" aria-label="Search"  />              
                     </form>
                 </div>

@@ -121,8 +121,17 @@ div.food_tile.active img
 }
 
 .buscador .inputBusc{
-    width: 55%;
+    width: 60%;
 } 
+
+.buscador .bi{
+    position: absolute;
+    margin-right: 54%;
+    margin-left: 0%;
+    margin-top: 0.5%;
+}
+
+
 
 #food_meta li
 {
