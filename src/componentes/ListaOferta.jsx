@@ -22,10 +22,14 @@ const ListaOfertas = ({usuario}) => {
 
     const handleChange=e=>{
 
-        
+        if (/\s/.test(e.target.value)) {
+            e.target.value = "";
             setBusqueda(e.target.value);
             filtrar(e.target.value); 
-        
+        }else{
+            filtrar(e.target.value); 
+        }                  
+    }
 
     const fechaActual = new Date()  
 
