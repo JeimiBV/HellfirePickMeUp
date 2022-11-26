@@ -13,8 +13,10 @@ const ListaPedidos = ({ usuario }) => {
         return <Navigate to="/" />
     }
 
-    const [pedidos, setPedidos] = useState(null)
+    const [pedidos, setPedidos] = useState([])
     const [post, setPost] = useState(null);
+    const [tablaPedi, setTablaPedi]= useState([]);
+    const [busqueda, setBusqueda]= useState("");
     const url = "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido";
     //const [productos, setProductos] = useState(null)
     //const [pedido, setPedidos] = useState(null)
@@ -45,6 +47,17 @@ const ListaPedidos = ({ usuario }) => {
             });
     }
 
+    const handleChange=e=>{
+
+        if (/\s/.test(e.target.value)) {
+            e.target.value = "";
+            setBusqueda(e.target.value);
+            filtrar(e.target.value); 
+        }else{
+            filtrar(e.target.value); 
+        }                  
+    }
+
     const fechaActual = new Date()
     const pr = pedidos || []
 
@@ -65,7 +78,7 @@ const ListaPedidos = ({ usuario }) => {
         <>
             <div className=" containerPed">
                 <h1 className="titulo text-center m-4" > Pedidos </h1>
-                
+
                 <div className="buscador">
                     <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
                            <i class="bi bi-search px-3"></i>
