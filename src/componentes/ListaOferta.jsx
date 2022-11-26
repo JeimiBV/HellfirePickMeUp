@@ -20,6 +20,13 @@ const ListaOfertas = ({usuario}) => {
         todosProductos(setTablaProductos)
     }, [])
 
+    const handleChange=e=>{
+
+     
+            setBusqueda(e.target.value);
+            filtrar(e.target.value); 
+                          
+    }
 
     const fechaActual = new Date()  
 
@@ -29,7 +36,8 @@ const ListaOfertas = ({usuario}) => {
             return  fechaPr > fechaActual && producto.Precio !== '';
         }
     ) 
-   
+  
+     
         
     return (
 
