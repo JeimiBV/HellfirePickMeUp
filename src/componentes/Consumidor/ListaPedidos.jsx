@@ -66,6 +66,14 @@ const ListaPedidos = ({ usuario }) => {
         return pedido.FlagC == true;
     }
     )
+    const filtrar=(terminoBusqueda)=>{
+        var resultadosBusqueda= tablaPedi.filter((elemento)=>{
+          if(elemento.Nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+            return elemento.FlagN == true;
+          }
+        });
+        setPedidos(resultadosBusqueda);
+      } 
 
     /*const deleteTask = (id) => {
         const filteredTasks = pr.filter(pedido => pedido.id !== id)
