@@ -13,7 +13,7 @@ const ListaPedidos = ({ usuario }) => {
         return <Navigate to="/" />
     }
 
-    const [pedidos, setPedidos] = useState([])
+    const [pedidos, setPedidos] = useState(null)
     const [post, setPost] = useState(null);
     const [tablaPedi, setTablaPedi]= useState([]);
     const [busqueda, setBusqueda]= useState("");
@@ -23,6 +23,7 @@ const ListaPedidos = ({ usuario }) => {
     const params = useParams()
     useEffect(() => {
         todosPedidos(setPedidos)
+        todosPedidos(setTablaPedi)
         if (post !== null) {
             axios.get(`${url}/1`).then((response) => {
                 setPost(response.data);
