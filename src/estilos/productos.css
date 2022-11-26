@@ -6,6 +6,9 @@
     overflow-y: scroll;
    
 }
+.buscador .inputBusc{
+    width: 60%;
+}
 .imagen{
     width: 200px;
     height: 200px;
