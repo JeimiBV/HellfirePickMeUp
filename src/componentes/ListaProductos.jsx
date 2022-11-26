@@ -56,7 +56,8 @@ function Productoslista({usuario}) {
     <h1 className="titleL"> Lista de productos </h1> 
     <div className="buscador">
         <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
-            <input class="form-control inputBusc me-2" type="search" placeholder="Ingrese nombre del producto..." aria-label="Search"  />              
+            <i class="bi bi-search px-3"></i>
+            <input class="form-control inputBusc me-2 px-4" type="search" placeholder="Ingrese nombre del producto..." aria-label="Search"  />              
         </form>
     </div>
 

@@ -9,6 +9,12 @@
 .buscador .inputBusc{
     width: 60%;
 }
+
+.containerG > .buscador .bi{
+    position: absolute;
+    margin-right: 59%;
+    margin-top: 0.5%;
+}
 .imagen{
     width: 200px;
     height: 200px;
