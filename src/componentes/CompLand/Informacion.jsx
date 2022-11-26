@@ -37,7 +37,7 @@ const Informacion = () => {
                         
                         <p>
                         Es ser un movimiento que lucha contra la pérdida y el desperdicio de alimentos
-                        reduciendo considerablemente las cifras de desperdicio
+                        reduciendo considerablemente las cifras de desperdicio.
                     
                         </p>
 
