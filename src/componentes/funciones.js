@@ -1,6 +1,7 @@
 import Axios from "axios"
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
+
 //const url='http://localhost:5000/pruebafirebase-30018/us-central1/app/api/products'
 const todosProductos = async (setProductos) =>{
 
@@ -8,7 +9,7 @@ const todosProductos = async (setProductos) =>{
         method: "GET",
         //withCredentials: true,
         
-        url: "http://localhost:5000/base-de-datos-h/us-central1/app/api/products",
+        url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products",
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)
@@ -37,7 +38,7 @@ const unicoProducto = async (id, setProducto) => {
     const peticion =  Axios({
         method: "GET",
         //withCredentials: true,
-        url: `http://localhost:5000/base-de-datos-h/us-central1/app/api/products/${id}`,
+        url: `https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products/${id}`,
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)
@@ -58,7 +59,7 @@ const todosCategorias = async (setCategorias) =>{
     const peticion =  Axios({
         method: "GET",
         //withCredentials: true,
-        url: "http://localhost:5000/base-de-datos-h/us-central1/app/api/oferts",
+        url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/oferts",
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)
@@ -81,7 +82,7 @@ const filtrarOfertas = async (id, setOfertas) => {
     const peticion =  Axios({
         method: "GET",
         //withCredentials: true,
-        url: `http://localhost:5000/base-de-datos-h/us-central1/app/api/oferts/${id}`,
+        url: `https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/oferts/${id}`,
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)

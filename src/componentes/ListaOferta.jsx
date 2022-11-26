@@ -22,6 +22,7 @@ const ListaOfertas = ({usuario}) => {
     const ofertados = pr.filter(producto => 
         {   
             const fechaPr = new Date(producto.Fecha + 'T' + producto.Hora) 
+            console.log("El Stock es: "+producto.Stock)
             return  fechaPr > fechaActual && producto.Precio !== '';
         }
     )   

@@ -29,6 +29,8 @@ function Mostraroferta({ usuario }) {
     const [valida, setValida] = useState(true);
     const [nombre, setNombre] = useState("");
     const [producto, setProducto] = useState(null);
+    const [stock, setStock] = useState(0);
+
     useEffect(() => {
         filtrarOfertas(params.id, setOfertas)
         todosCategorias(setCategorias)
@@ -59,11 +61,12 @@ function Mostraroferta({ usuario }) {
         }
     }
 
-    const pasarDatos = (id, precioo, nombree) => {
+    const pasarDatos = (id, precioo, nombree, stock) => {
         setModalPedido(true)
         setPrecioFijo(precioo);
         setPrecio(precioo)
         setNombre(nombree)
+        setStock(stock)
         console.log(precio)
         unicoProducto(id, setProducto)
         mostrarRealPedido
@@ -85,7 +88,7 @@ function Mostraroferta({ usuario }) {
                     FlagC: true,
                     FlagN: true
                 },
-                url: "http://localhost:5000/base-de-datos-h/us-central1/app/api/pedido",
+                url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido",
             }).then(response => {
                 if (!response.data.error) {
                     console.log(response.data)
@@ -128,7 +131,9 @@ function Mostraroferta({ usuario }) {
                 <span class="price">Precio: {oferta.Precio}   Bs</span><br />
 
                 <span class="price">Hora límite: {oferta.Hora} </span>
-
+                <button onClick={() => { setModalPedido(true) }} className="mt-5 p-1 ps-2 pe-2 ms-5 btn btn-outline-dark boton-pedido ">
+                    Hacer pedido
+                </button>
             </section>
             <section className="seccion1" onClick={() => { pasarDatos(oferta.id, oferta.Precio, oferta.Nombre) }}>
                 <img className="imgMajo" src={oferta.Imagen} alt="" />
