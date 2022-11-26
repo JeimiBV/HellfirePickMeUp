@@ -5,6 +5,7 @@ import { useAuth } from "../../context/authContext";
 import { getDownloadURL } from "firebase/storage";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import { Navigate } from "react-router-dom";
 const ListaPedidos = ({ usuario }) => {
 
     const { user } = useAuth();

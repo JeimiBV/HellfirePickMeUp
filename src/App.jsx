@@ -102,11 +102,11 @@ function App() {
           element={
             <AuthProvider>
               <ProtectedRoute>
-               <PlantillaC>
-               <Mostrarmenu usuario={userC} />
-               </PlantillaC>
+                <PlantillaC>
+                  <Mostrarmenu usuario={userC} />
+                </PlantillaC>
               </ProtectedRoute>
-             
+
             </AuthProvider>
           }
         />
@@ -115,21 +115,21 @@ function App() {
           element={
             <AuthProvider>
               <ProtectedRoute>
-              <PlantillaC>
-              <Mostraroferta usuario={userC} />
-              </PlantillaC>
+                <PlantillaC>
+                  <Mostraroferta usuario={userC} />
+                </PlantillaC>
               </ProtectedRoute>
             </AuthProvider>
           }
         />
-        
+
         <Route
           path="/categorias"
           element={
             <AuthProvider>
               <ProtectedRoute>
-              <PlantillaC>
-                <Mostrarmenu usuario={userC} />
+                <PlantillaC>
+                  <Mostrarmenu usuario={userC} />
                 </PlantillaC>
               </ProtectedRoute>
             </AuthProvider>
@@ -140,8 +140,8 @@ function App() {
           element={
             <AuthProvider>
               <ProtectedRoute>
-              <PlantillaC>
-                <ListaPedidos usuario={userC} />
+                <PlantillaC>
+                  <ListaPedidos usuario={userC} />
                 </PlantillaC>
               </ProtectedRoute>
             </AuthProvider>
@@ -159,7 +159,7 @@ function App() {
             </AuthProvider>
           }
         />
-          <Route
+        <Route
           path="/buscarProducto"
           element={
             <AuthProvider>
@@ -171,7 +171,20 @@ function App() {
             </AuthProvider>
           }
         />
-      </Routes> 
+
+        <Route
+          path="/buscarProducto"
+          element={
+            <AuthProvider>
+              <ProtectedRoute>
+                <Plantilla>
+                  <BuscarProducto usuario={userN} />
+                </Plantilla>
+              </ProtectedRoute>
+            </AuthProvider>
+          }
+        />
+      </Routes>
     </BrowserRouter>
   );
 }

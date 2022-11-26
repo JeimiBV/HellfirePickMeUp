@@ -24,7 +24,7 @@ function Informacion() {
 
     const [post, setPost] = useState(null);
     const url =
-        "http://localhost:5000/base-de-datos-h/us-central1/app/api/products";
+        "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products";
     useEffect(() => {
         unicoProducto(params.id, setProductos);
 
@@ -377,7 +377,7 @@ function Informacion() {
                             cambiarEstado={setModalSi}
                             estadoPantalla={true}
                             texto={"Guardando registro ..."}
-                            icon={false}
+                            icon={true}
                             
                         />
                         <Modals
@@ -388,7 +388,7 @@ function Informacion() {
                             cambiarEstado={setModalNo}
                             estadoPantalla={true}
                             texto={"Cancelado"}
-                            icon={false}
+                            icon={true}
                             
                         />
                     </div>
