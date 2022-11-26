@@ -11,26 +11,36 @@ const ListaOfertas = ({usuario}) => {
                 return <Navigate to ="/"/>
             }
 
-    const [productos, setProductos] = useState(null)
+    const [productos, setProductos] = useState([])
+    const [tablaProductos, setTablaProductos]= useState([]);
+    const [busqueda, setBusqueda]= useState("");
+
     useEffect(() => {
         todosProductos(setProductos)
+        todosProductos(setTablaProductos)
     }, [])
 
-    const fechaActual = new Date()
-    const pr = productos || []
 
-    const ofertados = pr.filter(producto => 
+    const fechaActual = new Date()  
+
+    const ofertados = productos.filter(producto => 
         {   
             const fechaPr = new Date(producto.Fecha + 'T' + producto.Hora) 
             return  fechaPr > fechaActual && producto.Precio !== '';
         }
-    )   
+    ) 
+   
         
     return (
 
         <>
             <div className=" containerL">
                 <h1 className="text-center mt-3" > Lista de Ofertas </h1>
+                <div className="buscador">
+                    <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
+                        <input class="form-control inputBusc me-2" type="search" placeholder="Buscar" aria-label="Search"  />              
+                    </form>
+                </div>
                 <div className="ofertasP">
                 
                     {ofertados != null ? (
