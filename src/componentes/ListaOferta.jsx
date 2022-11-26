@@ -31,13 +31,6 @@ const ListaOfertas = ({usuario}) => {
         <>
             <div className=" containerL">
                 <h1 className="text-center mt-3" > Lista de Ofertas </h1>
-                
-                <div className="buscador">
-                    <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
-                        <input class="form-control inputBusc me-2" type="search" placeholder="Buscar" aria-label="Search"  />              
-                    </form>
-                </div>
-
                 <div className="ofertasP">
                 
                     {ofertados != null ? (

@@ -65,6 +65,13 @@ const ListaPedidos = ({ usuario }) => {
         <>
             <div className=" containerPed">
                 <h1 className="titulo text-center m-4" > Pedidos </h1>
+                
+                <div className="buscador">
+                    <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
+                        <input class="form-control inputBusc me-2" type="search" placeholder="Buscar" aria-label="Search"  />              
+                    </form>
+                </div>
+
                 <div className="PedidosP">
 
                     {listaP != null ? (
