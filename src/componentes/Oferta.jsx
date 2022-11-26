@@ -126,7 +126,7 @@ function Mostraroferta({ usuario }) {
     const ListaOfertas = ofertados.map(oferta => (
 
         (<div class="list-card" key={oferta.id}>
-            <section>
+            <section className="jeimi">
                 <h1 className="nombreO">{oferta.Nombre}</h1>
                 <span class="price">Precio: {oferta.Precio}   Bs</span><br />
 
