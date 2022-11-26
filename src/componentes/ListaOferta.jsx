@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { todosProductos } from './funciones'
 import '../estilos/Ofertas.css'
-import { useAuth } from "../context/authContext";
+import { useAuth } from './../context/authContext';
 
 const ListaOfertas = ({usuario}) => {
 

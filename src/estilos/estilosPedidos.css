@@ -1,0 +1,135 @@
+.containerPed {
+    position: relative;
+    width: 100%;
+    height: 89.6vh;
+    /* background-color: #CAD2C5; */
+    background-color: #84A98C;
+    overflow-y: scroll;
+    padding-top: 2%
+}
+
+.cards {
+    position: relative;
+    width: 300px;
+    height: 325px;
+    display: grid;
+    /* background-color: #84A98C;  */
+    background-color: #CAD2C5;
+    border-color: #fff;
+    border-radius: 3%;
+}
+
+.PedidosP {
+    position: relative;
+    padding: 2rem 2rem;
+    flex-direction: column;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 0fr));
+    box-sizing: border-box;
+    justify-content: center;
+    gap: 3rem;
+    left: 1.5rem;
+
+
+}
+
+.cards .face {
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.cards .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+
+
+
+}
+
+.face .front {
+    width: 300px;
+    height: 205px;
+}
+
+.imgn {
+    width: 300px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.cards .front h5 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff background rgba(0, 0, 0, .4);
+    text-align: center;
+}
+
+.cards .back {
+    transform: perspective(600px)rotateY(180deg);
+    background-color: #21434e;
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+    width: 300px;
+    height: 270px;
+}
+
+.cards .link h5 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff background rgba(0, 0, 0, .4);
+    text-align: center;
+
+}
+
+.cards .back h5 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    width: 300px;
+    height: 205px;
+}
+
+.cards .back p {
+    letter-spacing: 1px;
+    text-align: left;
+    padding-top: 25%;
+    padding-left: 11%;
+}
+
+.cards:hover .front {
+    transform: perspective(600px)rotateY(180deg);
+}
+
+.cards:hover .back {
+    transform: perspective(600px)rotateY(360deg);
+}
+.card-tituloNombre{
+    padding-right: 20%;
+    padding-left: 18%;
+
+
+}
+
+.botonEliminar{
+    position: absolute;
+    top: 87%;
+    right: 11%;
+    width: 10%;
+    background-color: transparent; 
+    border: none;
+}

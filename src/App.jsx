@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import LandingPage from './componentes/Landingpage'
 import LoginC from "./componentes/FormInicioS";
@@ -17,7 +18,9 @@ import Landing from "./componentes/Landing";
 import Mostrarmenu from "./componentes/Menu";
 import Mostraroferta from "./componentes/Oferta";
 import ListaOfertas from "./componentes/ListaOferta";
-import MostrarPedidosN from "./componentes/Pedidos";
+import { PlantillaC } from "./componentes/Consumidor/PlantillaConsu";
+import ListaPedidos from "./componentes/Consumidor/ListaPedidos"
+import BuscarProducto from "./componentes/Consumidor/VistaConsumidor"
 
 function App() {
   const [userN, setUserN] = useState("QwXZyaODI9bQPoepSI1XyTYTeej1");
@@ -99,8 +102,11 @@ function App() {
           element={
             <AuthProvider>
               <ProtectedRoute>
-                <Mostrarmenu usuario={userC} />
+               <PlantillaC>
+               <Mostrarmenu usuario={userC} />
+               </PlantillaC>
               </ProtectedRoute>
+             
             </AuthProvider>
           }
         />
@@ -109,7 +115,34 @@ function App() {
           element={
             <AuthProvider>
               <ProtectedRoute>
-                <Mostraroferta usuario={userC} />
+              <PlantillaC>
+              <Mostraroferta usuario={userC} />
+              </PlantillaC>
+              </ProtectedRoute>
+            </AuthProvider>
+          }
+        />
+        
+        <Route
+          path="/categorias"
+          element={
+            <AuthProvider>
+              <ProtectedRoute>
+              <PlantillaC>
+                <Mostrarmenu usuario={userC} />
+                </PlantillaC>
+              </ProtectedRoute>
+            </AuthProvider>
+          }
+        />
+        <Route
+          path="/pedidos"
+          element={
+            <AuthProvider>
+              <ProtectedRoute>
+              <PlantillaC>
+                <ListaPedidos usuario={userC} />
+                </PlantillaC>
               </ProtectedRoute>
             </AuthProvider>
           }
@@ -126,19 +159,19 @@ function App() {
             </AuthProvider>
           }
         />
-        <Route
-          path="/Pedidos"
+          <Route
+          path="/buscarProducto"
           element={
             <AuthProvider>
               <ProtectedRoute>
                 <Plantilla>
-                  <MostrarPedidosN usuario={userN} />
+                  <BuscarProducto usuario={userN} />
                 </Plantilla>
               </ProtectedRoute>
             </AuthProvider>
           }
         />
-      </Routes>
+      </Routes> 
     </BrowserRouter>
   );
 }
