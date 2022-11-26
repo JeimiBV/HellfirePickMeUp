@@ -216,11 +216,7 @@ function Form({ usuario }) {
 
     //http://localhost:5000/fir-crud-c44e7/us-central1/app/api/products
 
-    return <div className="contenedorF">
-
-        <label className="titulo">
-            Registrar Producto
-        </label>
+    return <div className="contenedorF"> 
 
         <div id="Formul" className="elementos-form">
             <form id="formProducto">

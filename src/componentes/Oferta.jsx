@@ -137,7 +137,7 @@ function Mostraroferta({ usuario }) {
 
             </section>
             <section className="seccion1">
-                <img src={oferta.Imagen} alt="" />
+                <img className="imgMajo"src={oferta.Imagen} alt="" />
                 <span class="list-category">
                     <p>{oferta.Descripcion} </p>
                 </span>
@@ -148,6 +148,7 @@ function Mostraroferta({ usuario }) {
     ))
 
     const pr1 = categorias || []
+    console.log(`Pr1: ${pr1}`);
     const ListaCategorias = pr1.map(categoria => (
 
         <a href={`/Oferta/${categoria.id}`}>{categoria.Name}</a>
