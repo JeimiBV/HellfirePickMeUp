@@ -55,7 +55,15 @@ const VistaConsumidor = ({usuario}) => {
             return (
         
                 <>
-                    
+                    <div className=" containerLargo">
+                        <h1 className="text-center mt-3" > ¡Busca un producto! </h1>
+        
+                        <div className="buscador">
+                            <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
+                                  <i class="bi bi-search px-3"></i>
+                                <input class="form-control inputBusc me-2 px-5" type="search" placeholder=" Ingrese nombre del producto..." aria-label="Search"  />                    
+                            </form>
+                        </div>
         
                         <div className="ofertasDelosProductos"> 
                         
