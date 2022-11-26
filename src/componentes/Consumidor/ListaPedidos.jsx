@@ -27,18 +27,18 @@ const ListaPedidos = ({ usuario }) => {
             });
         }
     }, [post])
-    function updatePed() {
+    function updatePedido(pedidosC) {
         axios
-            .put(`${url}/${params.id}`, {
-                Imagen: pedidos.Imagen,
-                PrecioUnitario: pedidos.PrecioUnitario,
-                PrecioTotal: pedidos.PrecioTotal,
-                Hora: pedidos.Hora,
-                FechaLimite: pedidos.FechaLimite,
-                Cantidad: pedidos.Cantidad,
-                Nota: pedidos.Nota,
+            .put(`${url}/${pedidosC.id}`, {
+                Imagen: pedidosC.Imagen,
+                PrecioUnitario: pedidosC.PrecioUnitario,
+                PrecioTotal: pedidosC.PrecioTotal,
+                Hora: pedidosC.Hora,
+                FechaLimite: pedidosC.FechaLimite,
+                Cantidad: pedidosC.Cantidad,
+                Nota: pedidosC.Nota,
                 FlagC: false,
-                FalgN: pedidos.FlagN
+                FlagN: pedidosC.FlagN
             })
             .then((response) => {
                 setPost(response.data);
@@ -50,7 +50,7 @@ const ListaPedidos = ({ usuario }) => {
 
     const listaP = pr.filter(pedido => {
         const fechaPr = new Date(pedido.FechaLimite + 'T' + pedido.Hora)
-        return fechaPr > fechaActual && pedido.PrecioTotal !== '' && pedido.FlagC == true;
+        return pedido.FlagC == true;
     }
     )
 
@@ -79,13 +79,13 @@ const ListaPedidos = ({ usuario }) => {
                                     </div>
                                     <div className=" face back" >
                                         <p className="" >
-                                            <span > Precio: {pedidosC.PrecioTotal} bs.</span>
-                                            <span className="d-block"> Hora Límite:{pedidosC.Hora} </span>
-                                            <span className="d-block">Fecha Límite: {pedidosC.FechaLimite} </span>
+                                            <span > Precio: {pedidosC.PrecioUnitario} bs.</span>
+                                            <span className="d-block"> Hora límite:{pedidosC.Hora} </span>
+                                            <span className="d-block">Fecha límite: {pedidosC.FechaLimite} </span>
                                             <span className="d-block">Cantidad: {pedidosC.Cantidad} </span>
                                         </p>
                                     </div>
-                                    <button className="botonEliminar" color="danger" onClick={updatePed} >
+                                    <button className="botonEliminar" color="danger" onClick={()=>{updatePedido(pedidosC)}} >
                                     <i class="fa-regular fa-trash-can"></i></button>
                                 </div>
                             
