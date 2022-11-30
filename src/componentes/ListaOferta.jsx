@@ -36,8 +36,8 @@ const ListaOfertas = ({usuario}) => {
     const ofertados = productos.filter(producto => 
         {   
             const fechaPr = new Date(producto.Fecha + 'T' + producto.Hora) 
-            console.log("El Stock es: "+producto.Stock)
-            return  fechaPr > fechaActual && producto.Precio !== '';
+            console.log("El Stock es: " + producto.Stock)
+            return  fechaPr > fechaActual && producto.Precio !== '' ;
         }
     ) 
   
@@ -45,7 +45,7 @@ const ListaOfertas = ({usuario}) => {
         var resultadosBusqueda= tablaProductos.filter((elemento)=>{
             const fechaPr = new Date(elemento.Fecha + 'T' + elemento.Hora)
           if(elemento.Nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
-            return fechaPr > fechaActual && elemento.Precio !== '';
+            return fechaPr > fechaActual && elemento.Precio !== '' ;
           }
         });
         setProductos(resultadosBusqueda);

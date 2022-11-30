@@ -30,6 +30,7 @@ function Mostraroferta({ usuario }) {
     const [nombre, setNombre] = useState("");
     const [producto, setProducto] = useState(null);
     const [stock, setStock] = useState(0);
+    var url= "http://localhost:5000/base-de-datos-h/us-central1/app/api/pedido"
 
     useEffect(() => {
         filtrarOfertas(params.id, setOfertas)
@@ -70,10 +71,15 @@ function Mostraroferta({ usuario }) {
         console.log(precio)
         unicoProducto(id, setProducto)
         mostrarRealPedido
+        
+
     }
 
     const mostrarRealPedido = () => {
+
         if (valida) {
+
+            //console.log("Este si" + producto.Stock)
             axios({
                 method: "POST",
                 data: {
@@ -86,10 +92,13 @@ function Mostraroferta({ usuario }) {
                     Cantidad: contador,
                     Nota: notas.valor,
                     FlagC: true,
-                    FlagN: true
+                    FlagN: true,
+                    Stock: producto.Stock
                 },
-                url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido",
+
+
             }).then(response => {
+                
                 if (!response.data.error) {
                     console.log(response.data)
                 } else {
@@ -99,15 +108,19 @@ function Mostraroferta({ usuario }) {
                 .catch(err => {
                     console.log(err)
                 });
+                
             setTimeout(() => {
                 setModalRealPedido(false);
                 setModalPedido(false);
             }, 3000);
             setModalRealPedido(true);
             setContador(1)
+            actualizarStock()
         }
 
     };
+   
+    
     const mostrarCancPedido = () => {
         setTimeout(() => {
             setModalCancPedido(false);

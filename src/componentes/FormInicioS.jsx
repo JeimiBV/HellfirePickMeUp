@@ -135,7 +135,7 @@ function FormInicioSesion() {
                     <Modals
                         estado={modalAmbos}
                         estadoPantalla={false}
-                        texto={"No se aceptan espacios vacíos"}
+                        texto={"Ingrese su correo y contraseña"}
                         buttons={false}
                         icon={true}
                     />

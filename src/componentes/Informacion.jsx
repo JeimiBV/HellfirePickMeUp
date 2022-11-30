@@ -24,7 +24,7 @@ function Informacion() {
 
     const [post, setPost] = useState(null);
     const url =
-        "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products";
+        "http://localhost:5000/base-de-datos-h/us-central1/app/api/products";
     useEffect(() => {
         unicoProducto(params.id, setProductos);
 
@@ -315,6 +315,7 @@ function Informacion() {
                                         className="entrada-2 entrada-stock"
                                         id="stock"
                                         type="number"
+                                        min={1}
                                         required
                                         defaultValue={1}
                                         onChange={(e) =>

@@ -144,11 +144,13 @@ a {
 
 .list-cards .list-card section {
     width: 100%;
+    
     position: relative;
     overflow: hidden;
 }
 
 .list-cards .list-card {
+    height: 18rem;
     padding: 0.5em 1em;
 }
 
@@ -194,7 +196,7 @@ a {
 
 .imgMajo {
     width: 200px;
-    height: 200px;
+    height: 100%;
 }
 
 .boton-pedido {

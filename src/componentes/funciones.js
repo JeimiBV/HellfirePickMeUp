@@ -10,7 +10,7 @@ const todosProductos = async (setProductos) =>{
         method: "GET",
         //withCredentials: true,
         
-        url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products",
+        url: "http://localhost:5000/base-de-datos-h/us-central1/app/api/products",
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)
@@ -39,7 +39,7 @@ const unicoProducto = async (id, setProducto) => {
     const peticion =  Axios({
         method: "GET",
         //withCredentials: true,
-        url: `https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products/${id}`,
+        url: `http://localhost:5000/base-de-datos-h/us-central1/app/api/products/${id}`,
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)
@@ -60,7 +60,7 @@ const todosCategorias = async (setCategorias) =>{
     const peticion =  Axios({
         method: "GET",
         //withCredentials: true,
-        url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/oferts",
+        url: "http://localhost:5000/base-de-datos-h/us-central1/app/api/oferts",
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)
@@ -83,7 +83,7 @@ const filtrarOfertas = async (id, setOfertas) => {
     const peticion =  Axios({
         method: "GET",
         //withCredentials: true,
-        url: `https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/oferts/${id}`,
+        url: `http://localhost:5000/base-de-datos-h/us-central1/app/api/oferts/${id}`,
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)
@@ -105,7 +105,7 @@ const todosPedidos = async (setPedidos) =>{
         method: "GET",
         //withCredentials: true,
         
-        url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido",
+        url: "http://localhost:5000/base-de-datos-h/us-central1/app/api/pedido",
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)

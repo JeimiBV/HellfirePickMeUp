@@ -16,7 +16,7 @@ function MostrarPedidosN({ usuario }) {
     const [tablaPedi, setTablaPedi]= useState([]);
     const [busqueda, setBusqueda]= useState("");
 
-    const url = "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido";
+    const url = "http://localhost:5000/base-de-datos-h/us-central1/app/api/pedido";
 
     useEffect(() => {
         todosPedidos(setPedidos)
@@ -94,7 +94,7 @@ function MostrarPedidosN({ usuario }) {
                             </ul> 
                         </div>   
                         <div class="botonN">
-                            <button type="button" class="btn btn-sm btn-default" onClick={()=> {updatePedido(pedido)}}>Entregado</button>
+                             <button type="button" class="btn btn-sm btn-default" onClick={()=> {updatePedido(pedido)}}>Entregado</button>
                         </div>    
              </div>
          </div>
