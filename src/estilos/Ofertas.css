@@ -10,13 +10,25 @@
     position: relative; 
     padding: 1rem 2rem ;
     flex-direction: column;
-    left: 2rem;
+    left: 5rem;
     top: 1rem;
-    width: 85%;
+    width: 88%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12.5rem, 0fr));
     gap: 3rem ;
     box-sizing: border-box;
+   
+}
+
+.containerL > .buscador .inputBusc{
+    width: 60%;
+}
+
+.containerL > .buscador .bi{
+    position: absolute;
+    margin-right: 59%;
+    
+    margin-top: 0.5%;
 }
 
 .card-of > .imagenOf {

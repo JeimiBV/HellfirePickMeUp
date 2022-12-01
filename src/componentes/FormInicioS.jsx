@@ -36,7 +36,7 @@ function FormInicioSesion() {
         try {
             if (userf.correo == "user@gmail.com") {
                 await login(userf.correo, userf.contraseña);
-                navigate("/menu");
+                navigate("/vistaConsumidor");
             }
 
         } catch (error) {
@@ -135,7 +135,7 @@ function FormInicioSesion() {
                     <Modals
                         estado={modalAmbos}
                         estadoPantalla={false}
-                        texto={"No se aceptan espacios vacíos"}
+                        texto={"Ingrese su correo y contraseña"}
                         buttons={false}
                         icon={true}
                     />

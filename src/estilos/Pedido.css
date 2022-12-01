@@ -1,10 +1,12 @@
 
 .contenedor-pedidos{
-    background-color: azure;
+    background-image: url("https://i.ibb.co/DgRMWdv/default-bg.jpg");
     width: 40vw;
     height: 55vh;
     padding: 2vh;
     border-radius: 20px;
+    color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 #form-Pedido{
     display: flex;
@@ -20,25 +22,38 @@
     
 }
 .boton-controlar-pedido{
-    border: 1px solid black;
+    border: 1px solid white;
     padding:0 10px 0 10px ;
     height: 1.9rem;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .boton-conf{
     padding: 0 2vw;
     margin-top: 2vh;
+    transition: .5s;
+    border: 3px solid #70B475;
+    color: #2C2C2C;
+    font-weight: bold;
+    
+}
+.boton-conf:hover{
+    background-color:#70B475;
+    color: aliceblue;
+    transition: .5s;
 }
 .boton-controlar-pedido:hover{
-    background-color: rgb(19, 106, 147);
+    background-color: #70B475;
     color: aliceblue;
+    font-weight: bold;
 }
 .contenedor-agregar{
     margin-top: 2vh;
+
     display: flex;
     justify-content: space-between;
-    width: 12vw;
+    width: 15vw;
     align-items: center;
 }
 .botones-pedido{
@@ -48,7 +63,20 @@
     justify-content: space-around;
 }
 #notas{
-    height: 10vh;
+    height: 10vh !important;
     margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 32vw;
+    resize: none;
+    background-color: aliceblue;
+    border: 3px solid #70B475;
+}
+.validar {
+    font-size: small;
+    color: red;
+}
+
+.contenedor-input-pedido{
+    height: 15vh;
     margin-bottom: 2vh;
 }

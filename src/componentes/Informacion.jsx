@@ -219,7 +219,7 @@ function Informacion() {
                         <form
                             className="fo"
                             id="form"
-                            action="https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products/${id}"
+                            action="http://localhost:5000/base-de-datos-h/us-central1/app/api/products/${id}"
                             method="PUT"
                         >
                             <label className="label-1">
@@ -315,6 +315,7 @@ function Informacion() {
                                         className="entrada-2 entrada-stock"
                                         id="stock"
                                         type="number"
+                                        min={1}
                                         required
                                         defaultValue={1}
                                         onChange={(e) =>
@@ -377,7 +378,7 @@ function Informacion() {
                             cambiarEstado={setModalSi}
                             estadoPantalla={true}
                             texto={"Guardando registro ..."}
-                            icon={false}
+                            icon={true}
                             
                         />
                         <Modals
@@ -388,7 +389,7 @@ function Informacion() {
                             cambiarEstado={setModalNo}
                             estadoPantalla={true}
                             texto={"Cancelado"}
-                            icon={false}
+                            icon={true}
                             
                         />
                     </div>

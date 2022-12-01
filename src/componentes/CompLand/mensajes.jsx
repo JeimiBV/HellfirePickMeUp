@@ -31,7 +31,7 @@ export const MensajesP = () => {
                  <div class="col-sm p-5">
                    <img className=""  src="https://img.freepik.com/vector-premium/planeta-verde-iconos-ecologia-aislado-ilustracion-vectorial_24908-36326.jpg?w=2000" width="90" height="90"/>
                    <h3>
-                     Usando la aplicacion ayudas a reducir 
+                     Usando la aplicación ayudas a reducir 
                      el desperdicio de comida
                    </h3>
                  </div>

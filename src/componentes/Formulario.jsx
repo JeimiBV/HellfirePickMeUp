@@ -24,7 +24,7 @@ function Form({ usuario }) {
     const [nombre, setNombre] = useState({ valor: '', estado: false, check: false })
     const [descripcion, setDescripcion] = useState({ valor: '', estado: false, check: false })
     const [archivo, setArchivo] = useState(false)
-    const [modalConf, setModalConf] = useState(true)
+    const [modalConf, setModalConf] = useState(false)
     const [modalSi, setModalSi] = useState(false)
     const [modalNo, setModalNo] = useState(false)
     const [imagen, setImagen] = useState({ estado: false })
@@ -175,7 +175,7 @@ function Form({ usuario }) {
                 Tipo: producto.valor,
                 Imagen: urlImagen
             },
-            url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products",
+            url: "http://localhost:5000/base-de-datos-h/us-central1/app/api/products",
         }).then(response => {
             if (!response.data.error) {
                 console.log(response.data)
@@ -216,9 +216,9 @@ function Form({ usuario }) {
 
     //http://localhost:5000/fir-crud-c44e7/us-central1/app/api/products
 
-    return <div className="contenedorF">
-
-        <label className="titulo">
+    return <div className="contenedorF"> 
+    
+    <label className="titulo">
             Registrar Producto
         </label>
 
