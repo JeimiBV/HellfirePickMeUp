@@ -1,8 +1,10 @@
 import Axios from "axios"
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
+
 //const url='http://localhost:5000/pruebafirebase-30018/us-central1/app/api/products'
 //http://localhost:5000/base-de-datos-h/us-central1/app
+//https://us-central1-base-de-datos-h.cloudfunctions.net/app
 const todosProductos = async (setProductos) =>{
 
     const peticion =  Axios({

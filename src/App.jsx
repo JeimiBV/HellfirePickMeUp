@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import LandingPage from './componentes/Landingpage'
 import LoginC from "./componentes/FormInicioS";
@@ -17,6 +18,9 @@ import Landing from "./componentes/Landing";
 import Mostrarmenu from "./componentes/Menu";
 import Mostraroferta from "./componentes/Oferta";
 import ListaOfertas from "./componentes/ListaOferta";
+import { PlantillaC } from "./componentes/Consumidor/PlantillaConsu";
+import ListaPedidos from "./componentes/Consumidor/ListaPedidos"
+import VistaConsumidor from "./componentes/Consumidor/VistaConsumidor";
 import MostrarPedidosN from "./componentes/Pedidos";
 
 function App() {
@@ -99,8 +103,11 @@ function App() {
           element={
             <AuthProvider>
               <ProtectedRoute>
-                <Mostrarmenu usuario={userC} />
+                <PlantillaC>
+                  <Mostrarmenu usuario={userC} />
+                </PlantillaC>
               </ProtectedRoute>
+
             </AuthProvider>
           }
         />
@@ -109,7 +116,34 @@ function App() {
           element={
             <AuthProvider>
               <ProtectedRoute>
-                <Mostraroferta usuario={userC} />
+                <PlantillaC>
+                  <Mostraroferta usuario={userC} />
+                </PlantillaC>
+              </ProtectedRoute>
+            </AuthProvider>
+          }
+        />
+
+        <Route
+          path="/categorias"
+          element={
+            <AuthProvider>
+              <ProtectedRoute>
+                <PlantillaC>
+                  <Mostrarmenu usuario={userC} />
+                </PlantillaC>
+              </ProtectedRoute>
+            </AuthProvider>
+          }
+        />
+        <Route
+          path="/pedidosC"
+          element={
+            <AuthProvider>
+              <ProtectedRoute>
+                <PlantillaC>
+                  <ListaPedidos usuario={userC} />
+                </PlantillaC>
               </ProtectedRoute>
             </AuthProvider>
           }
@@ -122,6 +156,18 @@ function App() {
                 <Plantilla>
                   <ListaOfertas usuario={userN} />
                 </Plantilla>
+              </ProtectedRoute>
+            </AuthProvider>
+          }
+        />
+        <Route
+          path="/vistaConsumidor"
+          element={
+            <AuthProvider>
+              <ProtectedRoute>
+                <PlantillaC>
+                  <VistaConsumidor usuario={userC} />
+                </PlantillaC>
               </ProtectedRoute>
             </AuthProvider>
           }

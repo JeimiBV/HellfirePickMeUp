@@ -26,6 +26,9 @@
     align-items: center;
     justify-content: center;
 }
+.tituloModal{
+    font-size: 2.5vw;
+}
 .cardM{
     min-width: 25vw;
 }

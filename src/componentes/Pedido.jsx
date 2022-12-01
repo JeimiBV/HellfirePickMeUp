@@ -1,12 +1,12 @@
 import React from "react";
 import "../estilos/Modals.css"
-import '../estilos/Pedido.css'
+import '../estilos/Ofertar.css'
 
-function Modals({ children, estado, cambiarEstado }) {
+function Pedido({ children, estado, cambiarEstado }) {
     return (
         <>
             {estado &&
-                <div className="over">
+                <div className="over-complete ">
                     {children}
                 </div>
             }
@@ -14,4 +14,4 @@ function Modals({ children, estado, cambiarEstado }) {
         
     )
 }
-export default Modals
+export default Pedido

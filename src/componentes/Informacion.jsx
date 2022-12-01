@@ -16,6 +16,7 @@ function Informacion() {
     const [Precio, setPrecio] = useState({ estado: false, valor: "" }); // tarea 9
     const [Fecha, setFecha] = useState({ estado: false, valor: "AAAA-MM-DD" }); // tarea 10
     const [Hora, setHora] = useState({ estado: false, valor: "--:--" }); // tarea 11
+    const [Stock, setStock] = useState({ estado: false, valor: "" }); 
     const [modalConf, setModalConf] = useState(false);
     const [producto, setProductos] = useState(null);
     const [oferta, setOfertas] = useState(null);
@@ -44,10 +45,14 @@ function Informacion() {
                 Precio: document.getElementById("numero").value,
                 Fecha: document.getElementById("fecha").value,
                 Hora: document.getElementById("hora").value,
+                Stock: document.getElementById("stock").value,
+                
             })
+            
             .then((response) => {
                 setPost(response.data);
                 mostrarSi();
+            
             });
     }
 
@@ -62,6 +67,7 @@ function Informacion() {
             setPrecio(prevState => ({ ...prevState, estado: false }))
             setFecha(prevState => ({ ...prevState, estado: false }));
             setHora(prevState => ({ ...prevState, estado: false }));
+            setStock(prevState =>({...prevState, estado:false}));
             setIsLoading(false)
             setModalConf(true);
 
@@ -88,6 +94,12 @@ function Informacion() {
             } else {
                 setHora(prevState => ({ ...prevState, estado: true }));
             }
+            if(Stock.valor<=0){
+                setStock(prevState => ({ ...prevState, estado: true }));
+            }
+            else{
+                setStock(prevState => ({ ...prevState, estado: false }));
+            }
         }
 
     }
@@ -104,6 +116,7 @@ function Informacion() {
         setPrecio((prevState) => ({ ...prevState, estado: false }));
         setFecha((prevState) => ({ ...prevState, estado: false }));
         setHora((prevState) => ({ ...prevState, estado: false }));
+        setStock((prevState) => ({ ...prevState, estado: false }));
         window.location.pathname = "/listaOfertas";
     };
 
@@ -117,6 +130,7 @@ function Informacion() {
         setPrecio(prevState => ({ ...prevState, valor: '' }));
         setFecha(prevState => ({ ...prevState, valor: 'AAAA-MM-DD' }));
         setHora(prevState => ({ ...prevState, valor: '--:--' }));
+        setHora(prevState => ({ ...prevState, valor: '1' }));
         document.getElementById("form").reset();
         setModalConf(false);
         setModalNo(true);
@@ -162,6 +176,7 @@ function Informacion() {
         setPrecio(prevState => ({ ...prevState, estado: false }));
         setFecha(prevState => ({ ...prevState, estado: false }));
         setHora(prevState => ({ ...prevState, estado: false }));
+        setStock(prevState => ({ ...prevState, estado: false }));
     };
     
 
@@ -289,7 +304,39 @@ function Informacion() {
                                     >
                                         Ingrese una hora
                                     </h3>
+
                                 </div>
+                                
+                            </label>
+                            <label className="label-1">
+                                <div className="contenedor-input-1">
+                                    Stock:
+                                    <input
+                                        className="entrada-2 entrada-stock"
+                                        id="stock"
+                                        type="number"
+                                        min={1}
+                                        required
+                                        defaultValue={1}
+                                        onChange={(e) =>
+                                            setStock((prevState) => ({
+                                                ...prevState,
+                                                valor: e.target.value,
+                                            }))
+                                        }
+                                    />
+                                    <h3
+                                        className={
+                                            Stock.estado
+                                                ? "validacion-1"
+                                                : "invisible"
+                                        }
+                                    >
+                                        Ingrese un valor valido en este campo
+                                    </h3>
+
+                                </div>
+                                
                             </label>
                         </form>
                         <div className="contenedor-botones">
@@ -331,7 +378,7 @@ function Informacion() {
                             cambiarEstado={setModalSi}
                             estadoPantalla={true}
                             texto={"Guardando registro ..."}
-                            icon={false}
+                            icon={true}
                             
                         />
                         <Modals
@@ -342,7 +389,7 @@ function Informacion() {
                             cambiarEstado={setModalNo}
                             estadoPantalla={true}
                             texto={"Cancelado"}
-                            icon={false}
+                            icon={true}
                             
                         />
                     </div>
