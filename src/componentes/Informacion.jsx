@@ -24,7 +24,7 @@ function Informacion() {
 
     const [post, setPost] = useState(null);
     const url =
-        "http://localhost:5000/base-de-datos-h/us-central1/app/api/products";
+        "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products";
     useEffect(() => {
         unicoProducto(params.id, setProductos);
 
@@ -219,7 +219,7 @@ function Informacion() {
                         <form
                             className="fo"
                             id="form"
-                            action="http://localhost:5000/base-de-datos-h/us-central1/app/api/products/${id}"
+                            action="https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products/${id}"
                             method="PUT"
                         >
                             <label className="label-1">
