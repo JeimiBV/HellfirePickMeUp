@@ -53,7 +53,7 @@ function MostrarPedidosN({ usuario }) {
                         <span class="food_name">{pedido.Nombre}</span>
 
                         <span class="food_detail">{pedido.Nota}</span>
-                        <div className="listas">
+                        <div class="botonN">
                             <ul id="food_meta">
                                 <li>
                                     Cantidad:
@@ -64,8 +64,7 @@ function MostrarPedidosN({ usuario }) {
                                 <span>Bs {pedido.PrecioUnitario}</span>
                                 </li>
                             </ul> 
-                        </div>   
-                        <div class="botonN">
+
                             <button type="button" class="btn btn-sm btn-default" onClick={()=> {updatePedido(pedido)}}>Entregado</button>
                         </div>    
              </div>

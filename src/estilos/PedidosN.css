@@ -2,7 +2,7 @@
 .containerG{
     position: relative;
     width: 100%;
-    height: 87.248vh;
+    height: 87.6vh;
     background-color: #CAD2C5;
     overflow-y: scroll;
    
@@ -23,7 +23,8 @@
     margin-left: 2.5%;
     /* display: grid; */
     grid-template-columns: repeat(auto-fit, minmax(20rem, 0fr));
-    gap: 5rem 0rem;
+    gap: 16rem 0rem;
+    
     
 }
 
@@ -34,10 +35,10 @@
 }
 
 
-.fda_food_row > div:not(:first-child)
+/* .fda_food_row > div:not(:first-child)
 {
     margin-left: -15px;
-}
+} */
 
 #fda_product_tile
 {
@@ -56,24 +57,24 @@
     background-color: rgba(0,0,0,0.05);
     font-size: 11px;
     padding: 0 25px;
-    border-radius: 25px;
-    
-    
+    border-radius: 25px; 
 }
 
-.fda_food_row div.food_tile.active
+.food_tile.active
 {
     background-color: #B4D3B2;   
-    height: 25vw;
-    position:relative;
+    height: 160%;
+    position: relative;  
 }
 
 
 .fda_food_row img
 {
     position: relative;
-    width: 100%;
-    height: 50%;
+    /* width: 100%;
+    height: 40%; */
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 10%;
     padding: 15px;
@@ -86,8 +87,7 @@
                 0 8px 7px rgba(0,0,0,0.15);
    
     margin-top: -60px;
-    margin-bottom: 18px;
-   
+    margin-bottom: 18px;  
 }
 
 div.food_tile.active img
@@ -106,7 +106,6 @@ div.food_tile.active img
 .food_name::first-letter{
     text-transform: uppercase;
 }
-
 .food_detail
 {
     font-size: 13px;
@@ -162,14 +161,10 @@ div.food_tile.active img
     box-shadow: 0 5px 1px rgba(224,243,248);
 }
 .botonN{
-    position:absolute;
-    
+    position: absolute;
     /* posicion vertical */
     bottom:10px;
-
-    /* centrado horizontal */
-    
-    
+    /* centrado horizontal */   
 }
 .listas{
 
