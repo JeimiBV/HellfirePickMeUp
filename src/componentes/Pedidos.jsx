@@ -71,7 +71,9 @@ function MostrarPedidosN({ usuario }) {
         setPedidos(resultadosBusqueda);
       } 
 
-    const ListaPedidos = pedidos1.map(pedido => (
+    const ListaPedidos = 
+    
+    pedidos1.map(pedido => (
        
        
         <div class="col-9" key={pedido.id}>
@@ -92,8 +94,8 @@ function MostrarPedidosN({ usuario }) {
                                 <span>Bs {pedido.PrecioUnitario}</span>
                                 </li>
                             </ul> 
-                        </div>   
-                        <div class="botonN">
+                       
+                        
                             <button type="button" class="btn btn-sm btn-default" onClick={()=> {updatePedido(pedido)}}>Entregado</button>
                         </div>    
              </div>
