@@ -75,10 +75,7 @@ function Mostraroferta({ usuario }) {
     }
 
     const mostrarRealPedido = () => {
-
         if (valida) {
-
-            //console.log("Este si" + producto.Stock)
             axios({
                 method: "POST",
                 data: {
@@ -91,13 +88,10 @@ function Mostraroferta({ usuario }) {
                     Cantidad: contador,
                     Nota: notas.valor,
                     FlagC: true,
-                    FlagN: true,
-                    Stock: producto.Stock
+                    FlagN: true
                 },
-
-
+                url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido",
             }).then(response => {
-                
                 if (!response.data.error) {
                     console.log(response.data)
                 } else {
@@ -107,14 +101,12 @@ function Mostraroferta({ usuario }) {
                 .catch(err => {
                     console.log(err)
                 });
-                
             setTimeout(() => {
                 setModalRealPedido(false);
                 setModalPedido(false);
             }, 3000);
             setModalRealPedido(true);
             setContador(1)
-            actualizarStock()
         }
 
     };
