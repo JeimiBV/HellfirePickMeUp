@@ -70,9 +70,8 @@ function Mostraroferta({ usuario }) {
         setStock(stock)
         console.log(precio)
         unicoProducto(id, setProducto)
-        mostrarRealPedido
+        mostrarRealPedido()
         
-
     }
 
     const mostrarRealPedido = () => {
