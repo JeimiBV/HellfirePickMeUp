@@ -30,7 +30,7 @@ function Mostraroferta({ usuario }) {
     const [nombre, setNombre] = useState("");
     const [producto, setProducto] = useState(null);
     const [stock, setStock] = useState(0);
-    var url= "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido"
+    var url= "http://localhost:5000/base-de-datos-h/us-central1/app/api/pedido"
 
     useEffect(() => {
         filtrarOfertas(params.id, setOfertas)
@@ -114,7 +114,7 @@ function Mostraroferta({ usuario }) {
             }, 3000);
             setModalRealPedido(true);
             setContador(1)
-            actualizarStock()
+        
         }
 
     };
