@@ -4,6 +4,7 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 //const url='http://localhost:5000/pruebafirebase-30018/us-central1/app/api/products'
 //http://localhost:5000/base-de-datos-h/us-central1/app
+//https://us-central1-base-de-datos-h.cloudfunctions.net/app
 const todosProductos = async (setProductos) =>{
 
     const peticion =  Axios({
@@ -60,7 +61,7 @@ const todosCategorias = async (setCategorias) =>{
     const peticion =  Axios({
         method: "GET",
         //withCredentials: true,
-        url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/ofets",
+        url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/oferts",
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)
@@ -105,7 +106,7 @@ const todosPedidos = async (setPedidos) =>{
         method: "GET",
         //withCredentials: true,
         
-        url: "http://localhost:5000/base-de-datos-h/us-central1/app/api/pedido",
+        url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido",
     }).then(response => {
         if (!response.data.error) {
             console.log(response.data)

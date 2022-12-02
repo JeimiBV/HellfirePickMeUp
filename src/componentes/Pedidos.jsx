@@ -16,7 +16,7 @@ function MostrarPedidosN({ usuario }) {
     const [tablaPedi, setTablaPedi]= useState([]);
     const [busqueda, setBusqueda]= useState("");
 
-    const url = "http://localhost:5000/base-de-datos-h/us-central1/app/api/pedido";
+    const url = "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido";
 
     useEffect(() => {
         todosPedidos(setPedidos)
