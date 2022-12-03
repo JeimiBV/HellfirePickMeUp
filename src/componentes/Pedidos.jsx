@@ -46,14 +46,10 @@ function MostrarPedidosN({ usuario }) {
         }
 
         const handleChange=e=>{
-    
-            if (/\s/.test(e.target.value)) {
-                e.target.value = "";
-                setBusqueda(e.target.value);
-               
-            }else{
-                filtrar(e.target.value); 
-            }                  
+            setBusqueda(e.target.value);
+            if (/[A-Za-z]/.test(e.target.value) || !/\s/.test(e.target.value)) {
+               filtrar(e.target.value); 
+            }                 
         }
          
     
