@@ -92,7 +92,7 @@ const ListaPedidos = ({ usuario }) => {
                 <div className="buscador">
                     <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
                            <i class="bi bi-search px-3"></i>
-                        <input class="form-control inputBusc me-2 px-5" type="search" placeholder=" Ingrese el nombre de tu pedido..." aria-label="Search"  />              
+                        <input class="form-control inputBusc me-2 px-5" type="search" placeholder=" Ingrese el nombre del pedido..." aria-label="Search"  />              
                     </form>
                 </div>
 
