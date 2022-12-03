@@ -44,6 +44,7 @@ function Mostraroferta({ usuario }) {
         setContador(contador + 1)
         setPrecio((contador + 1) * precioFijo)
     }
+
     const disminuir = () => {
         if (contador > 1) {
             setContador(contador - 1)
@@ -70,7 +71,7 @@ function Mostraroferta({ usuario }) {
         setStock(stock)
         console.log(precio)
         unicoProducto(id, setProducto)
-        mostrarRealPedido()
+        //mostrarRealPedido()
         
     }
 
@@ -102,17 +103,17 @@ function Mostraroferta({ usuario }) {
                     console.log(err)
                 });
             setTimeout(() => {
-                setModalRealPedido(false);
                 setModalPedido(false);
+                setModalRealPedido(false);
             }, 3000);
             setModalRealPedido(true);
             setContador(1)
-        
+
         }
 
     };
    
-    
+
     const mostrarCancPedido = () => {
         setTimeout(() => {
             setModalCancPedido(false);

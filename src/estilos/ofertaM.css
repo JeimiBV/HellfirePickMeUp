@@ -92,7 +92,7 @@ a {
     border-radius: 0.625rem;
     position: sticky;
     top: -15%;
-    z-index: 11;
+    z-index: 0;
 }
 
 .list-section .left-section .column-2 {
