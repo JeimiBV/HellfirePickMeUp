@@ -21,14 +21,10 @@ const ListaOfertas = ({usuario}) => {
     }, [])
 
     const handleChange=e=>{
-
-        if (/\s/.test(e.target.value)) {
-            e.target.value = "";
-            setBusqueda(e.target.value);
-            filtrar(e.target.value); 
-        }else{
-            filtrar(e.target.value); 
-        }                  
+        setBusqueda(e.target.value);
+        if (/[A-Za-z]/.test(e.target.value) || !/\s/.test(e.target.value)) {
+           filtrar(e.target.value); 
+        }                 
     }
 
     const fechaActual = new Date()  
@@ -59,7 +55,7 @@ const ListaOfertas = ({usuario}) => {
                 <div className="buscador">
                     <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
                            <i class="bi bi-search px-3"></i>
-                        <input class="form-control inputBusc me-2 px-4" type="search" placeholder=" Ingrese nombre del producto ofertado..." aria-label="Search"  />              
+                        <input class="form-control inputBusc me-2 px-4" type="search" placeholder=" Ingrese el nombre del producto ofertado..." aria-label="Search"  />              
                     </form>
                 </div>
                 <div className="ofertasP">
@@ -71,8 +67,8 @@ const ListaOfertas = ({usuario}) => {
 
                                     <img src={oferta.Imagen} class="card-img-top imagenOf mt-2 mr-2" alt="..." />
 
-                                    <div class="card-body card-letra text-capitalize">
-                                        <h5 class="card-titleP text-center " >{oferta.Nombre}</h5>
+                                    <div class="card-body card-letra ">
+                                        <h5 class="card-titleP text-center text-capitalize" >{oferta.Nombre}</h5>
                                         <p className="">
                                             <span > Precio: {oferta.Precio} bs.</span>
                                             <span className="d-block"> Hora límite:{oferta.Hora} </span>

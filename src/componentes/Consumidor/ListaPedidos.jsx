@@ -50,14 +50,10 @@ const ListaPedidos = ({ usuario }) => {
     }
 
     const handleChange=e=>{
-
-        if (/\s/.test(e.target.value)) {
-            e.target.value = "";
-            setBusqueda(e.target.value);
-            filtrar(e.target.value); 
-        }else{
-            filtrar(e.target.value); 
-        }                  
+        setBusqueda(e.target.value);
+        if (/[A-Za-z]/.test(e.target.value) || !/\s/.test(e.target.value)) {
+           filtrar(e.target.value); 
+        }                 
     }
 
     const fechaActual = new Date()
@@ -92,7 +88,7 @@ const ListaPedidos = ({ usuario }) => {
                 <div className="buscador">
                     <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
                            <i class="bi bi-search px-3"></i>
-                        <input class="form-control inputBusc me-2 px-5" type="search" placeholder=" Ingrese el nombre de tu pedido..." aria-label="Search"  />              
+                        <input class="form-control inputBusc me-2 px-5" type="search" placeholder=" Ingrese el nombre del pedido..." aria-label="Search"  />              
                     </form>
                 </div>
 

@@ -6,7 +6,7 @@ export const SidebarDatosC = [
     },
 
     {
-        title: "Categorias",
+        title: "Categorías",
         path: "/menu"
 
     },
