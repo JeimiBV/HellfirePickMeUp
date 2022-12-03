@@ -78,13 +78,13 @@ const VistaConsumidor = ({usuario}) => {
                                             
                                             
                                             <div className="DisenioCard ">
-                                            <div class="card-body card-letra text-capitalize">
-                                                <h5 class="card-titleProducto text-center " >{oferta.Nombre}</h5>
+                                            <div class="card-body card-letra ">
+                                                <h5 class="card-titleProducto text-center text-capitalize" >{oferta.Nombre}</h5>
                                                 <p className="">
                                             
                                                     <span > Precio: {oferta.Precio} bs.</span>
-                                                    <span className="d-block"> Hora Límite:{oferta.Hora} </span>
-                                                    <span className="d-block">Fecha Límite: {oferta.Fecha} </span>
+                                                    <span className="d-block">Hora límite:{oferta.Hora} </span>
+                                                    <span className="d-block">Fecha límite: {oferta.Fecha} </span>
                                                     
                                                 </p>
                                               </div>
