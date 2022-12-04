@@ -38,11 +38,13 @@ function MostrarPedidosN({ usuario }) {
                 Nota: pedido.Nota,
                 FlagC: pedido.FlagC,
                 FlagN: false,
+                Stock: pedido.Stock
                 
             })
             .then((response) => {
-                setPost(response.data);
-                mostrarSi();
+                //setPost(response.data);
+                console.log("succesfull!!")
+                //mostrarSi();
             });
         }
 
