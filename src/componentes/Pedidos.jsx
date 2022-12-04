@@ -15,6 +15,7 @@ function MostrarPedidosN({ usuario }) {
     const [pedidos, setPedidos]=useState([])
     const [tablaPedi, setTablaPedi]= useState([]);
     const [busqueda, setBusqueda]= useState("");
+    var validacion = 0;
 
     const url = "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido";
 
@@ -58,10 +59,18 @@ function MostrarPedidosN({ usuario }) {
          
     
     const pr1 = pedidos || []
+            pr1.map(pedido => {
+                if(pedido.FlagN == true){
+                validacion += 1;
+                }
+        }
+        )
     const pedidos1 = pr1.filter(pedido => {  
         return pedido.FlagN == true;
     }
+    
     )
+   
     const filtrar=(terminoBusqueda)=>{
         var resultadosBusqueda= tablaPedi.filter((elemento)=>{
           if(elemento.Nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
@@ -71,9 +80,7 @@ function MostrarPedidosN({ usuario }) {
         setPedidos(resultadosBusqueda);
       } 
 
-    const ListaPedidos = 
-    
-    pedidos1.map(pedido => (
+    const ListaPedidos = pedidos1.map(pedido => (
        
        
         <div class="col-9" key={pedido.id}>
@@ -81,7 +88,7 @@ function MostrarPedidosN({ usuario }) {
                  <img src={pedido.Imagen} alt="" class="fda_product_img"/>
                  
                         <span class="food_name">{pedido.Nombre}</span>
-
+                        
                         <span class="food_detail">{pedido.Nota}</span>
                         <div class="botonN">
                             <ul id="food_meta">
@@ -94,8 +101,7 @@ function MostrarPedidosN({ usuario }) {
                                 <span>Bs {pedido.PrecioUnitario}</span>
                                 </li>
                             </ul> 
-                       
-                        
+
                             <button type="button" class="btn btn-sm btn-default" onClick={()=> {updatePedido(pedido)}}>Entregado</button>
                         </div>    
              </div>
@@ -103,37 +109,51 @@ function MostrarPedidosN({ usuario }) {
     )
     
     )
-    return(
-     <div className="containerG mt-3">
     
-    <h1 className="titleL"> Lista de pedidos </h1> 
-                <div class="container-fluid">
-
-                <div className="buscador">
-                    <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
-                    <i class="bi bi-search px-3"></i>
-                        <input class="form-control inputBusc me-2 px-4" type="search" placeholder=" Ingrese el nombre del pedido..." aria-label="Search"  />              
-                    </form>
-                </div>
-
-                    <div id="fda_app" class="row">
-            
-                            <section id="fda_product_tile" class="col-12">
-                        
-                                <div class="row fda_food_row">
-                                    
-                                   {ListaPedidos}
-                                
-                                </div>
-
-                            </section>
-            
+    if(validacion > 0){
+        
+        return(
+           
+           <div className="containerG mt-3">
+           
+            <h1 className="titleL"> Lista de pedidos </h1> 
+                       <div class="container-fluid">
+       
+                        <div className="buscador">
+                           <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
+                            <i class="bi bi-search px-3"></i>
+                               <input class="form-control inputBusc me-2 px-4" type="search" placeholder=" Ingrese el nombre del pedido..." aria-label="Search"  />              
+                          </form>
+                       </div>
+       
+                            <div id="fda_app" class="row">
+                   
+                                    <section id="fda_product_tile" class="col-12">
+                               
+                                       <div class="row fda_food_row">
+                                           
+                                           {ListaPedidos}
+                                       
+                                        </div>
+       
+                                    </section>
+                   
+                            </div>
                     </div>
-            </div>
-     </div>
-
-
-    )
+             </div>
+       
+       
+         )
+        
+    
+     }else{
+        return (<div className="containerG mt-3">
+           
+        <h1 className="titleL"> Lista de pedidos </h1> 
+           <div>No hay pedidos </div>
+        </div>)
+            
+     }
     
 
 }

@@ -60,10 +60,10 @@
     border-radius: 25px; 
 }
 
-.food_tile.active
+.fda_food_row .food_tile.active
 {
     background-color: #B4D3B2;   
-    height: 160%;
+    height: 55vh;
     position: relative;  
 }
 
