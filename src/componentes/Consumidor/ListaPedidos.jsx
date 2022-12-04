@@ -32,6 +32,7 @@ const ListaPedidos = ({ usuario }) => {
         }
     }, [post])
     function updatePedido(pedidosC) {
+        console.log(pedidosC.Stock)
         axios
             .put(`${url}/${pedidosC.id}`, {
                 Imagen: pedidosC.Imagen,
@@ -42,7 +43,7 @@ const ListaPedidos = ({ usuario }) => {
                 Cantidad: pedidosC.Cantidad,
                 Nota: pedidosC.Nota,
                 FlagC: false,
-                FlagN: pedidosC.FlagN
+                FlagN: pedidosC.FlagN,
             })
             .then((response) => {
                 setPost(response.data);
