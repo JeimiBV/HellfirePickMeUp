@@ -30,7 +30,7 @@ function Mostraroferta({ usuario }) {
     const [nombre, setNombre] = useState("");
     const [producto, setProducto] = useState(null);
     const [stock, setStock] = useState(0);
-    var url= "http://localhost:5000/base-de-datos-h/us-central1/app/api/pedido"
+    var url= "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido"
 
     useEffect(() => {
         filtrarOfertas(params.id, setOfertas)
@@ -92,7 +92,7 @@ function Mostraroferta({ usuario }) {
                     FlagN: true,
                     Stock:producto.Stock
                 },
-                url: "http://localhost:5000/base-de-datos-h/us-central1/app/api/pedido",
+                url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido",
             }).then(response => {
                 if (!response.data.error) {
                     console.log(response.data)
