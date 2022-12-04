@@ -23,7 +23,7 @@
     margin-left: 2.5%;
     /* display: grid; */
     grid-template-columns: repeat(auto-fit, minmax(20rem, 0fr));
-    gap: 16rem 0rem;
+    gap: 5rem 0rem;
     
     
 }
