@@ -80,3 +80,29 @@
     height: 15vh;
     margin-bottom: 2vh;
 }
+
+@media (max-width:500px){
+
+    .contenedor-pedidos{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #form-Pedido{
+        width: 80vw;
+        margin-left: 1.3rem;
+        margin-top: 5rem;
+    }
+
+    #notas{
+        width: 83vw;
+    }
+
+    .contenedor-agregar{
+      width: 16rem;
+      
+    }
+
+
+
+}

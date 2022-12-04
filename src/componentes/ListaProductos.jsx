@@ -28,14 +28,9 @@ function Productoslista({usuario}) {
     },[] )
     
     const handleChange=e=>{
-      
         setBusqueda(e.target.value);
-        if (/\s/.test(e.target.value)) {
-            e.target.value = "";
-            setBusqueda(e.target.value);
-            filtrar(e.target.value); 
-        }else{
-            filtrar(e.target.value); 
+        if (/[A-Za-z]/.test(e.target.value) || !/\s/.test(e.target.value)) {
+           filtrar(e.target.value); 
         }                  
     }
 
@@ -57,7 +52,7 @@ function Productoslista({usuario}) {
     <div className="buscador">
         <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
             <i class="bi bi-search px-3"></i>
-            <input class="form-control inputBusc me-2 px-4" type="search" placeholder=" Ingrese nombre del producto..." aria-label="Search"  />              
+            <input class="form-control inputBusc me-2 px-4" type="search" placeholder=" Ingrese el nombre del producto..." aria-label="Search"  />              
         </form>
     </div>
 
