@@ -28,6 +28,7 @@
     font-size: 26px;
     white-space: nowrap;
     color: black;
+    margin-left: 38vw;
 }
 
 .user {
@@ -53,4 +54,11 @@ ul li{
     color: white;
     border-radius: 7px;
     border: none;
+}
+
+@media (max-width:500px){
+    .nombre{
+        margin-top: 1rem;
+        margin-left: -2rem;
+    }
 }

@@ -89,9 +89,10 @@ function Mostraroferta({ usuario }) {
                     Cantidad: contador,
                     Nota: notas.valor,
                     FlagC: true,
-                    FlagN: true
+                    FlagN: true,
+                    Stock:producto.Stock
                 },
-                url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido",
+                url: "http://localhost:5000/base-de-datos-h/us-central1/app/api/pedido",
             }).then(response => {
                 if (!response.data.error) {
                     console.log(response.data)
