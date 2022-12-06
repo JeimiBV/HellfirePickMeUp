@@ -44,24 +44,39 @@ function Productoslista({usuario}) {
       }
     const pr = productos || []
     const listaProductos= pr.map(producto => (
-        <div class="containerHU1">
-            <img src={producto.Imagen} />
-            <div class="content-boxHU1">
-                <h4 class="nameHU1">{producto.Nombre}</h4>
-                <p>{producto.Descripcion}</p>
-                <h2 class="priceHU1">Tipo: <p className="gonh">{producto.Tipo}</p> </h2>
-                <div class="btnHU1">
-                    
-                    <a href="#">Order Now</a>
+        <div class="shell">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="wsk-cp-product">
+                            <div class="wsk-cp-img">
+                                <img src={producto.Imagen} />
+                            </div>
+                            <div class="wsk-cp-text">
+                                <div class="category">
+                                <span>Ofertar</span>
+                                </div>
+                                <div class="title-product">
+                                <h3>{producto.className}</h3>
+                                </div>
+                                <div class="description-prod">
+                                <p>{producto.Descripcion}</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
                 </div>
-        </div>
-      </div>
+            </div>
+      
+        </div> 
         
         ) )
     return(   
-    <>
+   
      
-    <div className="containerG mt-3">
+<div className="containerG mt-3">
     
     <h1 className="titleL"> Lista de productos </h1> 
     <div className="buscador">
@@ -73,10 +88,10 @@ function Productoslista({usuario}) {
 
     <div className="productos">    
         {listaProductos}
-      </div>
-        </div> 
-    
-    </>    
+      
+    </div> 
+ </div>    
+ 
     )
 }
 
