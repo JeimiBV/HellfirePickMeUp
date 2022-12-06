@@ -42,7 +42,22 @@ function Productoslista({usuario}) {
         });
         setProductos(resultadosBusqueda);
       }
- 
+    const pr = productos || []
+    const listaProductos= pr.map(producto => (
+        <div class="containerHU1">
+            <img src={producto.Imagen} />
+            <div class="content-boxHU1">
+                <h4 class="nameHU1">{producto.Nombre}</h4>
+                <p>{producto.Descripcion}</p>
+                <h2 class="priceHU1">Tipo: <p className="gonh">{producto.Tipo}</p> </h2>
+                <div class="btnHU1">
+                    
+                    <a href="#">Order Now</a>
+                </div>
+        </div>
+      </div>
+        
+        ) )
     return(   
     <>
      
@@ -56,29 +71,8 @@ function Productoslista({usuario}) {
         </form>
     </div>
 
-    <div className="productos">
-
-        {productos != null ? (
-
-            
-             productos.map(producto => (
-  
-                    <div className="producto" key={producto.id}> 
-                             
-                            <div className="producto_imagen">
-                                <a href={`/Informacion/${producto.id}`}>
-                                    <img className="imagen" src={producto.Imagen} alt="" />
-                                </a>
-                            </div>      
-                
-
-                        <div className="P_footer">
-                                    <h1 className="nombreL">{producto.Nombre}</h1>       
-                        </div>    
-                    </div>  
-            )           
-    )
-        ):('no hay productos')}
+    <div className="productos">    
+        {listaProductos}
       </div>
         </div> 
     
