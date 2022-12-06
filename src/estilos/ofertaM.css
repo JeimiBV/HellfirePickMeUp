@@ -46,7 +46,7 @@ a {
 }
 
 .nombreO {
-    font-size: 5vh;
+    font-size: 4vh;
     text-transform: lowercase;
 }
 
@@ -280,7 +280,8 @@ a {
     }
 
     .nombreO {
-        font-size: 2vh;
+        font-size: 3vh;
     }
+
 
 }
