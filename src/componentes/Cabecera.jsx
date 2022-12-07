@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../imagenes/logo.png";
+import Image from "../../public/log.png";
 import "../estilos/header.css";
 import { useAuth } from "../context/authContext";
 import { Link, useNavigate } from "react-router-dom";
@@ -27,7 +27,7 @@ function Header() {
             </Link>    
             </div >
          
-                <h1 className="nombre p-2 ">Pick me up</h1>  
+                 
         </div>
           
               
