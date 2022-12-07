@@ -43,7 +43,7 @@ export const MensajesP = () => {
                     </h3>   
                     </div>
                     <div class="col-sm p-5">
-                     <img className=""  src="https://previews.123rf.com/images/fordzolo/fordzolo1511/fordzolo151100137/47606229-texto-de-sello-de-oferta-especial-en-c%C3%ADrculo-verde-sobre-un-fondo-blanco-y-estrella.jpg" width="90" height="90"/>
+                     <img className=""  src="https://img.freepik.com/vector-premium/rebanada-redonda-naranja-vector-ilustracion-realista-aislada-sobre-fondo-blanco-predisenadas-icono-eps-naranja_335478-830.jpg?w=740" width="90" height="90"/>
                      <h3>
                     ¡Tenemos variedad de ofertas para ti!
                     </h3>   
