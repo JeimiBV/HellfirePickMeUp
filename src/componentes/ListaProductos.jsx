@@ -44,33 +44,17 @@ function Productoslista({usuario}) {
       }
     const pr = productos || []
     const listaProductos= pr.map(producto => (
-        <div class="shell">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="wsk-cp-product">
-                            <div class="wsk-cp-img">
-                                <img src={producto.Imagen} />
-                            </div>
-                            <div class="wsk-cp-text">
-                                <div class="category">
-                                <span>Ofertar</span>
-                                </div>
-                                <div class="title-product">
-                                <h3>{producto.className}</h3>
-                                </div>
-                                <div class="description-prod">
-                                <p>{producto.Descripcion}</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto ">
+        <button class="custom-btn btn-2 ver_mas text-center"><span>Ofertar</span></button>
+        <article class="text-left">
+            <h2>{producto.Nombre}</h2>
+            <h4>{producto.Descripcion}</h4>
+        </article>
+        <img src={producto.Imagen} alt="" className="Imagen"/>
+    </div>
+   
                 
-                </div>
-            </div>
-      
-        </div> 
+               
         
         ) )
     return(   
@@ -86,11 +70,14 @@ function Productoslista({usuario}) {
         </form>
     </div>
 
-    <div className="productos">    
-        {listaProductos}
+        <div className="productos">
+             {listaProductos}
+            
+        </div>
       
-    </div> 
- </div>    
+      </div>
+      
+    
  
     )
 }
