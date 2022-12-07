@@ -44,15 +44,20 @@ function Productoslista({usuario}) {
       }
     const pr = productos || []
     const listaProductos= pr.map(producto => (
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto ">
-        <button class="custom-btn btn-2 ver_mas text-center"><span>Ofertar</span></button>
-        <article class="text-left">
-            <h2>{producto.Nombre}</h2>
-            <h4>{producto.Descripcion}</h4>
-        </article>
-        <img src={producto.Imagen} alt="" className="Imagen"/>
-    </div>
-   
+        <div class="image">
+        <img class="image__img" src={producto.Imagen} alt="Bricks"/>
+        <span className="image_div1"> {producto.Nombre}</span>
+        <div class="image__overlay image__overlay--primary">
+            <div class="image__title">{producto.Nombre}</div>
+            <p class="image__description">
+                {producto.Descripcion}
+            </p>
+            <div className="boton">
+            <button class="button button--tamaya button--round-l button--text-thick button--border-medium button--text-upper button--size-s button--inverted" data-text="Ofertar"><span>Ofertar</span></button>
+            </div>
+        </div>
+        
+        </div>
                 
                
         
@@ -60,7 +65,7 @@ function Productoslista({usuario}) {
     return(   
    
      
-<div className="containerG mt-3">
+<div className="containerGHU1 mt-3">
     
     <h1 className="titleL"> Lista de productos </h1> 
     <div className="buscador">
@@ -72,6 +77,7 @@ function Productoslista({usuario}) {
 
         <div className="productos">
              {listaProductos}
+             
             
         </div>
       
