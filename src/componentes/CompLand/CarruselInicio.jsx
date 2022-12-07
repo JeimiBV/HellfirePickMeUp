@@ -15,17 +15,18 @@ export default class AutoPlay extends Component {
       speed: 800,
       autoplaySpeed: 5000,
       cssEase: "linear"
+      
      
     };
     return (
         
         <div className="fs-4 ">
-         <div className="sliderA text-center start-50 translate-middle-x">  
+         <div className="sliderA text-center start-50 translate-middle-x text-white">  
         <Slider {...settings}>
-             <div className="fs-1">
+             <div className="fs-1 ">
               <p>¡Darle una segunda oportunidad a los alimentos es darle un respiro al planeta!</p>
             </div>
-            <div className="fs-1">
+            <div className="fs-1 ">
               <p>Tomar buenas decisiones con la comida son buenas inversiones.</p>
             </div>
           
