@@ -2,8 +2,7 @@
     position: relative;
     width: 100%;
     height: 89.6vh;
-    /* background-color: #CAD2C5; */
-    background-color: #84A98C;
+    background-color: #f2f2f2;
     overflow-y: scroll;
     padding-top: 2%
 }.buscador .inputBusc{
@@ -20,8 +19,7 @@
     width: 300px;
     height: 325px;
     display: grid;
-    /* background-color: #84A98C;  */
-    background-color: #CAD2C5;
+   background-color: #BF4417;
     border-color: #fff;
     border-radius: 3%;
 }
@@ -80,7 +78,7 @@
 
 .cards .back {
     transform: perspective(600px)rotateY(180deg);
-    background-color: #21434e;
+    background-color: #D99D55;
     padding: 15px;
     color: #f3f3f3;
     display: flex;
@@ -128,6 +126,7 @@
 .card-tituloNombre{
     padding-right: 20%;
     padding-left: 18%;
+    color: #f3f3f3;
 
 
 }
@@ -139,4 +138,5 @@
     width: 10%;
     background-color: transparent; 
     border: none;
+    color: #f3f3f3;
 }
