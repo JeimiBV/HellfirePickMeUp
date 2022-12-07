@@ -24,9 +24,7 @@ function Header() {
               <Link className="flex-sm-fill  nav-link active" to="/">
                 <img className="logo mx-5" src={Image}  />
               </Link>    
-          </div >
-         
-                 
+          </div>         
         </div>
           
               
