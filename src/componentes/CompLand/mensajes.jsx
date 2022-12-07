@@ -29,7 +29,7 @@ export const MensajesP = () => {
 
             <div class="row body color-titulo">
                  <div class="col-sm p-5">
-                   <img className=""  src="https://img.freepik.com/vector-premium/planeta-verde-iconos-ecologia-aislado-ilustracion-vectorial_24908-36326.jpg?w=2000" width="90" height="90"/>
+                   <img className=""  src="https://previews.123rf.com/images/vectorv/vectorv1907/vectorv190706587/126254750-papelera-de-reciclaje-naranja-con-icono-de-s%C3%ADmbolo-de-reciclaje-aislado-sobre-fondo-blanco-icono-de-.jpg" width="90" height="90"/>
                    <h3>
                      Usando la aplicación ayudas a reducir 
                      el desperdicio de comida
