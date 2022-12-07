@@ -23,7 +23,7 @@
 
 .nav-pills .nav-link.active,
 .show>.nav-pills .nav-link{
-    background-color: var(--colorB); 
+    background-color: var(--colorF); 
     color: white;
     white-space: nowrap;
 }
