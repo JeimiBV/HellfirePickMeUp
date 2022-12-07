@@ -32,7 +32,9 @@
 .show>.nav-pills .nav-link:hover{
   color: rgb(185, 173, 173); 
 }
-
+.slick-list{
+    color: white;
+}
 .nav-pills{
     width: 100px;
 }

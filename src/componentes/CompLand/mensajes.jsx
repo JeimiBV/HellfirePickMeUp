@@ -37,7 +37,7 @@ export const MensajesP = () => {
                  </div>
 
                  <div class="col-sm p-5">
-                     <img className=""  src="https://static.vecteezy.com/system/resources/previews/008/302/516/non_2x/eps10-green-user-icon-or-logo-in-simple-flat-trendy-modern-style-isolated-on-white-background-free-vector.jpg" width="90" height="90"/>
+                     <img className=""  src="https://cdn.icon-icons.com/icons2/217/PNG/512/user-orange_25327.png" width="90" height="90"/>
                     <h3>
                     ¡Ya son 1000 usuarios que tienen la App!
                     </h3>   
