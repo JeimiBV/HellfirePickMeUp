@@ -18,7 +18,9 @@
 .show>.nav-pills .nav-link:hover{
     background-color: #a8ccb0; 
 }
-
+.slick-list{
+    color: white;
+}
 .nav-pills{
     width: 100px;
 }
