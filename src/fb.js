@@ -2,17 +2,19 @@
 import "firebase/compat/storage"
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore"
+import { getAuth } from "firebase/auth";
 
 export const app = firebase.initializeApp({
-  "projectId": "pruebafirebase-30018",
-  "appId": "1:567536522883:web:5d0157858a4aea89d92db6",
-  "storageBucket": "pruebafirebase-30018.appspot.com",
+  "projectId": "base-de-datos-h",
+  "appId": "1:284954700586:web:8c2c1d715f81bc29bacc53",
+  "storageBucket": "base-de-datos-h.appspot.com",
   "locationId": "us-central",
-  "apiKey": "AIzaSyDuQHUa77eSj4jILUI-zdyllYmybvH4wLw",
-  "authDomain": "pruebafirebase-30018.firebaseapp.com",
-  "messagingSenderId": "567536522883",
-  "measurementId": "G-EWDEPM9N7M"
-}); 
+  "apiKey": "AIzaSyBZdVFA-GhlHbi54swea5AEry-yzARtpzg",
+  "authDomain": "base-de-datos-h.firebaseapp.com",
+  "messagingSenderId": "284954700586",
+  "measurementId": "G-E0YTNDYRBH"
+});
+export const auth = getAuth(app);
 /*export const app = firebase.initializeApp({
   "projectId": "fir-crud-c44e7",
   "appId": "1:589326742342:web:da57c21af8c35352fe2b47",
@@ -22,3 +24,12 @@ export const app = firebase.initializeApp({
   "authDomain": "fir-crud-c44e7.firebaseapp.com",
   "messagingSenderId": "589326742342"
 });*/
+
+/*"projectId": "pruebafirebase-30018",
+  "appId": "1:567536522883:web:5d0157858a4aea89d92db6",
+  "storageBucket": "pruebafirebase-30018.appspot.com",
+  "locationId": "us-central",
+  "apiKey": "AIzaSyDuQHUa77eSj4jILUI-zdyllYmybvH4wLw",
+  "authDomain": "pruebafirebase-30018.firebaseapp.com",
+  "messagingSenderId": "567536522883",
+  "measurementId": "G-EWDEPM9N7M"*/

@@ -1,0 +1,96 @@
+
+/* Navbar*/
+
+.bg-sucess{
+    background-color: rgb(244, 247, 247);
+    --bs-border-opacity: 3;
+    border-color: #000000 !important;
+}
+
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link{
+    background-color: #84a98c; 
+    color: white;
+    white-space: nowrap;
+}
+
+.nav-pills .nav-link.active:hover,
+.show>.nav-pills .nav-link:hover{
+    background-color: #a8ccb0; 
+}
+
+.nav-pills{
+    width: 100px;
+}
+
+.navbar-nav .fs-3 {
+    white-space: nowrap;
+}
+
+.navbar-collapse .navbar-nav {
+    width: 100%;
+}
+
+/* Informacion*/
+.contenedor{
+    
+    height: 100vh !important;
+    width: 100% !important;
+    
+    
+ }
+ .img-fluid{
+    height: 100vh !important;
+    width: 100% !important;
+ }
+ 
+ .body{
+    font-size: x-large;
+     
+   }
+   .contenedor-2{
+       width: 99%;
+   }
+   
+   .color-titulo{
+       color: #52796f;
+}
+ 
+/*slider inicio */
+.sliderA{
+    
+    align-items: center;
+    background-color: #84a99a00;
+    width: 70%;
+    position: absolute;
+    color: rgb(9, 8, 8);
+    margin-top: 19%;
+    font-weight: bold;
+    z-index: 1;
+ }
+
+   /*2do slider*/
+   .containerB{
+    background-color: #84a98c;
+    padding: 50px;
+    width: 70%;
+    position: relative;
+    
+}
+
+ /*Mensajes*/
+.estadisticasM{
+    width: 98%;
+    margin-top: 50%;
+}
+
+/*Footer*/
+
+.contenedor-footer{
+    width: 99%;
+    
+}
+
+.bg-sucess-2{
+    background: #84a98c;
+}
