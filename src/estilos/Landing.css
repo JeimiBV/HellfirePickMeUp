@@ -1,10 +1,10 @@
 
 /* Navbar*/
 
-.bg-sucess{
-    background-color: rgb(244, 247, 247);
+.bg-sucessN{
+    background-color: #DA8131;
     --bs-border-opacity: 3;
-    border-color: #000000 !important;
+    border-color: #000000;
 }
 
 .nav-pills .nav-link.active,
