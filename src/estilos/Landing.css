@@ -1,22 +1,36 @@
 
 /* Navbar*/
 
+:root{
+    --colorA: #DA8131;
+    --colorB: #77281B;
+    --colorC: #603725;
+    --colorD: #374454;
+    --colorE: #131A20;
+    --colorF: rgb(176, 84, 32);
+
+}
+
+.colorA{
+    color: var( #DC7703);
+}
+
 .bg-sucessN{
-    background-color: #DA8131;
+    background-color: var(--colorA);
     --bs-border-opacity: 3;
-    border-color: #000000;
+    border-color: var(--colorB);
 }
 
 .nav-pills .nav-link.active,
 .show>.nav-pills .nav-link{
-    background-color: #84a98c; 
+    background-color: var(--colorF); 
     color: white;
     white-space: nowrap;
 }
 
 .nav-pills .nav-link.active:hover,
 .show>.nav-pills .nav-link:hover{
-    background-color: #a8ccb0; 
+  color: rgb(185, 173, 173); 
 }
 .slick-list{
     color: white;

@@ -29,7 +29,7 @@ export const MensajesP = () => {
 
             <div class="row body color-titulo">
                  <div class="col-sm p-5">
-                   <img className=""  src="https://img.freepik.com/vector-premium/planeta-verde-iconos-ecologia-aislado-ilustracion-vectorial_24908-36326.jpg?w=2000" width="90" height="90"/>
+                   <img className=""  src="https://previews.123rf.com/images/vectorv/vectorv1907/vectorv190706587/126254750-papelera-de-reciclaje-naranja-con-icono-de-s%C3%ADmbolo-de-reciclaje-aislado-sobre-fondo-blanco-icono-de-.jpg" width="90" height="90"/>
                    <h3>
                      Usando la aplicación ayudas a reducir 
                      el desperdicio de comida
@@ -37,13 +37,13 @@ export const MensajesP = () => {
                  </div>
 
                  <div class="col-sm p-5">
-                     <img className=""  src="https://static.vecteezy.com/system/resources/previews/008/302/516/non_2x/eps10-green-user-icon-or-logo-in-simple-flat-trendy-modern-style-isolated-on-white-background-free-vector.jpg" width="90" height="90"/>
+                     <img className=""  src="https://cdn.icon-icons.com/icons2/217/PNG/512/user-orange_25327.png" width="90" height="90"/>
                     <h3>
                     ¡Ya son 1000 usuarios que tienen la App!
                     </h3>   
                     </div>
                     <div class="col-sm p-5">
-                     <img className=""  src="https://previews.123rf.com/images/fordzolo/fordzolo1511/fordzolo151100137/47606229-texto-de-sello-de-oferta-especial-en-c%C3%ADrculo-verde-sobre-un-fondo-blanco-y-estrella.jpg" width="90" height="90"/>
+                     <img className=""  src="https://img.freepik.com/vector-premium/rebanada-redonda-naranja-vector-ilustracion-realista-aislada-sobre-fondo-blanco-predisenadas-icono-eps-naranja_335478-830.jpg?w=740" width="90" height="90"/>
                      <h3>
                     ¡Tenemos variedad de ofertas para ti!
                     </h3>   

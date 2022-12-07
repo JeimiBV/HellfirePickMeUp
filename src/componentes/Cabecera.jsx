@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../imagenes/logo.png";
+import Image from "../../public/logo-9.png";
 import "../estilos/header.css";
 import { useAuth } from "../context/authContext";
 import { Link, useNavigate } from "react-router-dom";
@@ -19,15 +19,12 @@ function Header() {
   return (
     <div className="contenedor-cabecera">
        <nav className="navbar fixed-top navbar-expand-sm bg-sucessN border-bottom border-dark border-2 ">
-        <div className="d-flex  w-50  justify-content">
-       
-            <div className="logoYNombre mx-5">
-            <Link className="flex-sm-fill  nav-link active" to="/">
-              <img className="logo" src={Image}  />
-            </Link>    
-            </div >
-         
-                <h1 className="nombre p-2 ">Pick me up</h1>  
+          <div className="d-flex  w-50  justify-content">
+              <div className="logoYNombre mx-5">
+              <Link className="flex-sm-fill  nav-link active" to="/">
+                <img className="logo mx-5" src={Image}  />
+              </Link>    
+          </div>         
         </div>
           
               
