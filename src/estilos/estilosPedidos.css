@@ -2,26 +2,23 @@
     position: relative;
     width: 100%;
     height: 89.6vh;
-    background-color: #f2f2f2;
     overflow-y: scroll;
-    padding-top: 2%
-}.buscador .inputBusc{
-    width: 60%;
+    padding-top: 2%;
+    background-image: url("../imagenes/fondoPed.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+
 }
-.buscador .bi{
+
+.buscador .inputBusc {
+    width: 60%;
+
+}
+
+.buscador .bi {
     position: absolute;
     margin-right: 57%;
     margin-top: 0.6%;
-}
-
-.cards {
-    position: relative;
-    width: 300px;
-    height: 325px;
-    display: grid;
-   background-color: #BF4417;
-    border-color: #fff;
-    border-radius: 3%;
 }
 
 .PedidosP {
@@ -35,29 +32,6 @@
     justify-content: center;
     gap: 3rem;
     left: 1.5rem;
-
-
-}
-
-.cards .face {
-    position: absolute;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: .5s;
-}
-
-.cards .front {
-    transform: perspective(600px) rotateY(0deg);
-    box-shadow: 0 5px 10px #000;
-
-
-
-}
-
-.face .front {
-    width: 300px;
-    height: 205px;
 }
 
 .imgn {
@@ -66,77 +40,101 @@
     object-fit: cover;
 }
 
-.cards .front h5 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 45px;
-    line-height: 45px;
-    color: #fff background rgba(0, 0, 0, .4);
-    text-align: center;
-}
-
-.cards .back {
-    transform: perspective(600px)rotateY(180deg);
-    background-color: #D99D55;
-    padding: 15px;
-    color: #f3f3f3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    box-shadow: 0 5px 10px #000;
-    width: 300px;
-    height: 270px;
-}
-
-.cards .link h5 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 45px;
-    line-height: 45px;
-    color: #fff background rgba(0, 0, 0, .4);
-    text-align: center;
-
-}
-
-.cards .back h5 {
-    font-size: 30px;
-    margin-top: 20px;
-    letter-spacing: 2px;
-    width: 300px;
-    height: 205px;
-}
-
-.cards .back p {
+.cardss .back p {
     letter-spacing: 1px;
     text-align: left;
-    padding-top: 25%;
     padding-left: 11%;
+    font-size: 78%;
+    padding-block: 0.5%;
 }
 
-.cards:hover .front {
-    transform: perspective(600px)rotateY(180deg);
-}
-
-.cards:hover .back {
-    transform: perspective(600px)rotateY(360deg);
-}
-.card-tituloNombre{
-    padding-right: 20%;
-    padding-left: 18%;
-    color: #f3f3f3;
-
-
-}
-
-.botonEliminar{
+.botonEliminar {
     position: absolute;
-    top: 87%;
-    right: 11%;
+    top: 38%;
     width: 10%;
-    background-color: transparent; 
+    background-color: transparent;
     border: none;
-    color: #f3f3f3;
+    color: rgb(59, 58, 58);
+    left: 16%;
 }
+
+.titulo {
+    color: #ffffff;
+    font-family: wfont_ea7e5d_6a0e3a2821df4187bd07550e513e3375, wf_6a0e3a2821df4187bd07550e5, orig_albra_black;
+    text-shadow: 0 0 0.5em #DC7703, 0 0 0.5em #bd6c0f, 0 0 0.5em #ec8816;
+    font-size: 66px;
+    background-image: url("https://as2.ftcdn.net/v2/jpg/01/94/86/53/1000_F_194865321_aojLvFIzFMjKXa1y0cWnVNzrD8HvSCSt.jpg")
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+
+.body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.cardss {
+    width: 295px;
+    overflow: hidden;
+    border-radius: 25px;
+    border: 1px solid lavender;
+    margin: 10px;
+    box-shadow: 5px 5px 15px 5px rgba(230, 230, 250, 1);
+    background-color: #f2f2f2;
+
+}
+
+.card__image {
+    position: relative;
+    height: 140px;
+}
+
+.card__image>img {
+    max-width: 100%;
+    border-bottom-right-radius: 30px;
+    transform: rotate(10deg) translate(-15px, -55px);
+    position: absolute;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card__info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0px 30px 0px 30px;
+}
+
+.card__info h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card__info p {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rect2 {
+    position: relative;
+    bottom: 315px;
+    right: 15px;
+    width: 325px;
+    height: 230px;
+    border: 1px solid lavender;
+    border-radius: 0 0px 80px 0;
+    background-image: url();
+    transform: rotate(10deg);
+    object-fit: cover;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+    background-color: #c9c4c4;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+ }
+
+
