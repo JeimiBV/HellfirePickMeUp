@@ -112,23 +112,29 @@ function FormInicioSesion() {
         </div>
         <div id="left">
           <div id="signin">
-            <div class="logo">
+            <div class="logo mt-5">
               <h1> Inicio de sesión </h1>
               <hr />
               <h4 class="text-center"> Consumidor </h4>
             </div>
-            <form onSubmit={handleSubmit}>
-              <div>
+            <form>
+              <div class="mt-5">
                 <label>Correo electrónico</label>
-                <input type="text" class="text-input" onChange={handlechange} />
+                <input
+                  type="text"
+                  class="text-input w-100"
+                  name="correo"
+                  onChange={handlechange}
+                />
               </div>
 
-              <div class="mb-3 w-75">
+              <div class="mb-3">
                 <label>Contraseña</label>
-                <div class="input-group contraseñaVisible">
+                <div class="input-group contraseñaVisible w-100">
                   <input
                     onChange={handlechange}
                     type={ojo ? "text" : "password"}
+                    name="contraseña"
                     class="text-input form-label form-control espacioContraseña"
                   />
                   <i

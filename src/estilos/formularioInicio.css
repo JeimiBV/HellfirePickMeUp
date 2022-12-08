@@ -51,7 +51,6 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   background: #181818;
-  color: #fff;
   overflow: hidden;
 }
 
@@ -77,6 +76,7 @@ h6 {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  color: #f4f4f4;
 }
 
 #right {
@@ -127,7 +127,8 @@ h6 {
 }
 
 #signin .primary-btn {
-  width: 100%;
+  width: 81%;
+  margin-left: .5rem;
 }
 
 #signin .secondary-btn,
@@ -169,7 +170,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient( rgba( 5,7,12,0.75 ), rgba(5,7,12,0.75)), url('https://images.alphacoders.com/768/76823.jpg') no-repeat center center / cover;
+  background: linear-gradient( rgba(110, 108, 70, 0.75), rgba(112, 117, 129, 0.1)), url('https://www.sabervivirtv.com/medio/2021/10/05/pastel-frio-con-naranja_23d4fc02_1200x709.jpg') no-repeat center center / cover;
   height: 100vh;
 
  
@@ -208,18 +209,19 @@ h6 {
   height: 2.7rem;
   display: block;
   border: 0;
-  border-radius: 2px;
-  font-weight: 500;
-  background: #f96816;
+  border-radius: 6px;
+  font-weight: 550;
+  background: #b6591c;
   color: #fff;
   text-decoration: none;
   cursor: pointer;
   text-align: center;
   transition: all 0.5s;
+
 }
 
 .primary-btn:hover {
-  background-color: #ff7b39;
+  background-color: #dc7703;
 }
 
 .secondary-btn {
