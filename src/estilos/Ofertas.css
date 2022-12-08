@@ -2,6 +2,18 @@
 * {   
     font-family: sans-serif;
 }
+
+:root{
+    --colorA: #DA8131;
+    --colorB: #77281B;
+    --colorC: #603725;
+    --colorD: #374454;
+    --colorE: #131A20;
+    --colorF: rgb(176, 84, 32);
+    --colorG: #6b4841;
+
+}
+
 .containerL{
     position: relative;
     width: 100%;
@@ -51,7 +63,7 @@ html , body {
     bottom: 110%;
     overflow: hidden;
     border-radius: 63px;
-
+  
 }
 
 .cardBackground {
@@ -95,7 +107,7 @@ html , body {
     background-position: center;
     border-radius: 63px;
     margin: 12px;
-    box-shadow: 0 0 33px -9px black ;
+    box-shadow: 0 0 33px -9px rgb(216, 152, 100) ;
     transition: width 300ms, height 300ms, border-radius 300ms , transform 300ms;
 
 }
@@ -109,11 +121,10 @@ html , body {
 
 .userInfo h5 {
 
-    height: 70px;
+    height: 50px;
     font-size: 1.5rem;
     margin-top: 0%;
-    text-shadow: -6px -15px 5.1px rgba(255,255,255,0.33);
-
+    margin-bottom: 0%;
 
 }
 .userInfo p {
