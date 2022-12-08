@@ -67,7 +67,11 @@ const ListaOfertas = ({usuario}) => {
                                 <div class="cardBackground">
                                 <div class="card cardOfertados">    
                                 <div class="cardInside">
-  
+                                <div class="imgSpace">
+                                                <div >
+                                                    <img src={oferta.Imagen} className="cardOfertas " alt="..." />
+                                                </div>
+                                            </div>
                                  </div>                                                                                                            
                                 </div>  
                                 </div>
