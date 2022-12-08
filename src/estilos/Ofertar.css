@@ -1,134 +1,151 @@
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
 
-*{ 
-    margin: 0%;
-    padding: 0%;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+.login-wrap{
+	width:100%;
+    height: 70%;
+	margin:auto;
+	max-width:525px;
+	min-height:600px;
+	position:relative;
+	background:url(https://www.torredenunez.com/wp-content/uploads/2020/04/planificarmenu.jpg) no-repeat center;
+	border-radius: 5%;
 }
-.todo{
-    align-items: center;
-    width: 100%;
-    min-height:89.6vh ;
-    background-color: gray;
+.login-form{
+	width:100%;
+	height:100%;
+	position:relative;
+	padding:70px 70px 200px 70px;
+	background:rgba(89,56,44,.5);
+    border-radius: 5%;
+}
+
+.login-form .sign-in,
+.login-form .sign-up,
+.login-form .group .check{
+	display:none;
+}
+
+.login-form .group .campo{
+	text-transform:uppercase;
+    color:white;
+    font: oblique bold 250% Comic Sans MS;
+}
+.login-form .tab{
     position: relative;
+    text-transform:uppercase;
     text-align: center;
-}
-.elementos-form-1{
-    min-width: 60%;
-    min-height: 70%;
-    padding: 30px ;
-    border: 2px solid black;
-    display: flex;
-    flex-direction: column;
-    background-color: azure;
-    justify-content: space-between;   
-
-}
-.label-1{ 
-    padding-top: .5%;
-    padding-bottom: 0.3%;
-    padding-left: 1.5%;
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-
+    color: #bf4417;
+    background-color: #F2F2F2;
+    width: 136%;
+    left: -33%;
+    font: oblique bold 250% Comic Sans MS;
 }
 
-.label-2{ 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction: column;
-    font-weight: bold;
-
+.tituloPedido .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
 }
 
-.entrada-1{
-
-    background-color: white;
-    height: 30px ;
-    margin-left: 1.5%; 
-    padding-left: 2%;
-    width: 20vw;
+.tituloPedido{
+    position: relative;
+    top: -8%;
+    left: 15%;
 }
-
-.entrada-2{
-    background-color: white;
-    height: 30px ;
-    margin-left: 3.5%; 
-    padding-left: 2%;
-    width: 10vw;
-    background-color: white;
-    height: 30px ;
-    margin-left: 3.5%; 
-    padding-left: 2%;
-    width: 10vw;
-    
+.login-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
 }
-.entrada-3{
-    background-color: white;
-    height: 30px ;
-    margin-left: 1.5%; 
-    padding-left: 2%;
-    width: 21vw;
+.login-form .group{
+	margin-bottom:15px;
+}
+.login-form .group .input{
+	width:100%;
+	color:#59382c;
+	display:block;
+    font: oblique bold 90% cursive;
 
 }
 
-.contenedor-input-1{
-    height: 7vh;
-    justify-content: flex-end;
-
+.login-form .group .input,
+.login-form .group .buttonConfirmar,
+.login-form .group .buttonCancelar{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(242,242,242,.5);
+}
+.login-form .group input[data-type="password"]{
+	-webkit-text-security:circle;
+}
+.login-form .group .campo{
+    width:100%;
+	color:white;
+    display:block;
+    font: oblique bold 100% cursive;
 }
 
-.titulo-1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight:bold;
-    font-size: 2.5rem;
+.login-form .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+	transform:rotate(0);
+}
+.login-form .sign-up:checked + .tab + .login-form .sign-up-htm{
+	transform:rotate(0);
 }
 
-.validacion-1{
-    margin-left: 9.3%;
-    font-size: small;
-    color: red;
-    height: 3hv;
+.hr{
+	height:3px;
+	margin:50px 0 50px 0;
+	background:rgba(89,56,44,.2);
 }
-.transparent-1{
-    display: none;
+.foot-lnk{
+	text-align:center;
 }
 .botonL-1{
     height: 40px;
-    margin-left: 1.5%;
-    min-width: 20%;
-    margin: 2%;
-    background-color: gray;
+    margin-left: 130%;
+    min-width: 70%;
+    background-color: #BF4417;
     transition: .5s;
     cursor: pointer;
-    cursor: pointer;
+    border-radius: 1rem;
+    color: #F2F2F2;
+    font: oblique bold 110% cursive;
+    border-color: #F2F2F2;
 }
 .botonL-1:hover{
-    background-color: darkslategray;
+    background-color: #59382C;
     color: azure;
     transition: .5s;
+    border-color: #F2F2F2;
+    
 }
 .botonR-1{
     height: 40px;
-    margin-left: 1.5%;
     min-width: 20%;
-    margin: 2%;
     height: 40px;
-    margin-left: 1.5%;
-    min-width: 20%;
-    margin: 2%;
-    background-color: gray;
+    margin-left: 15%;
+    min-width: 70%;
+    background-color: #BF4417;
     transition: .5s;
     cursor: pointer;
-    cursor: pointer;
+    border-radius: 1rem;
+    border-color: #F2F2F2;
+    color: #F2F2F2;
+    font: oblique bold 110% cursive;
 }
 .botonR-1:hover{
-    background-color: darkslategray;
+    background-color: #59382C;
     color: azure;
     transition: .5s;
+    border-color: #F2F2F2;
 }
 
 .contenedor-botones{
@@ -136,11 +153,18 @@
     justify-content: center;
     flex-direction: row;
 }
-
+.validacion-1{
+    margin-left: 9.3%;
+    font-size: small;
+    color: red;
+    height: 3hv;
+    font: oblique bold 70% cursive;
+}
+.transparent-1{
+    display: none;
+}
 .mod{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content:center ; 
-    justify-content:center ; 
+    background-color: #59382c;
+    color: #a65b4b;
+    font: oblique bold 100% cursive;
 }
