@@ -71,3 +71,26 @@ html , body {
     transition: width 300ms, height 300ms, border-radius 300ms , transform 300ms;
 
 }
+
+.userInfo {
+
+    width: 100%;
+    flex-grow: 1;
+
+}
+
+.userInfo h5 {
+
+    height: 70px;
+    font-size: 1.5rem;
+    margin-top: 0%;
+    text-shadow: -6px -15px 5.1px rgba(255,255,255,0.33);
+
+
+}
+.userInfo p {
+
+    font-size: 0.9em;
+    opacity: 75%;
+
+}
