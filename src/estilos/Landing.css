@@ -80,7 +80,12 @@
     margin-top: 19%;
     font-weight: bold;
     z-index: 1;
- }
+    
+}
+.sliderA .fs-1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(235, 235, 235);
+}
 
    /*2do slider*/
    .containerB{
