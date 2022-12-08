@@ -1,3 +1,5 @@
+
+
 * {   
     font-family: sans-serif;
 }
@@ -25,6 +27,7 @@ html , body {
     bottom: 90%;
     overflow: hidden;
     border-radius: 63px;
+
 }
 
 .cardBackground {
@@ -51,6 +54,7 @@ html , body {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .imgSpace {
@@ -94,6 +98,7 @@ html , body {
     opacity: 75%;
 
 }
+
 
 .cardSpace:hover {
 
