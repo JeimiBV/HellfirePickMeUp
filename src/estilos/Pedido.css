@@ -1,11 +1,12 @@
 
 .contenedor-pedidos{
-    background-image: url("https://i.ibb.co/DgRMWdv/default-bg.jpg");
+    background-color: var(--white-color);
+    border: #2C2C2C solid 4px;
     width: 40vw;
     height: 55vh;
     padding: 2vh;
     border-radius: 20px;
-    color: white;
+    color: #2C2C2C;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 #form-Pedido{
@@ -15,10 +16,11 @@
     margin-left: 2vw;
     margin-top: 4vh;
     
+    
 }
 .agregador{
     display: flex;
-   
+
     
 }
 .boton-controlar-pedido{
@@ -27,24 +29,26 @@
     height: 1.9rem;
     cursor: pointer;
     font-weight: bold;
+    border: #2C2C2C solid 2px;
 }
 
 .boton-conf{
     padding: 0 2vw;
     margin-top: 2vh;
     transition: .5s;
-    border: 3px solid #70B475;
-    color: #2C2C2C;
+    border: 3px solid var(--naranja);
+    background-color: var(--naranja-oscuro);
+    color: var(--white-color);
     font-weight: bold;
     
 }
 .boton-conf:hover{
-    background-color:#70B475;
+    background-color: var(--naranja);
     color: aliceblue;
     transition: .5s;
 }
 .boton-controlar-pedido:hover{
-    background-color: #70B475;
+    background-color: var(--naranja);
     color: aliceblue;
     font-weight: bold;
 }
@@ -61,6 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    
 }
 #notas{
     height: 10vh !important;
@@ -69,7 +74,7 @@
     width: 32vw;
     resize: none;
     background-color: aliceblue;
-    border: 3px solid #70B475;
+    border: 3px solid var(--naranja-oscuro);
 }
 .validar {
     font-size: small;
