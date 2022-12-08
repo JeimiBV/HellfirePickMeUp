@@ -3,6 +3,13 @@
     margin: 0%;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+:root {
+    --white-color: #fff;
+    --greenish-color: #006d77;
+    --naranja: #dc7703;
+    --naranja-oscuro: #b6591c;
+  }
+
 
 .over{
     width: 100%;
@@ -44,6 +51,7 @@
 .botonSN{
     position: absolute;
     bottom: 0px;
+    background-color: var(--naranja);
 }
 
 .ttmod{
