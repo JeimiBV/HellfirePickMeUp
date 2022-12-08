@@ -94,3 +94,82 @@ html , body {
     opacity: 75%;
 
 }
+
+.cardSpace:hover {
+
+    transform: scale(1.11 , 1.11);
+
+}
+.cardSpace:hover .cardShadow {
+
+    transform: scale(1.05,1.05);
+    filter: blur(51px);
+
+}
+
+.cardSpace:hover .imgSpace div {
+
+    width: 170px;
+    height: 170px;
+    border-radius: 53px;
+
+}
+
+.cardSpace:hover .userInfo h2 {
+
+    text-shadow: 6px -15px 5.1px rgba(255,255,255,0.33);
+
+}
+
+.imgSpace div:hover {
+
+    transform: scale(0.96 , 0.96);
+
+}
+
+
+
+@keyframes backgroundPosition {
+
+    0% {
+
+        background-position: left;
+
+    }
+    50% {
+
+        background-position: right;
+
+    }
+    100% {
+
+        background-position: left;
+
+    }
+
+}
+
+
+
+.buscador .bi{
+    position: absolute;
+    margin-right: 59%; 
+    margin-top: 0.5%;
+}
+
+
+.bg-sucessP{
+    background-color: #84A98C;
+   
+}
+
+.card-titleP{
+  
+    font-weight: bold;
+}
+
+.cardOfertas{
+    width: 170px;
+    height: 170px;
+    border-radius: 53px;  
+}
