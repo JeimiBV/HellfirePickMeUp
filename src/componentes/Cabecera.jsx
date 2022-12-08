@@ -68,9 +68,7 @@ function Header() {
         <>
         <ul className="navbar-nav gap-5 ms-auto mx-3 justify-content-end">
             <li className="nav nav-pills flex-column flex-sm-row ">
-            </li>
-            <li className="nav nav-pills flex-column flex-sm-row ">
-            <button className=" flex-sm-fill text-sm-center nav-link active " onClick={handleLogout}>Cerrar sesión</button>
+            <button className=" flex-sm-fill text-sm-center nav-link active m-2" onClick={handleLogout}>Cerrar sesión</button>
             </li>
           </ul>
         </>
