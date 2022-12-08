@@ -73,7 +73,14 @@ const ListaOfertas = ({usuario}) => {
                                                 </div>
                                             </div>
                                             <div class="userInfo">
-                                                
+                                            <div class="card-body card-letra ">
+                                                    <h5 class="card-titleP text-center text-capitalize " >{oferta.Nombre}</h5>
+                                                    <p className="">
+                                                        <span > Precio: {oferta.Precio} bs.</span>
+                                                        <span className="d-block"> Hora límite:{oferta.Hora} </span>
+                                                        <span className="d-block">Fecha límite: {oferta.Fecha} </span>
+                                                    </p>
+                                                    </div>
                                             </div>
                                           </div>                                                                                                            
                                      </div>  
