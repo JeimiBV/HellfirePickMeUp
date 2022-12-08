@@ -48,7 +48,7 @@ html , body {
     height: 100%;
     position: relative;
     z-index: 6;
-    bottom: 90%;
+    bottom: 110%;
     overflow: hidden;
     border-radius: 63px;
 
@@ -185,7 +185,6 @@ html , body {
     margin-right: 59%; 
     margin-top: 0.5%;
 }
-
 
 .bg-sucessP{
     background-color: #84A98C;
