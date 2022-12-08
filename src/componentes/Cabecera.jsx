@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../public/logo-9.png";
+import Image from "../imagenes/logo-9.png";
 import "../estilos/header.css";
 import { useAuth } from "../context/authContext";
 import { Link, useNavigate } from "react-router-dom";
