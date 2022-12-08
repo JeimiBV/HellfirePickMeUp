@@ -214,33 +214,28 @@ function Informacion() {
                     </div>
                 </div>
                 <Ofertar estado={modalOf}>
-                    <div className="elementos-form-1">
-                        <div className="label-2">Registrar Oferta</div>
-                        <form
-                            className="fo"
-                            id="form"
-                            action="https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products/${id}"
-                            method="PUT"
-                        >
-                            <label className="label-1">
-                                <div className="contenedor-input-1">
-                                    Precio:
-                                    <input
-                                        className="entrada-1"
-                                        id="numero"
-                                        type="number"
-                                        required
-                                        placeholder="Bs."
-                                        min="1"
-                                        max="99999"
-                                        onChange={(e) =>
-                                            setPrecio((prevState) => ({
-                                                ...prevState,
-                                                valor: e.target.value,
-                                            }))
-                                        }
-                                    />
-                                    Bs.
+                <div className="login-wrap">
+        <div className="login-form">
+            <div className="tituloPedido"><label  className="tab">Realiza tu pedido!</label></div>
+        
+        <div className="sign-up-htm">
+        <form  className="fo" id="form" action="https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products/${id}" method="PUT">
+                <div className="group">
+					<label for="user" className="campo">Precio
+					<input  className="input"
+                        id="numero"
+                        type="number"
+                        required
+                        placeholder="Bs."
+                        min="1"
+                        max="99999"
+                        onChange={(e) =>
+                            setPrecio((prevState) => ({
+                                ...prevState,
+                                valor: e.target.value,
+                            }))
+                        }
+                    /> 
                                     <h3
                                         className={
                                             Precio.estado
@@ -250,82 +245,77 @@ function Informacion() {
                                     >
                                         Ingrese un número positivo y menor a 99999
                                     </h3>
-                                </div>
-                            </label>
-                            <label className="label-1">
-                                <div className="contenedor-input-1">
-                                    Fecha :
-                                    <input
-                                        className="entrada-3"
-                                        id="fecha"
-                                        type="date"
-                                        min={formatoFecha('yyyy-mm-dd',0)}
-                                        required
-                                        onChange={(e) =>
-                                            setFecha((prevState) => ({
-                                                ...prevState,
-                                                valor: e.target.value,
-                                            }))
-                                        }
-                                    />
-                                    <h3
+                                    </label>
+				</div>
+				<div className="group">
+					<label for="pass" className="campo">Fecha
+					<input className="input"
+                    
+                    id="fecha"
+                    type="date"
+                    min={formatoFecha('yyyy-mm-dd',0)}
+                    required
+                    onChange={(e) =>
+                        setFecha((prevState) => ({
+                            ...prevState,
+                            valor: e.target.value,
+                        }))
+                    }
+                    />
+                    <h3
                                         className={
                                             Fecha.estado
                                                 ? "validacion-1"
                                                 : "invisible"
                                         }
                                     >
-                                        Ingrese una fecha
+                                        Ingrese una fecha valida
                                     </h3>
-                                </div>
-                            </label>
-                            <label className="label-1">
-                                <div className="contenedor-input-1">
-                                    Hora:
-                                    <input
-                                        className="entrada-2"
-                                        id="hora"
-                                        type="time"
-                                        required
-                                        defaultValue={null}
-                                        onChange={(e) =>
-                                            setHora((prevState) => ({
-                                                ...prevState,
-                                                valor: e.target.value,
-                                            }))
-                                        }
-                                    />
-                                    <h3
+                                    </label>
+
+				</div>
+				<div className="group">
+					<label for="pass" className="campo">Hora
+					<input  className="input" 
+                        id="hora"
+                        type="time"
+                        required
+                        defaultValue={null}
+                        onChange={(e) =>
+                            setHora((prevState) => ({
+                                ...prevState,
+                                valor: e.target.value,
+                            }))
+                        }
+                    />
+                    <h3
                                         className={
                                             Hora.estado
                                                 ? "validacion-1"
                                                 : "invisible"
                                         }
                                     >
-                                        Ingrese una hora
+                                        Ingrese una hora valida
                                     </h3>
-
-                                </div>
-                                
-                            </label>
-                            <label className="label-1">
-                                <div className="contenedor-input-1">
-                                    Stock:
-                                    <input
-                                        className="entrada-2 entrada-stock"
-                                        id="stock"
-                                        type="number"
-                                        min={1}
-                                        required
-                                        defaultValue={1}
-                                        onChange={(e) =>
-                                            setStock((prevState) => ({
-                                                ...prevState,
-                                                valor: e.target.value,
-                                            }))
-                                        }
-                                    />
-                                    <h3
+                   </label>
+				</div>
+				<div className="group">
+					<label for="pass" className="campo">Stock
+					<input className="input"
+                        id="stock"
+                        type="number"
+                        placeholder="0"
+                        min={1}
+                        required
+                        defaultValue={1}
+                        onChange={(e) =>
+                            setStock((prevState) => ({
+                                ...prevState,
+                                valor: e.target.value,
+                            }))
+                        }
+                    />
+                    <h3
                                         className={
                                             Stock.estado
                                                 ? "validacion-1"
@@ -334,12 +324,11 @@ function Informacion() {
                                     >
                                         Ingrese un valor valido en este campo
                                     </h3>
+                    </label>
 
-                                </div>
-                                
-                            </label>
-                        </form>
-                        <div className="contenedor-botones">
+				</div>
+        </form>
+				<div className="contenedor-botones">
                             <button
                                 className="botonL-1"
                                 onClick={Validar}
@@ -354,7 +343,13 @@ function Informacion() {
                                 Cancelar
                             </button>
                         </div>
-                    </div>
+
+				<div className="hr"></div>
+
+			</div>
+		</div>
+	</div>
+
 
                     <div className="mod">
                         <Modals
@@ -392,7 +387,7 @@ function Informacion() {
                             icon={true}
                             
                         />
-                    </div>
+                       </div>
                 </Ofertar>
             </>
         );

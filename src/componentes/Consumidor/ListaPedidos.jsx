@@ -97,29 +97,35 @@ const ListaPedidos = ({ usuario }) => {
                {listaP != null ? (
                   listaP.map(pedidosC => (
                      <div className="row row-col" key={pedidosC.id}>
-                        <div class="art-board">
-                           <div class="art-board__container">
-                              <div class="cardss">
-                                 <div class="card__image">
+                        <div className="art-board">
+                           <div className="art-board__container">
+                              <div className="cardss">
+                              
+                                 <div className="card__image">
                                     <img className="imgn" src={pedidosC.Imagen} alt=" " />
+                                    <div className="card_repetir">
+                                 <button className="botonEliminar" color="danger" onClick={()=>{updatePedido(pedidosC)}} >
+                                    <i className="fa-solid fa-trash"></i></button>
                                  </div>
-                                 <div class="card__info">
-                                    <div class="car__info--title">
+                                 </div>
+                                 <div className="card__info">
+                                    <div className="car__info--title">
                                        <h3 >{pedidosC.Nombre}</h3>
-                                    </div>
+                                  </div>
                                  </div>
+
                                  <div className=" face back" >
                                     <p className="" >
                                        <span > Precio: {pedidosC.PrecioUnitario} bs.</span>
                                        <span className="d-block"> Hora límite:{pedidosC.Hora} </span>
                                        <span className="d-block">Fecha límite: {pedidosC.FechaLimite} </span>
                                        <span className="d-block">Cantidad: {pedidosC.Cantidad} </span>
-                                    </p>
-                                    <button className="botonEliminar" color="danger" onClick={()=>{updatePedido(pedidosC)}} >
-                                    <i class="fa-solid fa-trash"></i></button>
-                                    
+                                    </p>                                   
                                  </div>
+                                
+                                  
                               </div>
+                              
                            </div>
                            
                         </div>

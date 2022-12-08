@@ -31,6 +31,7 @@
 }
 .cardM{
     min-width: 25vw;
+    background-color: #f2f2f2;
 }
 .transparent{
     display: none;
@@ -44,6 +45,19 @@
 .botonSN{
     position: absolute;
     bottom: 0px;
+    border-radius: 5%;
+}
+.left{
+    background-color: #a65b4b;
+    color: white;
+    font: oblique bold 100% cursive;
+    border-color: white;
+}
+.right{
+    background-color: #a65b4b;
+    color: white;
+    font: oblique bold 100% cursive;
+    border-color: white;
 }
 
 .ttmod{
@@ -72,3 +86,4 @@
         font-size: 0.6rem;
     }
   }
+ 

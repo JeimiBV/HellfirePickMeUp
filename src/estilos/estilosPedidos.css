@@ -50,12 +50,12 @@
 
 .botonEliminar {
     position: absolute;
-    top: 38%;
-    width: 10%;
+    width: 20%;
     background-color: transparent;
     border: none;
-    color: rgb(59, 58, 58);
-    left: 16%;
+    color: rgb(11, 11, 11);
+    left: 80%;
+    top: 150%;
 }
 
 .titulo {
@@ -104,7 +104,13 @@
     justify-content: space-between;
     padding: 0px 30px 0px 30px;
 }
+.card_repetir {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0px 30px 0px 30px;
 
+}
 .card__info h3 {
     font-size: 18px;
     font-weight: 700;
