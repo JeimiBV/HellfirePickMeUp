@@ -65,7 +65,10 @@ const ListaOfertas = ({usuario}) => {
                             <div  className="row row-col" key={oferta.id}>
                                 <div class="cardSpace">
                                 <div class="cardBackground">
-                                <div class="card cardOfertados">                                                                                                                      
+                                <div class="card cardOfertados">    
+                                <div class="cardInside">
+  
+                                 </div>                                                                                                            
                                 </div>  
                                 </div>
 
