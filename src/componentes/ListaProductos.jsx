@@ -3,7 +3,7 @@ import "../estilos/productos.css";
 import {todosProductos} from './funciones'
 import { Navigate } from "react-router-dom";
 import { useAuth } from '../context/authContext'
-
+import { Link } from "react-router-dom";
 
 
 function Productoslista({usuario}) {
@@ -48,12 +48,16 @@ function Productoslista({usuario}) {
         <img class="image__img" src={producto.Imagen} alt="Bricks"/>
         <span className="image_div1"> {producto.Nombre}</span>
         <div class="image__overlay image__overlay--primary">
+            <div className="original">
             <div class="image__title">{producto.Nombre}</div>
             <p class="image__description">
                 {producto.Descripcion}
             </p>
-            <div className="boton">
-            <button class="button button--tamaya button--round-l button--text-thick button--border-medium button--text-upper button--size-s button--inverted" data-text="Ofertar"><span>Ofertar</span></button>
+            <Link to ={`/Informacion/${producto.id}`} >
+            <div className="botonHU1">
+            <button class="custom-btn btn-1">Ofertar</button>
+            </div>
+            </Link>
             </div>
         </div>
         
@@ -65,7 +69,7 @@ function Productoslista({usuario}) {
     return(   
    
      
-<div className="containerGHU1 mt-3">
+<div className="containerGHU1 ">
     
     <h1 className="titleL"> Lista de productos </h1> 
     <div className="buscador">

@@ -1,66 +1,78 @@
 .containerGHU1{
     position: relative;
     width: 100%;
-    height: 87.248vh;
-    background-color: #eee8dc;
+    height: 86vh;
+    background-color: #ffffff;
     overflow-y: scroll;  
+	margin-top: 1.8%;
+	background: url("https://st2.depositphotos.com/1044374/5527/v/450/depositphotos_55279345-stock-illustration-set-of-hand-drawn-cookware.jpg");
 }
 .buscador .inputBusc{
     width: 60%;
 }
 
-.containerG > .buscador .bi{
+.containerGHU1 > .buscador .bi{
     position: absolute;
     margin-right: 59%;
     margin-top: 0.5%;
 }
-
+.titleL{
+	background-color: #ffff;
+	width: 30%;
+	margin-left: 35%;
+	margin-top: 2%;
+	color: #40251b;
+}
 .productos{   
     align-items: center;
     flex-direction: column;
     margin-top: 2%;
-    width: 90%;
-    margin-left: 5%;
+    width: 79%;
+    margin-left: 12%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 0fr));
-    gap: 2rem 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 0fr));
+    gap: 4rem 2.5rem;
     box-sizing: border-box; 
 }
 
 .image {
     position: relative;
-	width: 300px;
-	height: 370px;
+	width: 200px;
+	height: 235px;
+	background-color: white;
 }
 
 .image__img {
     display: block;
-    width: 300px;
-	height: 300px;
+    width: 200px;
+	height: 235px;
+	border: solid #835747;
 }
 
 .image__overlay {
     position: absolute;
     top: 0;
     left: 0;
-	width: 300px;
-	height: 370px;
+	width: 200px;
+	height: 270px;
     background: rgba(0, 0, 0, 0.6);
     color: #ffffff;
     font-family: 'Quicksand', sans-serif;
     display: flex;
     flex-direction: column;
+	word-break:break-all;
     /* align-items: center;
     justify-content: center; */
     opacity: 0;
     transition: opacity 0.25s;
+	
 }
 .image_div1{
 	display: block;
-	background-color:  #b05520;
-	font-size: 29px;
+	background-color:  #835747;
+	font-size: 20px;
 	font-family: 'Optima';
-	height: 65px;
+	height: 35px;
 	text-align: center;
 	font-weight: bold;
 	color: white;
@@ -70,7 +82,7 @@
 }
 
 .image__overlay--primary {
-    background: #808080;
+    background-color: #705836;
 }
 
 .image__overlay > * {
@@ -87,7 +99,7 @@
 }
 
 .image__title {
-    font-size: 2em;
+    font-size: 1em;
     font-weight: bold;
     margin-top: 0.5em;
 	text-align: center;
@@ -96,172 +108,50 @@
 .image__description {
     font-size: 1em;
     margin-top: 0.5em;
-	padding: 5px 3px;
+	padding: 1px 4px;
 	word-break:break-all;
-
 	text-align: center;
 }
-.button--tamaya {
-	overflow: hidden;
-	color: #7986cb;
-	min-width: 180px;
-}
-.button--tamaya.button--inverted {
-	color: #37474f;
-	border-color: #37474f;
-}
-.button--tamaya::before,
-.button--tamaya::after {
-	content: attr(data-text);
-	position: absolute;
-	width: 100%;
-	height: 50%;
-	left: 0;
-	background: #7986cb;
-	color: #fff;
-	overflow: hidden;
-	-webkit-transition: -webkit-transform 0.3s;
-	transition: transform 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-}
-.button--tamaya.button--inverted::before,
-.button--tamaya.button--inverted::after {
-	background: #fff;
-	color: #37474f;
-}
-.button--tamaya::before {
-	top: 0;
-	padding-top: 1em;
-}
-.button--tamaya::after {
-	bottom: 0;
-	line-height: 0;
-}
-.button--tamaya > span {
-	display: block;
-	-webkit-transform: scale3d(0.2, 0.2, 1);
-	transform: scale3d(0.2, 0.2, 1);
-	opacity: 0;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-}
-.button--tamaya:hover::before {
-	-webkit-transform: translate3d(0, -100%, 0);
-	transform: translate3d(0, -100%, 0);
-}
-.button--tamaya:hover::after {
-	-webkit-transform: translate3d(0, 100%, 0);
-	transform: translate3d(0, 100%, 0);
-}
-.button--tamaya:hover > span {
-	opacity: 1;
-	-webkit-transform: scale3d(1, 1, 1);
-	transform: scale3d(1, 1, 1);
-}
-/* Box colors */
-.bg-1 {
-	background: #ECEFF1;
-	color: #37474f;
-}
-.bg-2 {
-	background: #7986cb;
-	color: #ECEFF1;
-}
-.bg-3 {
-	background: #37474f;
-	color: #fff;
-}
-
-/* Common button styles */
-.button {
-	float: left;
-	min-width: 150px;
-	max-width: 250px;
-	display: block;
-	margin: 1em;
-	padding: 1em 2em;
-	border: none;
-	background: none;
-	color: inherit;
-	vertical-align: middle;
-	position: relative;
-	z-index: 1;
-	-webkit-backface-visibility: hidden;
-	-moz-osx-font-smoothing: grayscale;
-}
-.button:focus {
-	outline: none;
-}
-.button > span {
-	vertical-align: middle;
-}
-
-/* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
-.bg-1 .button {
-	color: #37474f;
-	border-color: #37474f;
-}
-.bg-2 .button {
-	color: #ECEFF1;
-	border-color: #ECEFF1;
-}
-.bg-3 .button {
-	color: #fff;
-	border-color: #fff;
-}
-
-/* Sizes */
-.button--size-s {
-	font-size: 14px;
-}
-.button--size-m {
-	font-size: 16px;
-}
-.button--size-l {
-	font-size: 18px;
-}
-
-/* Typography and Roundedness */
-.button--text-upper {
-	letter-spacing: 2px;
-	text-transform: uppercase;
-}
-.button--text-thin {
-	font-weight: 300;
-}
-.button--text-medium {
-	font-weight: 500;
-}
-.button--text-thick {
-	font-weight: 600;
-}
-.button--round-s {
+button {
+	margin: 20px;
+  }
+  .custom-btn {
+	width: 130px;
+	height: 40px;
+	color: black;
 	border-radius: 5px;
-}
-.button--round-m {
-	border-radius: 15px;
-}
-.button--round-l {
-	border-radius: 40px;
-}
+	padding: 10px 25px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 500;
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	 box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+	 7px 7px 20px 0px rgba(0,0,0,.1),
+	 4px 4px 5px 0px rgba(0,0,0,.1);
+	outline: none;
+  }
+.btn-1 {
+	background: #ffffff;
+	border: none;
+  }
+  .btn-1:hover {
+	 background: #ffffff;
+  background: linear-gradient(0deg, #ffffff 0%, rgb(157, 151, 151) 100%);
+  }
 
-/* Borders */
-.button--border-thin {
-	border: 1px solid;
-}
-.button--border-medium {
-	border: 2px solid;
-}
-.button--border-thick {
-	border: 3px solid;
-}
-.boton{
+
+.botonHU1{
     position: absolute;
     /* posicion vertical */
-    bottom:10px;
+    bottom: 0.5px;
     /* centrado horizontal */  
-	margin-left: 18%;
+	margin-left: 10%;
+}
+.original{
+	position: relative;
+	width: 200px;
+	height: 270px;
 }

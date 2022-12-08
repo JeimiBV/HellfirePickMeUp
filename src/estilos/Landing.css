@@ -8,6 +8,7 @@
     --colorD: #374454;
     --colorE: #131A20;
     --colorF: rgb(176, 84, 32);
+    --colorG:#59382c;
 
 }
 
@@ -16,7 +17,7 @@
 }
 
 .bg-sucessN{
-    background-color: var(--colorA);
+    background-color: var(--colorG);
     --bs-border-opacity: 3;
     border-color: var(--colorB);
 }
