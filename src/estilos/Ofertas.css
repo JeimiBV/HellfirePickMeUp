@@ -180,9 +180,9 @@ html , body {
 
 
 
-.buscador .bi{
+.containerL .buscador .bi{
     position: absolute;
-    margin-right: 59%; 
+    margin-right: 57c%; 
     margin-top: 0.5%;
 }
 
