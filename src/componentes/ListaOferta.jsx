@@ -63,20 +63,8 @@ const ListaOfertas = ({usuario}) => {
                     {ofertados != null ? (
                         ofertados.map(oferta => (
                             <div  className="row row-col" key={oferta.id}>
-                                <div class="card card-of border-success mb-2 bg-sucessP">
-
-                                    <img src={oferta.Imagen} class="card-img-top imagenOf mt-2 mr-2" alt="..." />
-
-                                    <div class="card-body card-letra ">
-                                        <h5 class="card-titleP text-center text-capitalize" >{oferta.Nombre}</h5>
-                                        <p className="">
-                                            <span > Precio: {oferta.Precio} bs.</span>
-                                            <span className="d-block"> Hora límite:{oferta.Hora} </span>
-                                            <span className="d-block">Fecha límite: {oferta.Fecha} </span>
-                                        </p>
-                                    </div>
-                                </div>
-
+                                <div class="cardSpace">
+                                 </div>
                             </div>
                         )
                         )
