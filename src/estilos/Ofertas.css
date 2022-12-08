@@ -26,3 +26,15 @@ html , body {
     overflow: hidden;
     border-radius: 63px;
 }
+
+.cardBackground {
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+    background-size: cover;
+    animation: backgroundPosition 15s linear infinite;
+    filter: blur(45px);
+
+}
