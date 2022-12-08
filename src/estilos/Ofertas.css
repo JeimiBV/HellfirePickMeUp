@@ -191,9 +191,9 @@ html , body {
 
 
 
-.buscador .bi{
+.containerL .buscador .bi{
     position: absolute;
-    margin-right: 59%; 
+    margin-right: 57%; 
     margin-top: 0.5%;
 }
 
