@@ -64,6 +64,10 @@ const ListaOfertas = ({usuario}) => {
                         ofertados.map(oferta => (
                             <div  className="row row-col" key={oferta.id}>
                                 <div class="cardSpace">
+                                <div class="cardBackground">
+                                        
+                                </div>
+
                                </div>
 
 
