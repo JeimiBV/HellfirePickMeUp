@@ -1,7 +1,9 @@
 .textoReflexion {
     font-weight: bold;
     font-size: small;
+    color: black;
 }
+
 
 @media (max-width: 490px) {
 
