@@ -184,10 +184,48 @@ function FormInicioSesion() {
                     />
                 </div>
             </div>
-        </div>
-    );
+            <div id="wrapper">
+                <div id="right">
+                    <div id="showcase">
+                        <div class="showcase-content">
+                            <h1 class="showcase-text">
+                                Detener La Pérdida Y
+                                <br>El Desperdicio De
+                                    <br>Alimentos
+                                        <br>Por Las Personas
+                                            <br>Por El Planeta
+                                            </h1>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="left">
+                                    <div id="signin">
+                                        <div class="logo">
+                                            <h1> Inicio de sesión </h1>
+                                            <hr />
+                                        </div>
+                                        <form>
+                                            <div>
+                                                <label>Correo electrónico</label>
+                                                <input type="text" class="text-input" />
+                                            </div>
+                                            <div>
+                                                <label>Contraseña</label>
+                                                <input type="password" class="text-input" />
+                                            </div>
+                                            <button type="submit" class="primary-btn">Acceder</button>
+                                        </form>
+
+
+                                    </div>
+
+                                </div>
+
+                        </div>
+
+                    </div>
+                    );
 }
-//ev => setCorreo(ev.target.value)106
-//ev => setContraseña(ev.target.value)113
-//onClick={validar} del acceder
-export default FormInicioSesion;
+
+                    export default FormInicioSesion;
