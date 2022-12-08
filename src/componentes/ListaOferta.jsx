@@ -65,6 +65,7 @@ const ListaOfertas = ({usuario}) => {
                             <div  className="row row-col" key={oferta.id}>
                                 <div class="cardSpace">
                                   <div class="cardBackground">
+                                  </div>
                                    <div class="card cardOfertados">    
                                     <div class="cardInside">
                                         <div class="imgSpace">
@@ -89,7 +90,7 @@ const ListaOfertas = ({usuario}) => {
                                </div>
 
 
-                            </div>
+                            
                         )
                         )
                     ) : ('no hay productos')}
