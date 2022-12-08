@@ -64,16 +64,19 @@ const ListaOfertas = ({usuario}) => {
                         ofertados.map(oferta => (
                             <div  className="row row-col" key={oferta.id}>
                                 <div class="cardSpace">
-                                <div class="cardBackground">
-                                <div class="card cardOfertados">    
-                                <div class="cardInside">
-                                <div class="imgSpace">
+                                  <div class="cardBackground">
+                                   <div class="card cardOfertados">    
+                                    <div class="cardInside">
+                                        <div class="imgSpace">
                                                 <div >
                                                     <img src={oferta.Imagen} className="cardOfertas " alt="..." />
                                                 </div>
                                             </div>
-                                 </div>                                                                                                            
-                                </div>  
+                                            <div class="userInfo">
+                                                
+                                            </div>
+                                          </div>                                                                                                            
+                                     </div>  
                                 </div>
 
                                </div>
