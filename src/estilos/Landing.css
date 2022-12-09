@@ -1,6 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 /* Navbar*/
 
@@ -129,7 +128,7 @@
 }
 .MensajesLPage >p{
     color: #2b2828;
-    font-family: 'Charm';
+    font-family: 'Playfair Display';
     font-size: x-large;
     
 }
@@ -137,5 +136,5 @@
     
     color: #292828d4;
     font-size: x-large;
-    font-family: 'Charm';
+    font-family: 'Playfair Display';
 }
