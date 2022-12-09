@@ -68,6 +68,8 @@ const VistaConsumidor = ({usuario}) => {
                                     <div  className="row row-col" key={oferta.id}>
                                         <div class="card card-ofP  mb-2 bg-sucessPedido">
                                         <span class="Banner">
+
+                                        <span className="d-block">Fecha límite: {oferta.Fecha} </span>   
                                         <h1 className="Descri">Descripción :</h1>
 
                                                  <p>{oferta.Descripcion} </p>
@@ -84,7 +86,7 @@ const VistaConsumidor = ({usuario}) => {
                                             
                                                     <span > Precio: {oferta.Precio} bs.</span>
                                                     <span className="d-block">Hora límite:{oferta.Hora} </span>
-                                                    <span className="d-block">Fecha límite: {oferta.Fecha} </span>
+                                                    
                                                     
                                                 </p>
                                               </div>
