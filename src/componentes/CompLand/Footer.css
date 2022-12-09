@@ -12,16 +12,10 @@
 
 }
   
-  .footer {
-    height: 200px;
-    background-color: var(--colorI);
-
-
-}
   
   .footer {
     height: 200px;
-    background-color: var(--colorA);
+    background-color: var(--colorI);
     padding: 0;
   }
 
