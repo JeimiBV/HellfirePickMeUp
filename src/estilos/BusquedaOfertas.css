@@ -79,7 +79,7 @@
     text-align: center;
     font-size: x-large;
     font-weight: bold;
-    color: rgb(107, 59, 18);
+    color: #804000e1;;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 100;
 
@@ -93,12 +93,12 @@
 
 
 }
-.precioAd{
+.precioAd >span{
     text-align: center;
-    font-weight: bold;
-    font-size: large;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #59381797
+
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    color: #804000b1;
    
     
 }
@@ -141,7 +141,7 @@
     font-family: 'Times New Roman', Times, serif;
     font-family: 'Times New Roman', Times, serif;
     font-size:x-large;
-    background-color: #804000ad;
+    background-color: #804000c9;
     
 }
 
