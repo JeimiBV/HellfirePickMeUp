@@ -52,7 +52,7 @@ const VistaConsumidor = ({usuario}) => {
         
                 <>
                     <div className=" containerLargo">
-                        <h1 className="text-center mt-3" > ¡Busca un producto! </h1>
+                        <h1 className="tituloProducto text-center mt-3" > ¡Busca un producto! </h1>
         
                         <div className="buscador">
                             <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
