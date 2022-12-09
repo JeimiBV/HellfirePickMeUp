@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 
 /* Navbar*/
 
@@ -98,9 +98,9 @@
     
 }
 .sliderA .fs-1 >p{
-    font-family: 'La Belle Aurore';
+    font-family: 'Marck Script';
     color: rgba(254, 254, 254, 0.957);
-    font-size: 52px;
+    font-size: 50px;
 }
 
    /*2do slider*/
