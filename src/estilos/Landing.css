@@ -112,6 +112,11 @@
 .bg-sucess-2{
     background: #84a98c;
 }
+.MensajesLPage{
+    color: #8b4815;
+    font-style:italic;
+    font-family: 'Times New Roman', Times, serif;
+}
 .MensajeLanding{
     color: #8b4815;
     font-style:italic;
