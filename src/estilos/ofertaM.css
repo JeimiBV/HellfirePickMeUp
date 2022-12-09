@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=M+PLUS+1+Code&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Stint+Ultra+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=M+PLUS+1+Code&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Stint+Ultra+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=Gruppo&family=M+PLUS+1+Code&family=Nanum+Gothic&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Stint+Ultra+Condensed&family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=Gruppo&family=M+PLUS+1+Code&family=Nanum+Gothic&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Signika+Negative:wght@300&family=Stint+Ultra+Condensed&family=Tangerine&display=swap');
 :root {
     --white: #fff;
     --black: #000;
@@ -11,6 +12,7 @@
     --litegreen: #62c08b;
     --dark: #242426;
     --gray: #5e6f77;
+    --cafe:#40251b;
 }
 
 .container89 {
@@ -46,6 +48,7 @@
     font-family: 'Bebas Neue';
     text-align: center;
     font-size: 41px;
+    color: #40251b
 }
 .Lab{
     top: 23%;
@@ -81,7 +84,9 @@ a {
 }
 .nombreO {
     font-size: 5vh;
+    font-family: 'Signika Negative';
     text-transform: lowercase;
+    color: #40251b;
 }
 
 .nombreO::first-letter {
@@ -100,15 +105,20 @@ a {
     min-height: 87.6;
     display: flex;
     align-items: top;
-    
-    background-color: #CAD2C5;
+    background-color: #775341;
 
 }
 
 .list-section .left-section,
-.list-section .right-section {
+.list-section  {
     width: 100%;
     padding: 1em 1em;
+
+}
+.right-section{
+    width: 100%;
+    align-items: center;
+    margin-left: 5%;
 }
 
 .list-section .left-section {
@@ -117,11 +127,11 @@ a {
 
 .list-section .left-section .column-1,
 .list-section .left-section .column-2 {
-    width: 100%;
+    width: 120%;
     margin: auto;
     padding: 1em;
     /* background: url("https://s.cornershopapp.com/product-images/4146740.jpg?versionId=Pd7K2Sj9JonXtPnE0bMuNjyzD_z4tX5t"); */
-    background-color: #BC9E82;
+    background-color: whitesmoke;
     margin-bottom: 10px;
     padding: 1em;
     border-radius: 0.625rem;
@@ -149,13 +159,12 @@ a {
 
 .list-section .left-section .column-1 a:hover,
 .list-section .left-section .column-2 a:hover {
-    color: var(--white);
+    color: var( --darkyellow);
 }
 
 .list-cards {
     width: 100%;
-    display: flex;
-    align-items: top;
+    display: flex; 
     flex-wrap: wrap;
 
 }
@@ -167,9 +176,11 @@ a {
     border-radius: 5px;
     overflow: hidden;
     padding: 0;
-    background-color: var(--white);
+    /* background: url("https://st3.depositphotos.com/2805411/15923/i/450/depositphotos_159231046-stock-photo-brown-leather-texture-background.jpg"); */
+    background-color: 	whitesmoke;
     display: flex;
     align-items: top;
+   
 }
 
 .list-cards .list-card:nth-child(1),
@@ -219,6 +230,7 @@ a {
     top: 0;
     padding: 1em 2em;
     transition: 0.5s;
+    word-wrap: break-word;
 }
 
 .list-category p {

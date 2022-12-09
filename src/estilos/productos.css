@@ -63,7 +63,7 @@
     font-family: 'Quicksand', sans-serif;
     display: flex;
     flex-direction: column;
-	word-break:break-all;
+    word-wrap: break-word;
     /* align-items: center;
     justify-content: center; */
     opacity: 0;
@@ -112,8 +112,9 @@
     font-size: 1em;
     margin-top: 0.5em;
 	padding: 1px 4px;
-	word-break:break-all;
+	word-wrap: break-word;
 	text-align: center;
+    
 }
 .botonHU1M {
 	margin: 20px;
@@ -151,10 +152,11 @@
     /* posicion vertical */
     bottom: 0.5px;
     /* centrado horizontal */  
-	margin-left: 10%;
+	
 }
 .original{
 	position: relative;
 	width: 200px;
 	height: 270px;
+    padding: 1em 1em;
 }

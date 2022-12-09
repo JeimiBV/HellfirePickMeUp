@@ -238,7 +238,8 @@ function Productoslista({usuario}) {
         <div class="image__overlay image__overlay--primary">
             <div className="original">
             <div class="image__title">{producto.Nombre}</div>
-            <p class="image__description">
+            <p
+             class="image__description">
                 {producto.Descripcion}
             </p>
             
