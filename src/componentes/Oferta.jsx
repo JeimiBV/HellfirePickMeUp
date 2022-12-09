@@ -171,7 +171,7 @@ function Mostraroferta({ usuario }) {
                         ¿Qué quieres comer hoy?
                     </h1>
                     <h1 className="gt1 pt-4">
-                        Encuentra lo que estas buscando !!!
+                    Alimentos frescos y saludables, siempre
                     </h1>
                 </div>
                 
@@ -180,7 +180,7 @@ function Mostraroferta({ usuario }) {
             <div class="list-section">
                 <div class="left-section">
                     <section class="column-1">
-                        <h1>Categorías</h1>
+                        <h1 className="TituloCatHU1">Categorías</h1>
                         {ListaCategorias}
                     </section>
                 </div>

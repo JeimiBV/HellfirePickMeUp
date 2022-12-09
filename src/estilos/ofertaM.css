@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=M+PLUS+1+Code&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Shadows+Into+Light&family=Shrikhand&family=Stint+Ultra+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=M+PLUS+1+Code&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Stint+Ultra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=M+PLUS+1+Code&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Stint+Ultra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=Gruppo&family=M+PLUS+1+Code&family=Nanum+Gothic&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Stint+Ultra+Condensed&family=Tangerine&display=swap');
 :root {
     --white: #fff;
     --black: #000;
@@ -28,7 +30,7 @@
 
 .gt {
     font-family: 'Secular One';
-    color: black;
+    color: #40251b;
     font-size: 3em;
     /* font-weight:  bolder; */
 
@@ -40,13 +42,18 @@
     /* font-weight:  bolder; */
 
 }
+.TituloCatHU1{
+    font-family: 'Bebas Neue';
+    text-align: center;
+    font-size: 41px;
+}
 .Lab{
-    top: 25%;
-    margin-left: 28%;
+    top: 23%;
+    margin-left: 23%;
     position: absolute;
-    width: 700px;
+    width: 800px;
     height: 210px;
-    background-color: rgba(255, 255, 255, 0.464);
+    background-color: rgba(255, 255, 255, 0.532);
     border-radius: 5px;
     
 }
@@ -55,6 +62,7 @@
 /*LIST*/
 a {
     text-decoration: none;
+    font-family: 'Nanum Gothic';
 }
 
 .default-hero-banner {
@@ -112,7 +120,8 @@ a {
     width: 100%;
     margin: auto;
     padding: 1em;
-    background-color: var(--darkgreen);
+    /* background: url("https://s.cornershopapp.com/product-images/4146740.jpg?versionId=Pd7K2Sj9JonXtPnE0bMuNjyzD_z4tX5t"); */
+    background-color: #BC9E82;
     margin-bottom: 10px;
     padding: 1em;
     border-radius: 0.625rem;
