@@ -116,7 +116,13 @@
   
 }
 
-.card{
+.card {
     overflow: hidden;
+    border-color: rgba(210, 116, 49, 0.765);
+    
+    border-left-width: 4px;
+    border-bottom-width: 4px;
+  
+    border-radius: 10%;
 }
 
