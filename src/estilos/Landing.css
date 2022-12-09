@@ -11,15 +11,27 @@
     --colorD: #374454;
     --colorE: #131A20;
     --colorF: rgb(176, 84, 32);
+    --colorH: #40251b;
+    
 
 }
 
 
 .bg-sucessN{
-    background-color: var(--colorA);
+    background-color: var(--colorH);
     --bs-border-opacity: 3;
     border-color: var(--colorB);
 }
+
+
+ .containerB{
+    background-color: #ab9680;
+    padding: 50px;
+    width: 70%;
+    position: relative;
+
+
+ }
 
 .nav-pills .nav-link.active,
 .show>.nav-pills .nav-link{
