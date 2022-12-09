@@ -83,8 +83,9 @@
     
 }
 .sliderA .fs-1{
+    font-style:italic;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(235, 235, 235);
+    color: rgba(248, 248, 248, 0.957);
 }
 
    /*2do slider*/
