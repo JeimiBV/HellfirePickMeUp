@@ -32,9 +32,15 @@ const Informacion = () => {
 
                     </div>
                     
-               
-                    <div className="col-sm p-5 mt-5">
-                        <h1 className='color-titulo' >
+                </div>
+
+
+                <div className="row " >
+                    <div class="col-sm  p-5 pt-5 mt-5"> 
+                        <img className='imagen-objetivo' src='https://www.elplural.com/uploads/s1/62/51/46/dieta-huella-agua.jpeg' />
+                    </div>
+                    <div className="col-sm p-5 pb-5 mt-5">
+                        <h1 className='color-titulo2' >
                             Nuestro objetivo
                         </h1>
                         <hr class="border border-dark border" />
