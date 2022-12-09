@@ -141,7 +141,7 @@
     font-family: 'Times New Roman', Times, serif;
     font-family: 'Times New Roman', Times, serif;
     font-size:x-large;
-    background-color: rgba(146, 101, 70, 0.765);
+    background-color: #804000ad;
     
 }
 
@@ -152,7 +152,7 @@
 
 .card-ofP{
     overflow: hidden;
-    border-color: rgba(107, 74, 51, 0.765);
+    border-color: #804000e1;
     
     border-left-width: 4px;
     border-bottom-width: 4px;
