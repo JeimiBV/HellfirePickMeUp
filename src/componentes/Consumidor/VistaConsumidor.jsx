@@ -72,7 +72,7 @@ const VistaConsumidor = ({usuario}) => {
                                         <span className="d-block">Fecha límite: {oferta.Fecha} </span>   
                                         <h1 className="Descri">Descripción :</h1>
 
-                                                 <p>{oferta.Descripcion} </p>
+                                        <p className="DescripcionAd">{oferta.Descripcion} </p>
                                                                     </span>
                                                                     
                                             
