@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 * {   
     font-family: sans-serif;
 }
@@ -38,6 +38,12 @@
 
 .containerL > .buscador .inputBusc{
     width: 60%;
+}
+.TituloListaO{
+    color: rgb(61, 38, 18);
+    font-size: 330%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Cinzel';
 }
 
 html , body {
