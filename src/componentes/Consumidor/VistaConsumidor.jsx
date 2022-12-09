@@ -82,7 +82,7 @@ const VistaConsumidor = ({usuario}) => {
                                             <div className="DisenioCard ">
                                             <div class="card-body card-letra ">
                                                 <h5 class="card-titleProducto text-center text-capitalize" >{oferta.Nombre}</h5>
-                                                <p className="">
+                                                <p className="precioAd">
                                             
                                                     <span > Precio: {oferta.Precio} bs.</span>
                                                     
