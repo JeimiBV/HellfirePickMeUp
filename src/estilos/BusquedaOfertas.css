@@ -52,7 +52,7 @@
 }
 
 .card-ofP:hover{
-    box-shadow: 5px 5px 5px 5px rgba(101, 148, 93, 0.308);
+    
     cursor: pointer;
     transform: translateY(-3%);
     
