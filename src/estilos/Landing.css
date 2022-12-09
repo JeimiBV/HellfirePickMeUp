@@ -1,4 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+
+
 /* Navbar*/
 
 :root{
@@ -83,8 +86,8 @@
     
 }
 .sliderA .fs-1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(235, 235, 235);
+    font-style:italic;
+    color: rgba(254, 254, 254, 0.957);
 }
 
    /*2do slider*/
@@ -114,12 +117,14 @@
 }
 .MensajesLPage >p{
     color: #2b2828;
+    font-family: 'Charm';
+    font-size: x-large;
     font-style:italic;
-    font-family: 'Times New Roman', Times, serif;
 }
 .MensajeLanding >h10{
     
-    color: #292828b7;
+    color: #292828d4;
+    font-size: x-large;
     font-style:italic;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Charm';
 }
