@@ -1,0 +1,22 @@
+:root{
+    --colorA: #DA8131;
+    --colorB: #77281B;
+    --colorC: #603725;
+    --colorD: #374454;
+    --colorE: #131A20;
+    --colorF: #b05420;
+    --colorG: #6b4841;
+
+}
+
+    .imagen-objetivo{
+        width: 440px;
+        height: 301px;
+    }
+
+    .color-titulo{
+        font-family: Parisienne;
+        font-weight: bold;
+        color: #553d2a ;
+        text-align: left;
+    }
