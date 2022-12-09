@@ -9,6 +9,7 @@ import { unicoProducto } from "./funciones";
 import Ofertar from "./Ofertar";
 import Modals from "./Modals";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 function Productoslista({usuario}) {
@@ -31,15 +32,15 @@ function Productoslista({usuario}) {
    const [Hora, setHora] = useState({ estado: false, valor: "--:--" }); // tarea 11
    const [Stock, setStock] = useState({ estado: false, valor: "" }); 
    const [modalConf, setModalConf] = useState(false);
-   const [producto, setProductos] = useState(null);
+   const [producto, setProductos] = useState([]);
    const [oferta, setOfertas] = useState(null);
-   
-   const [product, setProduct]=useState([])
+   const [vprod, setVprod]=useState([])
    const [tablaProductos, setTablaProductos]= useState([]);
    const [busqueda, setBusqueda]= useState("");
    const params = useParams();
 
    const [post, setPost] = useState(null);
+   const navigate = useNavigate();
    const url =
        "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products";
    useEffect(() => {
@@ -53,12 +54,14 @@ function Productoslista({usuario}) {
    }, [post]);
 
    function updatePost() {
-       axios
-           .put(`${url}/${params.id}`, {
-               Nombre: producto.Nombre,
-               Descripcion: producto.Descripcion,
-               Tipo: producto.Tipo,
-               Imagen: producto.Imagen,
+    console.log(vprod.id)
+  
+    axios
+           .put(`${url}/${vprod.id}`, {
+               Nombre: vprod.Nombre,
+               Descripcion: vprod.Descripcion,
+               Tipo: vprod.Tipo,
+               Imagen: vprod.Imagen,
                Precio: document.getElementById("numero").value,
                Fecha: document.getElementById("fecha").value,
                Hora: document.getElementById("hora").value,
@@ -122,24 +125,30 @@ function Productoslista({usuario}) {
    }
 
    const mostrarSi = () => {
-       setTimeout(() => {
-           setModalNo(false);
-           setModalSi(false);
-       }, 3000);
-
-       document.getElementById("form").reset();
-       setModalConf(false);
-       setModalSi(true);
-       setPrecio((prevState) => ({ ...prevState, estado: false }));
-       setFecha((prevState) => ({ ...prevState, estado: false }));
-       setHora((prevState) => ({ ...prevState, estado: false }));
-       setStock((prevState) => ({ ...prevState, estado: false }));
-       window.location.pathname = "/listaOfertas";
+        
+       
+        setTimeout(() => {
+            setModalNo(false);
+            setModalSi(false);
+        }, 3000);
+ 
+     
+        document.getElementById("form").reset();
+        setModalConf(false);
+        setModalSi(true);
+        setPrecio((prevState) => ({ ...prevState, estado: false }));
+        setFecha((prevState) => ({ ...prevState, estado: false }));
+        setHora((prevState) => ({ ...prevState, estado: false }));
+        setStock((prevState) => ({ ...prevState, estado: false }));
+        navigate("/listaOfertas");
+        console.log("entra al metodoooo")
+       
    };
 
    const guardarOferta = () => { };
 
    const mostrarNo = () => {
+    console.log("entra a mostrar no")
        setTimeout(() => {
            setModalNo(false);
            setModalSi(false);
@@ -185,8 +194,10 @@ function Productoslista({usuario}) {
        mostrar(setShow);
    };
 
-   const mostrarModalOf = () => {
+   const mostrarModalOf = (props) => {
+       
        setModalOf(true);
+       setVprod(props);
    };
    const ocultarModalOf = () => {
        setModalOf(false);
@@ -199,7 +210,7 @@ function Productoslista({usuario}) {
    
 
     useEffect(() => {
-        todosProductos(setProduct)
+        todosProductos(setProductos)
         todosProductos(setTablaProductos)
     },[] )
     
@@ -218,10 +229,10 @@ function Productoslista({usuario}) {
         });
         setProductos(resultadosBusqueda);
       }
-    const pr = product || []
+    const pr = producto || []
     const listaProductos= pr.map(producto => (
         <>
-        <div class="image">
+        <div class="image" key={producto.id}>
         <img class="image__img" src={producto.Imagen} alt="Bricks"/>
         <span className="image_div1"> {producto.Nombre}</span>
         <div class="image__overlay image__overlay--primary">
@@ -232,7 +243,7 @@ function Productoslista({usuario}) {
             </p>
             
             <div className="botonHU1">
-            <button class="custom-btn btn-1" onClick={mostrarModalOf}>Ofertar</button>
+            <button class="custom-btn btn-1 botonHU1M" onClick={() => mostrarModalOf(producto)}>Ofertar</button>
             </div>
             
             </div>
@@ -248,7 +259,7 @@ function Productoslista({usuario}) {
      
 <div className="containerGHU1 ">
     
-    <h1 className="titleL"> Lista de productos </h1> 
+    <h1 className="titleHU1"> Lista de productos </h1> 
     <div className="buscador">
         <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
             <i class="bi bi-search px-3"></i>

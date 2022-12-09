@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+1+Code&family=Oswald:wght@300&family=Ramabhadra&family=Rubik+Mono+One&display=swap');
 .containerGHU1{
     position: relative;
     width: 100%;
@@ -5,8 +6,7 @@
     background-color: #ffffff;
     overflow-y: scroll;  
 	margin-top: 0.8%;
-	background: url("https://thumbs.dreamstime.com/b/la-panader%C3%ADa-del-garabato-empana-el-modelo-linear-vendimia-61922450.jpg");
-    
+	background: url("https://static.vecteezy.com/system/resources/previews/004/725/277/non_2x/tartan-seamless-pattern-plaid-with-pastel-brown-and-white-for-printing-wallpaper-textile-burlap-tablecloth-checkered-background-vector.jpg")
 }
 .buscador .inputBusc{
     width: 60%;
@@ -17,12 +17,14 @@
     margin-right: 59%;
     margin-top: 0.5%;
 }
-.titleL{
+.titleHU1{
 	background-color: #ffff;
-	width: 30%;
+	width: 35%;
 	margin-left: 35%;
 	margin-top: 2%;
 	color: #40251b;
+    font-family: 'Ramabhadra';
+    font-size: 55px;
 }
 .productos{   
     align-items: center;
@@ -83,7 +85,7 @@
 }
 
 .image__overlay--primary {
-    background-color: #705836;
+    background-color: #a06e5c;
 }
 
 .image__overlay > * {
@@ -113,7 +115,7 @@
 	word-break:break-all;
 	text-align: center;
 }
-button {
+.botonHU1M {
 	margin: 20px;
   }
   .custom-btn {

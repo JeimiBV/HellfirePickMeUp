@@ -47,13 +47,13 @@
     bottom: 0px;
     border-radius: 5%;
 }
-.left{
+.botonSi{
     background-color: #a65b4b;
     color: white;
     font: oblique bold 100% cursive;
     border-color: white;
 }
-.right{
+.botonNo{
     background-color: #a65b4b;
     color: white;
     font: oblique bold 100% cursive;
