@@ -165,9 +165,16 @@ function Mostraroferta({ usuario }) {
     return (
         <div className="container89">
             <div class="default-hero-banner">
-                <h1 className="gt pt-4">
-                    Ofertas
-                </h1>
+                <img src="https://d2m1kqghccc19k.cloudfront.net/wp-content/uploads/2022/01/31185210/istockphoto-1199746550-612x612-1.jpeg" alt="" className="Fotofondo" />
+                <div className="Lab">
+                    <h1 className="gt pt-4">
+                        ¿Qué quieres comer hoy?
+                    </h1>
+                    <h1 className="gt1 pt-4">
+                        Encuentra lo que estas buscando !!!
+                    </h1>
+                </div>
+                
             </div>
 
             <div class="list-section">
