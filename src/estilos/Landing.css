@@ -116,10 +116,12 @@
     color: #2b2828;
     font-style:italic;
     font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
 }
 .MensajeLanding >h10{
     
     color: #292828b7;
+    font-size: large;
     font-style:italic;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
