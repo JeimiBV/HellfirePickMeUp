@@ -9,28 +9,35 @@
 
 }
 
-    .imagen-objetivo{
-        width: 440px;
-        height: 301px;
-    }
-
-    .imagen-quienes{
-        width: 440px;
-        height: 301px;
-    }
+.imagen-objetivo{
+    width: 400px;
+    height: 250px;
+    border-radius: 33px;
     
-    .color-titulo1{
-        font-family: Parisienne;
-        font-weight: bold;
-        color: #553d2a ;
-        text-align: left;
-    }
+}
 
-    .color-titulo2{
-        font-family: Parisienne;
-        font-weight: bold;
-        color: #553d2a ;
-        text-align: right;
-    }
+.imagen-quienes{
+    width: 440px;
+    height: 301px;
+    border-radius: 33px;
+}
 
+.color-titulo1{
+    font-family: Parisienne;
+    font-weight: bold;
+    color: #553d2a ;  
+    font-size: 50px;  
     
+}
+
+.colorT{
+    font-family: Parisienne;
+    font-weight: bold;
+    color: #553d2a ;
+    text-align: center;
+    font-size: 50px;  
+}
+
+
+
+
