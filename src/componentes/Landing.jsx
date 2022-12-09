@@ -11,7 +11,6 @@ const Landing = () => {
     <div > 
         <Carrusel/>
         <Informacion/>
-        <Slider/>
         <MensajesP/>
         <Footer/>
     </div> 

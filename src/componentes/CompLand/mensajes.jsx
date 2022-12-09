@@ -1,4 +1,6 @@
 import React from 'react'
+import Slider from "./Slider"
+
 export const MensajesP = () => {
   return (
 
@@ -27,6 +29,10 @@ export const MensajesP = () => {
 
                     <img className="imagen2 w-100"  src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2018/06/mesa-mucha-gente-comiendo.jpg" alt="..." />
                  </div>
+                </div>
+
+                <div>
+                  <Slider/>
                 </div>
 
             <div class="row body color-titulo">
