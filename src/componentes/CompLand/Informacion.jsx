@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./Info.css"
 
 
 const Informacion = () => { 
@@ -17,10 +17,8 @@ const Informacion = () => {
                 <div className="row " >
                     <div class="col-sm p-5 pt-5 pb-5 mt-5"> 
                         <h1 className='color-titulo'>
-                            ¿Quiénes Somos?
-                        </h1>
-                        <hr class="border border-dark border-1 " />
-                        
+                            ¿Quiénes Somos? <hr class="border bordeA border-dark border-1" />
+                        </h1>                      
                         <p >
                         Somos una página web que hace de intermediario entre restaurantes, 
                         reposterías o supermercados que ponen a la venta productos
@@ -29,6 +27,12 @@ const Informacion = () => {
         
                         </p>             
                     </div>
+                    <div className="col-sm p-5 mt-5">
+                       <img className='imagen-quienes' src='https://d1ih8jugeo2m5m.cloudfront.net/2020/04/Qui%C3%A9nes-somos.jpg' />
+
+                    </div>
+                    
+               
                     <div className="col-sm p-5 mt-5">
                         <h1 className='color-titulo' >
                             Nuestro objetivo
