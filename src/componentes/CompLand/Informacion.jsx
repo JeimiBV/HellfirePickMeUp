@@ -30,6 +30,20 @@ const Informacion = () => {
         </div>
       </section>
         
+      <div className="container-fluid objetivo">
+        <div class="row justify-content-center p-5">
+        
+          <div class="col-sm-8 " top="50">
+            
+            <h2 className=" colorT2 p-4">Nuestro objetivo
+            <hr class="border bordeA border-dark border-2 " />
+            </h2>
+
+           
+          </div>
+          </div>
+          </div>
+
     </div>
   )
 }
