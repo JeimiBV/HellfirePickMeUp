@@ -52,7 +52,7 @@
 }
 
 .card-ofP:hover{
-    box-shadow: 5px 5px 5px 5px rgba(101, 148, 93, 0.308);
+    
     cursor: pointer;
     transform: translateY(-3%);
     
@@ -85,20 +85,20 @@
 
 }
 
-.Descripcion{
+.DescripcionAd{
     text-align: center;
     font-size: large;
-    color: rgb(214, 70, 70);
+    color: rgb(255, 255, 255);
     font-family: 'Times New Roman', Times, serif;
 
 
 }
-.precioA{
+.precioAd{
     text-align: center;
     font-weight: bold;
     font-size: large;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #d77d2397
+    color: #59381797
    
     
 }
@@ -129,7 +129,7 @@
 
 
 .bg-sucessPedido{
-    background-color: #e7e0d7c3;
+    background-color: #dba375f1;
    
 }
 
@@ -141,7 +141,7 @@
     font-family: 'Times New Roman', Times, serif;
     font-family: 'Times New Roman', Times, serif;
     font-size:x-large;
-    background-color: rgba(210, 116, 49, 0.765);
+    background-color: rgba(146, 101, 70, 0.765);
     
 }
 
@@ -152,7 +152,7 @@
 
 .card {
     overflow: hidden;
-    border-color: rgba(210, 116, 49, 0.765);
+    border-color: rgba(107, 74, 51, 0.765);
     
     border-left-width: 4px;
     border-bottom-width: 4px;
