@@ -6,6 +6,7 @@ export const MensajesP = () => {
         <div class="text-center body-1 ">
           <div class="row body justify-content-center">
             <div class="col-sm-8 p-5" top="50" size={20}  >
+                  <div class="MensajesLPage">
                 <p>   
                   Nuestro sustento está íntimamente ligado a la comida que comemos 
                   y al agua que bebemos. 
@@ -20,6 +21,7 @@ export const MensajesP = () => {
                     <p> - Tecumseh.</p>
 
                 </div> 
+                </div>
 
                  <div class="col-sm-12 pt-4 mt-5 col-md-3">
 
