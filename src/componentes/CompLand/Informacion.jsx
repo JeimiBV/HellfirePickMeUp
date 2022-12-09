@@ -39,6 +39,12 @@ const Informacion = () => {
             <hr class="border bordeA border-dark border-2 " />
             </h2>
 
+                <p className="otroParrafo ">
+                Somos una página web que hace de intermediario entre restaurantes,
+                reposterías o supermercados que ponen a la venta productos o
+                alimentos que no han sido vendidos al servicio de los consumidores
+                para no malgastar la comida.
+                </p>
            
           </div>
           </div>
