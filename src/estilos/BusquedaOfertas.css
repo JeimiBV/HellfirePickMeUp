@@ -81,6 +81,15 @@
     font-weight: bold;
 
 }
+.precioA{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #d77d2397
+   
+    
+}
 
 .d-block{
     color: rgb(255, 255, 255);
