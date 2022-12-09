@@ -45,7 +45,7 @@ export default class SwipeToSlide extends Component {
     return (
       <div className="pt-4  m-3">
        
-      <div className="containerB start-50 translate-middle-x">
+      <div className="containerBA start-50 translate-middle-x">
             
             <Slider {...settings}>
               <div className = "container-slides-item">
