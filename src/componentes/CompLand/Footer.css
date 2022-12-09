@@ -7,6 +7,15 @@
     --colorD: #374454;
     --colorE: #131A20;
     --colorF: rgb(176, 84, 32);
+    --colorG: #6b4841;
+    --colorI: #40251b;
+
+}
+  
+  .footer {
+    height: 200px;
+    background-color: var(--colorI);
+
 
 }
   
