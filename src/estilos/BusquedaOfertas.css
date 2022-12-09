@@ -81,6 +81,15 @@
     font-weight: bold;
 
 }
+
+.Descripcion{
+    text-align: center;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
 .precioA{
     text-align: center;
     font-weight: bold;
