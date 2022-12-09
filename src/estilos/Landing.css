@@ -112,13 +112,14 @@
 .bg-sucess-2{
     background: #84a98c;
 }
-.MensajesLPage{
-    color: #8b4815;
+.MensajesLPage >p{
+    color: #2b2828;
     font-style:italic;
     font-family: 'Times New Roman', Times, serif;
 }
-.MensajeLanding{
-    color: #8b4815;
+.MensajeLanding >h10{
+    
+    color: #292828b7;
     font-style:italic;
-    font-weight:bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
