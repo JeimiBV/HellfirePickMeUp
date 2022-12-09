@@ -82,6 +82,14 @@
 
 }
 
+.d-block{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+   
+
+}
 .card:hover .Banner{
     transform : translateY(0)
 
