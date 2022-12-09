@@ -1,0 +1,34 @@
+
+
+  :root{
+    --colorA: #DA8131;
+    --colorB: #77281B;
+    --colorC: #603725;
+    --colorD: #374454;
+    --colorE: #131A20;
+    --colorF: rgb(176, 84, 32);
+
+}
+  
+  .footer {
+    height: 200px;
+    background-color: var(--colorA);
+    padding: 0;
+  }
+
+
+  .logoF {
+    width: 50vh;
+    
+  }
+  
+  .copyright p{
+    padding: 5px;
+  }
+  
+  
+  
+  
+  
+  
+  

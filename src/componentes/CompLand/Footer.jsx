@@ -1,28 +1,38 @@
 import React from 'react'
-import '../../estilos/Landing.css'
+import './Footer.css'
+import Image from "../../imagenes/logo-9.png";
 
 const Footer = () => {
   return (
-    <footer className='border-top bg-sucess-2 border-dark border-1 '>
-        <div className='contenedor-footer row'>
-            <div className='col-sm'>
-                <h6 className='text-center'>
-                    Pick me up              
-                </h6>
-                <h6 className='text-center'>
-                    Salva la comida
-                </h6>
-                <p className='text-center' >
+    <div>
+        
+        <footer class="footer">
+            <div className='container-fluid'>
+                <div class="row row-cols-1">
+                    <div class="col d-flex justify-content-center">
+                        <img class="logoF m-2 p-2" src={Image} />
+                    </div> 
+
+                    <div class="col d-flex justify-content-center">
+                    <p>
+                        El repositorio de la página se encuentra en    
+                        <a href='https://github.com/JeimiBV/HellfirePickMeUp.git'>Pick-me-up</a>
+                    </p>
+                    </div> 
                     
-                    El repositorio de la página se encuentra en    
-                    <a href='https://github.com/JeimiBV/HellfirePickMeUp.git'>Pick-me-up</a>
-                </p>
+                    <div class="col d-flex justify-content-center">
+                        
+                  
+                        <p>© Copyright 2022 Hellfire Club.</p> 
+                        
+                    </div>   
+
+                </div>
             </div>
             
-        </div>
-    
         
-    </footer>
+        </footer>
+    </div>
   )
 }
 

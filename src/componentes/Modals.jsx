@@ -20,8 +20,8 @@ function Modals({  estado, estadoPantalla,texto, titulo, mostrarSi, mostrarNo,bu
 
                 </div>
                 <div className={buttons?"botones botonSN":"transparent"}>
-                    <button type="submit" className="left" onClick={mostrarSi}>Si</button>
-                    <button className="right" onClick={mostrarNo}>No</button>
+                    <button type="submit" className="botonSi" onClick={mostrarSi}>Si</button>
+                    <button className="botonNo" onClick={mostrarNo}>No</button>
                 </div>
               </div>
                 </div>

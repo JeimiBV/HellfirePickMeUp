@@ -8,22 +8,23 @@
     --colorD: #374454;
     --colorE: #131A20;
     --colorF: rgb(176, 84, 32);
+    --colorG:#59382c;
 
 }
 
 .colorA{
-    color: var( #DA8131);
+    color: var( #DC7703);
 }
 
 .bg-sucessN{
-    background-color: var(--colorA);
+    background-color: var(--colorG);
     --bs-border-opacity: 3;
     border-color: var(--colorB);
 }
 
 .nav-pills .nav-link.active,
 .show>.nav-pills .nav-link{
-    background-color: var(--colorB); 
+    background-color: var(--colorF); 
     color: white;
     white-space: nowrap;
 }

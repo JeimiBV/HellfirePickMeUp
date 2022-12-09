@@ -216,7 +216,7 @@ function Informacion() {
                 <Ofertar estado={modalOf}>
                 <div className="login-wrap">
         <div className="login-form">
-            <div className="tituloPedido"><label  className="tab">Realiza tu pedido!</label></div>
+            <div className="tituloPedido"><label  className="tab">Realiza tu oferta!</label></div>
         
         <div className="sign-up-htm">
         <form  className="fo" id="form" action="https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products/${id}" method="PUT">

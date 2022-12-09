@@ -86,7 +86,7 @@ const ListaPedidos = ({ usuario }) => {
 
       <>
          <div className=" containerPed">
-            <h1 className="titulo text-center m-4" > Pedidos </h1>
+         <h5 className="tituloAnd"> PEDIDOS </h5> 
             <div className="buscador">
                <form class="d-flex justify-content-center" value={busqueda} role="search" onChange={handleChange}>
                   <i class="bi bi-search px-3"></i>
@@ -101,15 +101,15 @@ const ListaPedidos = ({ usuario }) => {
                            <div className="art-board__container">
                               <div className="cardss">
                               
-                                 <div className="card__image">
+                                 <div className="card__imageAnd">
                                     <img className="imgn" src={pedidosC.Imagen} alt=" " />
                                     <div className="card_repetir">
                                  <button className="botonEliminar" color="danger" onClick={()=>{updatePedido(pedidosC)}} >
                                     <i className="fa-solid fa-trash"></i></button>
                                  </div>
                                  </div>
-                                 <div className="card__info">
-                                    <div className="car__info--title">
+                                 <div className="card__infoAnd">
+                                    <div className="cardTitulo">
                                        <h3 >{pedidosC.Nombre}</h3>
                                   </div>
                                  </div>

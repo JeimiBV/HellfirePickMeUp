@@ -1,130 +1,160 @@
-.containerG{
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+1+Code&family=Oswald:wght@300&family=Ramabhadra&family=Rubik+Mono+One&display=swap');
+.containerGHU1{
     position: relative;
     width: 100%;
-    height: 87.248vh;
-    background-color: #CAD2C5;
-    overflow-y: scroll;
-   
+    height: 86vh;
+    background-color: #ffffff;
+    overflow-y: scroll;  
+	margin-top: 0.8%;
+	background: url("https://static.vecteezy.com/system/resources/previews/004/725/277/non_2x/tartan-seamless-pattern-plaid-with-pastel-brown-and-white-for-printing-wallpaper-textile-burlap-tablecloth-checkered-background-vector.jpg")
 }
 .buscador .inputBusc{
     width: 60%;
 }
 
-.containerG > .buscador .bi{
+.containerGHU1 > .buscador .bi{
     position: absolute;
     margin-right: 59%;
     margin-top: 0.5%;
 }
-.imagen{
-    width: 200px;
-    height: 200px;
-  }
-.titleL{
-    text-align:center;  
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 3rem;
-    top: 20rem;
+.titleHU1{
+	background-color: #ffff;
+	width: 35%;
+	margin-left: 35%;
+	margin-top: 2%;
+	color: #40251b;
+    font-family: 'Ramabhadra';
+    font-size: 55px;
 }
-.nombreL{
-    text-align:center;  
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 1rem;
-    text-transform: capitalize; 
-}
-
 .productos{   
     align-items: center;
     flex-direction: column;
     margin-top: 2%;
-    width: 93%;
-    margin-left: 4%;
+    width: 79%;
+    margin-left: 12%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(13rem, 0fr));
-    gap: 2rem 2.5rem;
-    box-sizing: border-box;   
- 
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 0fr));
+    gap: 4rem 2.5rem;
+    box-sizing: border-box; 
 }
-.producto{
-   
+
+.image {
+    position: relative;
+	width: 200px;
+	height: 235px;
+	background-color: white;
+}
+
+.image__img {
+    display: block;
+    width: 200px;
+	height: 235px;
+	border: solid #835747;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+	width: 200px;
+	height: 270px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border: 6px solid transparent;
-    border-radius: 5px;
-    background-color: white;
-
+	word-break:break-all;
+    /* align-items: center;
+    justify-content: center; */
+    opacity: 0;
+    transition: opacity 0.25s;
+	
+}
+.image_div1{
+	display: block;
+	background-color:  #835747;
+	font-size: 20px;
+	font-family: 'Optima';
+	height: 35px;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+}
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
 }
 
-.producto:hover{
-     border: 6px solid  #84A98C;
+.image__overlay--primary {
+    background-color: #a06e5c;
 }
-.producto_imagen{
-    width: 100%;
-    height: auto;
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
 }
-.P_footer{
-    width: 100%;
-    height: auto;
+
+.image__overlay:hover {
+    opacity: 1;
 }
-@media(max-width: 912px){
-    .titleL{
-        font-size: 2rem;
-    }
-    .productos{   
-        margin-top: 8%;
-        margin-left: 16%;
-        grid-template-columns: repeat(auto-fit, minmax(16rem, 0fr));
-     
-    }
-      .nombreL{
-        
-        font-size: 1.8rem;
-        
-    }
-    .imagen{
-        width: 240px;
-        height: 200px;
-      }
-}   
-@media(width: 912px){
-    .titleL{
-        top:10%;
-        font-size: 2rem;
-    }
-    .productos{   
-        margin-top: 8%;
-        margin-left: 10%;
-        grid-template-columns: repeat(auto-fit, minmax(14rem, 0fr));
-     
-    }
-      .nombreL{
-        
-        font-size: 1.8rem;
-        
-    }
-    .imagen{
-        width: 210px;
-        height: 200px;
-      }
-}   
-@media(width: 280px){
-    .titleL{
-        margin-top: 20%;
-        font-size: 2rem;
-    }
-    .productos{   
-        margin-top: 8%;
-        margin-left: 10%;
-        grid-template-columns: repeat(auto-fit, minmax(14rem, 0fr));
-     
-    }
-      .nombreL{
-        
-        font-size: 1.8rem;
-        
-    }
-    .imagen{
-        width: 210px;
-        height: 200px;
-      }
+
+.image__overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image__title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 0.5em;
+	text-align: center;
+}
+
+.image__description {
+    font-size: 1em;
+    margin-top: 0.5em;
+	padding: 1px 4px;
+	word-break:break-all;
+	text-align: center;
+}
+.botonHU1M {
+	margin: 20px;
+  }
+  .custom-btn {
+	width: 130px;
+	height: 40px;
+	color: black;
+	border-radius: 5px;
+	padding: 10px 25px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 500;
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	 box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+	 7px 7px 20px 0px rgba(0,0,0,.1),
+	 4px 4px 5px 0px rgba(0,0,0,.1);
+	outline: none;
+  }
+.btn-1 {
+	background: #ffffff;
+	border: none;
+  }
+  .btn-1:hover {
+	 background: #ffffff;
+  background: linear-gradient(0deg, #ffffff 0%, rgb(157, 151, 151) 100%);
+  }
+
+
+.botonHU1{
+    position: absolute;
+    /* posicion vertical */
+    bottom: 0.5px;
+    /* centrado horizontal */  
+	margin-left: 10%;
+}
+.original{
+	position: relative;
+	width: 200px;
+	height: 270px;
 }

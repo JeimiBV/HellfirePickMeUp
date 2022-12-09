@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../public/log.png";
+import Image from "../imagenes/logo-9.png";
 import "../estilos/header.css";
 import { useAuth } from "../context/authContext";
 import { Link, useNavigate } from "react-router-dom";
@@ -19,15 +19,12 @@ function Header() {
   return (
     <div className="contenedor-cabecera">
        <nav className="navbar fixed-top navbar-expand-sm bg-sucessN border-bottom border-dark border-2 ">
-        <div className="d-flex  w-50  justify-content">
-       
-            <div className="logoYNombre mx-5">
-            <Link className="flex-sm-fill  nav-link active" to="/">
-              <img className="logo" src={Image}  />
-            </Link>    
-            </div >
-         
-                 
+          <div className="d-flex  w-50  justify-content">
+              <div className="logoYNombre mx-5">
+              <Link className="flex-sm-fill  nav-link active" to="/">
+                <img className="logo mx-5" src={Image}  />
+              </Link>    
+          </div>         
         </div>
           
               
@@ -71,9 +68,7 @@ function Header() {
         <>
         <ul className="navbar-nav gap-5 ms-auto mx-3 justify-content-end">
             <li className="nav nav-pills flex-column flex-sm-row ">
-            </li>
-            <li className="nav nav-pills flex-column flex-sm-row ">
-            <button className=" flex-sm-fill text-sm-center nav-link active " onClick={handleLogout}>Cerrar sesión</button>
+            <button className=" flex-sm-fill text-sm-center nav-link active m-2" onClick={handleLogout}>Cerrar sesión</button>
             </li>
           </ul>
         </>
