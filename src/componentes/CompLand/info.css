@@ -14,9 +14,23 @@
         height: 301px;
     }
 
+    .imagen-quienes{
+        width: 440px;
+        height: 301px;
+    }
+    
     .color-titulo{
         font-family: Parisienne;
         font-weight: bold;
         color: #553d2a ;
         text-align: left;
     }
+
+    .color-titulo2{
+        font-family: Parisienne;
+        font-weight: bold;
+        color: #553d2a ;
+        text-align: right;
+    }
+
+    
