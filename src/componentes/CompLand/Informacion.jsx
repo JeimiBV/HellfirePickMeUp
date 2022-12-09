@@ -16,8 +16,8 @@ const Informacion = () => {
         <div className='contenedor-2 text-center body'>
                 <div className="row " >
                     <div class="col-sm p-5 pt-5 pb-5 mt-5"> 
-                        <h1 className='color-titulo'>
-                            ¿Quiénes Somos? <hr class="border bordeA border-dark border-1" />
+                        <h1 className='color-titulo1'>
+                            ¿Quiénes Somos? <hr class="border border-dark border-1" />
                         </h1>                      
                         <p >
                         Somos una página web que hace de intermediario entre restaurantes, 
