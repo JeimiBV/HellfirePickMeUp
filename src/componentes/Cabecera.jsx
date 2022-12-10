@@ -22,7 +22,7 @@ function Header() {
           <div className="d-flex  w-50  justify-content">
               <div className="logoYNombre mx-5">
               <Link className="flex-sm-fill  nav-link active" to="/">
-                <img className="logo mx-5" src={Image}  />
+                <img className="logo mx-2" src={Image}  />
               </Link>    
           </div>         
         </div>

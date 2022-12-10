@@ -17,12 +17,12 @@
 .containerL{
     position: relative;
     width: 100%;
-    background-color: #e7bf8254 ;
-    background: url("https://i.pinimg.com/564x/62/7d/68/627d681f93113289e83c1450c1667deb.jpg")
+
+   
    
 }
 .ofertasP{
-    position: relative; 
+    
     padding: 1rem 2rem ;
     flex-direction: column;
     left: 4rem;
@@ -51,12 +51,13 @@ html , body {
     height: 100%;
     align-items: center;
     justify-content: center;
+    background: url("https://i.pinimg.com/564x/62/7d/68/627d681f93113289e83c1450c1667deb.jpg")
 
 }
 
 .cardSpace {
     transition: transform 300ms;
-    padding-top: 33px;
+    padding-top: 60px;
     margin-left: 66px;
 }
 
