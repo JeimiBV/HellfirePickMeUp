@@ -6,7 +6,7 @@
     height: 89.6vh;
     background-color: #CAD2C5;
     overflow-y: scroll;
-    background: url("https://static.vecteezy.com/system/resources/previews/001/736/089/non_2x/half-circle-triangle-abstract-background-in-brown-color-free-vector.jpg")
+    background: url("https://st3.depositphotos.com/3049107/16145/v/600/depositphotos_161454306-stock-illustration-hand-drawn-bakery-pattern.jpg")
 }
 
 
@@ -18,10 +18,13 @@
 }
 .tituloProducto{
 
-    color: rgb(234, 219, 206);
+    color: #643201;
     font-size: 330%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-family: 'Cinzel';
+    background-color: #e8cbae;
+    width: 650px;
+    margin-left: 450px;
 }
 
 
@@ -36,7 +39,7 @@
     position: relative; 
     padding: 1rem 1rem ;
     flex-direction: column;
-    left: 7rem;
+    left: 9rem;
     top: 1rem;
     width: 85%;
     display: grid;
@@ -99,7 +102,7 @@
 
     font-size: x-large;
     font-family: 'Times New Roman', Times, serif;
-    color: #804000b1;
+    color: #643301d5;
    
     
 }
@@ -139,7 +142,7 @@
 
 
 .bg-sucessPedido{
-    background-color: #f5e1ceee;
+    background-color: #debc99;
    
 }
 
@@ -151,7 +154,7 @@
     font-family: 'Times New Roman', Times, serif;
     font-family: 'Times New Roman', Times, serif;
     font-size:x-large;
-    background-color: #804000cb;
+    background-color: #643201b3;
     
     
 }
@@ -163,10 +166,10 @@
 
 .card-ofP{
     overflow: hidden;
-    border-color: #804000e1;
+    border-color: #643201b3;
     
-    border-left-width: 4px;
-    border-bottom-width: 4px;
+    border-left-width: 5px;
+    border-bottom-width: 5px;
   
     border-radius: 10%;
 }
