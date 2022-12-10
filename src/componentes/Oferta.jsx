@@ -159,20 +159,31 @@ function Mostraroferta({ usuario }) {
   return (
     <div className="container89">
       <div class="default-hero-banner">
-        <h1 className="gt pt-4">Ofertas</h1>
-      </div>
+                <img src="https://d2m1kqghccc19k.cloudfront.net/wp-content/uploads/2022/01/31185210/istockphoto-1199746550-612x612-1.jpeg" alt="" className="Fotofondo" />
+                <div className="Lab">
+                    <h1 className="gt pt-4">
+                        ¿Qué quieres comer hoy?
+                    </h1>
+                    <h1 className="gt1 pt-4">
+                    Alimentos frescos y saludables, siempre
+                    </h1>
+                </div>
+                
+            </div>
 
-      <div class="list-section">
-        <div class="left-section">
-          <section class="column-1">
-            <h1>Categorías</h1>
-            {ListaCategorias}
-          </section>
-        </div>
-        <div class="right-section">
-          <div class="list-cards">{ListaOfertas}</div>
-        </div>
-      </div>
+            <div class="list-section">
+                <div class="left-section">
+                    <section class="column-1">
+                        <h1 className="TituloCatHU1">Categorías</h1>
+                        {ListaCategorias}
+                    </section>
+                </div>
+                <div class="right-section">
+                    <div class="list-cards">
+                        {ListaOfertas}
+                    </div>
+                </div>
+            </div>
 
       <Pedido estado={modalPedido}>
         <div class="cont">

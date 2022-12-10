@@ -8,7 +8,7 @@ const Informacion = () => {
         <div>
         <div className="contenedor">
 
-            <img src="https://images.pexels.com/photos/1634062/pexels-photo-1634062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid opacity-50" />
+            <img src="https://images.pexels.com/photos/1634062/pexels-photo-1634062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid " />
             
         </div>
     </div>

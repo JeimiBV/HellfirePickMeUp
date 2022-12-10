@@ -4,20 +4,23 @@
     box-sizing: border-box;
 }
 
+
+
 .contenedor-cabecera {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    border-bottom: 3px solid rgb(47, 62, 70);
+    border-bottom: 3px solid rgb(47, 70, 61);
     background-color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: rgb(47, 62, 70);
     height: 10vh;
+    
 }
 
 .logo {
     
-    height: 10vh;
+   height: 9vh;
 
 }
 
@@ -27,7 +30,7 @@
     font-family: cursive;
     font-size: 26px;
     white-space: nowrap;
-    color: black;
+    color: white;
     margin-left: 38vw;
 }
 
@@ -50,7 +53,7 @@ ul li{
 }
 .botonL{
     
-    background: #84A98C;
+    background: color;
     color: white;
     border-radius: 7px;
     border: none;

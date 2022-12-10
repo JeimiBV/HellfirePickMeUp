@@ -18,12 +18,12 @@
 
 .listaSidebar .row:hover {
   cursor: pointer;
-  background-color: rgb(132, 169, 140);
+  background-color: rgb(92,60,44);
   font-style: bold;
 }
 
 .listaSidebar #active {
-  background-color: rgb(132, 169, 140);
+  background-color: rgb(92,60,44);
   font-weight: bold;
 }
 :root {

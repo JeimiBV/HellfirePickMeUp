@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=M+PLUS+1+Code&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Shadows+Into+Light&family=Shrikhand&family=Stint+Ultra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=M+PLUS+1+Code&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Stint+Ultra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=M+PLUS+1+Code&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Stint+Ultra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=Gruppo&family=M+PLUS+1+Code&family=Nanum+Gothic&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Stint+Ultra+Condensed&family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=Gruppo&family=M+PLUS+1+Code&family=Nanum+Gothic&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Signika+Negative:wght@300&family=Stint+Ultra+Condensed&family=Tangerine&display=swap');
 :root {
     --white: #fff;
     --black: #000;
@@ -7,11 +12,14 @@
     --litegreen: #62c08b;
     --dark: #242426;
     --gray: #5e6f77;
+    --cafe:#40251b;
 }
 
 .container89 {
     max-width: 100%;
-    height: 86.6vh;
+    height: 87.8vh;
+    overflow-y: scroll;
+    margin-top: 0.7%;
 }
 
 .title {
@@ -23,31 +31,62 @@
 }
 
 .gt {
+    font-family: 'Secular One';
+    color: #40251b;
+    font-size: 3em;
+    /* font-weight:  bolder; */
 
-    color: var(--white);
-    font-size: 1.6em;
+}
+.gt1 {
+    font-family: 'Bad Script';
+    color: black;
+    font-size: 3em;
+    /* font-weight:  bolder; */
+
+}
+.TituloCatHU1{
+    font-family: 'Bebas Neue';
+    text-align: center;
+    font-size: 41px;
+    color: #40251b
+}
+.Lab{
+    top: 23%;
+    margin-left: 23%;
+    position: absolute;
+    width: 800px;
+    height: 210px;
+    background-color: rgba(255, 255, 255, 0.532);
+    border-radius: 5px;
+    
 }
 
 /*STYLES FOR SHOP PAGE*/
 /*LIST*/
 a {
     text-decoration: none;
+    font-family: 'Nanum Gothic';
 }
 
 .default-hero-banner {
-    display: flex;
+    position: relative;
+    display: inline-block;
+    text-align: center;
     justify-content: center;
     width: 100%;
-    height: 100px;
-    background-image: url("https://i.ibb.co/DgRMWdv/default-bg.jpg");
+    height: 400px;
     background-size: cover;
     background-attachment: fixed;
-
 }
-
+.Fotofondo{
+    width: 100%;
+    height: 100%;
+}
 .nombreO {
     font-size: 5vh;
+    font-family: 'Signika Negative';
     text-transform: lowercase;
+    color: #40251b;
 }
 
 .nombreO::first-letter {
@@ -63,18 +102,23 @@ a {
 /*LIST SECTION*/
 .list-section {
     width: 100%;
-    height: 87%;
+    min-height: 87.6;
     display: flex;
     align-items: top;
-    overflow-y: scroll;
-    background-color: #CAD2C5;
+    background-color: #775341;
 
 }
 
 .list-section .left-section,
-.list-section .right-section {
+.list-section  {
     width: 100%;
     padding: 1em 1em;
+
+}
+.right-section{
+    width: 100%;
+    align-items: center;
+    margin-left: 5%;
 }
 
 .list-section .left-section {
@@ -83,10 +127,11 @@ a {
 
 .list-section .left-section .column-1,
 .list-section .left-section .column-2 {
-    width: 100%;
+    width: 120%;
     margin: auto;
     padding: 1em;
-    background-color: var(--darkgreen);
+    /* background: url("https://s.cornershopapp.com/product-images/4146740.jpg?versionId=Pd7K2Sj9JonXtPnE0bMuNjyzD_z4tX5t"); */
+    background-color: whitesmoke;
     margin-bottom: 10px;
     padding: 1em;
     border-radius: 0.625rem;
@@ -114,13 +159,12 @@ a {
 
 .list-section .left-section .column-1 a:hover,
 .list-section .left-section .column-2 a:hover {
-    color: var(--white);
+    color: var( --darkyellow);
 }
 
 .list-cards {
     width: 100%;
-    display: flex;
-    align-items: top;
+    display: flex; 
     flex-wrap: wrap;
 
 }
@@ -132,9 +176,11 @@ a {
     border-radius: 5px;
     overflow: hidden;
     padding: 0;
-    background-color: var(--white);
+    /* background: url("https://st3.depositphotos.com/2805411/15923/i/450/depositphotos_159231046-stock-photo-brown-leather-texture-background.jpg"); */
+    background-color: 	whitesmoke;
     display: flex;
     align-items: top;
+   
 }
 
 .list-cards .list-card:nth-child(1),
@@ -184,6 +230,7 @@ a {
     top: 0;
     padding: 1em 2em;
     transition: 0.5s;
+    word-wrap: break-word;
 }
 
 .list-category p {
@@ -195,15 +242,16 @@ a {
 }
 
 .imgMajo {
-    width: 200px;
+    width: 200px ;
     height: 100%;
+    
 }
 
 .boton-pedido {
     transition: .5s;
-    box-shadow: 2px 2px #70B475;
-    border: 2px solid #70B475;
-    color: #70B475;
+    box-shadow: 2px 2px #b6591c;;
+    border: 2px solid #b6591c;;
+    color: #b6591c;
     font-weight: bold;
     position: absolute;
     left: 11px;
@@ -212,11 +260,11 @@ a {
 }
 
 .boton-pedido:hover {
-    background-color: #70B475;
+    background-color: #dc7703;
     color: aliceblue;
     transition: .5s;
     box-shadow: 0px 0px;
-    border: 2px solid #70B475;
+    border: 2px solid #dc7703;
 
 }
 .contenedorHacerPedido{
