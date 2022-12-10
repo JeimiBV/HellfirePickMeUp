@@ -17,8 +17,7 @@
 .containerL{
     position: relative;
     width: 100%;
-    
-   
+    background: url("https://i.pinimg.com/564x/62/7d/68/627d681f93113289e83c1450c1667deb.jpg")   
 }
 .ofertasP{
     
@@ -50,14 +49,14 @@ html , body {
     height: 100%;
     align-items: center;
     justify-content: center;
-    background: url("https://i.pinimg.com/564x/62/7d/68/627d681f93113289e83c1450c1667deb.jpg")
-
+    
 }
 
 .cardSpace {
     transition: transform 300ms;
     padding-top: 60px;
     margin-left: 66px;
+    
 }
 
 .cardOfertados {
@@ -70,6 +69,7 @@ html , body {
     overflow: hidden;
     border-radius: 63px;
     background-color: #d3b398;
+    
   
 }
 

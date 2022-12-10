@@ -51,7 +51,7 @@ const ListaOfertas = ({usuario}) => {
 
         <>
 
-        <div className="container-fluid">
+        <div className="">
             <div className=" containerL p-2" >
                 <div className="ofertasTitulo ">
                     <h1 className="TituloListaO text-center mt-3 p-1" > Lista de ofertas </h1>
