@@ -1,17 +1,22 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+1+Code&family=Oswald:wght@300&family=Ramabhadra&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=Gruppo&family=M+PLUS+1+Code&family=Nanum+Gothic&family=Nunito:wght@200&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Signika+Negative:wght@300&family=Stint+Ultra+Condensed&family=Tangerine&display=swap');
 .containerG{
     position: relative;
     width: 100%;
     height: 87.6vh;
-    background-color: #CAD2C5;
+    background: url("https://cdn.pixabay.com/photo/2014/03/04/19/34/paper-279677_640.jpg");
     overflow-y: scroll;
    
 }
 .titleL{
     text-align:center;  
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: #40251b;
+    font-family: 'Ramabhadra';
+    width: 28%;
+    margin-left: 35%;
     font-size: 3rem;
     top: 20rem;
+    background-color: whitesmoke;
 }
 /** Start Section Body Part 1 **/
 
@@ -19,13 +24,11 @@
 {
     /* flex-wrap: nowrap; */
     
-    width: 95%;
-    margin-left: 2.5%;
+    width: 87%;
+    margin-left: 8%;
     /* display: grid; */
     grid-template-columns: repeat(auto-fit, minmax(20rem, 0fr));
-    gap: 5rem 0rem;
-    
-    
+    gap: 5rem 4rem;
 }
 
 .fda_food_row > .col-9
@@ -62,8 +65,9 @@
 
 .fda_food_row .food_tile.active
 {
-    background-color: #B4D3B2;   
-    height: 55vh;
+    background-color: #a06e5c;   
+    height: 60vh;
+    width: 35vh;
     position: relative;  
 }
 
@@ -97,9 +101,10 @@ div.food_tile.active img
 
 .food_name
 {
-    font-size: 3vh;
-    font-weight: bold;
-    color: rgba(38, 29, 86, 1);
+    font-size: 4vh;
+    font-family: 'Nunito';
+
+    color: whitesmoke;
     margin-bottom: 12px;
     text-transform: lowercase;
 }
@@ -108,7 +113,8 @@ div.food_tile.active img
 }
 .food_detail
 {
-    font-size: 13px;
+    word-wrap: break-word;
+    font-size: 14px;
     color: black;
     margin-bottom: 15px;   
 }
@@ -138,14 +144,13 @@ div.food_tile.active img
     float: left;
     width: 50%;
     margin-bottom: 25px;
-    font-size: 13px;
-    font-weight: bold;
-    color: rgba(38, 29, 86, 1);
+    font-size: 15px;
+    color: whitesmoke;
 }
 
 #food_meta li span
 {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     color: black;   
 }
@@ -160,8 +165,8 @@ div.food_tile.active img
     font-weight: 300;
     letter-spacing: 0.5px;
     background-color: transparent;
-    color: white;
-    background-color:#2f2c79ba;
+    color: #40251b;
+    background-color:whitesmoke;
     font-weight: bold;
     
 }
@@ -177,7 +182,8 @@ div.food_tile.active img
     position: absolute;
     /* posicion vertical */
     bottom:10px;
-    /* centrado horizontal */   
+    /* centrado horizontal */  
+    width: 80%;
 }
 .listas{
 
