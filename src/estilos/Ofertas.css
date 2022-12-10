@@ -127,7 +127,7 @@ html , body {
 
 .userInfo h5 {
 
-    height: 50px;
+    height: 70px;
     font-size: 1.5rem;
     margin-top: 0%;
     margin-bottom: 0%;
@@ -209,7 +209,6 @@ html , body {
 }
 
 .card-titleP{
-  
     font-weight: bold;
 }
 
@@ -219,10 +218,9 @@ html , body {
     border-radius: 53px;  
 }
 
-.letra{
-    text-align: center;
-    
-}
+
+
+
 
 .ofertasTitulo{
     background-color: #ffff;
