@@ -52,7 +52,7 @@ const VistaConsumidor = ({usuario}) => {
         
                 <>
                     <div className=" containerLargo">
-                        <h1 className="text-center mt-3" > ¡Busca un producto! </h1>
+                        <h1 className="tituloProducto text-center mt-3" > ¡Busca un producto! </h1>
         
                         <div className="buscador">
                             <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
@@ -68,9 +68,11 @@ const VistaConsumidor = ({usuario}) => {
                                     <div  className="row row-col" key={oferta.id}>
                                         <div class="card card-ofP  mb-2 bg-sucessPedido">
                                         <span class="Banner">
+                                        <span className="d-block">Hora límite:{oferta.Hora} </span>
+                                        <span className="d-block">Fecha límite: {oferta.Fecha} </span>   
                                         <h1 className="Descri">Descripción :</h1>
 
-                                                 <p>{oferta.Descripcion} </p>
+                                        <p className="DescripcionAd">{oferta.Descripcion} </p>
                                                                     </span>
                                                                     
                                             
@@ -80,11 +82,11 @@ const VistaConsumidor = ({usuario}) => {
                                             <div className="DisenioCard ">
                                             <div class="card-body card-letra ">
                                                 <h5 class="card-titleProducto text-center text-capitalize" >{oferta.Nombre}</h5>
-                                                <p className="">
+                                                <p className="precioAd">
                                             
                                                     <span > Precio: {oferta.Precio} bs.</span>
-                                                    <span className="d-block">Hora límite:{oferta.Hora} </span>
-                                                    <span className="d-block">Fecha límite: {oferta.Fecha} </span>
+                                                    
+                                                    
                                                     
                                                 </p>
                                               </div>

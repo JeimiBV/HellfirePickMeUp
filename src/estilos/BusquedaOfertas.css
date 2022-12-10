@@ -1,18 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
 .containerLargo{
     position: relative;
     width: 100%;
     height: 89.6vh;
     background-color: #CAD2C5;
     overflow-y: scroll;
-   
+    background: url("https://img.freepik.com/vector-premium/patron-transparente-vector-granos-cafe-fondo-pintado-sobre-tema-cafe_646455-94.jpg?w=740s")
 }
 
 .containerLargo > .buscador .inputBusc{
     width: 55%;
     margin-top: 1%;
     
+    
 }
+.tituloProducto{
 
+    color: rgb(61, 38, 18);
+    font-size: 330%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Cinzel';
+}
 
 
 .containerLargo > .buscador .bi{
@@ -43,36 +52,65 @@
 }
 
 .card-ofP:hover{
-    box-shadow: 5px 5px 5px 5px rgba(101, 148, 93, 0.308);
+    
     cursor: pointer;
     transform: translateY(-3%);
     
 }
 
 .Banner{
-        background-color:rgba(1,1,1,0.7);
-        display:block;
-        width:100%;
-        height:100%;
-        position:absolute;
-        top:0;
-        padding:3.5em 2em;
-        transition:0.5s;
-        color:var(--white);
-        border-radius: 8px;
-        margin-left: -5.5%;
-        transform : translateY(100% )
-    
-     
+    background-color:#eaccadf9;
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    padding:3.5em 2em;
+    transition:0.5s;
+    color:var(--white);
+    border-radius: 8px;
+    margin-left: -5.5%;
+    transform : translateY(100% )
+
+ 
 }
 
 .Descri{
     text-align: center;
     font-size: x-large;
     font-weight: bold;
+    color: #804000e1;;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
 
 }
 
+.DescripcionAd{
+    text-align: center;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+.precioAd >span{
+    text-align: center;
+
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    color: #804000b1;
+   
+    
+}
+
+.d-block{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+   
+
+}
 .card:hover .Banner{
     transform : translateY(0)
 
@@ -91,15 +129,21 @@
 
 
 .bg-sucessPedido{
-    background-color: #87b9813f;
+    background-color: #f5e1ceee;
    
 }
 
 
 
 .card-titleProducto{
-    
+    color: rgb(255, 255, 255);
     font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:x-large;
+    background-color: #804000cb;
+    
+    
 }
 
 .card-img-top{
@@ -107,7 +151,13 @@
   
 }
 
-.card{
+.card-ofP{
     overflow: hidden;
+    border-color: #804000e1;
+    
+    border-left-width: 4px;
+    border-bottom-width: 4px;
+  
+    border-radius: 10%;
 }
 
