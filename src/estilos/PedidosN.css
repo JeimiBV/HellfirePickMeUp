@@ -9,12 +9,13 @@
    
 }
 .titleL{
+    margin-top: 2%;
     text-align:center;  
     color: #40251b;
     font-family: 'Ramabhadra';
-    width: 28%;
+    width: 35%;
     margin-left: 35%;
-    font-size: 3rem;
+    font-size: 55px;
     top: 20rem;
     background-color: whitesmoke;
 }

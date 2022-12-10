@@ -34,21 +34,21 @@
     margin-left: 12%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 0fr));
-    gap: 4rem 2.5rem;
+    gap: 4rem 5rem;
     box-sizing: border-box; 
 }
 
 .image {
     position: relative;
-	width: 200px;
-	height: 235px;
+	width: 240px;
+	height: 275px;
 	background-color: white;
 }
 
 .image__img {
     display: block;
-    width: 200px;
-	height: 235px;
+    width: 240px;
+	height: 275px;
 	border: solid #835747;
 }
 
@@ -56,8 +56,8 @@
     position: absolute;
     top: 0;
     left: 0;
-	width: 200px;
-	height: 270px;
+	width: 240px;
+	height: 310px;
     background: rgba(0, 0, 0, 0.6);
     color: #ffffff;
     font-family: 'Quicksand', sans-serif;
@@ -150,13 +150,14 @@
 .botonHU1{
     position: absolute;
     /* posicion vertical */
-    bottom: 0.5px;
+      bottom: -33px;
+      left: 15%;
     /* centrado horizontal */  
 	
 }
 .original{
 	position: relative;
-	width: 200px;
+	width: 240px;
 	height: 270px;
     padding: 1em 1em;
 }
