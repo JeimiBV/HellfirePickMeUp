@@ -17,7 +17,7 @@
 .containerL{
     position: relative;
     width: 100%;
-    background: url("https://i.pinimg.com/564x/09/1d/b9/091db9692eee89d13034666ee7d36593.jpg")   
+    background: url("https://img.freepik.com/vector-premium/patron-transparente-vector-granos-cafe-fondo-pintado-sobre-tema-cafe_646455-94.jpg?w=740s")
 }
 .ofertasP{
     
@@ -67,7 +67,7 @@ html , body {
     bottom: 110%;
     overflow: hidden;
     border-radius: 63px;
-    background-color: #d3b398;
+    background-color: #dfbe9f;
     
   
 }
@@ -163,7 +163,7 @@ html , body {
 
 .cardSpace:hover .userInfo h2 {
 
-    text-shadow: 6px -15px 5.1px rgba(255,255,255,0.33);
+    text-shadow: 6px -15px 5.1px rgba(255, 255, 255, 0.295);
 
 }
 
@@ -223,12 +223,12 @@ html , body {
 
 
 .ofertasTitulo{
-    background-color: rgba(255, 255, 255, 0.692);
-    width: 35%;
-    margin-left: 35%;
+    background-color: #dcc3abf5;
+    width: 30%;
+    margin-left: 30%;
     margin-top: 1%;
     margin-bottom: 12px;
-    color: #40251b;
+    color: #371f16;
     font-family: 'Ramabhadra';
     
 }

@@ -6,7 +6,7 @@
     height: 89.6vh;
     background-color: #CAD2C5;
     overflow-y: scroll;
-    background: url("https://st3.depositphotos.com/3049107/16145/v/600/depositphotos_161454306-stock-illustration-hand-drawn-bakery-pattern.jpg")
+    background: url("https://img.freepik.com/vector-premium/patron-transparente-vector-granos-cafe-fondo-pintado-sobre-tema-cafe_646455-94.jpg?w=740s")
 }
 
 
@@ -39,7 +39,7 @@
     position: relative; 
     padding: 1rem 1rem ;
     flex-direction: column;
-    left: 9rem;
+    left: 11rem;
     top: 1rem;
     width: 85%;
     display: grid;
@@ -63,7 +63,7 @@
 }
 
 .Banner{
-    background-color:#eaccadf9;
+    background-color:#eaccad;
     display:block;
     width:100%;
     height:100%;
@@ -117,7 +117,7 @@
 }
 .d-block1{
     color: rgb(255, 255, 255);
-    margin-left: 6px;
+    margin-left: 7px;
     font-size:large;
     font-family: 'Times New Roman', Times, serif;
    
@@ -142,7 +142,7 @@
 
 
 .bg-sucessPedido{
-    background-color: #debc99;
+    background-color: #f1d4b7;
    
 }
 
