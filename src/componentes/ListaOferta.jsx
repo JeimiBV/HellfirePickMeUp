@@ -50,8 +50,8 @@ const ListaOfertas = ({usuario}) => {
     return (
 
         <>
-            <div className=" containerL">
-                <div className="ofertasTitulo p-2">
+            <div className=" containerL p-2">
+                <div className="ofertasTitulo ">
                     <h1 className="TituloListaO text-center mt-3 p-1" > Lista de ofertas </h1>
                 </div>
                 
