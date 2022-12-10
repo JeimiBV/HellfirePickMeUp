@@ -224,3 +224,9 @@ html , body {
     text-align: center;
     
 }
+
+.ofertasTitulo{
+    background-color: white;
+    width: 100vh;
+    align-items: center;
+}

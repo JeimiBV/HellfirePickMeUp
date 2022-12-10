@@ -51,7 +51,10 @@ const ListaOfertas = ({usuario}) => {
 
         <>
             <div className=" containerL">
-                <h1 className="TituloListaO text-center mt-3 p-1" > Lista de ofertas </h1>
+                <div className="ofertasTitulo p-2">
+                    <h1 className="TituloListaO text-center mt-3 p-1" > Lista de ofertas </h1>
+                </div>
+                
                 <div className="buscador">
                     <form class="d-flex justify-content-center " value={busqueda}  role="search" onChange={handleChange}>
                            <i class="bi bi-search px-3"></i>
