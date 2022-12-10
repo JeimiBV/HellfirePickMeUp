@@ -7,7 +7,7 @@ import Modals from "./Modals";
 import { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { Navigate, useNavigate } from "react-router-dom";
-import "../estilos/formularioInicio.css";
+import "../estilos/formularioIniConsum.css";
 
 function FormInicioSesion() {
   const [modalCorreo, setModalCorreo] = useState(false);
