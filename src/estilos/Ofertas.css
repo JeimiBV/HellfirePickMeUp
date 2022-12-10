@@ -17,7 +17,7 @@
 .containerL{
     position: relative;
     width: 100%;
-    background: url("https://i.pinimg.com/564x/62/7d/68/627d681f93113289e83c1450c1667deb.jpg")   
+    background: url("https://i.pinimg.com/564x/09/1d/b9/091db9692eee89d13034666ee7d36593.jpg")   
 }
 .ofertasP{
     
@@ -223,7 +223,7 @@ html , body {
 
 
 .ofertasTitulo{
-    background-color: #ffff;
+    background-color: rgba(255, 255, 255, 0.692);
     width: 35%;
     margin-left: 35%;
     margin-top: 1%;
