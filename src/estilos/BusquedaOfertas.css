@@ -112,6 +112,15 @@
    
 
 }
+.d-block1{
+    color: rgb(255, 255, 255);
+    margin-left: 6px;
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+   
+
+}
+
 .card:hover .Banner{
     transform : translateY(0)
 
