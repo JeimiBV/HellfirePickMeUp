@@ -18,12 +18,12 @@
 
 .listaSidebar .row:hover {
   cursor: pointer;
-  background-color: rgb(132, 169, 140);
+  background-color: #B05420;
   font-style: bold;
 }
 
 .listaSidebar #active {
-  background-color: rgb(132, 169, 140);
+  background-color: #B05420;
   font-weight: bold;
 }
 :root {
@@ -46,8 +46,7 @@
   color: white;
   font-size: 0.8em;
   height: 100vh;
-  font: 500 0.9375em/1.4 nunito, "Trebuchet MS", sans-serif;
-  
+  font: 500 0.9375em/1.4 nunito, "Signika Negative";
 }
 #side::before {
   position: fixed;

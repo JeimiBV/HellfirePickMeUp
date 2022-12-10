@@ -51,11 +51,11 @@ const ListaOfertas = ({usuario}) => {
 
         <>
             <div className=" containerL">
-                <h1 className="text-center mt-3" > Lista de ofertas </h1>
+                <h1 className="TituloListaO text-center mt-3" > Lista de ofertas </h1>
                 <div className="buscador">
                     <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
                            <i class="bi bi-search px-3"></i>
-                        <input class="form-control inputBusc me-2 px-4" type="search" placeholder=" Ingrese el nombre del producto ofertado..." aria-label="Search"  />              
+                        <input class="form-control inputBusc me-2 px-5" type="search" placeholder=" Ingrese el nombre del producto ofertado..." aria-label="Search"  />              
                     </form>
                 </div>
                 <div className="ofertasP">
@@ -63,21 +63,34 @@ const ListaOfertas = ({usuario}) => {
                     {ofertados != null ? (
                         ofertados.map(oferta => (
                             <div  className="row row-col" key={oferta.id}>
-                                <div class="card card-of border-success mb-2 bg-sucessP">
-
-                                    <img src={oferta.Imagen} class="card-img-top imagenOf mt-2 mr-2" alt="..." />
-
-                                    <div class="card-body card-letra ">
-                                        <h5 class="card-titleP text-center text-capitalize" >{oferta.Nombre}</h5>
-                                        <p className="">
-                                            <span > Precio: {oferta.Precio} bs.</span>
-                                            <span className="d-block"> Hora límite:{oferta.Hora} </span>
-                                            <span className="d-block">Fecha límite: {oferta.Fecha} </span>
-                                        </p>
-                                    </div>
+                                <div class="cardSpace">
+                                  <div class="cardBackground">
+                                  </div>
+                                   <div class="card cardOfertados">    
+                                    <div class="cardInside">
+                                        <div class="imgSpace">
+                                                <div >
+                                                    <img src={oferta.Imagen} className="cardOfertas " alt="..." />
+                                                </div>
+                                            </div>
+                                            <div class="userInfo">
+                                            <div class="card-body card-letra ">
+                                                    <h5 class="card-titleP text-center text-capitalize " >{oferta.Nombre}</h5>
+                                                    <p className="">
+                                                        <span > Precio: {oferta.Precio} bs.</span>
+                                                        <span className="d-block"> Hora límite:{oferta.Hora} </span>
+                                                        <span className="d-block">Fecha límite: {oferta.Fecha} </span>
+                                                    </p>
+                                                    </div>
+                                            </div>
+                                          </div>                                                                                                            
+                                     </div>  
                                 </div>
 
-                            </div>
+                               </div>
+
+
+                            
                         )
                         )
                     ) : ('no hay productos')}

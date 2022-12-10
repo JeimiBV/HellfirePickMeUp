@@ -1,4 +1,6 @@
 import React from 'react'
+import Slider from "./Slider"
+
 export const MensajesP = () => {
   return (
 
@@ -6,6 +8,7 @@ export const MensajesP = () => {
         <div class="text-center body-1 ">
           <div class="row body justify-content-center">
             <div class="col-sm-8 p-5" top="50" size={20}  >
+                  <div class="MensajesLPage">
                 <p>   
                   Nuestro sustento está íntimamente ligado a la comida que comemos 
                   y al agua que bebemos. 
@@ -20,6 +23,7 @@ export const MensajesP = () => {
                     <p> - Tecumseh.</p>
 
                 </div> 
+                </div>
 
                  <div class="col-sm-12 pt-4 mt-5 col-md-3">
 
@@ -27,27 +31,35 @@ export const MensajesP = () => {
                  </div>
                 </div>
 
+                <div>
+                  <Slider/>
+                </div>
+
             <div class="row body color-titulo">
                  <div class="col-sm p-5">
-                   <img className=""  src="https://previews.123rf.com/images/vectorv/vectorv1907/vectorv190706587/126254750-papelera-de-reciclaje-naranja-con-icono-de-s%C3%ADmbolo-de-reciclaje-aislado-sobre-fondo-blanco-icono-de-.jpg" width="90" height="90"/>
-                   <h3>
+                   <img className=""  src="https://st2.depositphotos.com/3589081/7944/v/950/depositphotos_79445402-stock-illustration-brown-recycle-logo-vector.jpg" width="90" height="90"/>
+                   <div class="MensajeLanding">
+                   <h1>
                      Usando la aplicación ayudas a reducir 
                      el desperdicio de comida
-                   </h3>
+                   </h1>
                  </div>
-
+                 </div>
                  <div class="col-sm p-5">
-                     <img className=""  src="https://cdn.icon-icons.com/icons2/217/PNG/512/user-orange_25327.png" width="90" height="90"/>
-                    <h3>
+                     <img className=""  src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-2-avatar-2754578_120514.png" width="90" height="90"/>
+                    <div class="MensajeLanding">
+                    <h1>
                     ¡Ya son 1000 usuarios que tienen la App!
-                    </h3>   
+                    </h1>   
+                    </div>
                     </div>
                     <div class="col-sm p-5">
-                     <img className=""  src="https://img.freepik.com/vector-premium/rebanada-redonda-naranja-vector-ilustracion-realista-aislada-sobre-fondo-blanco-predisenadas-icono-eps-naranja_335478-830.jpg?w=740" width="90" height="90"/>
-                     <h3>
+                     <img className=""  src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-house-icon-in-trendy-style-isolated-background-png-image_4826447.jpg" width="90" height="90"/>
+                     <div class="MensajeLanding">
+                     <h1>
                     ¡Tenemos variedad de ofertas para ti!
-                    </h3>   
-
+                    </h1>   
+                    </div>
                  </div> 
 
             </div>

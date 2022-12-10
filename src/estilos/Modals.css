@@ -39,6 +39,7 @@
 .cardM{
     min-width: 25vw;
     background-color: #f2f2f2;
+    color: var(--naranja-oscuro);
 }
 .transparent{
     display: none;
@@ -52,7 +53,6 @@
 .botonSN{
     position: absolute;
     bottom: 0px;
-<<<<<<< HEAD
     border-radius: 5%;
 }
 .botonSi{
@@ -60,15 +60,14 @@
     color: white;
     font: oblique bold 100% cursive;
     border-color: white;
+    border-bottom-left-radius: 20px;
 }
 .botonNo{
     background-color: #a65b4b;
     color: white;
     font: oblique bold 100% cursive;
     border-color: white;
-=======
-    background-color: var(--naranja);
->>>>>>> rediseñoJeimi
+    border-bottom-right-radius: 20px;
 }
 
 .ttmod{

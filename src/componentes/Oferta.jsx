@@ -151,29 +151,29 @@ function Mostraroferta({ usuario }) {
     </div>
   ));
 
-        </div>)
-
-    ))
-
-    const pr1 = categorias || []
-    console.log(`Pr1: ${pr1}`);
-    const ListaCategorias = pr1.map(categoria => (
-
-        <a href={`/Oferta/${categoria.id}`}>{categoria.Name}</a>
-
-    )
-    )
-    return (
-        <div className="container89">
-            <div class="default-hero-banner">
-                <h1 className="gt pt-4">
-                    Ofertas
-                </h1>
+  const pr1 = categorias || [];
+  console.log(`Pr1: ${pr1}`);
+  const ListaCategorias = pr1.map((categoria) => (
+    <a href={`/Oferta/${categoria.id}`}>{categoria.Name}</a>
+  ));
+  return (
+    <div className="container89">
+      <div class="default-hero-banner">
+                <img src="https://pbs.twimg.com/media/FhJUxarUoAA5TBJ?format=jpg&name=4096x4096" alt="" className="Fotofondo" />
+                <div className="Lab">
+                    <h1 className="gt pt-4">
+                        ¿Qué quieres comer hoy?
+                    </h1>
+                    <h1 className="gt1 pt-4">
+                    Alimentos frescos y saludables, siempre
+                    </h1>
+                </div>
+                
             </div>
 
             <div class="list-section">
                 <div class="left-section">
-                    <section class="column-1">
+                    <section class="column-1 h1Categoria">
                         <h1>Categorías</h1>
                         {ListaCategorias}
                     </section>
@@ -184,22 +184,32 @@ function Mostraroferta({ usuario }) {
                     </div>
                 </div>
             </div>
-            <Pedido estado={modalPedido}>
 
-                <div className="contenedor-pedidos ">
-                    <h2 className="label-2">{nombre}</h2>
-                    <form id="form-Pedido">
-                        <label htmlFor="notas">Notas para este producto</label>
-                        <div className="contenedor-input-pedido">
-                            <textarea type="text" id="notas" onChange={ev => validar(ev)} />
-                            <h3 className={notas.estado ? "validar" : "invisible"} >
-                                Se acepta un máximo de 100 caracteres
-                            </h3>
-                        </div>
-                        <label htmlFor="">
-                            Agregar
-                        </label>
-                        <div className=" contenedor-agregar">
+      <Pedido estado={modalPedido}>
+        <div class="cont">
+          <div class="form sign-in">
+            <h2 className="h2NombrePedido">Nombre producto</h2>
+            <label className="labelPedidoJ">
+              <div className="notasProducto">Notas para este producto</div>
+              <div className="contenedor-input-pedido">
+                <textarea className="textareaPedido" onChange={(ev) => validar(ev)} />
+                <h3 className={notas.estado ? "validar" : "invisible"}>
+                  Se acepta un máximo de 100 caracteres
+                </h3>
+              </div>
+              <label className="notasProducto">Agregar</label>
+              <div className=" contenedor-agregar">
+                <span className="  agregador ">
+                  <div className="boton-controlar-pedido" onClick={disminuir}>
+                    -
+                  </div>
+                  <div className="boton-controlar-pedido">{contador}</div>
+                  <div className="boton-controlar-pedido" onClick={sumar}>
+                    +
+                  </div>
+                </span>
+                <div className="sumador-precio p-2">Bs : {precio}</div>
+              </div>
 
               <div className="botones-pedido">
                 <button className="boton-conf submitPedido" onClick={mostrarRealPedido}>
