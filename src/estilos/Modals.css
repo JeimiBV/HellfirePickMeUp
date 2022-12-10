@@ -3,6 +3,13 @@
     margin: 0%;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+:root {
+    --white-color: #fff;
+    --greenish-color: #006d77;
+    --naranja: #dc7703;
+    --naranja-oscuro: #b6591c;
+  }
+
 
 .over{
     width: 100%;
@@ -21,7 +28,7 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,6 +52,7 @@
 .botonSN{
     position: absolute;
     bottom: 0px;
+<<<<<<< HEAD
     border-radius: 5%;
 }
 .botonSi{
@@ -58,6 +66,9 @@
     color: white;
     font: oblique bold 100% cursive;
     border-color: white;
+=======
+    background-color: var(--naranja);
+>>>>>>> rediseñoJeimi
 }
 
 .ttmod{

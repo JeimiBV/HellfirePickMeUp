@@ -1,12 +1,15 @@
 
 .contenedor-pedidos{
-    background-image: url("https://i.ibb.co/DgRMWdv/default-bg.jpg");
+    
+    background: linear-gradient( rgba(44, 43, 43, 0.7), rgba(67, 62, 62, 0.924)), url("https://img.freepik.com/foto-gratis/mesa-fondo_1404-8.jpg?w=1380&t=st=1670564090~exp=1670564690~hmac=a4c17e8cd901228228ea3ec1e930156b74c063b7650daf44dd8002fe695bc918") no-repeat center center / cover;
+  
     width: 40vw;
-    height: 55vh;
+    height: 60vh;
     padding: 2vh;
     border-radius: 20px;
-    color: white;
+    color: aliceblue;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    border: var(--naranja-oscuro) solid 7px;
 }
 #form-Pedido{
     display: flex;
@@ -18,7 +21,6 @@
 }
 .agregador{
     display: flex;
-   
     
 }
 .boton-controlar-pedido{
@@ -27,24 +29,29 @@
     height: 1.9rem;
     cursor: pointer;
     font-weight: bold;
+    border: var(--naranja-oscuro) 1px solid;
+
 }
 
 .boton-conf{
     padding: 0 2vw;
     margin-top: 2vh;
     transition: .5s;
-    border: 3px solid #70B475;
-    color: #2C2C2C;
+    border: 2px solid var(--naranja-oscuro);
     font-weight: bold;
-    
+    background-color: var(--naranja-oscuro);
+    color: #F4F4F4;
+    border-radius: 6px;
+    height: 3rem;
 }
 .boton-conf:hover{
-    background-color:#70B475;
+    background-color:var(--naranja);
+    border: 2px solid var(--naranja);
     color: aliceblue;
     transition: .5s;
 }
 .boton-controlar-pedido:hover{
-    background-color: #70B475;
+    background-color: var(--naranja-oscuro);
     color: aliceblue;
     font-weight: bold;
 }
@@ -57,28 +64,23 @@
     align-items: center;
 }
 .botones-pedido{
-    margin-top: 2vh;
+    margin-top: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    
 }
-#notas{
-    height: 10vh !important;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    width: 32vw;
-    resize: none;
-    background-color: aliceblue;
-    border: 3px solid #70B475;
-}
+
 .validar {
     font-size: small;
+
     color: red;
 }
 
 .contenedor-input-pedido{
-    height: 15vh;
-    margin-bottom: 2vh;
+    height: 12vh;
+    text-align: start;
+
 }
 
 @media (max-width:500px){
@@ -94,9 +96,7 @@
         margin-top: 5rem;
     }
 
-    #notas{
-        width: 83vw;
-    }
+
 
     .contenedor-agregar{
       width: 16rem;
