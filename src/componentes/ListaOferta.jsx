@@ -51,9 +51,9 @@ const ListaOfertas = ({usuario}) => {
 
         <>
             <div className=" containerL">
-                <h1 className="TituloListaO text-center mt-3" > Lista de ofertas </h1>
+                <h1 className="TituloListaO text-center mt-3 p-1" > Lista de ofertas </h1>
                 <div className="buscador">
-                    <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
+                    <form class="d-flex justify-content-center " value={busqueda}  role="search" onChange={handleChange}>
                            <i class="bi bi-search px-3"></i>
                         <input class="form-control inputBusc me-2 px-5" type="search" placeholder=" Ingrese el nombre del producto ofertado..." aria-label="Search"  />              
                     </form>

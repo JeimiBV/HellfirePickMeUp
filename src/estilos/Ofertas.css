@@ -17,16 +17,15 @@
 .containerL{
     position: relative;
     width: 100%;
-    height: 89.6vh;
     background-color: #e7bf8254 ;
-    overflow-y: scroll;
+
    
 }
 .ofertasP{
     position: relative; 
     padding: 1rem 2rem ;
     flex-direction: column;
-    left: 5rem;
+    left: 4rem;
     top: 1rem;
     width: 88%;
     display: grid;
@@ -57,7 +56,8 @@ html , body {
 
 .cardSpace {
     transition: transform 300ms;
-    margin: 66px;
+    padding-top: 33px;
+    margin-left: 66px;
 }
 
 .cardOfertados {
