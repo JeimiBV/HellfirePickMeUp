@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=M+PLUS+1+Code&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Stint+Ultra+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=Gruppo&family=M+PLUS+1+Code&family=Nanum+Gothic&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Stint+Ultra+Condensed&family=Tangerine&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=Gruppo&family=M+PLUS+1+Code&family=Nanum+Gothic&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Signika+Negative:wght@300&family=Stint+Ultra+Condensed&family=Tangerine&display=swap');
+
 :root {
     --white: #fff;
     --black: #000;
@@ -38,7 +39,7 @@
 
 }
 .gt1 {
-    font-family: 'Bad Script';
+    font-family: 'Parisienne';
     color: black;
     font-size: 3em;
     /* font-weight:  bolder; */
@@ -65,7 +66,8 @@
 /*LIST*/
 a {
     text-decoration: none;
-    font-family: 'Nanum Gothic';
+    font-family: 'Signika Negative';
+    font-size: 17px ;
 }
 
 .default-hero-banner {
@@ -93,6 +95,9 @@ a {
     text-transform: uppercase;
 }
 
+.h1Categoria{
+    font-family: 'Signika Negative' importan;
+}
 .default-hero-banner section {
     text-align: center;
     color: var(--white);
@@ -106,7 +111,6 @@ a {
     display: flex;
     align-items: top;
     background-color: #775341;
-
 }
 
 .list-section .left-section,
@@ -138,6 +142,7 @@ a {
     position: sticky;
     top: -15%;
     z-index: 0;
+    
 }
 
 .list-section .left-section .column-2 {
@@ -214,10 +219,12 @@ a {
 .list-cards .list-card section p {
     line-height: 1.4em;
     font-size: 0.8125em;
+    
 }
 
 .list-cards .list-card section .price {
     font-size: 1em;
+    font-family: 'Signika Negative';
 }
 
 .list-category {
@@ -256,15 +263,16 @@ a {
     position: absolute;
     left: 11px;
     bottom: 10px;
+    font-family: 'Signika Negative';
     
 }
 
 .boton-pedido:hover {
-    background-color: #dc7703;
+    background-color: #b6591c;
     color: aliceblue;
     transition: .5s;
     box-shadow: 0px 0px;
-    border: 2px solid #dc7703;
+    border: 2px solid #b6591c;
 
 }
 .contenedorHacerPedido{
@@ -297,7 +305,6 @@ a {
     .list-section .left-section .column-1 a:after,
     .list-section .left-section .column-2 a:after {
         content: "";
-        font-family: "FontAwesome";
         display: inline-block;
         margin: 0 0.625em;
     }
@@ -345,7 +352,6 @@ a {
     border: none;
     outline: none;
     background: none;
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   }
   
   .tip {
@@ -371,6 +377,7 @@ a {
     height: 100%;
     transition: transform 1.2s ease-in-out;
     padding: 50px 30px 0;
+    font-family: 'Signika Negative';
   }
   
   .sub-cont {
@@ -394,6 +401,7 @@ a {
     color: #fff;
     font-size: 15px;
     cursor: pointer;
+    font-family: 'Signika Negative';
   }
   
   .imgPedido {
@@ -408,12 +416,14 @@ a {
     background: url("https://img.freepik.com/foto-gratis/joven-bastante-seria-cabello-rizado-lee-mensaje-ingresos-telefono-inteligente-moderno-que-encuentra-contexto-urbano-escucha-musica-traves-auriculares-busca-ubicacion-traves-aplicacion-telefonica_273609-62246.jpg?w=2000") no-repeat center / cover;   
     }
     
+    
     .h2NombrePedido {
     width: 100%;
     font-size: 26px;
     text-align: center;
     color: #b6591c;
     font-weight: bold;
+    font-family: 'Signika Negative';
   }
   
   .labelPedidoJ {
@@ -421,6 +431,7 @@ a {
     width: 80%;
     margin: 25px auto 0;
     text-align: center;
+    
   }
   .notasProducto {
     font-size: 15px;
@@ -460,6 +471,7 @@ a {
     background: rgba(182, 89, 28,0.4);
     height: 12rem;
     padding: 3rem 2px;
+    font-family: 'Signika Negative';
   }
 
 

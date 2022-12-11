@@ -159,7 +159,7 @@ function Mostraroferta({ usuario }) {
   return (
     <div className="container89">
       <div class="default-hero-banner">
-                <img src="https://d2m1kqghccc19k.cloudfront.net/wp-content/uploads/2022/01/31185210/istockphoto-1199746550-612x612-1.jpeg" alt="" className="Fotofondo" />
+                <img src="https://pbs.twimg.com/media/FhJUxarUoAA5TBJ?format=jpg&name=4096x4096" alt="" className="Fotofondo" />
                 <div className="Lab">
                     <h1 className="gt pt-4">
                         ¿Qué quieres comer hoy?
@@ -173,8 +173,8 @@ function Mostraroferta({ usuario }) {
 
             <div class="list-section">
                 <div class="left-section">
-                    <section class="column-1">
-                        <h1 className="TituloCatHU1">Categorías</h1>
+                    <section class="column-1 h1Categoria">
+                        <h1>Categorías</h1>
                         {ListaCategorias}
                     </section>
                 </div>

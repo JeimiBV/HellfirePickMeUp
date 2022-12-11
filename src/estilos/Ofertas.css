@@ -18,7 +18,7 @@
     position: relative;
     width: 100%;
     height: 89.6vh;
-    background-color: #e7bf8254 ;
+    background:url("https://images2.alphacoders.com/102/1028530.jpg") ;
     overflow-y: scroll;
    
 }
@@ -40,10 +40,16 @@
     width: 60%;
 }
 .TituloListaO{
-    color: rgb(61, 38, 18);
-    font-size: 330%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-family: 'Cinzel';
+    margin-top: 2%;
+    text-align:center;  
+    color: #f4f4f4;
+    font-family: 'Ramabhadra';
+    width: 35%;
+    margin-left: 35%;
+    font-size: 55px;
+    top: 20rem;
+    
+    
 }
 
 html , body {

@@ -235,7 +235,7 @@ function Form({ usuario }) {
     setModalSi(true);
     console.log("datos enviados");
 
-    document.getElementById("formProducto").reset();
+    document.getElementById("survey-form").reset();
     setModalConf(false);
     setModalSi(true);
     setNombre((prevState) => ({ ...prevState, valor: "", check: false }));

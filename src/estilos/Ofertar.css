@@ -21,36 +21,41 @@ a{color:inherit;text-decoration:none}
 	background:rgba(89,56,44,.5);
     border-radius: 5%;
 }
+::placeholder{
+    color: #59382C;
+}
 
 .login-form .sign-in,
 .login-form .sign-up,
 .login-form .group .check{
 	display:none;
+
 }
 
 .login-form .group .campo{
-	text-transform:uppercase;
     color:white;
-    font: oblique bold 250% Comic Sans MS;
+    font-family: 'Signika Negative';
 }
 .login-form .tab{
     position: relative;
-    text-transform:uppercase;
     text-align: center;
     color: #bf4417;
     background-color: #F2F2F2;
     width: 136%;
     left: -33%;
-    font: oblique bold 250% Comic Sans MS;
+    font-family: 'Signika Negative';;
 }
 
 .tituloPedido .tab{
-	font-size:22px;
+	font-size:28px;
 	margin-right:15px;
 	padding-bottom:5px;
 	margin:0 15px 10px 0;
 	display:inline-block;
 	border-bottom:2px solid transparent;
+    font-family: 'Signika Negative';
+    text-align: center;
+
 }
 
 .tituloPedido{
@@ -71,16 +76,19 @@ a{color:inherit;text-decoration:none}
 	width:100%;
 	color:#59382c;
 	display:block;
-    font: oblique bold 90% cursive;
+    font-family: 'Signika Negative';
 
 }
 
+.input ::placeholder{
+    color:#2c5942;
+}
 .login-form .group .input,
 .login-form .group .buttonConfirmar,
 .login-form .group .buttonCancelar{
 	border:none;
 	padding:15px 20px;
-	border-radius:25px;
+	border-radius:6px;
 	background:rgba(242,242,242,.5);
 }
 .login-form .group input[data-type="password"]{
@@ -90,7 +98,8 @@ a{color:inherit;text-decoration:none}
     width:100%;
 	color:white;
     display:block;
-    font: oblique bold 100% cursive;
+    font-family: 'Signika Negative';
+    height: 5rem;
 }
 
 .login-form .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
@@ -117,8 +126,9 @@ a{color:inherit;text-decoration:none}
     cursor: pointer;
     border-radius: 1rem;
     color: #F2F2F2;
-    font: oblique bold 110% cursive;
+    font-family: 'Signika Negative';
     border-color: #F2F2F2;
+    
 }
 .botonL-1:hover{
     background-color: #59382C;
@@ -139,7 +149,7 @@ a{color:inherit;text-decoration:none}
     border-radius: 1rem;
     border-color: #F2F2F2;
     color: #F2F2F2;
-    font: oblique bold 110% cursive;
+    font-family: 'Signika Negative';
 }
 .botonR-1:hover{
     background-color: #59382C;
@@ -150,15 +160,17 @@ a{color:inherit;text-decoration:none}
 
 .contenedor-botones{
     display:inline-flex;
-    justify-content: center;
+    /*justify-content: center;*/
     flex-direction: row;
+    align-items: center;
+    margin: -5rem
 }
 .validacion-1{
     margin-left: 9.3%;
     font-size: small;
     color: red;
     height: 3hv;
-    font: oblique bold 70% cursive;
+    font-family: 'Signika Negative';
 }
 .transparent-1{
     display: none;
@@ -166,5 +178,5 @@ a{color:inherit;text-decoration:none}
 .mod{
     background-color: #59382c;
     color: #a65b4b;
-    font: oblique bold 100% cursive;
+    font-family: 'Signika Negative';
 }

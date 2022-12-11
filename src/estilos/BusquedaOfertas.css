@@ -6,7 +6,7 @@
     height: 89.6vh;
     background-color: #CAD2C5;
     overflow-y: scroll;
-    background: url("https://img.freepik.com/vector-premium/patron-transparente-vector-granos-cafe-fondo-pintado-sobre-tema-cafe_646455-94.jpg?w=740s")
+    background: url("https://img.freepik.com/fotos-premium/superficie-grunge-papel-marron-viejo-textura-color-cafe-liquido-abstracto_51524-10679.jpg?w=2000")
 }
 
 .containerLargo > .buscador .inputBusc{
@@ -159,4 +159,28 @@
   
     border-radius: 10%;
 }
+
+.title16{
+    text-align:center;  
+    font-family: 'Bebas Neue';
+    color: whitesmoke;
+    font-size: 4rem;
+    padding-top: 1.9%;
+    
+    
+  }
+  .title16::after, .title16::before{
+       content: "";
+       position: absolute;
+       width: 430px;
+       height: 5px;
+       background-color: white;
+       margin-top: 2%;
+  }
+  .title16::before{
+       left: 70px;
+  }
+  .title16::after{
+      right: 100px;
+  }
 

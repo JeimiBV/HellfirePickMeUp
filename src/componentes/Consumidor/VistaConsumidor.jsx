@@ -47,12 +47,13 @@ const VistaConsumidor = ({usuario}) => {
                 });
                 setProductos(resultadosBusqueda);
               }  
+              //<h1 className="tituloProducto text-center mt-3" > ¡Busca un producto! </h1>
             
             return (
         
                 <>
                     <div className=" containerLargo">
-                        <h1 className="tituloProducto text-center mt-3" > ¡Busca un producto! </h1>
+                    <h5 className="title16"> ¡Busca un producto! </h5>
         
                         <div className="buscador">
                             <form class="d-flex justify-content-center" value={busqueda}  role="search" onChange={handleChange}>
@@ -65,8 +66,8 @@ const VistaConsumidor = ({usuario}) => {
                         
                             { 
                                 ofertados.map(oferta => (
-                                    <div  className="row row-col" key={oferta.id}>
-                                        <div class="card card-ofP  mb-2 bg-sucessPedido">
+                                    <div  className="row row-col" onClick={ ()=>{console.log("clickeado") }} key={oferta.id}>
+                                        <div  class="card card-ofP  mb-2 bg-sucessPedido">
                                         <span class="Banner">
                                         <span className="d-block">Hora límite:{oferta.Hora} </span>
                                         <span className="d-block">Fecha límite: {oferta.Fecha} </span>   

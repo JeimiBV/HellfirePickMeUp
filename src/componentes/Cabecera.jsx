@@ -7,7 +7,7 @@ import { useState } from "react";
 
 function Header() {
   const { user, logout } = useAuth();
- 
+
   const handleLogout = async () => {
     try {
       await logout();
@@ -26,42 +26,42 @@ function Header() {
               </Link>    
           </div>         
         </div>
-          
-              
-            
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-          </button>
-      
+        </button>
 
-      <div className="collapse navbar-collapse mx-3 justify-content-end " id="navbarTogglerDemo02">
-      <div className="d-flex justify-content-right">
-      {!user &&
-          <ul className="navbar-nav gap-5 ms-auto mx-3 justify-content-end">
-            <li className="nav nav-pills flex-column flex-sm-row">
-              <Link 
-                className="flex-sm-fill text-sm-center nav-link active "
-                to="/loginN"
-              >
-                <i className="bi bi-shop "> </i> Negocio
-              </Link>
-            </li>
-            <li className="nav nav-pills flex-column flex-sm-row ">
-              <Link 
-                className="flex-sm-fill text-sm-center nav-link active "
-                to="/loginC"
-              >
-                <i className="bi bi-person"></i> Consumidor
-              </Link>
-            </li>
 
-          </ul>
-        }
-        
-        </div>
-        
-        <div className="d-flex justify-content">
+        <div className="collapse navbar-collapse mx-3 justify-content-end " id="navbarTogglerDemo02">
+          <div className="d-flex justify-content-right">
+            {!user &&
+              <ul className="navbar-nav gap-5 ms-auto mx-3 justify-content-end">
+                <li className="nav nav-pills flex-column flex-sm-row">
+                  <Link
+                    className="flex-sm-fill text-sm-center nav-link active "
+                    to="/loginN"
+                  >
+                    <i className="bi bi-shop "> </i> Negocio
+                  </Link>
+                </li>
+                <li className="nav nav-pills flex-column flex-sm-row ">
+                  <Link
+                    className="flex-sm-fill text-sm-center nav-link active "
+                    to="/loginC"
+                  >
+                    <i className="bi bi-person"></i> Consumidor
+                  </Link>
+                </li>
+
+              </ul>
+            }
+
+          </div>
+
+          <div className="d-flex justify-content">
 
         
       {user && 

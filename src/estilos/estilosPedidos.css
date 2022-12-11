@@ -52,7 +52,7 @@ background: url("https://img.freepik.com/fotos-premium/superficie-grunge-papel-m
     font-size: 78%;
     padding-block: 0.5%;
     font-weight: bold;
-   
+    font-family: 'Signika Negative';
     
 }
 
@@ -71,7 +71,7 @@ background: url("https://img.freepik.com/fotos-premium/superficie-grunge-papel-m
 .tituloAnd{
     text-align:center;  
     font-family: 'Bebas Neue';
-    color: #40251b;
+    color: #ffffff;
     font-size: 4rem;
     padding-top: 1.9%;
     
@@ -93,6 +93,10 @@ background: url("https://img.freepik.com/fotos-premium/superficie-grunge-papel-m
       right: 180px;
   }
 
+  .infPedido{
+    font-family: 'Signika Negative';
+  }
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
 
 .body {
@@ -105,7 +109,7 @@ background: url("https://img.freepik.com/fotos-premium/superficie-grunge-papel-m
     border-radius: 25px;
     border: 1px solid lavender;
     margin: 10px;
-    box-shadow: 5px 5px 15px 5px rgba(230, 230, 250, 1);
+    box-shadow: 5px 5px 15px 5px #40251B;
    background-color: #f2f2f2;
 
 

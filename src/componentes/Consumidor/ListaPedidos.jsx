@@ -116,10 +116,10 @@ const ListaPedidos = ({ usuario }) => {
 
                                  <div className=" face back" >
                                     <p className="" >
-                                       <span > Precio: {pedidosC.PrecioUnitario} bs.</span>
-                                       <span className="d-block"> Hora límite:{pedidosC.Hora} </span>
-                                       <span className="d-block">Fecha límite: {pedidosC.FechaLimite} </span>
-                                       <span className="d-block">Cantidad: {pedidosC.Cantidad} </span>
+                                       <span className="d-block infPedido" > Precio: {pedidosC.PrecioUnitario} bs.</span>
+                                       <span className="d-block infPedido"> Hora límite:{pedidosC.Hora} </span>
+                                       <span className="d-block infPedido">Fecha límite: {pedidosC.FechaLimite} </span>
+                                       <span className="d-block infPedido">Cantidad: {pedidosC.Cantidad} </span>
                                     </p>                                   
                                  </div>
                                 

@@ -7,7 +7,7 @@ import Modals from "./Modals";
 import { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { Navigate, useNavigate } from "react-router-dom";
-import "../estilos/formularioIniConsum.css";
+import "../estilos/formularioInicio.css";
 
 function FormInicioSesion() {
   const [modalCorreo, setModalCorreo] = useState(false);
@@ -91,10 +91,10 @@ function FormInicioSesion() {
   };
 
   return (
-    <div class="w-100 h-100">
+    <div class="w-100 h-100 contenedorInicioDeS">
       <div id="wrapper">
         <div id="right">
-          <div id="showcase">
+          <div id="showcaseConsumidor">
             <div class="showcase-content">
               <h1 class="showcase-text">
                 Detener La Pérdida Y
@@ -119,7 +119,7 @@ function FormInicioSesion() {
             </div>
             <form>
               <div class="mt-5">
-                <label>Correo electrónico</label>
+                <label className="labelCorreo">Correo electrónico</label>
                 <input
                   type="text"
                   class="text-input w-100"
@@ -129,7 +129,7 @@ function FormInicioSesion() {
               </div>
 
               <div class="mb-3">
-                <label>Contraseña</label>
+                <label className="labelCorreo">Contraseña</label>
                 <div class="input-group contraseñaVisible w-100">
                   <input
                     onChange={handlechange}
