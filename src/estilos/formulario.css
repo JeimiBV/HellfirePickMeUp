@@ -1,196 +1,371 @@
-*{ 
-    margin-left: 0%;
-    padding: 0%;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-}
-.contenedorF{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    background-color: #CAD2C5;
-    position: relative;
-    height: 90vh;
-    
-}
-.elementos-form{
-    max-width: 100%;
-    max-height: 70%;
-    padding: 30px ;
-    border: 2px solid black;
-    display: flex;
-    flex-direction: column;
-    background-color: azure;
-    border-radius: 20px; 
-    justify-content: center;   
-}
-#formProducto{
-    display: flex;
-    flex-direction: column;
-}
-.label{ 
-    padding-top: .5%;
-    padding-bottom: 0.3%;
-    padding-left: 1.5%;
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-
-}
-.botonA{
-    height: 30px;
-    margin-left: 1.5%;
-    max-width: 100%;
-    min-width: 20%;
-    text-align: left;
-    padding-left: 0;
-    
-}
-.botonR{
-    height: 40px;
-    margin-left: 1.5%;
-    min-width: 10%;
-    margin: 2% auto;
-    background-color: gray;
-    cursor: pointer;
-
-
-}
-.botonR:hover{
-    background-color: darkslategray;
-    color: azure;
-    transition: .5s;
-}
-.entrada{
-    background-color: white;
-    height: 30px ;
-    margin-left: 1.5%; 
-    margin-right: 3.5%;
-    padding-left: 2%;
-    width: 45vw;
-    position: relative;
-    left: -15px;
-    
-}
-.drop{
-    background-color: white;
-    height: 30px ;
-    margin-left: 1.5%;
-    margin-right: 3.5%; 
-    padding-left: 2%;
-    width: 45vw;
-    position: relative;
-    left: -15px;
-}
-.mensaje{
-    width: 20vw;
-}
-.validacion{
-    margin-left: 2%;
-    font-size: small;
-    color: red;
-}
-.invisible{
-    margin-left: 2%;
-    font-size: small;
-    display: none;
-    
+* {
+  margin-left: 0%;
+  padding: 0%;
+  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
-.botones{
-    width: 100%;
-    height: 15%;
-}
-.botones button{
-    width: 50%;
-    height: 100%;
-    padding: .2vh;
-    cursor: pointer;
-}
-.left{
-    border-bottom-left-radius: 20px;
-   
-  
-}
-.right{
-    border-bottom-right-radius: 20px;
-}
-.texto-confirmacion{
-    width: 70%;
-    text-align: center;
-}
-.transparent{
-    display: none;
-}
-.modalSiNo{
-    padding-top: .3vh;
-    border: 0ch;
-    position: absolute;
-    background-color: darkslategray;
-    max-width: 20vw;
-    max-height: 25vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 20px;
-    color: white;
-    
-}
-.icono{
-    display: flex;
-    width: 100%;
-}
-.fa-circle-check{
-    height: 2vh;
-    width: 12px;
-    color: rgb(126, 197, 126);
-}
-.imagenes-label{
-    position: relative;
-    left: 15px;
-    font-weight: bold;
-}
-.contenedor-input{
-    height: 7vh;
-}
-.titulo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight:bold;
-    font-size: 2.5rem;
+.contenedorF {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  height: 90vh;
+  background-image:
+    url("https://images2.alphacoders.com/102/1028530.jpg");
+
 }
 
-@media(max-width: 912px){
-    .titulo{
-        margin-top: 1.5rem;
-        font-size: 2.4rem;
-    }
-    .validacion{
-        
-        font-size: 12px;
-        
-    }
+.elementos-form {
+  max-width: 100%;
+  max-height: 70%;
+  padding: 30px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  background-color: azure;
+  border-radius: 20px;
+  justify-content: center;
 }
 
+#formProducto {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  padding-top: 0.5%;
+  padding-bottom: 0.3%;
+  padding-left: 1.5%;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.botonA {
+  height: 30px;
+  max-width: 100%;
+  min-width: 20%;
+  text-align: left;
+  padding-left: 0;
+  border: none;
+}
+
+.botonR {
+  height: 40px;
+  margin-left: 1.5%;
+  min-width: 10%;
+  margin: 2% auto;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.botonR:hover {
+  background-color: darkslategray;
+  color: azure;
+  transition: 0.5s;
+}
+
+.entrada {
+  background-color: white;
+  height: 30px;
+  margin-left: 1.5%;
+  margin-right: 3.5%;
+  padding-left: 2%;
+
+  position: relative;
+  left: -15px;
+}
+
+.selectProducto {
+  background-color: white;
+  height: 30px;
+  margin-left: 1.5%;
+  margin-right: 3.5%;
+  padding-left: 2%;
+  position: relative;
+  left: -15px;
+}
+
+.mensaje {
+  width: 20vw;
+}
+
+.validacion {
+  margin-left: 2%;
+  font-size: small;
+  color: red;
+}
+
+.invisible {
+  margin-left: 2%;
+  font-size: small;
+  display: none;
+}
+
+.botones {
+  width: 100%;
+  height: 15%;
+}
+
+.botones button {
+  width: 50%;
+  height: 100%;
+  padding: 0.2vh;
+  cursor: pointer;
+  background-color: var(--naranja-oscuro);
+  color: var(--white-color);
+}
+
+.botones button:hover {
+  background-color: var(--naranja);
+
+}
+
+.left {
+  border-bottom-left-radius: 20px;
+  border: 2px solid #fff;
+}
+
+.right {
+  border-bottom-right-radius: 20px;
+  border: 2px solid #fff;
+}
+
+.texto-confirmacion {
+  width: 70%;
+  text-align: center;
+}
+
+.transparent {
+  display: none;
+}
+
+.modalSiNo {
+  padding-top: 0.3vh;
+  border: 0ch;
+  position: absolute;
+  background-color: darkslategray;
+  max-width: 20vw;
+  max-height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  color: white;
+}
+
+.icono {
+  display: flex;
+  width: 100%;
+}
+
+.fa-circle-check {
+  height: 2vh;
+  width: 12px;
+  color: rgb(126, 197, 126);
+}
+
+.imagenes-label {
+  position: relative;
+  left: 15px;
+  font-weight: bold;
+}
+
+.contenedor-input {
+  height: 7vh;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.contenedorDeContenedor {
+
+  background-color: var(--white-color);
+  height: 500px;
+  border-radius: 10px;
 
 
+}
 
-@media(max-width: 280px){
-    .elementos-form{
-        font-size: 13px;  
-    }
-    .titulo{
-        margin-top: 4.5rem;
-        font-size: 1.5rem;
-    }
-    .validacion{
-        
-        font-size: 9px;
-        
-    }
-    
+@media (max-width: 912px) {
+  .titulo {
+    margin-top: 1.5rem;
+    font-size: 2.4rem;
   }
+
+  .validacion {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 280px) {
+  .elementos-form {
+    font-size: 13px;
+  }
+
+  .titulo {
+    margin-top: 4.5rem;
+    font-size: 1.5rem;
+  }
+
+  .validacion {
+    font-size: 9px;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+:root {
+  --white-color: #fff;
+  --greenish-color: #006d77;
+  --naranja: #dc7703;
+  --naranja-oscuro: #b6591c;
+}
+
+:focus:first-child {
+  border-color: var(--naranja);
+  box-shadow: 0 0 0 0.1rem rgba(182, 89, 28, 0.25);
+  transition: 0.2s linear;
+}
+
+::placeholder {
+  font-size: 15px;
+  font-family: inherit;
+  color: rgb(189, 185, 185);
+  font-family: 'Signika Negative';
+}
+
+#title {
+  width: 50%;
+  margin-top: 2%;
+  margin-left: 26%;
+  color: #ffff;
+  font-family: 'Ramabhadra';
+  font-size: 55px;
+  text-align: center;
+
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: 'Signika Negative';
+}
+
+.optional {
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.form-option {
+  height: 5rem;
+}
+
+.form-option:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.containerForm {
+  width: 70%;
+  margin: 0px auto;
+}
+
+.containerForm form {
+  padding: 30px;
+  background: var(--white-color);
+  border-radius: 6px;
+}
+
+input,
+select {
+  width: 92%;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3.5px 2px;
+  font-size: 15px;
+  font-family: inherit;
+  -webkit-accent-color: var(--naranja);
+  -moz-accent-color: var(--naranja);
+  accent-color: var(--naranja);
+  font-family: 'Signika Negative';
+}
+
+select option {
+  font-family: 'Signika Negative';
+}
+
+.submit {
+  width: 94.5%;
+  display: block;
+  background: var(--naranja-oscuro);
+  color: var(--white-color);
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: background-color 0.2s linear;
+  margin-top: 0px;
+  text-align: center;
+  margin-left: 1.8rem;
+  font-weight: bold;
+
+}
+
+.submit::placeholder {
+  color: var(--white-color);
+}
+
+.submit:hover {
+  background: var(--naranja);
+}
+
+.porDefecto {
+  background: var(--naranja-oscuro);
+  font-size: 15px;
+}
+
+@media (max-width: 991px) {
+  .containerForm {
+    width: 88%;
+  }
+}
+
+@media (max-width: 667px) {
+  .containerForm {
+    width: 100%;
+  }
+
+  .containerForm header h1 {
+    font-size: 26px;
+  }
+
+  .containerForm form {
+    padding: 15px;
+  }
+}

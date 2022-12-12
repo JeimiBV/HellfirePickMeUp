@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=M+PLUS+1+Code&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Stint+Ultra+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=Gruppo&family=M+PLUS+1+Code&family=Nanum+Gothic&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Stint+Ultra+Condensed&family=Tangerine&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alex+Brush&family=Amatic+SC&family=Arima+Madurai:wght@200&family=Bad+Script&family=Bebas+Neue&family=Black+Han+Sans&family=Cookie&family=Corinthia:wght@400;700&family=Gruppo&family=M+PLUS+1+Code&family=Nanum+Gothic&family=Oswald:wght@300&family=Parisienne&family=Ramabhadra&family=Rubik+Mono+One&family=Secular+One&family=Shadows+Into+Light&family=Shrikhand&family=Signika+Negative:wght@300&family=Stint+Ultra+Condensed&family=Tangerine&display=swap');
+
 :root {
     --white: #fff;
     --black: #000;
@@ -38,7 +39,7 @@
 
 }
 .gt1 {
-    font-family: 'Bad Script';
+    font-family: 'Parisienne';
     color: black;
     font-size: 3em;
     /* font-weight:  bolder; */
@@ -65,7 +66,8 @@
 /*LIST*/
 a {
     text-decoration: none;
-    font-family: 'Nanum Gothic';
+    font-family: 'Signika Negative';
+    font-size: 17px ;
 }
 
 .default-hero-banner {
@@ -93,6 +95,9 @@ a {
     text-transform: uppercase;
 }
 
+.h1Categoria{
+    font-family: 'Signika Negative' importan;
+}
 .default-hero-banner section {
     text-align: center;
     color: var(--white);
@@ -106,7 +111,6 @@ a {
     display: flex;
     align-items: top;
     background-color: #775341;
-
 }
 
 .list-section .left-section,
@@ -139,6 +143,7 @@ a {
     position: sticky;
     top: -15%;
     z-index: 0;
+    
 }
 
 .list-section .left-section .column-2 {
@@ -215,10 +220,12 @@ a {
 .list-cards .list-card section p {
     line-height: 1.4em;
     font-size: 0.8125em;
+    
 }
 
 .list-cards .list-card section .price {
     font-size: 1em;
+    font-family: 'Signika Negative';
 }
 
 .list-category {
@@ -243,27 +250,30 @@ a {
 }
 
 .imgMajo {
-    width: 200px;
+    width: 200px ;
     height: 100%;
+    
 }
 
 .boton-pedido {
     transition: .5s;
-    box-shadow: 2px 2px #70B475;
-    border: 2px solid #70B475;
-    color: #70B475;
+    box-shadow: 2px 2px #b6591c;;
+    border: 2px solid #b6591c;;
+    color: #b6591c;
     font-weight: bold;
     position: absolute;
     left: 11px;
     bottom: 10px;
+    font-family: 'Signika Negative';
+    
 }
 
 .boton-pedido:hover {
-    background-color: #70B475;
+    background-color: #b6591c;
     color: aliceblue;
     transition: .5s;
     box-shadow: 0px 0px;
-    border: 2px solid #70B475;
+    border: 2px solid #b6591c;
 
 }
 .contenedorHacerPedido{
@@ -273,6 +283,7 @@ a {
     justify-content: center;
     
 }
+
 .jeimi{
     position: relative;
 }
@@ -330,7 +341,6 @@ a {
     .list-section .left-section .column-1 a:after,
     .list-section .left-section .column-2 a:after {
         content: "";
-        font-family: "FontAwesome";
         display: inline-block;
         margin: 0 0.625em;
     }
@@ -419,3 +429,149 @@ a {
     }
 
 }
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  textarea, .buttonPedido {
+    border: none;
+    outline: none;
+    background: none;
+  }
+  
+  .tip {
+    font-size: 20px;
+    margin: 40px auto 50px;
+    text-align: center;
+  }
+  
+  .cont {
+    overflow: hidden;
+    position: relative;
+    width: 900px;
+    height: 500px;
+    margin: 0 auto 100px;
+    background: #fff;
+    border-radius: 6px;
+    margin-top: 6rem;
+  }
+  
+  .form {
+    position: relative;
+    width: 640px;
+    height: 100%;
+    transition: transform 1.2s ease-in-out;
+    padding: 50px 30px 0;
+    font-family: 'Signika Negative';
+  }
+  
+  .sub-cont {
+    overflow: hidden;
+    position: absolute;
+    left: 640px;
+    top: 0;
+    width: 900px;
+    height: 100%;
+    padding-left: 260px;
+    background: #fff;
+    transition: transform 1.2s ease-in-out;
+  }
+  
+  .buttonPedido {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    height: 36px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Signika Negative';
+  }
+  
+  .imgPedido {
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    padding-top: 360px;
+    background: url("https://img.freepik.com/foto-gratis/joven-bastante-seria-cabello-rizado-lee-mensaje-ingresos-telefono-inteligente-moderno-que-encuentra-contexto-urbano-escucha-musica-traves-auriculares-busca-ubicacion-traves-aplicacion-telefonica_273609-62246.jpg?w=2000") no-repeat center / cover;   
+    }
+    
+    
+    .h2NombrePedido {
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+    color: #b6591c;
+    font-weight: bold;
+    font-family: 'Signika Negative';
+  }
+  
+  .labelPedidoJ {
+    display: block;
+    width: 80%;
+    margin: 25px auto 0;
+    text-align: center;
+    
+  }
+  .notasProducto {
+    font-size: 15px;
+    color: #b6591c;
+    text-align:start ;
+    font-weight: bold;
+    text-transform: initial;
+  }
+  
+  .textareaPedido {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(182, 89, 28);
+    text-align: start;
+    background-color: rgba(220, 119, 3,0.1);
+    border-radius: 6px;
+    resize: none;
+    height: 5rem;
+
+  }
+  
+  .submitPedido {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background: #b6591c;
+    
+  }
+
+  .submitPedido:hover{
+    background: #dc7703;
+  }
+  .img__text {
+    color: #fff;
+    background: rgba(182, 89, 28,0.4);
+    height: 12rem;
+    padding: 3rem 2px;
+    font-family: 'Signika Negative';
+  }
+
+
+  @media (max-width:800px){
+
+
+.sub-cont{
+    display: none;
+}
+.form{
+    width: 100vw;
+}
+
+
+  }

@@ -1,24 +1,300 @@
 .textoReflexion {
-    font-weight: bold;
-    font-size: small;
+  font-weight: bold;
+  font-size: small;
+  color: black;
+}
+
+
+.contraseñaVisible{
+  display: flex;
+  flex-direction: row;
+  width: 23rem;
+}
+.espacioContraseña{
+  width: 70%;
+}
+.contenedorInicioDeS{
+  position: fixed;
+}
+
+#ojito{
+  
+  border: rgb(64, 37, 27) solid 1px;
+  background-color: #40251B;
+  height: 39px;
+  padding: 2.5% ;
 }
 
 @media (max-width: 490px) {
 
-    .textoReflexion {
-        display: none;
-    }
+  .textoReflexion {
+      display: none;
+  }
 
-    .contenedorInicio {
-        width: 90vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  .contenedorInicio {
+      width: 90vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-    }
+  }
 
-    .botonInicio {
+  .botonInicio {
 
-        margin: auto;
-    }
+      margin: auto;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+* {
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Roboto', sans-serif;
+font-weight: 300;
+background: #775341;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-weight: 300;
+font-family: 'Signika Negative';
+}
+
+.labelCorreo{
+  font-family: 'Signika Negative';
+}
+#wrapper {
+display: flex;
+flex-direction: row;
+
+}
+
+#left {
+display: flex;
+flex-direction: column;
+flex: 1;
+align-items: center;
+justify-content: center;
+height: 100vh;
+color: #f4f4f4;
+}
+
+#right {
+flex: 1;
+margin-left: 0px;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 0;
+}
+
+/* Sign In */
+#signin {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 80%;
+padding-bottom: 1rem;
+}
+
+#signin form {
+width: 80%;
+padding-bottom: 3rem;
+}
+
+#signin .logo {
+margin-bottom: 8vh;
+}
+
+#signin .logo img {
+width: 300px;
+}
+
+#signin label {
+font-size: 0.9rem;
+line-height: 2rem;
+font-weight: 500;
+}
+
+#signin .text-input {
+margin-bottom: 1.3rem;
+border-radius: 2px;
+background: #40251B;
+border: 1px solid #555;
+color: #ccc;
+padding: 0.5rem 1rem;
+line-height: 1.3rem;
+}
+
+#signin .primary-btn {
+width: 81%;
+margin-left: .5rem;
+}
+
+#signin .secondary-btn,
+.or,
+.links {
+width: 60%;
+}
+
+#signin .links a {
+display: block;
+color: #fff;
+text-decoration: none;
+margin-bottom: 1rem;
+text-align: center;
+font-size: 0.9rem;
+}
+
+#signin .or {
+display: flex;
+flex-direction: row;
+margin-bottom: 1.2rem;
+align-items: center;
+}
+
+#signin .or .bar {
+flex: auto;
+border: none;
+height: 1px;
+background: #aaa;
+}
+
+#signin .or span {
+color: #ccc;
+padding: 0 0.8rem;
+}
+
+/* Showcase */
+#showcaseNegocio {
+display: flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient( rgba(110, 108, 70, 0.75), rgba(112, 117, 129, 0.1)), url('https://i.pinimg.com/564x/58/9e/e2/589ee22d681fcbc3f83ac4ce37294ee7.jpg') no-repeat center center / cover;
+height: 100vh;
+}
+
+#showcaseConsumidor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient( rgba(110, 108, 70, 0.75), rgba(112, 117, 129, 0.1)), url('https://www.sabervivirtv.com/medio/2021/10/05/pastel-frio-con-naranja_23d4fc02_1200x709.jpg') no-repeat center center / cover;
+  height: 100vh;
+  }
+
+ .showcase-text {
+font-size: 3rem;
+width: 100%;
+color: aliceblue ;
+margin-bottom: 1.5rem;
+font-weight: 900;
+font-family: 'Bebas Neue';
+}
+
+.secondary-btn {
+width: 60%;
+margin: auto;
+}
+
+/* Footer */
+#main-footer {
+color: #ccc;
+text-align: center;
+font-size: 0.8rem;
+max-width: 80%;
+padding-top: 5rem;
+}
+
+#main-footer a {
+color: #f96816;
+text-decoration: underline;
+}
+
+/* Button */
+.primary-btn {
+padding: 0.7rem 1rem;
+height: 2.7rem;
+display: block;
+border: 0;
+border-radius: 6px;
+font-weight: 550;
+background: #b6591c;
+color: #fff;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+transition: all 0.5s;
+font-family: 'Signika Negative';
+font-size: large;
+font-weight: bold;
+
+}
+
+.primary-btn:hover {
+background-color: #dc7703;
+}
+
+.secondary-btn {
+padding: 0.7rem 1rem;
+height: 2.7rem;
+display: block;
+border: 1px solid #f4f4f4;
+border-radius: 2px;
+font-weight: 500;
+background: none;
+color: #fff;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+transition: all 0.5s;
+}
+
+.secondary-btn:hover {
+border-color: #ff7b39;
+color: #ff7b39;
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+#left {
+  flex: 4;
+}
+
+#right {
+  flex: 6;
+}
+}
+
+@media (max-width: 768px) {
+body {
+  overflow: auto;
+}
+
+#right {
+  display: none;
+}
+
+#left {
+  justify-content: start;
+  margin-top: 4vh;
+}
+
+#signin .logo {
+  margin-bottom: 2vh;
+}
+
+#signin .text-input {
+  margin-bottom: 0.7rem;
+}
+
+
 }

@@ -7,187 +7,187 @@ import Modals from "./Modals";
 import { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
-import "../estilos/formularioInicio.css"
+import "../estilos/formularioInicio.css";
 
 function FormInicioSesion() {
-    const [modalCorreo, setModalCorreo] = useState(false);
-    const [modalContraseña, setModalContraseña] = useState(false);
-    const [modalAmbos, setModalAmbos] = useState(false);
-    const [ojo, setOjo] = useState(false);
-    const [error, setError] = useState();
-    const [modalInvalido, setModalInvalido] = useState(false);
-    const [userf, setUser] = useState({
-        correo: "",
-        contraseña: "",
-    });
+  const [modalCorreo, setModalCorreo] = useState(false);
+  const [modalContraseña, setModalContraseña] = useState(false);
+  const [modalAmbos, setModalAmbos] = useState(false);
+  const [ojo, setOjo] = useState(false);
+  const [error, setError] = useState();
+  const [modalInvalido, setModalInvalido] = useState(false);
+  const [userf, setUser] = useState({
+    correo: "",
+    contraseña: "",
+  });
 
-    const { login } = useAuth();
-    const navigate = useNavigate();
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
-    const handlechange = ({ target: { name, value } }) => {
-        setUser({ ...userf, [name]: value });
-    };
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        validar();
-        setError("");
-        try {
-            if (userf.correo == "usuario1@gmail.com") {
-                await login(userf.correo, userf.contraseña);
-                navigate("/listaProductos");
-            }
-        } catch (error) {
-            console.log(error.code);
-            if (
-                error.code === "auth/userf-not-found" ||
-                error.code === "auth/wrong-password"
-            ) {
-                console.log("no hay usuario");
-                mostrar(setModalInvalido);
-            }
-        }
-    };
-    const verificarEspacio = (valor) => {
-        if (valor == "" || valor == null || valor.includes(" ")) {
-            return false;
-        }
-        return true;
-    };
-    const verContraseña = () => {
-        setOjo(!ojo);
-    };
+  const handlechange = ({ target: { name, value } }) => {
+    setUser({ ...userf, [name]: value });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    validar();
+    setError("");
+    try {
+      if (userf.correo == "usuario1@gmail.com") {
+        await login(userf.correo, userf.contraseña);
+        navigate("/listaProductos");
+      }
+    } catch (error) {
+      console.log(error.code);
+      if (
+        error.code === "auth/userf-not-found" ||
+        error.code === "auth/wrong-password"
+      ) {
+        console.log("no hay usuario");
+        mostrar(setModalInvalido);
+      }
+    }
+  };
+  const verificarEspacio = (valor) => {
+    if (valor == "" || valor == null || valor.includes(" ")) {
+      return false;
+    }
+    return true;
+  };
+  const verContraseña = () => {
+    setOjo(!ojo);
+  };
 
-    const mostrar = (cambiarEstado) => {
-        setTimeout(() => {
-            cambiarEstado(false);
-        }, 2000);
-        cambiarEstado(true);
-    };
-    const validar = () => {
-        //console.log("entra al validar")
-        if (
-            !verificarEspacio(userf.contraseña) &&
-            !verificarEspacio(userf.correo)
-        ) {
-            mostrar(setModalAmbos);
+  const mostrar = (cambiarEstado) => {
+    setTimeout(() => {
+      cambiarEstado(false);
+    }, 2000);
+    cambiarEstado(true);
+  };
+  const validar = () => {
+    //console.log("entra al validar")
+    if (
+      !verificarEspacio(userf.contraseña) &&
+      !verificarEspacio(userf.correo)
+    ) {
+      mostrar(setModalAmbos);
+    } else {
+      if (!verificarEspacio(userf.correo)) {
+        mostrar(setModalCorreo);
+      } else {
+        if (!verificarEspacio(userf.contraseña)) {
+          mostrar(setModalContraseña);
+          console.log("entra a aqui ");
         } else {
-            if (!verificarEspacio(userf.correo)) {
-                mostrar(setModalCorreo);
-            } else {
-                if (!verificarEspacio(userf.contraseña)) {
-                    mostrar(setModalContraseña);
-                    console.log("entra a aqui ");
-                } else {
-                    if (
-                        (userf.correo != "usuario1@gmail.com" &&
-                            verificarEspacio(userf.correo)) ||
-                        userf.contraseña != "987654321"
-                    ) {
-                        mostrar(setModalInvalido);
-                        console.log("entra a aqui ");
-                    }
-                }
-            }
+          if (
+            (userf.correo != "usuario1@gmail.com" &&
+              verificarEspacio(userf.correo)) ||
+            userf.contraseña != "987654321"
+          ) {
+            mostrar(setModalInvalido);
+            console.log("entra a aqui ");
+          }
         }
-    };
+      }
+    }
+  };
 
-    return (
-        <div class="w-100 h-100 container">
-            <div class="row ">
-                <div class="col d-flex justify-content-center align-middle mt-5">
-                    <label class="fs-1 pt-5 textoReflexion "  >
-                        Detener la pérdida y <br />
-                        el desperdicio de <br />
-                        alimentos<br />
-                        por las personas<br />
-                        por el planeta
-                    </label>
-                </div>
-                <div class="col p-5 align-middle contenedorInicio ">
-                    <form onSubmit={handleSubmit} className="contenedorInicio">
-                        <div class="text-center fs-4 w-75 font-bold pt-5 mt-5">
-                            <label> Inicio de sesión</label>
-                            <div class="border border-dark"> </div>
-                        </div>
-
-                        <div class="mb-3 w-75 mt-3">
-                            <label class="form-label ">Correo electrónico</label>
-                            <input
-                                type="email"
-                                name="correo"
-                                class="form-control"
-                                id="exampleInputEmail1"
-                                aria-describedby="emailHelp"
-                                onChange={handlechange}
-                            />
-                        </div>
-
-                        <div class="mb-3 w-75">
-                            <label class="form-label">Contraseña</label>
-                            <div class="input-group">
-                                <input
-                                    class="form-control "
-                                    name="contraseña"
-                                    type={ojo ? "text" : "password"}
-                                    id="exampleInputPassword1"
-                                    onChange={handlechange}
-                                />
-                                <i
-                                    class={
-                                        ojo
-                                            ? "position-relative border end-0 p-3  fa-solid fa-eye "
-                                            : "fa-solid fa-eye-slash position-relative border end-0 p-3"
-                                    }
-                                    onClick={verContraseña}
-                                ></i>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="text-center w-75 botonInicio">
-                        <button
-                            type="submit"
-                            class="btn btn-secondary "
-                            onClick={handleSubmit}
-
-                        >
-                            Acceder
-                        </button>
-                    </div>
-
-                    <Modals
-                        estado={modalAmbos}
-                        estadoPantalla={false}
-                        texto={"Ingrese su correo y contraseña"}
-                        buttons={false}
-                        icon={true}
-                    />
-                    <Modals
-                        estado={modalContraseña}
-                        estadoPantalla={false}
-                        texto={"Ingrese su contraseña "}
-                        buttons={false}
-                        icon={true}
-                    />
-                    <Modals
-                        estado={modalCorreo}
-                        estadoPantalla={false}
-                        texto={"Ingrese su correo"}
-                        buttons={false}
-                        icon={true}
-                    />
-                    <Modals
-                        estado={modalInvalido}
-                        estadoPantalla={false}
-                        texto={"Verifique el correo y la contraseña"}
-                        buttons={false}
-                        icon={true}
-                    />
-                </div>
+  return (
+    <div class="w-100 h-100 contenedorInicioDeS">
+      <div id="wrapper">
+        <div id="right">
+          <div id="showcaseNegocio">
+            <div class="showcase-content">
+              <h1 class="showcase-text">
+                Detener La Pérdida Y
+                <br />
+                El Desperdicio De
+                <br />
+                Alimentos
+                <br />
+                Por Las Personas
+                <br />
+                Por El Planeta
+              </h1>
             </div>
+          </div>
         </div>
-    );
+        <div id="left">
+          <div id="signin">
+            <div class="logo mt-5">
+              <h1> Inicio de sesión </h1>
+              <hr />
+              <h4 class="text-center"> Negocio </h4>
+            </div>
+            <form>
+              <div class="mt-5">
+                <label className="labelCorreo">Correo electrónico</label>
+                <input
+                type="text"
+                class="text-input w-100"
+                name="correo"
+                onChange={handlechange} />
+              </div>
+
+              <div class="mb-3">
+                <label className="labelCorreo">Contraseña</label>
+                <div class="input-group contraseñaVisible w-100">
+                  <input
+                    onChange={handlechange}
+                    type={ojo ? "text" : "password"}
+                    name="contraseña"
+                    class="text-input form-label form-control espacioContraseña"
+                  />
+                  <i
+                    id="ojito"
+                    class={
+                      ojo
+                        ? "    fa-solid fa-eye "
+                        : "fa-solid fa-eye-slash   "
+                    }
+                    onClick={verContraseña}
+                  ></i>
+                </div>
+              </div>
+
+             
+            </form>
+            <button type="submit" class="primary-btn" onClick={handleSubmit}>
+              Acceder
+            </button>
+          </div>
+        </div>
+
+        <Modals
+          estado={modalAmbos}
+          estadoPantalla={false}
+          texto={"Ingrese su correo y contraseña"}
+          buttons={false}
+          icon={true}
+        />
+        <Modals
+          estado={modalContraseña}
+          estadoPantalla={false}
+          texto={"Ingrese su contraseña "}
+          buttons={false}
+          icon={true}
+        />
+        <Modals
+          estado={modalCorreo}
+          estadoPantalla={false}
+          texto={"Ingrese su correo"}
+          buttons={false}
+          icon={true}
+        />
+        <Modals
+          estado={modalInvalido}
+          estadoPantalla={false}
+          texto={"Verifique el correo y la contraseña"}
+          buttons={false}
+          icon={true}
+        />
+      </div>
+    </div>
+  );
 }
-//ev => setCorreo(ev.target.value)106
-//ev => setContraseña(ev.target.value)113
-//onClick={validar} del acceder
+
 export default FormInicioSesion;

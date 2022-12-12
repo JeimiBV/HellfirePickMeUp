@@ -1,0 +1,72 @@
+:root{
+    --colorA: #DA8131;
+    --colorB: #77281B;
+    --colorC: #603725;
+    --colorD: #374454;
+    --colorE: #131A20;
+    --colorF: #b05420;
+    --colorG: #6b4841;
+
+}
+
+.imagen-objetivo{
+    width: 400px;
+    height: 250px;
+    border-radius: 33px;
+    
+}
+
+.imagen-quienes{
+    width: 440px;
+    height: 301px;
+    border-radius: 33px;
+}
+
+.color-titulo1{
+    font-family: Parisienne;
+    font-weight: bold;
+    color: #553d2a ;  
+    font-size: 50px;  
+    
+}
+
+.colorT{
+    font-family: Parisienne;
+    font-weight: bold;
+    color: #553d2a ;
+    text-align: center;
+    font-size: 50px;  
+}
+
+
+
+.columna{
+    display: inline-block;
+}
+
+.parrafo{
+    font-family: 'Signika Negative';
+    font-size: 20px;
+    text-align: justify;
+   
+}
+
+.colorT2{
+    font-family: Parisienne;
+    font-weight: bold;
+    color: #f8f6f5 ;
+    text-align: center;
+    font-size: 50px;  
+}
+
+.otroParrafo{ 
+    font-family: 'Signika Negative';
+    font-size: 20px;
+    text-align: justify;
+    color: #f8f6f5 ;
+    font-family: 'Signika Negative';
+}
+
+.objetivo{
+    background-color: var(--colorG);
+}

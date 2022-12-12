@@ -1,13 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+* {   
+  font-family: 'Signika Negative';
+}
+
+:root{
+    --colorA: #DA8131;
+    --colorB: #77281B;
+    --colorC: #603725;
+    --colorD: #374454;
+    --colorE: #131A20;
+    --colorF: #b05420;
+    --colorG: #6b4841;
+    --surface-color: #fff;
+    --curve: 10;
+
+}
+
 .containerL{
     position: relative;
     width: 100%;
-    height: 89.6vh;
-    background-color: #CAD2C5;
+    height: 90vh;
+    background:url("https://images2.alphacoders.com/102/1028530.jpg") ;
     overflow-y: scroll;
    
 }
 .ofertasP{
-    position: relative; 
+  
+    
     padding: 1rem 2rem ;
     flex-direction: column;
     left: 5rem;
@@ -17,47 +36,148 @@
     grid-template-columns: repeat(auto-fit, minmax(12.5rem, 0fr));
     gap: 3rem ;
     box-sizing: border-box;
+    float: left;
+    justify-content: center;
    
 }
 
 .containerL > .buscador .inputBusc{
     width: 60%;
 }
-
-.containerL > .buscador .bi{
-    position: absolute;
-    margin-right: 59%;
+.TituloListaO{
+    margin-top: 2%;
+    text-align:center;  
+    color: #f4f4f4;
+    font-family: 'Ramabhadra';
+    width: 35%;
+    margin-left: 35%;
+    font-size: 55px;
+    top: 20rem;
     
-    margin-top: 0.5%;
+    
 }
 
-.card-of > .imagenOf {
+html , body {
+
     width: 100%;
-    height: 150px;
-}
-
-.card-of > .card-letra {
-    text-align: left;
+    height: 100%;
 }
 
 
-.bg-sucessP{
-    background-color: #84A98C;
-   
-}
 
-.card-of:hover{
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-    transform: translateY(-3%);
-}
-
-.card-titleP{
-    
-    font-weight: bold;
-}
-
-.card-img-top{
-    border-radius: 8px;
+.cardOf {
+    position: relative;
+    display: block;
+    width: 110%;
+    height: 100%;  
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+    justify-content: center;
+  }
   
-}
+.card > .imagenCard{ 
+    padding-bottom: 100px; 
+    padding-top: 10px;  
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    height: 300px;
+    background-color: #ffffff;
+    border-radius: 15px;
+  }
+  
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+    background-color: #d3b398
+  }
+  
+  .card:hover .card__overlay {
+    transform: translateY(0);
+  }
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+    background-color: #d3b398
+  }
+  
+  .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+ 
+  }
+  
+  .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;      
+    border-radius: 50%;    
+    /*background-color: red;  */
+  }
+  
+  .card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: var(--colorC);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: .8em; 
+    color: #d7c9bd; 
+     
+  }
+  
+  .card__status {
+    font-size: .8em;
+    color: #D7BDCA;
+  }
+   
+  .card__description {
+    padding: 0 3em 2em;
+    margin: 0;
+    color: var(--colorC);
+    font-family: 'Signika Negative';
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    background-color: #d3b398;
+    
+    
+  }    
+
+  .card__arc path {
+    fill: #d3b398;
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  }   
+
+

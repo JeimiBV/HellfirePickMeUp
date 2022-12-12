@@ -21,7 +21,7 @@ export default class AutoPlay extends Component {
     return (
         
         <div className="fs-4 ">
-         <div className="sliderA text-center start-50 translate-middle-x text-white">  
+         <div className="sliderA text-center start-50 translate-middle-x ">  
         <Slider {...settings}>
              <div className="fs-1 ">
               <p>¡Darle una segunda oportunidad a los alimentos es darle un respiro al planeta!</p>

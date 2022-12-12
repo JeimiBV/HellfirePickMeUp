@@ -1,4 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
 /* Navbar*/
 
 :root{
@@ -8,19 +11,27 @@
     --colorD: #374454;
     --colorE: #131A20;
     --colorF: rgb(176, 84, 32);
-    --colorG:#59382c;
+    --colorH: #40251b;
+    
 
 }
 
-.colorA{
-    color: var( #DC7703);
-}
 
 .bg-sucessN{
-    background-color: var(--colorG);
+    background-color: #633728;
     --bs-border-opacity: 3;
     border-color: var(--colorB);
 }
+
+
+ .containerBA{
+    background-color: #b1968c;
+    padding: 50px;
+    width: 70%;
+    position: relative;
+
+
+ }
 
 .nav-pills .nav-link.active,
 .show>.nav-pills .nav-link{
@@ -63,7 +74,6 @@
  
  .body{
     font-size: x-large;
-     
    }
    .contenedor-2{
        width: 99%;
@@ -84,7 +94,13 @@
     margin-top: 19%;
     font-weight: bold;
     z-index: 1;
- }
+    
+}
+.sliderA .fs-1 >p{
+    font-family: 'Marck Script';
+    color: rgba(254, 254, 254, 0.893);
+    font-size: 50px;
+}
 
    /*2do slider*/
    .containerB{
@@ -99,15 +115,30 @@
 .estadisticasM{
     width: 98%;
     margin-top: 50%;
+   
 }
 
 /*Footer*/
 
 .contenedor-footer{
     width: 99%;
+    font-family: 'Signika Negative';
     
 }
 
 .bg-sucess-2{
     background: #84a98c;
+}
+.MensajesLPage >p{
+    color: #2b2828;
+    font-family: 'Signika Negative';
+    font-size: x-large;
+    
+}
+.MensajeLanding > h1{
+    
+    color: #56321ad4;
+    font-size: x-large;
+    font-family: 'Signika Negative';
+    font-weight: bold;
 }

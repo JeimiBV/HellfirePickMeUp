@@ -375,15 +375,6 @@ function Productoslista({usuario}) {
                                                                 }))
                                                             }
                                                         />
-                                                        <h3
-                                                                            className={
-                                                                                Stock.estado
-                                                                                    ? "validacion-1"
-                                                                                    : "invisible"
-                                                                            }
-                                                                        >
-                                                                            Ingrese un valor valido en este campo
-                                                                        </h3>
                                                     </label>
 
                                                 </div>

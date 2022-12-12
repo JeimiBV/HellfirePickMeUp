@@ -3,6 +3,13 @@
     margin: 0%;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+:root {
+    --white-color: #fff;
+    --greenish-color: #006d77;
+    --naranja: #dc7703;
+    --naranja-oscuro: #b6591c;
+  }
+
 
 .over{
     width: 100%;
@@ -21,7 +28,7 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,6 +39,7 @@
 .cardM{
     min-width: 25vw;
     background-color: #f2f2f2;
+    color: var(--naranja-oscuro);
 }
 .transparent{
     display: none;
@@ -52,12 +60,14 @@
     color: white;
     font: oblique bold 100% cursive;
     border-color: white;
+    border-bottom-left-radius: 20px;
 }
 .botonNo{
     background-color: #a65b4b;
     color: white;
     font: oblique bold 100% cursive;
     border-color: white;
+    border-bottom-right-radius: 20px;
 }
 
 .ttmod{

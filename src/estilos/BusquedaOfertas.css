@@ -1,18 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
 .containerLargo{
     position: relative;
     width: 100%;
     height: 89.6vh;
     background-color: #CAD2C5;
     overflow-y: scroll;
-   
+    background: url("https://img.freepik.com/fotos-premium/superficie-grunge-papel-marron-viejo-textura-color-cafe-liquido-abstracto_51524-10679.jpg?w=2000")
 }
 
 .containerLargo > .buscador .inputBusc{
     width: 55%;
     margin-top: 1%;
-    
 }
+.tituloProducto{
 
+    color: rgb(61, 38, 18);
+    font-size: 330%;
+    font-family: 'Signika Negative';
+}
 
 
 .containerLargo > .buscador .bi{
@@ -43,42 +49,67 @@
 }
 
 .card-ofP:hover{
-    box-shadow: 5px 5px 5px 5px rgba(101, 148, 93, 0.308);
+    
     cursor: pointer;
     transform: translateY(-3%);
     
 }
 
 .Banner{
-        background-color:rgba(1,1,1,0.7);
-        display:block;
-        width:100%;
-        height:100%;
-        position:absolute;
-        top:0;
-        padding:3.5em 2em;
-        transition:0.5s;
-        color:var(--white);
-        border-radius: 8px;
-        margin-left: -5.5%;
-        transform : translateY(100% )
-    
-     
+    background-color:#eaccadf9;
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    padding:3.5em 2em;
+    transition:0.5s;
+    color:var(--white);
+    border-radius: 8px;
+    margin-left: -5.5%;
+    transform : translateY(100% )
+
+ 
 }
 
 .Descri{
-    text-align: center;
-    font-size: x-large;
+    text-align: left;
+    font-size: larger;
     font-weight: bold;
-
+    color: #804000e1;;
+    font-family: 'Signika Negative';
+    font-weight: 100;
+    margin-bottom: 0%;
+    margin-top: 5%;
 }
 
+.DescripcionAd{
+    text-align: left;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    font-family: 'Signika Negative';
+
+
+}
+.precioAd >span{
+    text-align: center;
+    font-size: larger;
+    font-family: 'Signika Negative';
+    color: #804000b1;
+   
+}
+
+.d-blockLP{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size:large;
+    font-family: 'Signika Negative';
+    text-align: start;
+}
 .card:hover .Banner{
     transform : translateY(0)
 
 }
-
-
 
 .card .card-ofP:hover  {
     left:0%;
@@ -87,27 +118,59 @@
 
 .card-ofP > .card-letra {
     text-align: left;
+    font-family: 'Signika Negative';
 }
 
-
 .bg-sucessPedido{
-    background-color: #87b9813f;
+    background-color: #f5e1ceee;
    
 }
 
-
-
 .card-titleProducto{
-    
+    color: rgb(255, 255, 255);
     font-weight: bold;
+    font-family: 'Signika Negative';
+    font-size:x-large;
+    background-color: #b6591c;   
 }
 
 .card-img-top{
     border-radius: 8px;
+    background-color: white;
   
 }
 
-.card{
+.card-ofP{
     overflow: hidden;
+    border-color: #b6591c;
+    
+    border-left-width: 4px;
+    border-bottom-width: 4px;
+  
+    border-radius: 10%;
 }
+
+.title16{
+    text-align:center;  
+    font-family: 'Bebas Neue';
+    color: white;
+    font-size: 4rem;
+    padding-top: 1.9%;
+    
+    
+  }
+  .title16::after, .title16::before{
+       content: "";
+       position: absolute;
+       width: 430px;
+       height: 5px;
+       background-color: white;
+       margin-top: 2%;
+  }
+  .title16::before{
+       left: 70px;
+  }
+  .title16::after{
+      right: 100px;
+  }
 
