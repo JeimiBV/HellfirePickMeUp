@@ -68,10 +68,11 @@ const VistaConsumidor = ({ usuario }) => {
                             <div className="row row-col" onClick={() => { console.log("clickeado") }} key={oferta.id}>
                                 <div class="card card-ofP  mb-2 bg-sucessPedido">
                                     <span class="Banner">
-                                        <span className="d-block">Hora límite:{oferta.Hora} </span>
-                                        <span className="d-block">Fecha límite: {oferta.Fecha} </span>
+                                        <h1 className="Descri">Hora límite: </h1>
+                                        <span className="d-block pt-0">{oferta.Hora} </span>
+                                        <h1 className="Descri">Fecha límite: </h1>
+                                        <span className="d-block">{oferta.Fecha} </span>
                                         <h1 className="Descri">Descripción :</h1>
-
                                         <p className="DescripcionAd">{oferta.Descripcion} </p>
                                     </span>
 
@@ -82,12 +83,9 @@ const VistaConsumidor = ({ usuario }) => {
                                     <div className="DisenioCard ">
                                         <div class="card-body card-letra ">
                                             <h5 class="card-titleProducto text-center text-capitalize" >{oferta.Nombre}</h5>
-                                            <p className="precioAd">
-
-                                                <span > Precio: {oferta.Precio} bs.</span>
-
-
-
+                                            <p className="precioAd text-center pt-3">
+                                                <h1 className="Descri d-inline">Precio:</h1>
+                                                <span className="d-inline"> {oferta.Precio} bs.</span>
                                             </p>
                                         </div>
                                     </div>
