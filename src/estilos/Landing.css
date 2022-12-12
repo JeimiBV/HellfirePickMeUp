@@ -18,7 +18,7 @@
 
 
 .bg-sucessN{
-    background-color: var(--colorH);
+    background-color: #633728;
     --bs-border-opacity: 3;
     border-color: var(--colorB);
 }
