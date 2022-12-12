@@ -22,7 +22,7 @@ function Header() {
           <div className="d-flex  w-50  justify-content">
               <div className="logoYNombre mx-5">
               <Link className="flex-sm-fill  nav-link active" to="/">
-                <img className="logo mx-5" src={Image}  />
+                <img className="logo " src={Image}  />
               </Link>    
           </div>         
         </div>
@@ -30,8 +30,8 @@ function Header() {
 
 
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
         </button>
 
 

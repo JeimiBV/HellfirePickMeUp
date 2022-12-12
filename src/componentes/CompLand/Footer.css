@@ -33,7 +33,13 @@
     color: white;
   }
   
-  
+  .colorLetra p {
+    font-family: 'Signika Negative';
+  }
+
+  .colorLetra a{
+    font-family: 'Signika Negative';
+  }
   
   
   

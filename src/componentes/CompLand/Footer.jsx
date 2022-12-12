@@ -15,8 +15,9 @@ const Footer = () => {
             <div class="col d-flex justify-content-center">
               <p>
                 El repositorio de la página se encuentra en
+                
                 <a href="https://github.com/JeimiBV/HellfirePickMeUp.git">
-                  Pick-me-up
+                   <span></span> <i class="bi bi-github"></i>
                 </a>
               </p>
             </div>
