@@ -13,7 +13,6 @@ function MostrarPedidosN({ usuario }) {
         return <Navigate to="/" />
     }
     const [pedidos, setPedidos]=useState([])
-    const [tablaPedi, setTablaPedi]= useState([]);
     const [busqueda, setBusqueda]= useState("");
     var validacion = 0;
 
@@ -21,7 +20,6 @@ function MostrarPedidosN({ usuario }) {
 
     useEffect(() => {
         todosPedidos(setPedidos)
-        todosPedidos(setTablaPedi)
     },[] )  
     
     function updatePedido(pedido) {
@@ -54,30 +52,30 @@ function MostrarPedidosN({ usuario }) {
                filtrar(e.target.value); 
             }                 
         }
-         
-    
-    const pr1 = pedidos || []
-            pr1.map(pedido => {
-                if(pedido.FlagN == true){
-                validacion += 1;
-                }
-        }
-        )
-    const pedidos1 = pr1.filter(pedido => {  
-        return pedido.FlagN == true;
-    }
-    
-    )
+        const pr1 = pedidos || []
+
    
     const filtrar=(terminoBusqueda)=>{
-        var resultadosBusqueda= tablaPedi.filter((elemento)=>{
+        var resultadosBusqueda= pedidos.filter((elemento)=>{
           if(elemento.Nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
             return elemento.FlagN == true;
           }
         });
         setPedidos(resultadosBusqueda);
       } 
-
+             
+    
+      pr1.map(pedido => {
+        if(pedido.FlagN == true){
+        validacion += 1;
+        }
+}
+)
+      const pedidos1 = pr1.filter(pedido => {  
+        return pedido.FlagN == true;
+    }
+    
+    )
     const ListaPedidos = pedidos1.map(pedido => (
        
        
