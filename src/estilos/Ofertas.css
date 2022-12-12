@@ -174,7 +174,7 @@ html , body {
     -webkit-line-clamp: 3;
     overflow: hidden;
     background-color: #d3b398
-    /*background-color: #e01a7d;*/
+    
   }    
 
   .card__arc path {
