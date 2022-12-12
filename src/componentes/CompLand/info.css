@@ -45,6 +45,7 @@
 }
 
 .parrafo{
+    font-family: 'Signika Negative';
     width: 800px;
     font-size: 20px;
     color: #553d2a ;
@@ -59,7 +60,7 @@
 }
 
 .otroParrafo{ 
- 
+    font-family: 'Signika Negative';
     font-size: 20px;
     text-align: justify;
     color: #f8f6f5 ;
