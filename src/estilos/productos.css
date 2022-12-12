@@ -40,7 +40,6 @@
     gap: 4rem 5rem;
     box-sizing: border-box; 
     margin-left: 15vw;    
-    
 }
 
 .image {
@@ -176,4 +175,18 @@
 	width: 240px;
 	height: 270px;
     padding: 1em 1em;
+}
+@media (max-width:1280px) {
+    .titleHU1{
+        width: 40%;
+        margin-left: 35%;
+        font-size: 55px;
+    }
+}
+@media (max-width:480px) {
+    .titleHU1{
+        width: 60%;
+        margin-left: 20%;
+        font-size: 25px;
+    }
 }
