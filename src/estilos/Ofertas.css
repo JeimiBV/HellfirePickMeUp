@@ -64,10 +64,7 @@ html , body {
 
 }
 
-.cardSpace {
-    transition: transform 300ms;
-    margin: 66px;
-}
+
 
 .cardOf {
     position: relative;
@@ -166,8 +163,8 @@ html , body {
   }
    
   .card__description {
-    padding: 20px;
-    margin: 25px;
+    padding: 0 3em 2em;
+    margin: 0;
     color: var(--colorC);
     font-family: 'Signika Negative';
     display: -webkit-box;
