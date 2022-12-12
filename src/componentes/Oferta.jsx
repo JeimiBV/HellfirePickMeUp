@@ -188,7 +188,7 @@ function Mostraroferta({ usuario }) {
       <Pedido estado={modalPedido}>
         <div class="cont">
           <div class="form sign-in">
-            <h2 className="h2NombrePedido">Nombre producto</h2>
+            <h2 className="h2NombrePedido">{nombre}</h2>
             <label className="labelPedidoJ">
               <div className="notasProducto">Notas para este producto</div>
               <div className="contenedor-input-pedido">
