@@ -32,7 +32,7 @@ const ListaPedidos = ({ usuario }) => {
       }
    }, [post])
    function updatePedido(pedidosC) {
-      console.log(pedidosC)
+  
       axios
          .put(`${url}/${pedidosC.id}`, {
             Imagen: pedidosC.Imagen,
