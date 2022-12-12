@@ -11,11 +11,11 @@ const Informacion = () => {
             <img src="https://images.pexels.com/photos/1634062/pexels-photo-1634062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid " />
             
         </div>
-   
-        <section className="p-top-5 mb-5 lg-0 p-5">
-        <div className="container">
-          <div className="row justify-content-center">
-            <h2 className="mb-5 m-auto colorT">
+        <div div className="container-fluid ">
+        <div class="row justify-content-center p-5">
+        <div class="col-sm-8 " top="50">
+          
+            <h2 className="colorT p-3">
               ¿Quiénes Somos?
               <hr class="border bordeA border-dark border-2 " />
             </h2>
@@ -26,9 +26,9 @@ const Informacion = () => {
               alimentos que no han sido vendidos al servicio de los consumidores
               para no malgastar la comida.
             </p>
-          </div>
-        </div>
-      </section>
+            </div>  
+      </div>
+      </div>
         
       <div className="container-fluid objetivo">
         <div class="row justify-content-center p-5">
