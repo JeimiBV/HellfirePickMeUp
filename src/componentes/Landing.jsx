@@ -8,7 +8,7 @@ import Footer from './CompLand/Footer'
 
 const Landing = () => {
   return (
-    <div > 
+    <div class="bg-light" > 
         <Carrusel/>
         <Informacion/>
         <MensajesP/>

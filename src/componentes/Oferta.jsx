@@ -69,7 +69,6 @@ function Mostraroferta({ usuario }) {
     setPrecio(precioo);
     setNombre(nombree);
     setStock(stock);
-    console.log(precio);
     unicoProducto(id, setProducto);
     
     

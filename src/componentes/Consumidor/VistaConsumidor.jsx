@@ -62,9 +62,11 @@ const VistaConsumidor = ({ usuario }) => {
 
     const pasarDatos = (oferta) => {
         setNombre(oferta.Nombre);
-        setPrecio(oferta.precio);
+        setPrecio(oferta.Precio);
         setModalPedido(true)
         setProducto(oferta)
+        console.log("Este es la oferta que viene de vista consumidor", oferta)
+        console.log(precio,"este es el precio que viene de oferta");
         console.log(oferta.Stock, "esteeeee")
     }
     
@@ -115,7 +117,6 @@ const VistaConsumidor = ({ usuario }) => {
 
         }, 3000);
         setModalCancPedido(true);
-
         setContador(1);
     };
 
@@ -176,10 +177,11 @@ const VistaConsumidor = ({ usuario }) => {
             <Pedido
                 estado={modalPedido}
                 nombre={nombre}
-                precioTotal={precio}
-                precioFijo={precioFijo}
+                precioFijo={precio}
+                precioTotalP={precio}
                 mostrarCancPedido={mostrarCancPedido}
                 mostrarRealPedido={mostrarRealPedido}
+                oferta={producto}
             >
             </Pedido>
 
