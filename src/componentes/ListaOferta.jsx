@@ -64,27 +64,28 @@ const ListaOfertas = ({usuario}) => {
                         ofertados.map(oferta => (
                             <div  className="row row-col" key={oferta.id}>
                                 <div class="cardSpace">
-                                  <div class="cardBackground">
-                                  </div>
-                                   <div class="card cardOfertados">    
-                                    <div class="cardInside">
-                                        <div class="imgSpace">
-                                                <div >
-                                                    <img src={oferta.Imagen} className="cardOfertas " alt="..." />
-                                                </div>
-                                            </div>
-                                            <div class="userInfo">
-                                            <div class="card-body card-letra ">
-                                                    <h5 class="card-titleP text-center text-capitalize " >{oferta.Nombre}</h5>
-                                                    <p className="">
-                                                        <span > Precio: {oferta.Precio} bs.</span>
-                                                        <span className="d-block"> Hora límite:{oferta.Hora} </span>
-                                                        <span className="d-block">Fecha límite: {oferta.Fecha} </span>
-                                                    </p>
-                                                    </div>
-                                            </div>
-                                          </div>                                                                                                            
-                                     </div>  
+                                <div class="card cardOf">    
+                                        <img src={oferta.Imagen} className="imagenCard" alt="..." />
+                                        <div className="card__overlay"> 
+                                            
+                                            <div class="card__header">  
+                                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                                            <img class="card__thumb" src={oferta.Imagen} alt="" />
+                                                    <div class=" card__header-text">
+                                                            <h5 class=" text-center text-capitalize card__title" >{oferta.Nombre}</h5>
+                                                            </div>
+                                                            </div>
+                                                                <div className="card__description">
+                                                                    <span className="" > Precio: {oferta.Precio} bs.</span>
+                                                                    <span className=""> Hora límite:{oferta.Hora} </span>
+                                                                    <span className="">Fecha límite: {oferta.Fecha} </span>
+                                                                
+                                                    </div>             
+                                            </div>           
+                                       
+
+                                    </div>                                                                                                       
+                                    
                                 </div>
 
                                </div>
