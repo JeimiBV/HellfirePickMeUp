@@ -1,8 +1,6 @@
 
 .contenedor-pedidos{
-    
     background: linear-gradient( rgba(44, 43, 43, 0.7), rgba(67, 62, 62, 0.924)), url("https://img.freepik.com/foto-gratis/mesa-fondo_1404-8.jpg?w=1380&t=st=1670564090~exp=1670564690~hmac=a4c17e8cd901228228ea3ec1e930156b74c063b7650daf44dd8002fe695bc918") no-repeat center center / cover;
-  
     width: 40vw;
     height: 60vh;
     padding: 2vh;
@@ -10,6 +8,12 @@
     color: aliceblue;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     border: var(--naranja-oscuro) solid 7px;
+
+    
+}
+.PedidosP{
+    max-width: 90%;
+    margin-left: 3vw;
 }
 #form-Pedido{
     display: flex;
@@ -17,7 +21,7 @@
     width: 28vw;
     margin-left: 2vw;
     margin-top: 4vh;
-    
+   
 }
 .agregador{
     display: flex;
