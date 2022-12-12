@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 * {   
-    font-family: sans-serif;
+  font-family: 'Signika Negative';
 }
 
 :root{
@@ -11,6 +11,8 @@
     --colorE: #131A20;
     --colorF: #b05420;
     --colorG: #6b4841;
+    --surface-color: #fff;
+    --curve: 10;
 
 }
 
@@ -23,6 +25,7 @@
    
 }
 .ofertasP{
+  
     position: relative; 
     padding: 1rem 2rem ;
     flex-direction: column;
@@ -33,6 +36,7 @@
     grid-template-columns: repeat(auto-fit, minmax(12.5rem, 0fr));
     gap: 3rem ;
     box-sizing: border-box;
+    float: left;
    
 }
 
@@ -61,167 +65,121 @@ html , body {
 
 }
 
-.cardSpace {
-    transition: transform 300ms;
-    margin: 66px;
-}
 
-.cardOfertados {
 
-    width: 100%;
-    height: 100%;
+.cardOf {
     position: relative;
-    z-index: 6;
-    bottom: 110%;
+    display: block;
+    width: 110%;
+    height: 100%;  
+    border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
-    border-radius: 63px;
-    background-color: #d3b398;
+    text-decoration: none;
+    justify-content: center;
+  }
   
-}
-
-.cardBackground {
-
+.card > .imagenCard{ 
+    padding-bottom: 100px; 
+    padding-top: 10px;  
+    padding-left: 10px;
+    padding-right: 10px;
     width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 3;
-    background-size: cover;
-    animation: backgroundPosition 15s linear infinite;
-    filter: blur(45px);
-
-}
-
-.cardInside {
-
-    width: 100%;
-    height: 100%;
-    /*position: relative;*/
-    z-index: 9;
-    bottom: 200%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-.imgSpace {
-
-    width: 100%;
-
-}
-
-.imgSpace div {
-
-    width: 170px;
-    height: 170px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 63px;
-    margin: 12px;
-    box-shadow: 0 0 70px -9px rgb(0, 0, 0) ;
-    transition: width 300ms, height 300ms, border-radius 300ms , transform 300ms;
-
-}
-
-.userInfo {
-
-    width: 100%;
-    flex-grow: 1;
-
-}
-
-.userInfo h5 {
-
-    height: 50px;
-    font-size: 1.5rem;
-    margin-top: 0%;
-    margin-bottom: 0%;
-
-}
-.userInfo p {
-
-    font-size: 0.9em;
-    opacity: 75%;
-
-}
-
-
-.cardSpace:hover {
-
-    transform: scale(1.11 , 1.11);
-
-}
-.cardSpace:hover .cardShadow {
-
-    transform: scale(1.05,1.05);
-    filter: blur(51px);
-
-}
-
-.cardSpace:hover .imgSpace div {
-
-    width: 170px;
-    height: 170px;
-    border-radius: 53px;
-
-}
-
-.cardSpace:hover .userInfo h2 {
-
-    text-shadow: 6px -15px 5.1px rgba(255,255,255,0.33);
-
-}
-
-.imgSpace div:hover {
-
-    transform: scale(0.96 , 0.96);
-
-}
-
-
-
-@keyframes backgroundPosition {
-
-    0% {
-
-        background-position: left;
-
-    }
-    50% {
-
-        background-position: right;
-
-    }
-    100% {
-
-        background-position: left;
-
-    }
-
-}
-
-
-
-.containerL .buscador .bi{
+    height: 300px;
+    background-color: #ffffff;
+    border-radius: 15px;
+  }
+  
+  .card__overlay {
     position: absolute;
-    margin-right: 57%; 
-    margin-top: 0.5%;
-}
-
-.bg-sucessP{
-    background-color: #84A98C;
-   
-}
-
-.card-titleP{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+    background-color: #d3b398
+  }
   
+  .card:hover .card__overlay {
+    transform: translateY(0);
+  }
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+    background-color: #d3b398
+  }
+  
+  .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+ 
+  }
+  
+  .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;      
+    border-radius: 50%;    
+    /*background-color: red;  */
+  }
+  
+  .card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: var(--colorC);
+    text-transform: uppercase;
     font-weight: bold;
-}
+  }
+  
+  .card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: .8em; 
+    color: #d7c9bd; 
+     
+  }
+  
+  .card__status {
+    font-size: .8em;
+    color: #D7BDCA;
+  }
+   
+  .card__description {
+    padding: 0 3em 2em;
+    margin: 0;
+    color: var(--colorC);
+    font-family: 'Signika Negative';
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    background-color: #d3b398;
+    
+    
+  }    
 
-.cardOfertas{
-    width: 170px;
-    height: 170px;
-    border-radius: 53px;  
-}
+  .card__arc path {
+    fill: #d3b398;
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  }   
+
+
