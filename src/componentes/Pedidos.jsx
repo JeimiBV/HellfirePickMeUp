@@ -12,6 +12,7 @@ function MostrarPedidosN({ usuario }) {
     return <Navigate to="/" />;
   }
   const [pedidos, setPedidos] = useState([]);
+  const [post, setPost] = useState(null);
   const [tablaPedi, setTablaPedi] = useState([]);
   const [busqueda, setBusqueda] = useState("");
   var validacion = 0;
@@ -22,10 +23,15 @@ function MostrarPedidosN({ usuario }) {
   useEffect(() => {
     todosPedidos(setPedidos);
     todosPedidos(setTablaPedi);
-  }, []);
+    if (post !== null) {
+      axios.get(`${url}/1`).then((response) => {
+         setPost(response.data);
+      });
+   }
+  }, [post]);
 
   function updatePedido(pedido) {
-    console.log(`Id: ${pedido.id}`);
+    
     axios
       .put(`${url}/${pedido.id}`, {
         Imagen: pedido.Imagen,
@@ -40,8 +46,8 @@ function MostrarPedidosN({ usuario }) {
         Stock: pedido.Stock,
       })
       .then((response) => {
-        //setPost(response.data);
-        console.log("succesfull!!");
+        setPost(response.data);
+        // console.log("succesfull!!");
         //mostrarSi();
       });
   }

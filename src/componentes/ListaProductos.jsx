@@ -125,23 +125,20 @@ function Productoslista({usuario}) {
    }
 
    const mostrarSi = () => {
-        
-       
         setTimeout(() => {
             setModalNo(false);
             setModalSi(false);
         }, 3000);
- 
-     
-        document.getElementById("form").reset();
-        setModalConf(false);
-        setModalSi(true);
         setPrecio((prevState) => ({ ...prevState, estado: false }));
         setFecha((prevState) => ({ ...prevState, estado: false }));
         setHora((prevState) => ({ ...prevState, estado: false }));
         setStock((prevState) => ({ ...prevState, estado: false }));
-        navigate("/listaOfertas");
-        console.log("entra al metodoooo")
+        document.getElementById("form").reset();
+    setModalConf(false);
+       setModalSi(true);
+    navigate("/listaOfertas");
+        
+
        
    };
 
@@ -421,7 +418,7 @@ function Productoslista({usuario}) {
                     cambiarEstado={setModalSi}
                     estadoPantalla={true}
                     texto={"Guardando registro ..."}
-                    icon={true}
+                    icon={false}
                     
                 />
                 <Modals
