@@ -168,9 +168,10 @@ a{color:inherit;text-decoration:none}
 .validacion-1{
     margin-left: 9.3%;
     font-size: small;
-    color: red;
+    color: rgb(251, 255, 0);
     height: 3hv;
     font-family: 'Signika Negative';
+    
 }
 .transparent-1{
     display: none;
