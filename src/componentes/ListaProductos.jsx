@@ -432,7 +432,7 @@ function Productoslista({usuario}) {
                     cambiarEstado={setModalNo}
                     estadoPantalla={true}
                     texto={"Cancelado"}
-                    icon={true}
+                    icon={false}
                     
                 />
             </div>
