@@ -4,30 +4,64 @@
     box-sizing: border-box;
 }
 
+
+
 .contenedor-cabecera {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    border-bottom: 3px solid rgb(47, 62, 70);
+    border-bottom: 3px solid rgb(47, 70, 61);
     background-color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: rgb(47, 62, 70);
+    height: 10vh;
+    
 }
 
 .logo {
-
-    height: 10vh;
-
+    
+   height: 9vh;
 
 }
 
 .nombre {
-    text-transform: initial !important;
+    text-transform: initial;
     font-style: italic;
     font-family: cursive;
-    font-size: 5vh !important;
+    font-size: 26px;
+    white-space: nowrap;
+    color: white;
+    margin-left: 38vw;
 }
 
 .user {
     font-size: 3vh;
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+
+}
+ul li{
+    width: 12vw;
+    
+}
+.logoYNombre{
+    display: flex;   
+    align-items: center;
+}
+.botonL{
+    
+    background: color;
+    color: white;
+    border-radius: 7px;
+    border: none;
+}
+
+@media (max-width:500px){
+    .nombre{
+        margin-top: 1rem;
+        margin-left: -2rem;
+    }
 }

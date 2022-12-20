@@ -5,7 +5,7 @@
 }
 
 .over{
-    width: 80%;
+    width: 100%;
     height: 89.5vh;
     position: fixed;
     bottom: 0;
@@ -15,4 +15,60 @@
     align-items: center;
     justify-content: center;
 }
+.over-complete{
+    width: 100%;
+    height: 90vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tituloModal{
+    font-size: 2.5vw;
+}
+.cardM{
+    min-width: 25vw;
+}
+.transparent{
+    display: none;
+}
+.ModalForm{
+    min-width: 20vw;
+    max-width: 40vw;
+    max-height: 40vh;
+    
+}
+.botonSN{
+    position: absolute;
+    bottom: 0px;
+}
 
+.ttmod{
+    font-size: 220%;
+}
+
+.txmod{
+    font-size: 100%;
+}
+
+  @media(max-width: 562px){
+    .ttmod{
+        font-size: 1.5rem;
+    }
+    .txmod{
+        font-size: 0.8rem;
+    }
+        
+  }
+ 
+  @media(max-width: 280px){
+    .ttmod{
+        font-size: 1rem;
+    }
+    .txmod{
+        font-size: 0.6rem;
+    }
+  }

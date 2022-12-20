@@ -3,7 +3,7 @@ import { Routes, Route} from "react-router-dom";
 import Formulario from "../componentes/Formulario"
 import Informacion from "./Informacion";
 import Productoslista from "./ListaProductos";
-
+import Login from "./FormInicioS"
 
 const NavPage = () =>{
     return(

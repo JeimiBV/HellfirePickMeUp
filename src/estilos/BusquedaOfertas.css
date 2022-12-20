@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+.containerLargo{
+    position: relative;
+    width: 100%;
+    height: 89.6vh;
+    background-color: #CAD2C5;
+    overflow-y: scroll;
+    background: url("https://img.freepik.com/vector-premium/patron-transparente-vector-granos-cafe-fondo-pintado-sobre-tema-cafe_646455-94.jpg?w=740s")
+}
+
+
+.containerLargo > .buscador .inputBusc{
+    width: 55%;
+    margin-top: 1%;
+    
+    
+}
+.tituloProducto{
+
+    color: #643201;
+    font-size: 330%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Cinzel';
+    background-color: #e8cbae;
+    width: 650px;
+    margin-left: 450px;
+}
+
+
+.containerLargo > .buscador .bi{
+    position: absolute;
+    margin-right: 54%;
+    margin-left: 2%;
+    margin-top: 1.3%;
+}
+
+.ofertasDelosProductos{
+    position: relative; 
+    padding: 1rem 1rem ;
+    flex-direction: column;
+    left: 11rem;
+    top: 1rem;
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 0fr));
+    gap: 3rem ;
+    box-sizing: border-box;
+    
+}
+
+.card-ofP > .imagenOf {
+    width: 100%;
+    height: 180px;
+    align-items:top;
+}
+
+.card-ofP:hover{
+    
+    cursor: pointer;
+    transform: translateY(-3%);
+    
+}
+
+.Banner{
+    background-color:#eaccad;
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    padding:3.5em 2em;
+    transition:0.5s;
+    color:var(--white);
+    border-radius: 8px;
+    margin-left: -5.5%;
+    transform : translateY(100% )
+
+ 
+}
+
+.Descri{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    color: #804000e1;;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+
+}
+
+.DescripcionAd{
+    text-align: center;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+.precioAd >span{
+    text-align: center;
+
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    color: #643301d5;
+   
+    
+}
+
+.d-block{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+   
+
+}
+.d-block1{
+    color: rgb(255, 255, 255);
+    margin-left: 7px;
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+   
+
+}
+
+.card:hover .Banner{
+    transform : translateY(0)
+
+}
+
+
+
+.card .card-ofP:hover  {
+    left:0%;
+    
+}
+
+.card-ofP > .card-letra {
+    text-align: left;
+}
+
+
+.bg-sucessPedido{
+    background-color: #f4e0ccf3;
+   
+}
+
+
+
+.card-titleProducto{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:x-large;
+    background-color: #643201be;
+    
+    
+}
+
+.card-img-top{
+    border-radius: 8px;
+  
+}
+
+.card-ofP{
+    overflow: hidden;
+    border-color: #522a02ca;
+    
+    border-left-width: 5px;
+    border-bottom-width: 5px;
+  
+    border-radius: 10%;
+}
+

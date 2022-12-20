@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+* {   
+    font-family: sans-serif;
+}
+
+:root{
+    --colorA: #DA8131;
+    --colorB: #77281B;
+    --colorC: #603725;
+    --colorD: #374454;
+    --colorE: #131A20;
+    --colorF: #b05420;
+    --colorG: #6b4841;
+    --surface-color: #fff;
+    --curve: 10;
+
+}
+
+.containerL{
+    position: relative;
+    width: 100%;
+    height: 89.6vh;
+    background-color: #CAD2C5;
+    overflow-y: scroll;
+    justify-content: center;
+    background: url("https://st3.depositphotos.com/3049107/16145/v/600/depositphotos_161454306-stock-illustration-hand-drawn-bakery-pattern.jpg")
+}
+.ofertasP{
+    
+    padding: 1rem 2rem ;
+    flex-direction: column;
+    left: 4rem;
+    top: 1rem;
+    width: 88%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 0fr));
+    gap: 3rem ;
+    box-sizing: border-box;
+   
+}
+
+.containerL > .buscador .inputBusc{
+    width: 60%;
+}
+.TituloListaO{
+    color: rgb(61, 38, 18);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Cinzel';
+}
+
+html , body {
+
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+
+}
+
+
+
+/*otro*/
+
+.cardOf {
+    position: relative;
+    display: block;
+    height: 100%;  
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+    justify-content: center;
+  }
+  
+.card > .imagenCard{ 
+    padding-bottom: 100px; 
+    padding-top: 10px;  
+    width: 100%;
+    height: 300px;
+    background-color: #ffffff;
+  }
+  
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card:hover .card__overlay {
+    transform: translateY(0);
+  }
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+ 
+  }
+  
+  .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;      
+    border-radius: 50%;    
+    /*background-color: red;  */
+  }
+  
+  .card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: .8em; 
+    color: #d7c9bd; 
+     
+  }
+  
+  .card__status {
+    font-size: .8em;
+    color: #D7BDCA;
+  }
+   
+  .card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #e01a7d;
+    font-family: 'Noto Sans JP', sans-serif;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    /*background-color: #e01a7d;*/
+  }    
+
+  .card__arc path {
+    fill: var(--colorG);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  }   

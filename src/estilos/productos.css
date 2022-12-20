@@ -1,23 +1,31 @@
-.container{
+.containerG{
     position: relative;
-    width: 80%;
-    height: 89.5vh;
-    border: 2px solid black;
+    width: 100%;
+    height: 87.248vh;
     background-color: #CAD2C5;
     overflow-y: scroll;
    
+}
+.buscador .inputBusc{
+    width: 60%;
+}
+
+.containerG > .buscador .bi{
+    position: absolute;
+    margin-right: 59%;
+    margin-top: 0.5%;
 }
 .imagen{
     width: 200px;
     height: 200px;
   }
-.title{
+.titleL{
     text-align:center;  
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 3rem;
     top: 20rem;
 }
-.nombre{
+.nombreL{
     text-align:center;  
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 1rem;
@@ -25,27 +33,98 @@
 }
 
 .productos{   
-    position: relative; 
-    padding: 1rem 3.2rem ;
     align-items: center;
     flex-direction: column;
-    left: 2rem;
-    top: 0rem;
-    width: 95%;
+    margin-top: 2%;
+    width: 93%;
+    margin-left: 4%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(13rem, 0fr));
-    gap: 2rem 3.2rem;
-    box-sizing: border-box;
-   
+    gap: 2rem 2.5rem;
+    box-sizing: border-box;   
+ 
 }
 .producto{
+   
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 6px solid transparent;
     border-radius: 5px;
     background-color: white;
+
 }
+
 .producto:hover{
      border: 6px solid  #84A98C;
+}
+.producto_imagen{
+    width: 100%;
+    height: auto;
+}
+.P_footer{
+    width: 100%;
+    height: auto;
+}
+@media(max-width: 912px){
+    .titleL{
+        font-size: 2rem;
+    }
+    .productos{   
+        margin-top: 8%;
+        margin-left: 16%;
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 0fr));
+     
+    }
+      .nombreL{
+        
+        font-size: 1.8rem;
+        
+    }
+    .imagen{
+        width: 240px;
+        height: 200px;
+      }
+}   
+@media(width: 912px){
+    .titleL{
+        top:10%;
+        font-size: 2rem;
+    }
+    .productos{   
+        margin-top: 8%;
+        margin-left: 10%;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 0fr));
+     
+    }
+      .nombreL{
+        
+        font-size: 1.8rem;
+        
+    }
+    .imagen{
+        width: 210px;
+        height: 200px;
+      }
+}   
+@media(width: 280px){
+    .titleL{
+        margin-top: 20%;
+        font-size: 2rem;
+    }
+    .productos{   
+        margin-top: 8%;
+        margin-left: 10%;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 0fr));
+     
+    }
+      .nombreL{
+        
+        font-size: 1.8rem;
+        
+    }
+    .imagen{
+        width: 210px;
+        height: 200px;
+      }
 }
