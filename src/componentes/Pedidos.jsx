@@ -18,7 +18,7 @@ function MostrarPedidosN({ usuario }) {
   var validacion = 0;
 
   const url =
-    "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido";
+    "http://localhost:5000/bd-pickmeup/us-central1/app/api/pedido";
 
   useEffect(() => {
     todosPedidos(setPedidos);

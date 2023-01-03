@@ -42,7 +42,7 @@ function Productoslista({usuario}) {
    const [post, setPost] = useState(null);
    const navigate = useNavigate();
    const url =
-       "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products";
+       "http://localhost:5000/bd-pickmeup/us-central1/app/api/products";
    useEffect(() => {
        unicoProducto(params.id, setProductos);
 
@@ -276,7 +276,7 @@ function Productoslista({usuario}) {
                 <div className="tituloPedido"><label  className="tab">Realiza tu oferta!</label></div>
 
                         <div className="sign-up-htm">
-                                <form  className="fo" id="form" action="https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products/${id}" method="PUT">
+                                <form  className="fo" id="form" action="http://localhost:5000/bd-pickmeup/us-central1/app/api/products/${id}" method="PUT">
                                         <div className="group">
                                             <label for="user" className="campo">Precio
                                                 <input  className="input"

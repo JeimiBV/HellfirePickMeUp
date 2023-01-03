@@ -5,14 +5,12 @@ import "firebase/compat/firestore"
 import { getAuth } from "firebase/auth";
 
 export const app = firebase.initializeApp({
-  "projectId": "base-de-datos-h",
-  "appId": "1:284954700586:web:8c2c1d715f81bc29bacc53",
-  "storageBucket": "base-de-datos-h.appspot.com",
-  "locationId": "us-central",
-  "apiKey": "AIzaSyBZdVFA-GhlHbi54swea5AEry-yzARtpzg",
-  "authDomain": "base-de-datos-h.firebaseapp.com",
-  "messagingSenderId": "284954700586",
-  "measurementId": "G-E0YTNDYRBH"
+  "projectId": "bd-pickmeup",
+  "appId": "1:601422770883:web:c8131b814608651246e876",
+  "storageBucket": "bd-pickmeup.appspot.com",
+  "apiKey": "AIzaSyCPms0J4QrmrpXmfaC206VBadJkrF7NG2U",
+  "authDomain": "bd-pickmeup.firebaseapp.com",
+  "messagingSenderId": "601422770883"
 });
 export const auth = getAuth(app);
 /*export const app = firebase.initializeApp({

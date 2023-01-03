@@ -30,7 +30,7 @@ function Mostraroferta({ usuario }) {
   const [producto, setProducto] = useState(null);
   const [stock, setStock] = useState(0);
   var url =
-    "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido";
+    "http://localhost:5000/bd-pickmeup/us-central1/app/api/pedido";
 
   useEffect(() => {
     filtrarOfertas(params.id, setOfertas);
@@ -90,7 +90,7 @@ function Mostraroferta({ usuario }) {
           FlagN: true,
           Stock: producto.Stock,
         },
-        url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/pedido",
+        url: "http://localhost:5000/bd-pickmeup/us-central1/app/api/pedido",
       })
         .then((response) => {
           if (!response.data.error) {

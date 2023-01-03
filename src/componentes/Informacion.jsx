@@ -24,7 +24,7 @@ function Informacion() {
 
     const [post, setPost] = useState(null);
     const url =
-        "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products";
+        "http://localhost:5000/bd-pickmeup/us-central1/app/api/products";
     useEffect(() => {
         unicoProducto(params.id, setProductos);
 

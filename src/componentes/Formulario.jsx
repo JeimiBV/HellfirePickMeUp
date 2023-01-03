@@ -213,7 +213,7 @@ function Form({ usuario }) {
         Tipo: producto.valor,
         Imagen: urlImagen,
       },
-      url: "https://us-central1-base-de-datos-h.cloudfunctions.net/app/api/products",
+      url: "http://localhost:5000/bd-pickmeup/us-central1/app/api/products",
     })
       .then((response) => {
         if (!response.data.error) {
